@@ -1,11 +1,10 @@
-﻿// part 1
-Console.WriteLine(File.ReadAllLines("input.txt").Select(l => "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".IndexOf(l.Substring(0, l.Length / 2).Intersect(l.Substring(l.Length / 2)).First()) + 1).Sum());
+﻿string abc = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-// part 2
-string[] input = File.ReadAllLines("input.txt");
+Console.WriteLine(File.ReadAllLines("input").Select(l => abc.IndexOf(l[..(l.Length / 2)].Intersect(l[(l.Length / 2)..]).First()) + 1).Sum());
+
+string[] input = File.ReadAllLines("input");
 int result = 0;
 for (int i = 2; i < input.Length; i+=3) {
-    result += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".IndexOf(input[i-2].Intersect(input[i-1]).Intersect(input[i]).First()) + 1;
+    result += abc.IndexOf(input[i-2].Intersect(input[i-1]).Intersect(input[i]).First()) + 1;
 }
 Console.WriteLine(result);
-

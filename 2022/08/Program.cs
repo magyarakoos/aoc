@@ -1,4 +1,4 @@
-byte[][] m = File.ReadAllLines("input.txt").Select(line => line.Select(c => (byte)char.GetNumericValue(c)).ToArray()).ToArray();
+byte[][] m = File.ReadAllLines("input").Select(line => line.Select(c => (byte)char.GetNumericValue(c)).ToArray()).ToArray();
 (int w, int h) = (m[0].Length, m.Length);
 (int sum, int max) = (0, 0);
 
@@ -44,5 +44,4 @@ for (int i = 0; i < h; i++) {
     }
 }
 
-Console.WriteLine($"Part 1: {sum}\nPart 2: {max}");
-
+Console.WriteLine(sum + '\n' + max);

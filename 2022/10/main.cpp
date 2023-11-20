@@ -1,47 +1,34 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <string>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-vector<string> read(const string& path)
-{
-    vector<string> vec;
+vector<string> read(const string& path) {
+    vector<string> v;
     ifstream in(path);
     string s;
 
-    while (getline(in, s))
-    {
-        if (s.size() > 0)
-        {
-            vec.push_back(s);
+    while (getline(in, s)) {
+        if (s.size() > 0) {
+            v.push_back(s);
         }
     }
-
-    in.close();
-    return vec;
+    return v;
 }
 
-void part1(const vector<string>& input)
-{
+void part1(const vector<string>& input) {
     int x = 1;
     int cyc = 0;
     int result = 0;
 
-    for (auto& l : input)
-    {
+    for (auto& l : input) {
         cyc++;
 
-        if ((cyc - 20) % 40 == 0)
-        {
+        if ((cyc - 20) % 40 == 0) {
             result += cyc * x;
         }
-        if (l != "noop")
-        {
+        if (l != "noop") {
             cyc++;
-            if ((cyc - 20) % 40 == 0)
-            {
+            if ((cyc - 20) % 40 == 0) {
                 result += cyc * x;
             }
             x += stoi(l.substr(5));
@@ -51,34 +38,27 @@ void part1(const vector<string>& input)
     cout << result << "\n";
 }
 
-void draw(int& cyc, int& x)
-{
-    if (abs((cyc - 1) % 40 - x) <= (3/2))
-    {
+void draw(int& cyc, int& x) {
+    if (abs((cyc - 1) % 40 - x) <= (3/2)) {
         cout << "█";
     }
-    else
-    {
+    else {
         cout << " ";
     }
-    if (cyc % 40 == 0)
-    {
+    if (cyc % 40 == 0) {
         cout << "\n";
     }
 }
 
-void part2(const vector<string>& input)
-{
+void part2(const vector<string>& input) {
     int x = 1;
     int cyc = 0;
 
-    for (auto& l : input)
-    {
+    for (auto& l : input) {
         cyc++;
         draw(cyc, x);
 
-        if (l != "noop")
-        {
+        if (l != "noop") {
             cyc++;
             draw(cyc, x);
             x += stoi(l.substr(5));
@@ -86,14 +66,9 @@ void part2(const vector<string>& input)
     }
 }
 
-int main()
-{
+int main() {
     vector<string> input = read("input.txt");
 
     part1(input);
     part2(input);
-
-    return 0;
 }
-
-

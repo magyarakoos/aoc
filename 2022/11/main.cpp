@@ -1,11 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <string>
-#include <functional>
-#include <cmath>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -78,7 +71,7 @@ int main()
 {
     vector<Monke> monkeys;
 
-    ifstream f("input.txt");
+    ifstream f("input");
     string line;
     vector<string> lines;
 
