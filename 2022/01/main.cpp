@@ -15,7 +15,7 @@ int main() {
             n = 0;
         }
     }
-    if (n) v.push_back(n);
+    v.push_back(n);
     sort(v.begin(), v.end(), greater<int>());
     cout << v[0] << "\n" << v[0] + v[1] + v[2];
 }
