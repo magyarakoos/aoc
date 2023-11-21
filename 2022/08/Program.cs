@@ -44,4 +44,4 @@ for (int i = 0; i < h; i++) {
     }
 }
 
-Console.WriteLine(sum + '\n' + max);
+Console.WriteLine(sum + "\n" + max);
