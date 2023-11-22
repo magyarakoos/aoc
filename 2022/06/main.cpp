@@ -2,14 +2,20 @@
 
 using namespace std;
 
+int solve(const string& s,int n) {
+    for (int i = n - 1; i < s.size(); i++) {
+        set<char> cs;
+        for (int j = i - n; j < i && j < s.size(); j++) cs.insert(s[j]);
+        if (cs.size() == n) {
+            return i;
+        }
+    }
+    return 0;
+}
+
 int main() {
     ifstream f("input");
     string s;
     f >> s;
-    deque<char> ms({s[0], s[1], s[2]});
-    for (int i = 3; i < s.size(); i++) {
-        ms.push_back(s[i]);
-        // TODO: rape sebi
-        ms.pop_front();
-    }
+    cout << solve(s, 4) << '\n' << solve(s, 14);
 }
