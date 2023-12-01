@@ -1,21 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void get_p(char& c, char& d, const string& s) {
-    for (int i = 0; i < s.size(); i++) {
-        if (isdigit(s[i])) {
-            c = s[i];
-            break;
-        }
-    }
-    for (int i = s.size() - 1; i >= 0; i--) {
-        if (isdigit(s[i])) {
-            d = s[i];
-            break;
-        }
-    }
-}
-
 int main() {
     const vector<pair<string, string>> m{
         {"one", "1"},
@@ -33,7 +18,18 @@ int main() {
     int p1 = 0, p2 = 0;
     while (f >> s) {
         char c, d;
-        get_p(c, d, s);
+        for (int i = 0; i < s.size(); i++) {
+            if (isdigit(s[i])) {
+                c = s[i];
+                break;
+            }
+        }
+        for (int i = s.size() - 1; i >= 0; i--) {
+            if (isdigit(s[i])) {
+                d = s[i];
+                break;
+            }
+        }
         p1 += stoi(string{c, d});
         string t;
         for (int i = 0; i < s.size(); i ++) {
@@ -47,8 +43,7 @@ int main() {
                 }
             }
         }
-        get_p(c, d, t);
-        p2 += stoi(string{c, d});
+        p2 += stoi(string{t[0], t.back()});
     }
     cout << p1 << '\n' << p2;
 }
