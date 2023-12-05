@@ -31,7 +31,7 @@ int main() {
             l[j % 3] = stol(s);
         }
     }
-    u32 p1 = UINT_MAX;
+    u32 p1 = UINT_MAX, p2 = 0;
     for (u32 seed : seeds) {
         u32 curr = seed;
         for (const auto& val : vals) {
@@ -44,6 +44,5 @@ int main() {
         }
         p1 = min(p1, curr);
     }
-    cout << p1;
+    cout << p1 << '\n' << p2;
 }
-
