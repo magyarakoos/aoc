@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
+using u32 = unsigned;
 
-typedef unsigned u32;
-int main() {
+int p1() {
     ifstream f("input");
     string s;
     vector<u32> seeds;
@@ -44,5 +44,5 @@ int main() {
         }
         p1 = min(p1, curr);
     }
-    cout << p1;
+    return p1;
 }
