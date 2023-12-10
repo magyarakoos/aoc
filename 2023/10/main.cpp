@@ -6,8 +6,7 @@ using point = pair<int, int>;
 #define y second
 
 vector<string> v;
-map<point, vector<point>> g;
-set<point> vis;
+vector<point> vis;
 point start;
 int N, M;
 
@@ -75,11 +74,25 @@ void set_start() {
 }
 
 bool cont(point p) {
-    return vis.find(p) != vis.end();
+    return find(vis.begin(), vis.end(), p) != vis.end();
+}
+
+void flood_fill(vector<vector<char>>& grid, point p) {
+    if (p.x < 0 || p.x >= N * 2 - 1 || p.y < 0 || p.y >= M * 2 - 1) {
+        return;
+    }
+    if (grid[p.x][p.y] == '#' || grid[p.x][p.y] == ' ') {
+        return;
+    }
+    grid[p.x][p.y] = ' ';
+    flood_fill(grid, {p.x + 1, p.y});
+    flood_fill(grid, {p.x - 1, p.y});
+    flood_fill(grid, {p.x, p.y + 1});
+    flood_fill(grid, {p.x, p.y - 1});
 }
 
 void dfs(point p) {
-    vis.insert(p);
+    vis.push_back(p);
     bool u, d, l, r;
     validate(u, d, l, r, p);
     if (u && !cont({p.x - 1, p.y})) dfs({p.x - 1, p.y});
@@ -97,5 +110,35 @@ int main() {
     M = v[0].size();
     set_start();
     dfs(start);
-    cout << vis.size() / 2;
+    vector<vector<char>> exp(N * 2 - 1, vector<char>(M * 2 - 1, '~'));
+    for (int i = 0; i < vis.size(); i++) {
+        exp[vis[i].x * 2][vis[i].y * 2] = '#';
+        if (i) {
+            if (vis[i].y == vis[i - 1].y) {
+                exp[min(vis[i].x, vis[i - 1].x) * 2 + 1][vis[i].y * 2] = '#';
+            } else {
+                exp[vis[i].x * 2][min(vis[i].y, vis[i - 1].y) * 2 + 1] = '#';
+            }
+        }
+    }
+    if (vis.front().y == vis.back().y) {
+        exp[min(vis.front().x, vis.back().x) * 2 + 1][vis.back().y * 2] = '#';
+    } else {
+        exp[vis.back().x * 2][min(vis.front().y, vis.back().y) * 2 + 1] = '#';
+    }
+    for (int i = 0; i < N * 2 - 1; i++) {
+        flood_fill(exp, {i, 0});
+        flood_fill(exp, {i, M * 2 - 2});
+    }
+    for (int i = 0; i < M * 2 - 1; i++) {
+        flood_fill(exp, {0, i});
+        flood_fill(exp, {N * 2 - 2, i});
+    }
+    int p2 = 0;
+    for (int i = 0; i < N * 2 - 1; i += 2) {
+        for (int j = 0; j < M * 2 - 1; j += 2) {
+            p2 += exp[i][j] == '~';
+        }
+    }
+    cout << vis.size() / 2 << '\n' << p2;
 }
