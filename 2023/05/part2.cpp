@@ -122,5 +122,4 @@ int main() {
         cout << r.first << ' ' << r.second;
         cout << '\n';
     }
-    cout << p2;
 }
