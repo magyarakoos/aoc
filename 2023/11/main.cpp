@@ -41,7 +41,7 @@ int main() {
                 }
             }
             p1 += dist + n;
-            p2 += abs(px[i].x - px[j].x) + abs(px[i].y - px[j].y) + n * (1e6 - 1);
+            p2 += dist + n * (1e6 - 1);
         }
     }
     cout << p1 << '\n' << p2;
