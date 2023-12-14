@@ -55,44 +55,26 @@ void east() {
     transpose();
 }
 
-void print(const vector<string>& vec) {
-    for (const string& l : vec) cout << l << '\n';
-    cout << '\n';
-} 
-
-int main(int argc, char* argv[]) {
+int main() {
     fstream f("input");
     string s;
     while (f >> s) v.push_back(s);
-    int cyc = stoi(argv[1]);
-    map<vector<string>, vector<int>> m;
-    for (int i = 0; i < cyc; i++) {
+    set<int> values;
+    for (int i = 0; i < (int)1e9; i++) {
         north();
         west();
         south();
         east();
-        m[v].push_back(i);
-    }
-    vector<pair<int, int>> vec;
-    for (const auto& entry : m) {
-        /*cout << "REP [" << entry.second.size() << "]: ";
-        for (int n : entry.second) {
-            cout << n << ' ';
+        if (((int)1e9 - (i + 1)) % 72 == 0) {
+            int result = 0;
+            for (int i = 0; i < v.size(); i++) {
+                result += (v.size() - i) * count(v[i].begin(), v[i].end(), 'O');
+            }
+            if (values.find(result) != values.end()) {
+                cout << result;
+                return 0;
+            }
+            values.insert(result);
         }
-        cout << '\n';*/
-        vec.push_back({entry.second.front(), entry.second.size()});
     }
-    sort(vec.begin(), vec.end(), [](auto a, auto b){ return a.first < b.first; });
-    int nig = 0;
-    for (pair<int, int>& p : vec) {
-        cout << p.first << ' ' << p.second << '\n';
-        if (p.second == 13) nig++;
-    }
-    cout << nig << '\n';
-    return 0;
-    int p1 = 0;
-    for (int i = 0; i < v.size(); i++) {
-        p1 += (v.size() - i) * count(v[i].begin(), v[i].end(), 'O');
-    }
-    cout << p1;
 }
