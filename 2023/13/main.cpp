@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define PART 2
+
 void transpose(vector<string>& v) {
     int rows = v.size();
     int cols = v[0].size();
@@ -14,17 +16,16 @@ void transpose(vector<string>& v) {
 }
 
 bool valid(const vector<string>& table, int i) {
-    int b = i - 1, t = i;
-
-    while (table[b] == table[t]) {
+    int b = i - 1, t = i, result = 0;
+    while (true) {
+        for (int p = 0; p < table[0].size(); p++) {
+            result += (table[b][p] != table[t][p]);
+        }
         if (b > 0 && t < table.size() - 1) {
             b--;
             t++;
-        } else {
-            return 1;
-        }
+        } else return result == (PART == 1 ? 0 : 1);
     }
-
     return 0;
 }
 
