@@ -21,8 +21,8 @@ int dijkstra() {
     while (!pq.empty()) {
         props curr = pq.top(); pq.pop();
         int len = curr[0], straight = curr[1];
-        point pos{curr[2], curr[3]}, dir{curr[4], curr[5]}; 
-        cout << pos[0] << ' ' << pos[1] << '\n';
+        point pos{curr[2], curr[3]}, dir{curr[4], curr[5]};
+        cout << pq.size() << '\n';
 
         if (pos[0] == N - 1 && pos[1] == M - 1) return dists[curr];
 
@@ -56,13 +56,13 @@ int dijkstra() {
             // a mező új lehetséges tulajdonságai, vagy jobb mint az eddigi vagy nem
             props new_props {
                 dists[curr] + heat_loss,
-                straight, 
+                new_straight, 
                 new_pos[0], new_pos[1],
                 move[0], move[1]
             };
 
             // ez eddig a legjobb, a mapen beállítjuk és megy a heapre is
-            if (!contains(dists, new_props) || dists[new_props] > new_props[0]) {
+            if (dists[new_props] == 0 || new_props[0] < dists[new_props]) {
                 dists[new_props] = new_props[0];
                 pq.push(new_props);
             }
