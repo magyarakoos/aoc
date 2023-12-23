@@ -4,39 +4,48 @@ using namespace std;
 using point = array<int, 2>;
 
 vector<string> grid;
-int N, M, p1;
+vector<vector<bool>> vis;
+int N, M;
 
-void hike(point p, point bef, vector<vector<bool>> vis, vector<vector<int>> distS) {
-    if (p[0] < 0 || p[1] < 0 || p[0] >= N || p[1] >= M) return;
+int dijkstra(point s) {
+    const vector<point> moves {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+    queue<pair<int, point>> pq;
+    map<point, pair<int, vector<vector<bool>>>> pathS;
 
-    char c = grid[p[0]][p[1]];
+    pq.push({0, s});
+    pathS[s] = {0, vector<vector<bool>>(N, vector<bool>(M))};
 
-    if (c == '#') return;
+    int result = -1;
 
-    distS[p[0]][p[1]] = (bef[0] || bef[1]) * (distS[bef[0]][bef[1]] + 1); 
+    while (!pq.empty()) {
+        auto [dist, pos] = pq.front();
+        pq.pop();
 
-    if (p[0] == N - 1 && p[1] == M - 2) {
-        p1 = max(p1, distS[N - 1][M - 2]);
-        return;
+        if (pos[0] == N - 1 && pos[1] == M - 2) {
+            result = max(result, pathS[pos].first);
+        }
+
+        for (point move : moves) {
+            point new_pos{pos[0] + move[0], pos[1] + move[1]};
+
+            if (new_pos[0] < 0 || new_pos[1] < 0 || new_pos[0] >= N || new_pos[1] >= M || grid[new_pos[0]][new_pos[1]] == '#') {
+                continue;
+            }
+
+            if (pathS[pos].second[new_pos[0]][new_pos[1]]) continue;
+
+            int new_dist = pathS[pos].first + 1;
+
+            if (new_dist > pathS[new_pos].first) {
+                pathS[new_pos].first = new_dist;
+                pathS[new_pos].second = pathS[pos].second;
+                pathS[new_pos].second[new_pos[0]][new_pos[1]] = 1;
+                pq.push({new_dist, new_pos});
+            }
+        }
     }
 
-    if (vis[p[0]][p[1]]) return;
-    vis[p[0]][p[1]] = 1;
-
-    if (c == '.') {
-        hike({p[0] + 1, p[1]}, p, vis, distS);
-        hike({p[0] - 1, p[1]}, p, vis, distS);
-        hike({p[0], p[1] + 1}, p, vis, distS);
-        hike({p[0], p[1] - 1}, p, vis, distS);
-    }
-
-    if (c == '>') {
-        hike({p[0], p[1] + 1}, p, vis, distS);
-    }
-
-    if (c == 'v') {
-        hike({p[0] + 1, p[1]}, p, vis, distS);
-    }
+    return result;
 }
 
 int main() {
@@ -46,7 +55,5 @@ int main() {
 
     N = grid.size(), M = s.size();
 
-    hike({0, 1}, {0, 0}, vector<vector<bool>>(N, vector<bool>(M)), vector<vector<int>>(N, vector<int>(M)));
-
-    cout << p1;
+    cout << dijkstra({0, 1});
 }
