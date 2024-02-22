@@ -28,8 +28,8 @@ int main() {
         }
     }
 
-    int p1 = 0, p2 = 0, req = -40'000'000 + root;
-í
+    int p1 = 0, p2 = 0, req = root - 40'000'000;
+
     for (const auto& [k, v] : sizeS) {
         p1 += v * (v <= 100'000);
     }
