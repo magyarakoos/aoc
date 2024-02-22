@@ -30,7 +30,7 @@ int main() {
 
     int p1 = 0, p2 = root, req = root - 40'000'000;
 
-    cout << req <<  << '\n';
+    cout << req << ' ' << root << '\n';
 
     for (const auto& [k, v] : sizeS) {
         p1 += v * (v <= 100'000);
