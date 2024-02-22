@@ -28,11 +28,11 @@ int main() {
         }
     }
 
-    int p1 = 0, p2 = 0, req = root - 40'000'000;
+    int p1 = 0, p2 = root;
 
     for (const auto& [k, v] : sizeS) {
         p1 += v * (v <= 100'000);
-        if (v >= req) p2 = min(p2, v);
+        if (v >= root - 40'000'000) p2 = min(p2, v);
     }
 
     cout << p1 << '\n' << p2;
