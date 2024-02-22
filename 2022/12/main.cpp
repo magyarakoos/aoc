@@ -30,5 +30,9 @@ int main() {
     }
 
     set<point> vis;
-    queue<point> q({{}})
+    queue<pair<point, int>> q({{sp, 0}});
+
+    while (!q.empty()) {
+        
+    }
 }
