@@ -34,7 +34,6 @@ int main() {
     set<point> vis({sp});
     queue<pair<point, int>> q({{sp, 0}});
 
-    exit(0);
 
     while (!q.empty()) {
         auto [p, dist] = q.front();
