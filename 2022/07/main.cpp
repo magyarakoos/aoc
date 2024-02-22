@@ -12,6 +12,8 @@ int main() {
 
     ifstream f("input");
     string s;
+
+    getline(f, s); // $ cd /
     
     set<string> dirS;
     map<string, int> sizeS;
@@ -25,6 +27,8 @@ int main() {
 
         if (tokenS[0] == "$") {
             
+        } else {
+
         }
     }
 }
