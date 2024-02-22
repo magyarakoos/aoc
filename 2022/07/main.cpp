@@ -26,7 +26,7 @@ int main() {
         }
 
         if (tokenS[0] == "$") {
-
+            if (tokenS[1] == "ls") continue;
         } else {
 
         }
