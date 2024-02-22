@@ -17,8 +17,14 @@ int main() {
     map<string, int> sizeS;
 
     while (getline(f, s)) {
-        istringstream iss;
+        istringstream iss(s);
         vector<string> tokenS;
-        while (i)
+        while (iss >> s) {
+            tokenS.push_back(s);
+        }
+
+        if (tokenS[0] == "$") {
+            
+        }
     }
 }
