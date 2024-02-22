@@ -15,7 +15,7 @@ int main() {
 
     point sp, ep;
     
-    for (int i = 0; i < N; i++) {
+    for (int i = 0, k = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
             if (grid[i][j] == 'S') {
                 sp = {i, j};
@@ -23,8 +23,6 @@ int main() {
             if (grid[i][j] == 'E') {
                 ep = {i, j};
             }
-
-            if (sp && ep) break;
         }
     }
 }
