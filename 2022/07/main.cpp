@@ -27,7 +27,10 @@ int main() {
 
         if (tokenS[0] == "$") {
             if (tokenS[1] == "ls") continue;
-            
+            if (tokenS[2] == "..") dirS.pop_back();
+            else {
+                
+            }
         } else {
 
         }
