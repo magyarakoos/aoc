@@ -32,6 +32,7 @@ int main() {
 
     for (const auto& [k, v] : sizeS) {
         p1 += v * (v <= 100'000);
+        if (v >= req) p2 = min(p2, v);
     }
 
     cout << p1 << '\n' << p2;
