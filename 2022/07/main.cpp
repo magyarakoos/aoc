@@ -29,6 +29,6 @@ int main() {
     int p1 = 0, p2 = 0;
 
     for (const auto& [k, v] : sizeS) {
-        if (v <= 100000)
+        p1 += v * (v <= 100'000);
     }
 }
