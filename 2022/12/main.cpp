@@ -39,13 +39,9 @@ int main() {
             point np {p[0] + dir[0], p[1] + dir[1]};
 
             if (np[0] < 0 || np[1] < 0 || np[0] >= N || np[1] >= M || 
-                vis.find(np) != vis.end()) {
-                continue;
-            }
+                vis.find(np) != vis.end() || ) continue;
 
-            if () {
-                vis.insert(np);
-            }
+            vis.insert(np);
         }
     }
 }
