@@ -11,10 +11,12 @@ int main() {
         grid.push_back(s);
     }
 
+    int N = grid.size(), M = grid[0].size();
+
     point sp, ep;
     
-    for (int i = 0; i < size(grid); i++) {
-        for (int j = 0; j < grid[0].size(); j++) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
             if (grid[i][j] == 'S') {
                 sp = {i, j};
             }
