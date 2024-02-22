@@ -13,6 +13,10 @@ int main() {
     ifstream f("input");
     string s;
     
-    vector<
+    set<string> dirS;
+    map<string, int> sizeS;
 
+    while (getline(f, s)) {
+        
+    }
 }
