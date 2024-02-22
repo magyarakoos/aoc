@@ -22,7 +22,9 @@ int main() {
             if (tokenS[2] == "..") dirS.pop_back();
             else dirS.push_back(tokenS[2]);
         } else if (tokenS[0][0] <= '9') {
-            
+            for (const string& dir : dirS) {
+                sizeS[dir] += stoi()
+            }
         }
     }
 }
