@@ -36,7 +36,9 @@ int main() {
         auto [p, dist] = q.front();
         q.pop();
         for (auto dir : dirs) {
-            point np {p[]}
+            point np {p[0] + dir[0], p[1] + dir[1]};
+
+            
         }
     }
 }
