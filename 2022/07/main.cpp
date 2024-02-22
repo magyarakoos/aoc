@@ -29,7 +29,7 @@ int main() {
     }
 
     root = 70'000'000 - root;
-    int p1 = 0, p2 = 0, int req = 
+    int p1 = 0, p2 = 0, int req = 30'000'000 - 
 
     for (const auto& [k, v] : sizeS) {
         p1 += v * (v <= 100'000);
