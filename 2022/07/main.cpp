@@ -12,5 +12,7 @@ int main() {
 
     ifstream f("input");
     string s;
-    whil
+    
+    vector<
+
 }
