@@ -16,6 +16,7 @@ int main() {
     point sp, ep;
     
     queue<pair<point, int>> q;
+    set<point> vis;
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
@@ -29,12 +30,11 @@ int main() {
             }
 
             if (grid[i][j] == 'a') {
-
+                q.push({{i, j}, 0});
+                vis.insert({i, j});
             }
         }
     }
-
-    set<point> vis({sp});
 
     int p2 = INT_MAX;
 
@@ -57,4 +57,6 @@ int main() {
             q.push({np, dist + 1});
         }
     }
+
+    cout << p2;
 }
