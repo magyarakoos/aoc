@@ -15,7 +15,7 @@ int main() {
 
     getline(f, s); // $ cd /
     
-    set<string> dirS;
+    vector<string> dirS;
     map<string, int> sizeS;
 
     while (getline(f, s)) {
@@ -26,7 +26,7 @@ int main() {
         }
 
         if (tokenS[0] == "$") {
-            
+
         } else {
 
         }
