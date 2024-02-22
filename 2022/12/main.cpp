@@ -29,5 +29,6 @@ int main() {
         }
     }
 
-    set<point> vis
+    set<point> vis;
+    queue<point> q({{}})
 }
