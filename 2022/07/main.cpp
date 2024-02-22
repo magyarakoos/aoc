@@ -17,6 +17,8 @@ int main() {
     map<string, int> sizeS;
 
     while (getline(f, s)) {
-        
+        istringstream iss;
+        vector<string> tokenS;
+        while (i)
     }
 }
