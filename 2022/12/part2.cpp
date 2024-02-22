@@ -15,24 +15,26 @@ int main() {
 
     point sp, ep;
     
-    for (int i = 0, k = 0; i < N; i++) {
+    queue<pair<point, int>> q;
+
+    for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
             if (grid[i][j] == 'S') {
                 sp = {i, j};
                 grid[i][j] = 'a';
-                k++;
             }
             else if (grid[i][j] == 'E') {
                 ep = {i, j};
                 grid[i][j] = 'z';
-                k++;
             }
-            if (k == 2) break;
+
+            if (grid[i][j] == 'a') {
+
+            }
         }
     }
 
     set<point> vis({sp});
-    queue<pair<point, int>> q({{sp, 0}});
 
     while (!q.empty()) {
         auto [p, dist] = q.front();
