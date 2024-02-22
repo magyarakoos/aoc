@@ -4,7 +4,6 @@ using namespace std;
 int main() {
     ifstream f("input");
     string s;
-
     getline(f, s); // $ cd /
     
     vector<string> dirS;
@@ -16,14 +15,13 @@ int main() {
         while (iss >> s) {
             tokenS.push_back(s);
         }
-
         if (tokenS[0] == "$") {
             if (tokenS[1] == "ls") continue;
             if (tokenS[2] == "..") dirS.pop_back();
             else dirS.push_back(tokenS[2]);
         } else if (tokenS[0][0] <= '9') {
             for (const string& dir : dirS) {
-                sizeS[dir] += stoi()
+                sizeS[dir] += stoi(tokenS[0]);
             }
         }
     }
