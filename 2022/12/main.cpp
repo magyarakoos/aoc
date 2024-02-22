@@ -35,5 +35,8 @@ int main() {
     while (!q.empty()) {
         auto [p, dist] = q.front();
         q.pop();
+        for (auto dir : dirs) {
+            point np {p[]}
+        }
     }
 }
