@@ -19,10 +19,15 @@ int main() {
         for (int j = 0; j < M; j++) {
             if (grid[i][j] == 'S') {
                 sp = {i, j};
+                k++;
             }
-            if (grid[i][j] == 'E') {
+            else if (grid[i][j] == 'E') {
                 ep = {i, j};
+                k++;
             }
+            if (k == 2) break;
         }
     }
+
+    set<point> vis
 }
