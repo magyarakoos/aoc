@@ -43,7 +43,7 @@ int main() {
         q.pop();
 
         if (p == ep) {
-            p2 = max(p2, dist);
+            p2 = min(p2, dist);
             continue;
         }
 
