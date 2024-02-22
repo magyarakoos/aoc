@@ -38,7 +38,10 @@ int main() {
         auto [p, dist] = q.front();
         q.pop();
 
-        if ()
+        if (p == ep) {
+            cout << dist;
+            exit(0);
+        }
 
         for (auto dir : dirs) {
             point np {p[0] + dir[0], p[1] + dir[1]};
