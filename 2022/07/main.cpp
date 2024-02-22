@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     ifstream f("input");
     string s;
-    getline(f, s); // $ cd /
+    getline(f, s);
     
     vector<string> dirS;
     map<string, int> sizeS;
@@ -30,7 +30,6 @@ int main() {
 
     for (const auto& [k, v] : sizeS) {
         p1 += v * (v <= 100'000);
-        cout << k << ' ' << v << '\n';
     }
 
     cout << p1 << '\n' << p2;
