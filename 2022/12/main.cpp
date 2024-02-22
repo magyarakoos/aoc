@@ -23,6 +23,8 @@ int main() {
             if (grid[i][j] == 'E') {
                 ep = {i, j};
             }
+
+            if (sp && ep) break;
         }
     }
 }
