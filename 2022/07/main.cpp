@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
+    srand((unsigned)time(0));
+
     ifstream f("input");
     string s;
     getline(f, s);
@@ -18,7 +20,7 @@ int main() {
         if (tokenS[0] == "$") {
             if (tokenS[1] == "ls") continue;
             if (tokenS[2] == "..") dirS.pop_back();
-            else dirS.push_back(tokenS[2] + );
+            else dirS.push_back(to_string(rand()));
         } else if (tokenS[0][0] <= '9') {
             for (const string& dir : dirS) {
                 sizeS[dir] += stoi(tokenS[0]);
