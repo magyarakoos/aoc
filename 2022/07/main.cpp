@@ -31,4 +31,6 @@ int main() {
     for (const auto& [k, v] : sizeS) {
         p1 += v * (v <= 100'000);
     }
+
+    cout << p1 << '\n' << p2;
 }
