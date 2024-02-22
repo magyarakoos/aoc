@@ -11,7 +11,6 @@ int main() {
         grid.push_back(s);
     }
 
-    int N = grid.size(), M = grid[0].size();
     point sp, ep;
     
     for (int i = 0; i < N; i++) {
