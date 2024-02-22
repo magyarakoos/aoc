@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int id;
+int id, root;
 int main() {
     ifstream f("input");
     string s;
@@ -23,6 +23,7 @@ int main() {
         } else if (tokenS[0][0] <= '9') {
             for (const string& dir : dirS) {
                 sizeS[dir] += stoi(tokenS[0]);
+                root += stoi(tokenS[0]);
             }
         }
     }
