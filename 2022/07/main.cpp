@@ -21,20 +21,18 @@ int main() {
             if (tokenS[2] == "..") dirS.pop_back();
             else dirS.push_back(to_string(++id));
         } else if (tokenS[0][0] <= '9') {
+            root += stoi(tokenS[0]);
             for (const string& dir : dirS) {
                 sizeS[dir] += stoi(tokenS[0]);
-                root += stoi(tokenS[0]);
             }
         }
     }
 
-    int p1 = 0, p2 = root, req = root - 40'000'000;
-
-    cout << req << ' ' << root << ' ' << root - req << '\n';
+    int p1 = 0, p2 = root, req =;
 
     for (const auto& [k, v] : sizeS) {
         p1 += v * (v <= 100'000);
-        if (v >= req) p2 = min(p2, v);
+        if (v >= root - 40'000'000) p2 = min(p2, v);
     }
 
     cout << p1 << '\n' << p2;
