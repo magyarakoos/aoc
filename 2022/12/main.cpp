@@ -24,7 +24,7 @@ int main() {
             }
             else if (grid[i][j] == 'E') {
                 ep = {i, j};
-                grid[i][j] == 'z';
+                grid[i][j] = 'z';
                 k++;
             }
             if (k == 2) break;
