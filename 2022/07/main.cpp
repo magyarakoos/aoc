@@ -29,6 +29,8 @@ int main() {
             if (tokenS[1] == "ls") continue;
             if (tokenS[2] == "..") dirS.pop_back();
             else dirS.push_back(tokenS[2]);
-        } else if ()
+        } else if (tokenS[0][0] <= '9') {
+            
+        }
     }
 }
