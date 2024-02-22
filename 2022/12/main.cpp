@@ -19,10 +19,12 @@ int main() {
         for (int j = 0; j < M; j++) {
             if (grid[i][j] == 'S') {
                 sp = {i, j};
+                grid[i][j] = 'a';
                 k++;
             }
             else if (grid[i][j] == 'E') {
                 ep = {i, j};
+                grid[i][j] == 'z';
                 k++;
             }
             if (k == 2) break;
@@ -35,6 +37,9 @@ int main() {
     while (!q.empty()) {
         auto [p, dist] = q.front();
         q.pop();
+
+        if ()
+
         for (auto dir : dirs) {
             point np {p[0] + dir[0], p[1] + dir[1]};
 
