@@ -38,7 +38,9 @@ int main() {
         for (auto dir : dirs) {
             point np {p[0] + dir[0], p[1] + dir[1]};
 
-            
+            if (vis.find(np) == vis.end()) {
+                vis.insert(np);
+            }
         }
     }
 }
