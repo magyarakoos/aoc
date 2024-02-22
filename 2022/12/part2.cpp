@@ -36,13 +36,15 @@ int main() {
 
     set<point> vis({sp});
 
+    int p2 = INT_MAX;
+
     while (!q.empty()) {
         auto [p, dist] = q.front();
         q.pop();
 
         if (p == ep) {
-            cout << dist;
-            exit(0);
+            p2 = max(p2, dist);
+            continue;
         }
 
         for (auto dir : dirs) {
