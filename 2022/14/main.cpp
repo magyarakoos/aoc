@@ -37,7 +37,7 @@ int main() {
         }
     }
     maxy++; minx--; maxx++;
-    minx += 10;
+    minx -= 10;
     maxx += 10;
     N = maxy + 2, M = maxx - minx + 1;
     grid.assign(N, string(M, '.'));
@@ -55,6 +55,6 @@ int main() {
     for (const string& line : grid) cout << line << '\n';
 
     int p2 = 0;
-    while ((drop(500, 0), grid[0][500 - minx] != '0')) p2++;
+    while (1) p2++;
     cout << p2;
 }
