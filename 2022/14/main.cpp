@@ -54,11 +54,14 @@ int main() {
 
 
     int p2 = 0;
-    while (1) {/*
-        cout << "\x1B[2J\x1B[H";
-        for (const string& line : grid) cout << line << '\n';
-        cout << grid[0][500 - minx] << '\n';
-        this_thread::sleep_for(chrono::milliseconds(20));*/
+    while (1) {
+        // epic visualization
+        /*
+            cout << "\x1B[2J\x1B[H";
+            for (const string& line : grid) cout << line << '\n';
+            cout << grid[0][500 - minx] << '\n';
+            this_thread::sleep_for(chrono::milliseconds(20));
+        */
         drop(500 - minx, 0);
         p2++;
         if (grid[0][500 - minx] == 'o') break;
