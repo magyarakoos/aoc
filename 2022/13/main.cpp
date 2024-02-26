@@ -1,11 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct Token {
-    union {
-        vector<Token> list;
-        int x;
-    };
+union Token {
+    vector<Token> list;
+    int x;
 };
 
 vector<Token> tokenize(string s) {
