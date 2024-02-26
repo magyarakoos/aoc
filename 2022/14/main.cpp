@@ -18,12 +18,14 @@ int main() {
         }
     }
 
-    int minx = INT_MAX, miny = INT_MAX, _PC_REC_MAX_XFER_SIZE
+    int minx = INT_MAX, miny = INT_MAX, maxx = INT_MIN, maxy = INT_MIN;
 
     for (const auto& worm : v) {
         for (auto [x, y] : worm) {
-
+            minx = min(minx, x);
+            maxx = max(maxx, x);
+            miny = min(miny, y);
+            maxy = max(maxy, y);
         }
-        cout << '\n';
     }
 }
