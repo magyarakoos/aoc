@@ -40,10 +40,13 @@ int main() {
         for (size_t i = 1; i < worm.size(); i++) {
             for (int y = min(worm[i - 1][1], worm[i][1]); y <= max(worm[i - 1][1], worm[i][1]); y++) {
                 for (int x = min(worm[i - 1][0], worm[i][0]); x <= max(worm[i - 1][0], worm[i][0]); x++) {
+                    grid[y][x - minx] = '#';
                     cout << x - minx << ' ' << y << '\n';
                 }
             }
             cout << '\n';
         }
     }
+
+    grid[0][500 - minx] = '+';
 }
