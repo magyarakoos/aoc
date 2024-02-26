@@ -8,8 +8,8 @@ vector<string> grid;
 void drop(int x, int y) {
     if (y + 1 == N) return;
     if (grid[y + 1][x] == '.') { drop(x, y + 1); return; }
-    else if (grid[y + 1][x - 1] == '.') drop(x - 1, y + 1);
-    else if (grid[y + 1][x + 1] == '.') drop(x + 1, y + 1);
+    else if (grid[y + 1][x - 1] == '.') { drop(x - 1, y + 1); return; }
+    else if (grid[y + 1][x + 1] == '.') { drop(x + 1, y + 1); return; }
     grid[y][x] = 'o';
 }
 
