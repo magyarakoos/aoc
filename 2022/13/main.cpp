@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct token {
+struct Token {
     union {
-        vector<token> list;
+        vector<Token> list;
         int x;
     };
-}
+};
 
 int main() {
     ifstream f("input");
