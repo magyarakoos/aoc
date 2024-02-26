@@ -28,7 +28,7 @@ int main() {
         }
     }
 
-    int N = maxy - miny + 1, M = maxx - minx + 1;
+    int N = maxy, M = maxx - minx + 1;
     vector<string> grid(N, string(M, '.'));
 
     for (const auto& worm : v) {
