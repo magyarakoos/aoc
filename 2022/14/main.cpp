@@ -28,12 +28,7 @@ int main() {
         }
     }
 
-    cout << minx << ' ' << maxx << ' ' << maxy << '\n';
-
     int N = maxy + 1, M = maxx - minx + 1;
-
-    cout << N << ' ' << M << "\n\n";
-
     vector<string> grid(N, string(M, '.'));
 
     for (const auto& worm : v) {
@@ -41,12 +36,16 @@ int main() {
             for (int y = min(worm[i - 1][1], worm[i][1]); y <= max(worm[i - 1][1], worm[i][1]); y++) {
                 for (int x = min(worm[i - 1][0], worm[i][0]); x <= max(worm[i - 1][0], worm[i][0]); x++) {
                     grid[y][x - minx] = '#';
-                    cout << x - minx << ' ' << y << '\n';
                 }
             }
-            cout << '\n';
         }
     }
 
-    grid[0][500 - minx] = '+';
+    int p1 = 0;
+
+    while (1) {
+        
+    }
+    
+    cout << p1;
 }
