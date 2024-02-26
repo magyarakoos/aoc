@@ -18,9 +18,5 @@ int main() {
         }
     }
 
-    for (const auto& worm : v) {
-        for (auto [x, y] : worm) {
-            cout << ""
-        }
-    }
+    
 }
