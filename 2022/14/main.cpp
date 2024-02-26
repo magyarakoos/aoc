@@ -24,7 +24,6 @@ int main() {
         for (auto [x, y] : worm) {
             minx = min(minx, x);
             maxx = max(maxx, x);
-            miny = min(miny, y);
             maxy = max(maxy, y);
         }
     }
@@ -40,5 +39,7 @@ int main() {
                 }
             }
         }
-    }    
+    }
+
+    grid[]
 }
