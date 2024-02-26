@@ -30,5 +30,7 @@ int main() {
     }
 
     int N = maxy - miny + 1, M = maxx - minx + 1;
-    vector<vector<char>> grid()
+    vector<vector<char>> grid(N, vector<char>(M));
+
+    
 }
