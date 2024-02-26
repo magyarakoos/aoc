@@ -29,5 +29,6 @@ int main() {
         }
     }
 
-    
+    int N = miny - minx
+    vector<vector<char>> grid()
 }
