@@ -10,7 +10,7 @@ struct Token {
 
 vector<Token> tokenize(string s) {
     vector<Token> v;
-    
+    if ()
 }
 
 int main() {
