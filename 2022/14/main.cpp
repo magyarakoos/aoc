@@ -37,7 +37,7 @@ int main() {
             maxy = max(maxy, y);
         }
     }
-    maxy++; minx--; maxx++;
+    maxy++; minx += 1000; maxx += 2001;
     N = maxy + 2, M = maxx - minx + 1;
     grid.assign(N, string(M, '.'));
     for (const auto& worm : v) {
@@ -49,10 +49,10 @@ int main() {
             }
         }
     }
+    replace(grid.back().begin(), grid.back().end(), '.', '#');
 
     for (const string& line : grid) cout << line << '\n';
 
-    replace(grid.back().begin(), grid.back().end(), '.', '#');
 
 
 }
