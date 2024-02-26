@@ -45,7 +45,6 @@ int main() {
     maxy++; minx--; maxx++;
     N = maxy + 1, M = maxx - minx + 1;
     grid.assign(N, string(M, '.'));
-
     for (const auto& worm : v) {
         for (size_t i = 1; i < worm.size(); i++) {
             for (int y = min(worm[i - 1][1], worm[i][1]); y <= max(worm[i - 1][1], worm[i][1]); y++) {
@@ -55,11 +54,7 @@ int main() {
             }
         }
     }
-
     int p1 = 0;
-    while (drop(500 - minx, 0)) {
-        cout << "\x1B[2J\x1B[H";
-        for (const string& line : grid) cout << line << '\n';
-    }
+    while (drop(500 - minx, 0)) p1++;
     cout << p1;
 }
