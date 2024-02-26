@@ -3,7 +3,7 @@ using namespace std;
 using point = array<int, 2>;
 
 bool drop(int x, int y, const vector<string>&, grid) {
-
+    if ()
 }
 
 int main() {
