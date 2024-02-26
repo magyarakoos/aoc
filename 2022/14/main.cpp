@@ -48,7 +48,7 @@ int main() {
     while (1) {
         int x = 500, y = 0;
         while (1) {
-            if ()
+            if (x)
         }
     }
     
