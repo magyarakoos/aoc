@@ -37,8 +37,8 @@ int main() {
         }
     }
     maxy++; minx--; maxx++;
-    minx -= 100;
-    maxx += 100;
+    minx -= 1000;
+    maxx += 1000;
     N = maxy + 2, M = maxx - minx + 1;
     grid.assign(N, string(M, '.'));
     for (const auto& worm : v) {
