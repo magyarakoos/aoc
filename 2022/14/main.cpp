@@ -38,7 +38,7 @@ int main() {
         }
     }
     maxy++; minx--; maxx++;
-    N = maxy + 2, M = maxx - minx + 1;
+    N = maxy + 2, M = maxx - minx + 1 + 1000;
     grid.assign(N, string(M, '.'));
     for (const auto& worm : v) {
         for (size_t i = 1; i < worm.size(); i++) {
@@ -52,5 +52,7 @@ int main() {
 
     for (const string& line : grid) cout << line << '\n';
 
-    replace()
+    replace(grid.back().begin(), grid.back().end(), '.', '#');
+
+
 }
