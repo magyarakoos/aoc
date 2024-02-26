@@ -18,5 +18,10 @@ int main() {
         }
     }
 
-    k
+    for (const auto& worm : v) {
+        for (auto [x, y] : worm) {
+            cout << x << ',' << y << ' ';
+        }
+        cout << '\n';
+    }
 }
