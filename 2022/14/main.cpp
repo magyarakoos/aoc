@@ -7,8 +7,10 @@ vector<string> grid;
 
 bool drop(int x, int y) {
     if (y + 1 == N) return 0;
-    
-    return 0;
+
+    if (y)
+
+    return 1;
 }
 
 int main() {
