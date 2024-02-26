@@ -8,10 +8,10 @@ vector<int> tokenize(string& s) {
         }
     }
     istringstream iss(s);
+    vector<int> v;
     int x;
-    while (iss >> x) {
-
-    }
+    while (iss >> x) v.push_back(x);
+    
 }
 int main() {
     ifstream f("input");
