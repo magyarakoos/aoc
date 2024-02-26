@@ -13,8 +13,14 @@ int main() {
             if (s == "->") continue;
             v.back().push_back({
                 stoi(s.substr(0, s.find(','))),
-                stoi(s.substr());
+                stoi(s.substr(s.find(',') + 1))
             });
+        }
+    }
+
+    for (const auto& worm : v) {
+        for (auto [x, y] : worm) {
+            cout << ""
         }
     }
 }
