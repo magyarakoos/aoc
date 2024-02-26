@@ -33,7 +33,8 @@ int main() {
     vector<vector<char>> grid(N, vector<char>(M));
 
     for (const auto& worm : v) {
-        for (auto [x, y] : worm) {
+        for (int i = 1; i < worm.size(); i++) {
+            for (int j = wo)
         }
     }    
 }
