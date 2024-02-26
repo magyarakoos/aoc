@@ -12,7 +12,8 @@ int main() {
         while (iss >> s) {
             if (s == "->") continue;
             v.back().push_back({
-                stoi(s.substr(0, s.find(','))
+                stoi(s.substr(0, s.find(','))),
+                stoi(s.substr());
             });
         }
     }
