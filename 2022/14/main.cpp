@@ -13,7 +13,8 @@ bool drop(int x, int y) {
     else if (grid[y + 1][x - 1] == '.') return drop(x - 1, y + 1);
     else if (grid[y + 1][x + 1] == '.') return drop(x + 1, y + 1);
     grid[y][x] = 'o';
-    cout << x << ' ' << y << '\n';
+    cout << x << ' ' << y << endl;
+    sleep(1);
     return 1;
 }
 
