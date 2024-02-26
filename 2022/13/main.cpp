@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void replace(string& s) {
+
+}
 int main() {
     ifstream f("input");
     string s, t;
@@ -10,7 +13,7 @@ int main() {
                 c = ' ';
             }
         }
-        for (char& c : s) {
+        for (char& c : t) {
             if (c == '[' || c == ']' || c == ',') {
                 c = ' ';
             }
