@@ -21,7 +21,9 @@ int main() {
     while (f >> s >> t) {
         vector<int> sv = tokenize(s), tv = tokenize(t);
         if (sv.size() < tv.size()) {
-            for ()
+            for (int i = 0; i < sv.size(); i++) {
+                if (sv)
+            }
             p1++;
         }
     }
