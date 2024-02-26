@@ -52,5 +52,5 @@ int main() {
 
     for (const string& line : grid) cout << line << '\n';
 
-
+    while ()
 }
