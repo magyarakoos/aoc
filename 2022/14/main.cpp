@@ -46,7 +46,10 @@ int main() {
     int p1 = 0;
 
     while (1) {
-        
+        int x
+        while (1) {
+
+        }
     }
     
     cout << p1;
