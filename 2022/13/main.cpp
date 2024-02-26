@@ -6,6 +6,5 @@ int main() {
     string s, t;
     while (getline(f, s) && getline(f, t)) {
         cout << s << '\n' << t << "\n\n";
-        f >> s;
     }
 }
