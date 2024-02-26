@@ -7,16 +7,16 @@ vector<int> tokenize(string& s) {
             c = ' ';
         }
     }
-    
+    istringstream iss(s);
+    int x;
+    while (iss >> x) {
+
+    }
 }
 int main() {
     ifstream f("input");
     string s, t;
     while (f >> s >> t) {
-        replace(s);
-        replace(t);
-        istringstream iss(s), itt(t);
-        vector<int> sv, tv;
-
+        
     }
 }
