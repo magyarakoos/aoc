@@ -2,6 +2,8 @@
 using namespace std;
 using point = array<int, 2>;
 
+bool drop()
+
 int main() {
     ifstream f("input");
     string s;
@@ -47,9 +49,7 @@ int main() {
 
     while (1) {
         int x = 500, y = 0;
-        while (1) {
-            if (x)
-        }
+        
     }
     
     cout << p1;
