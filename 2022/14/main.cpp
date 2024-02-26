@@ -2,7 +2,9 @@
 using namespace std;
 using point = array<int, 2>;
 
-bool drop()
+bool drop(int x, int y, const vector<string>&, grid) {
+    
+}
 
 int main() {
     ifstream f("input");
