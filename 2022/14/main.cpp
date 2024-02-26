@@ -18,7 +18,7 @@ int main() {
         }
     }
 
-    int minx = INT_MAX, miny = INT_MAX,
+    int minx = INT_MAX, miny = INT_MAX, _PC_REC_MAX_XFER_SIZE
 
     for (const auto& worm : v) {
         for (auto [x, y] : worm) {
