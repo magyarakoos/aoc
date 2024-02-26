@@ -9,6 +9,8 @@ int main() {
     while (getline(f, s)) {
         vector<point> worm;
         istringstream iss(s);
-        while ()
+        while (iss >> s) {
+            if ()
+        }
     }
 }
