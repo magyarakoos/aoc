@@ -7,10 +7,11 @@ int main() {
     string s;
     vector<vector<point>> v;
     while (getline(f, s)) {
-        vector<point> worm;
+        v.push_back({});
         istringstream iss(s);
         while (iss >> s) {
-            if ()
+            if (s == "->") continue;
+            v.back().push_back({});
         }
     }
 }
