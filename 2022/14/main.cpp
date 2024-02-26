@@ -34,8 +34,9 @@ int main() {
 
     for (const auto& worm : v) {
         for (int i = 1; i < worm.size(); i++) {
-            for (int y = min(worm[i - 1][1], worm[i][1]; y <= min(worm[i][])))
-            for (int x = min(worm[i - 1][0], worm[i][0]);)
+            for (int y = min(worm[i - 1][1], worm[i][1]); y <= min(worm[i - 1][1], worm[i][1]); y++) {
+                for (int x = min(worm[i - 1][0], worm[i][0]);)
+            }
         }
     }    
 }
