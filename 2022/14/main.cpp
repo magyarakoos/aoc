@@ -58,6 +58,7 @@ int main() {
         cout << "\x1B[2J\x1B[H";
         for (const string& line : grid) cout << line << '\n';
         sleep(1);
+        cout << p1 << '\n';
     }
     cout << p1;
 }
