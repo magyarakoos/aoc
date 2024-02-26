@@ -3,7 +3,7 @@ using namespace std;
 using point = array<int, 2>;
 
 bool drop(int x, int y, const vector<string>&, grid) {
-    
+
 }
 
 int main() {
@@ -48,11 +48,6 @@ int main() {
     for (const string& line : grid) cout << line << '\n';
 
     int p1 = 0;
-
-    while (1) {
-        int x = 500, y = 0;
-        
-    }
-    
+    while (drop(500, 0)) p1++;
     cout << p1;
 }
