@@ -13,6 +13,7 @@ vector<int> tokenize(string& s) {
     while (iss >> x) v.push_back(x);
     return v;
 }
+
 int main() {
     ifstream f("input");
     string s, t;
