@@ -2,22 +2,19 @@
 using namespace std;
 
 void replace(string& s) {
-
+    for (char& c : s) {
+        if (c == '[' || c == ']' || c == ',') {
+            c = ' ';
+        }
+    }
 }
 int main() {
     ifstream f("input");
     string s, t;
     while (f >> s >> t) {
-        for (char& c : s) {
-            if (c == '[' || c == ']' || c == ',') {
-                c = ' ';
-            }
-        }
-        for (char& c : t) {
-            if (c == '[' || c == ']' || c == ',') {
-                c = ' ';
-            }
-        }
+        replace(s);
+        replace(t);
         
+        istringstream
     }
 }
