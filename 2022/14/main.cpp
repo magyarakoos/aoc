@@ -12,7 +12,7 @@ bool drop(int x, int y) {
     if (y + 1 == N) return 0;
     if (grid[y + 1][x] == '.') return drop(x, y + 1);
     else if (grid[y + 1][x - 1] == '.') return drop(x - 1, y + 1);
-    else if (grid[y + 1][x + 1] == '.') return drop (x + 1, y + 1);
+    else if (grid[y + 1][x + 1] == '.') return drop(x + 1, y + 1);
     grid[y][x] = 'o';
     return 1;
 }
