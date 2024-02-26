@@ -30,17 +30,17 @@ int main() {
 
     cout << minx << ' ' << maxx << ' ' << maxy << '\n';
 
-    int N = maxy, M = maxx - minx + 1;
+    int N = maxy + 1, M = maxx - minx + 1;
 
     cout << N << ' ' << M << "\n\n";
-    
+
     vector<string> grid(N, string(M, '.'));
 
     for (const auto& worm : v) {
         for (size_t i = 1; i < worm.size(); i++) {
             for (int y = min(worm[i - 1][1], worm[i][1]); y <= max(worm[i - 1][1], worm[i][1]); y++) {
                 for (int x = min(worm[i - 1][0], worm[i][0]); x <= max(worm[i - 1][0], worm[i][0]); x++) {
-                    cout << x << ' ' << y << '\n';
+                    cout << x - minx << ' ' << y << '\n';
                 }
             }
             cout << '\n';
