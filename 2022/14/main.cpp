@@ -57,7 +57,7 @@ int main() {
     while (1) {
         cout << "\x1B[2J\x1B[H";
         for (const string& line : grid) cout << line << '\n';
-        sleep(1);
+        cout << grid[0][500 - minx] << '\n';
 
         drop(500 - minx, 0);
         if (grid[0][500 - minx] != '0') p2++;
