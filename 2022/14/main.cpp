@@ -61,7 +61,8 @@ int main() {
         this_thread::sleep_for(chrono::milliseconds(250));
 
         drop(500 - minx, 0);
-        if (grid[0][500 - minx] != 'o') p2++;
+        p2++;
+        if (grid[0][500 - minx] != 'o') 
         else break;
     }
     cout << p2;
