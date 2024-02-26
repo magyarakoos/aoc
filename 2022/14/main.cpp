@@ -36,7 +36,8 @@ int main() {
             maxy = max(maxy, y);
         }
     }
-    maxy++; minx += 1000; maxx += 2001;
+    maxy++; minx--; maxx ++;
+    minx += 10;
     N = maxy + 2, M = maxx - minx + 1;
     grid.assign(N, string(M, '.'));
     for (const auto& worm : v) {
@@ -52,5 +53,7 @@ int main() {
 
     for (const string& line : grid) cout << line << '\n';
 
-    while ((drop(500, 0), grid[0][500 - minx]))
+    int p2 = 0;
+    while ((drop(500, 0), grid[0][500 - minx] != '0')) p2++;
+    cout << p2;
 }
