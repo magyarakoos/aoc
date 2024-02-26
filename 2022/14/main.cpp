@@ -52,11 +52,12 @@ int main() {
     }
     replace(grid.back().begin(), grid.back().end(), '.', '#');
 
-    for (const string& line : grid) cout << line << '\n';
 
     int p2 = 0;
     while (1) {
-        
+        cout << "\x1B[2J\x1B[H";
+        for (const string& line : grid) cout << line << '\n';
+        sleep(1);
 
         drop(500 - minx, 0);
         if (grid[0][500 - minx] != '0') p2++;
