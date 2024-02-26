@@ -41,6 +41,8 @@ int main() {
         }
     }
 
+    for (const string& line : grid) cout << line << '\n';
+
     int p1 = 0;
 
     while (1) {
