@@ -52,5 +52,5 @@ int main() {
 
     for (const string& line : grid) cout << line << '\n';
 
-    while ()
+    while ((drop(500, 0), grid[0][500 - minx]))
 }
