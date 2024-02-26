@@ -53,11 +53,10 @@ int main() {
         }
     }
 
-    for (const string& line : grid) cout << line << '\n';
-
     int p1 = 0;
     while (drop(500, 0)) {
-        
+        cout << "\x1B[2J\x1B[H";
+        for (const string& line : grid) cout << line << '\n';
     }
     cout << p1;
 }
