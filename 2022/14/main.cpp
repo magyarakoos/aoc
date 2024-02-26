@@ -29,5 +29,5 @@ int main() {
         }
     }
 
-    
+    cout << minx << ',' << miny << ' ' << maxx << ',' << maxy << '\n';
 }
