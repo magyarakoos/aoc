@@ -8,6 +8,10 @@ struct Token {
     };
 };
 
+vector<Token> tokenize(string s) {
+    
+}
+
 int main() {
     ifstream f("input");
     string s, t;
