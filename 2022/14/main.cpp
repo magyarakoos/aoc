@@ -6,9 +6,6 @@ int N, M;
 vector<string> grid;
 
 bool drop(int x, int y) {
-
-    cout << x << ' ' << y << endl;
-
     if (y + 1 == N) return 0;
     if (grid[y + 1][x] == '.') return drop(x, y + 1);
     else if (grid[y + 1][x - 1] == '.') return drop(x - 1, y + 1);
@@ -32,9 +29,7 @@ int main() {
             });
         }
     }
-
     int minx = 500, maxx = 500, maxy = 0;
-
     for (const auto& worm : v) {
         for (auto [x, y] : worm) {
             minx = min(minx, x);
