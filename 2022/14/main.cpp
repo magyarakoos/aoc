@@ -34,7 +34,7 @@ int main() {
 
     for (const auto& worm : v) {
         for (int i = 1; i < worm.size(); i++) {
-            for (int j = wo)
+            for (int x = min(worm[i]))
         }
     }    
 }
