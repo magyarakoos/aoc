@@ -10,6 +10,7 @@ bool drop(int x, int y) {
     if (grid[y + 1][x] == '.') return drop(x, y + 1);
     else if (grid[y + 1][x - 1] == '.') return drop(x - 1, y + 1);
     else if (grid[y + 1][x + 1] == '.') return drop (x + 1, y + 1);
+    grid[y][x] = 'o';
     return 1;
 }
 
@@ -55,6 +56,8 @@ int main() {
     for (const string& line : grid) cout << line << '\n';
 
     int p1 = 0;
-    while (drop(500, 0)) p1++;
+    while (drop(500, 0)) {
+        
+    }
     cout << p1;
 }
