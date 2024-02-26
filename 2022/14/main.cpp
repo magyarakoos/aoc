@@ -56,9 +56,11 @@ int main() {
 
     int p2 = 0;
     while (1) {
+        
+
         drop(500 - minx, 0);
-        if ()
-        grid[0][500 - minx] != '0';
+        if (grid[0][500 - minx] != '0') p2++;
+        else break;
     }
     cout << p2;
 }
