@@ -18,7 +18,7 @@ int main() {
         }
     }
 
-    int minx = 500, miny = 0, maxx = INT_MIN, maxy = INT_MIN;
+    int minx = 500, miny = 0, maxx = 500, maxy = 0;
 
     for (const auto& worm : v) {
         for (auto [x, y] : worm) {
@@ -29,5 +29,5 @@ int main() {
         }
     }
 
-    cout << minx << ',' << miny << ' ' << maxx << ',' << maxy << '\n';
+    
 }
