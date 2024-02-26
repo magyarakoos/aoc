@@ -7,7 +7,7 @@ vector<string> grid;
 
 bool drop(int x, int y) {
     if (y + 1 == N) return 0;
-    
+
 }
 
 int main() {
@@ -35,7 +35,7 @@ int main() {
             maxy = max(maxy, y);
         }
     }
-
+    maxy++; minx--; maxx++;
     N = maxy + 1, M = maxx - minx + 1;
     grid.assign(N, string(M, '.'));
 
