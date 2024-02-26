@@ -4,7 +4,8 @@ using namespace std;
 int main() {
     ifstream f("input");
     string s, t;
-    while (getline(f, s) && getline(f, t)) {
+    while (f >> s >> t) {
         cout << s << '\n' << t << "\n\n";
+        f >> s;
     }
 }
