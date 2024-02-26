@@ -46,7 +46,7 @@ int main() {
     int p1 = 0;
 
     while (1) {
-        int x
+        int x = 500, y = 0;
         while (1) {
 
         }
