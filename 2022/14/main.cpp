@@ -18,7 +18,7 @@ int main() {
         }
     }
 
-    int minx = 500, miny = 0, maxx = 500, maxy = 0;
+    int minx = 500, maxx = 500, maxy = 0;
 
     for (const auto& worm : v) {
         for (auto [x, y] : worm) {
@@ -35,7 +35,7 @@ int main() {
         for (int i = 1; i < worm.size(); i++) {
             for (int y = min(worm[i - 1][1], worm[i][1]); y <= max(worm[i - 1][1], worm[i][1]); y++) {
                 for (int x = min(worm[i - 1][0], worm[i][0]); x <= max(worm[i - 1][0], worm[i][0]); x++) {
-                    grid[y - miny][x - minx] = '#';
+                    grid[y][x - minx] = '#';
                 }
             }
         }
