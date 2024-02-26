@@ -28,7 +28,11 @@ int main() {
         }
     }
 
+    cout << minx << ' ' << maxx << ' ' << maxy << '\n';
+
     int N = maxy, M = maxx - minx + 1;
+
+    cout << N << ' ' << M << "\n\n";
     vector<string> grid(N, string(M, '.'));
 
     for (const auto& worm : v) {
