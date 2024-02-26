@@ -18,7 +18,7 @@ int main() {
         }
     }
 
-    int minx = INT_MAX, miny = INT_MAX, maxx = INT_MIN, maxy = INT_MIN;
+    int minx = INT_MAX, maxx = INT_MIN, maxy = INT_MIN;
 
     for (const auto& worm : v) {
         for (auto [x, y] : worm) {
