@@ -62,8 +62,7 @@ int main() {
 
         drop(500 - minx, 0);
         p2++;
-        if (grid[0][500 - minx] != 'o') 
-        else break;
+        if (grid[0][500 - minx] == 'o') break;
     }
     cout << p2;
 }
