@@ -7,8 +7,14 @@ int main() {
     while (f >> s >> t) {
         for (char& c : s) {
             if (c == '[' || c == ']' || c == ',') {
-                c = 
+                c = ' ';
             }
         }
+        for (char& c : s) {
+            if (c == '[' || c == ']' || c == ',') {
+                c = ' ';
+            }
+        }
+        
     }
 }
