@@ -11,7 +11,9 @@ int main() {
         istringstream iss(s);
         while (iss >> s) {
             if (s == "->") continue;
-            v.back().push_back({});
+            v.back().push_back({
+                stoi(s.substr(0, s.find(','))
+            });
         }
     }
 }
