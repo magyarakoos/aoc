@@ -32,5 +32,8 @@ int main() {
     int N = maxy - miny + 1, M = maxx - minx + 1;
     vector<vector<char>> grid(N, vector<char>(M));
 
-    
+    for (const auto& worm : v) {
+        for (auto [x, y] : worm) {
+        }
+    }    
 }
