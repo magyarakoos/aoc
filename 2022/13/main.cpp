@@ -14,7 +14,8 @@ int main() {
     while (f >> s >> t) {
         replace(s);
         replace(t);
+        istringstream iss(s), itt(t);
+        vector<int> sv, tv;
         
-        istringstream
     }
 }
