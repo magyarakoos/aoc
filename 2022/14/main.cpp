@@ -2,8 +2,11 @@
 using namespace std;
 using point = array<int, 2>;
 
-bool drop(int x, int y, const vector<string>&, grid) {
-    if ()
+int N, M;
+vector<string> grid;
+
+bool drop(int x, int y) {
+    if (y + 1 == )
 }
 
 int main() {
@@ -32,8 +35,8 @@ int main() {
         }
     }
 
-    int N = maxy + 1, M = maxx - minx + 1;
-    vector<string> grid(N, string(M, '.'));
+    N = maxy + 1, M = maxx - minx + 1;
+    grid.assign(N, string(M, '.'));
 
     for (const auto& worm : v) {
         for (size_t i = 1; i < worm.size(); i++) {
