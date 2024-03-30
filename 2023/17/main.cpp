@@ -1,79 +1,72 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 using point = array<int, 2>;
-using props = array<int, 6>;
+using route = array<int, 5>;
 
-const vector<point> moves{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-vector<vector<int>> grid;
-vector<vector<int>> costs;
+point dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
+
+vector<vector<int>> g;
 int N, M;
 
-#define contains(m, e) m.count(e)
-
-int dijkstra() {
-    priority_queue<props, vector<props>, greater<props>> pq;
-    map<props, int> dists;
-
-    // start pozíció
-    pq.push({0, 0, 0, 0, 0, 0});
+int dijkstra(int min_step, int max_step) {
+    vector<vector<array<int, 2>>> prev(N, vector<array<int, 2>>(M));
+    vector<vector<int>> distS(N, vector<int>(M, INT_MAX));
+    priority_queue<route, vector<route>, greater<route>> pq;
+    distS[0][1] = g[0][1];
+    //distS[1][0] = g[1][0];
+    pq.push({g[0][1], 1, 0, 1, 1});
+    //pq.push({g[1][0], 0, 1, 2, 1});
 
     while (!pq.empty()) {
-        props curr = pq.top(); pq.pop();
-        int len = curr[0], straight = curr[1];
-        point pos{curr[2], curr[3]}, dir{curr[4], curr[5]};
-        cout << pq.size() << '\n';
+        auto [dist, x, y, dir, step] = pq.top();
+        pq.pop();
 
-        if (pos[0] == N - 1 && pos[1] == M - 1) return dists[curr];
+        if (dist != distS[y][x]) continue;
 
-        for (const point move : moves) {
-            // ellentétes irány, visszamenni mindig felesleges
-            if (-dir[0] == move[0] && -dir[1] == move[1])
-                continue;
+        cerr << dist << " " << x << " " << y << " " << dir << " " << step << "\n";
+       
+        for (int d_dir = 0; d_dir < 4; d_dir++) {
+            auto [dx, dy] = dirS[d_dir];
+            auto new_x = dx + x, new_y = dy + y;
 
-            int new_straight;
-
-            if (dir[0] == move[0] && dir[1] == move[1]) {
-                // azonos irány, meg kell növelni
-                new_straight = straight + 1;
-            } else {
-                // új irány, hossza 1
-                new_straight = 1;
-            }
-
-            // nem lehetséges, hosszabb az egyenes mint 3 
-            if (new_straight > 3) continue;
-
-            // új pozíció, adott irányba elmozdítjuk
-            point new_pos{pos[0] + move[0], pos[1] + move[1]};
-
-            // kiment a pályáról
-            if (new_pos[0] < 0 || new_pos[1] < 0 || new_pos[0] >= N || new_pos[1] >= M)
-                continue;
-            
-            int heat_loss = grid[new_pos[0]][new_pos[1]];
-
-            // a mező új lehetséges tulajdonságai, vagy jobb mint az eddigi vagy nem
-            props new_props {
-                dists[curr] + heat_loss,
-                new_straight, 
-                new_pos[0], new_pos[1],
-                move[0], move[1]
-            };
-
-            // ez eddig a legjobb, a mapen beállítjuk és megy a heapre is
-            if (dists[new_props] == 0 || new_props[0] < dists[new_props]) {
-                dists[new_props] = new_props[0];
-                pq.push(new_props);
+            if ((step <  min_step && d_dir != dir) || 
+                (step == max_step && dir == d_dir) ||
+                d_dir == (dir + 2) % 4 ||
+                new_x < 0 || new_y < 0 || new_x >= M || new_y >= N) continue;
+        
+            int new_dist = dist + g[new_y][new_x];
+            if (new_dist < distS[new_y][new_x]) {
+                distS[new_y][new_x] = new_dist;
+                pq.push({new_dist, new_x, new_y, d_dir, (d_dir == dir ? step + 1 : 1)});
+                prev[new_y][new_x] = {x, y};
             }
         }
     }
-    // hibás input
-    return false;
+
+    vector<vector<char>> grid(N, vector<char>(M));
+
+    cout << "\n";
+    int curr_x = M - 1, curr_y = N - 1;
+    while (!(curr_x == 0 && curr_y == 0)) {
+        grid[curr_y][curr_x] = '#';
+        auto [next_x, next_y] = prev[curr_y][curr_x];
+        curr_x = next_x;
+        curr_y = next_y;
+    }
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            if (grid[i][j] == '#') cout << '.';
+            else cout << g[i][j];
+        }
+        cout << "\n";
+    }
+
+    return distS[N - 1][M - 1];
 }
 
 int main() {
-    fstream f("input");
+    ifstream f("input");
     string s;
 
     while (f >> s) {
@@ -81,11 +74,10 @@ int main() {
         for (char c : s) {
             v.push_back(c - '0');
         }
-        grid.push_back(v);
+        g.push_back(v);
     }
 
-    N = grid.size(), M = grid[0].size();
-    costs.resize(N, vector<int>(M));
+    N = g.size(), M = g[0].size();
 
-    cout << dijkstra() << '\n';
+    cout << dijkstra(0, 3) << "\n";
 }
