@@ -70,4 +70,11 @@ int main() {
     N = g.size(), M = g[0].size();
 
     cout << dijkstra() << "\n";
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            cout << (g[i][j] == -1 ? "." : to_string(g[i][j]));
+        }
+        cout << "\n";
+    }
 }
