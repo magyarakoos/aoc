@@ -9,7 +9,7 @@ vector<vector<int>> g;
 int N, M;
 
 int dijkstra() {
-    
+    vector<bool> vis(N)
 }
 
 int main() {
