@@ -28,7 +28,8 @@ int dijkstra(int min_step, int max_step) {
             int nx = x + dx, ny = y + dy;
 
             // 1. nem mehet ki a pályáról
-            // 2. 
+            // 2. nem fordulhat 180 fokot
+            // 3. amennyiben ez nem a legelső lépés, 
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
                 dir == (i + 2) % 4 || (
                 (i != dir && step <  min_step) ||
