@@ -25,6 +25,8 @@ ll solve(const string& s, const vector<int>& v) {
         
         if (k != 0) {
             if (0 < j) {
+                dot
+            } els e{
                 
             }
         }
