@@ -29,9 +29,9 @@ int dijkstra() {
 
             int nx = x + dx, ny = y + dy;
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
-                (dir != -1 && i != dir && (i + 1) % 4 != dir && ()) {
-                continue;
-            }
+                (dir != -1 && i != dir && (i + 1) % 4 != dir && )
+                ) continue;
+
             int ndist = dist + g[ny][nx];
             if (distS[ny][nx] > ndist) {
                 distS[ny][nx] = ndist;
