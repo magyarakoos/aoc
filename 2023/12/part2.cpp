@@ -3,7 +3,10 @@ using namespace std;
 using ll = unsigned long long;
 
 ll solve(const string& s, const vector<int>& v) {
-    
+
+    int N = s.size(), M = v.size(), O = 
+
+    vector<vector<vector<ll>>> dp()
 }
 
 int main() {
