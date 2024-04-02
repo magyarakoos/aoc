@@ -59,7 +59,7 @@ int main() {
         istringstream iss(t2);
         vector<int> v;
         while (iss >> t) v.push_back(stoi(t));
-        p2 += solve(s2, v);
+        p2 += solve(s2 + ".", v);
     }
     cout << p2;*/
     ifstream f("input");
