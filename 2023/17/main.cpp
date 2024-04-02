@@ -17,7 +17,11 @@ int dijkstra() {
     pq.push({0, 0, 0});
 
     while (!pq.empty()) {
-        
+        auto [dist, x, y] = pq.top(); pq.pop();
+
+        if (dist != distS[y][x]) continue;
+
+        for (auto [d])
     }
 }
 
