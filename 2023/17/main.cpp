@@ -29,8 +29,7 @@ int dijkstra() {
         if (dist != distS[{x, y, dir, step}]) continue;
 
         if (x == M - 1 && y == N - 1) {
-            result = distS[{x, y, dir, step}];
-            break;
+            return distS[{x, y, dir, step}];
         }
 
         for (int i = 0; i < 4; i++) {
@@ -53,16 +52,7 @@ int dijkstra() {
             }
         }
     }
-
-    int cx = M - 1, cy = N - 1;
-    while (cx || cy) {
-        g[cy][cx] = -1;
-        auto [nx, ny] = prev[cy][cx];
-        cx = nx;
-        cy = ny;
-    }
-
-    return result;
+    return -1;
 }
 
 int main() {
