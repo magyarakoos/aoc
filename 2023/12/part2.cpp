@@ -11,8 +11,9 @@ ll solve(const string& s, const vector<int>& v) {
     vector<vector<vector<ll>>> dp(N, vector<vector<ll>>(M, vector<ll>(O)));
 
     for (int k = 0; k < O; k++) {
-
-
+        if (s[0] == '#') {
+            
+        }
     }
 
     for (int i = 1; i < N; i++) {
