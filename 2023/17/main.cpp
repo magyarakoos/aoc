@@ -19,7 +19,7 @@ int dijkstra(int min_step, int max_step) {
 
         if (dist != distS[{x, y, dir, step}]) continue;
 
-        if (x == M - 1 && y == N - 1) {
+        if (x == M - 1 && y == N - 1 && step >= min_step) {
             return distS[{x, y, dir, step}];
         }
 
