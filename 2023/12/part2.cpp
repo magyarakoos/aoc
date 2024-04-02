@@ -6,10 +6,8 @@ ll solve(const string& s, const vector<int>& v) {
     int N = s.size(), 
         M = v.size(), 
         O = *max_element(v.begin(), v.end());
-    // dp[i][j][k] = hányféleképpen lehet elrendezni
-    // a [0..i) tartományát a stringnek, 
-    // az első j-1 csoport teljes lefedésével,
-    // amennyiben ez a j. csoport k. eleme
+    // dp[i][j][k] = hányféleképpen lehet elrendezni a [0..i) tartományát a stringnek, 
+    // az első j-1 csoport teljes lefedésével, amennyiben ez a j. csoport k. eleme
     vector<vector<vector<ll>>> dp(N, vector<vector<ll>>(M, vector<ll>(O + 1)));
     if (s[0] == '#' || s[0] == '?') {
         dp[0][0][1] = 1;
@@ -21,22 +19,13 @@ ll solve(const string& s, const vector<int>& v) {
     for (int j = 0; j < M; j++) {
     for (int k = 0; k <= v[j]; k++) {
         ll dot_count = 0, hash_count = 0;
-        // hash csak akkor lehet, ha a jelenlegi szakasznak legalább az első eleme
         if (k) {
-            // ebben az esetben egy karakterrel visszább, 
-            // a jelenlegi csoportnak eggyel előbbi elemét folytatjuk
             hash_count += dp[i - 1][j][k - 1];
         } else {
-            // dot nem lehet része szakasznak, így csak akkor pozitív az értéke ha k = 0
             if (j) {
-                // amennyiben ez nem a legelső csoport, 
-                // dot elhelyezhető az előző csoport után, 
-                // így annak az összértékét hozzáadhatjuk
                 dot_count += dp[i - 1][j - 1][v[j - 1]];
                 dot_count += dp[i - 1][j][0];
             } else {
-                // ha viszont még csak a legelső csoportnál tartunk
-                // dot csak akkor helyezhető el, ha eddig egy hash sem volt
                 dot_count += s.substr(0, i + 1).find('#') == s.npos;
             }
         }
