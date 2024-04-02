@@ -13,7 +13,7 @@ int main() {
     while (f >> s >> t) {
         string s2 = s, t2 = t;
         for (int i = 0; i < 5; i++) {
-            s2 +=
+            s2 += 
         }
     }
 }
