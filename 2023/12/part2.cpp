@@ -43,9 +43,11 @@ ll solve(const string& s, const vector<int>& v) {
     }}}
 
     for (int i = 0; i < N; i++) {
-    for (int j = 0; j < M; j++) {
-        
-    }
+        for (int j = 0; j < M; j++) {
+            for (int k = 0; k < O; k++) {
+                cout << dp[i][j]
+            }
+        }
     }
 
     return dp.back().back().front();
