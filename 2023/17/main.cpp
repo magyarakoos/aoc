@@ -53,7 +53,7 @@ int dijkstra() {
         cy = ny;
     }
 
-    return distS.back().back();
+    return distS[{M - 1, N - 1}]
 }
 
 int main() {
