@@ -19,6 +19,7 @@ int main() {
         replace(t2.begin(), t2.end(), ',', ' ');
         istringstream iss(t2);
         vector<int> v;
-        while (iss >> t2) v.push_back(stoi(t2));
+        while (iss >> t) v.push_back(stoi(t));
+
     }
 }
