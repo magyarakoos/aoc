@@ -24,7 +24,9 @@ ll solve(const string& s, const vector<int>& v) {
         int dot_count  = 0, hash_count = 0;
         
         if (k != 0) {
-            
+            if (0 < j) {
+                
+            }
         }
     }}}
 }
