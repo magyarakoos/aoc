@@ -14,6 +14,8 @@ int main() {
         string s2 = s, t2 = t;
         for (int i = 0; i < 4; i++) {
             s2 += "?" + s;
+            t2 += "," + t;
         }
+        replace(t2.begin(), t2.end(), ",")
     }
 }
