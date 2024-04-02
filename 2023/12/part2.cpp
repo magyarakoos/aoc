@@ -2,7 +2,7 @@
 using namespace std;
 using ll = unsigned long long;
 
-ll solve(const string& s, const vector<int>& groupS) {
+ll solve(const string& s, const vector<int>& v) {
 
 }
 
@@ -20,6 +20,6 @@ int main() {
         istringstream iss(t2);
         vector<int> v;
         while (iss >> t) v.push_back(stoi(t));
-
+        p2 += solve(s2, v);
     }
 }
