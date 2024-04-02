@@ -8,7 +8,7 @@ int main() {
     f >> s; getline(f, s);
     r.erase(remove_if(r.begin(), r.end(), ::isspace), r.end());
     s.erase(remove_if(s.begin(), s.end(), ::isspace), s.end());
-    double d = stold(r), t = stold(s);
+    double t = stold(r), t = stold(s);
     cout << d << " " << t << "\n";
     double 
         x1 = (t - sqrt(pow(t, 2) - 4 * d)) / 2,
