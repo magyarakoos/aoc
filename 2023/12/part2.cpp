@@ -43,19 +43,7 @@ ll solve(string s, vector<int> v) {
         if (s[i] == '.' || s[i] == '?') {
             dp[i][j][k] += dot_count;
         }
-
-        cout << i << " " << j << " " << k << " | " << dot_count << " " << hash_count << "\n";
     }}}
-
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < M; j++) {
-            for (int k = 0; k <= v[j]; k++) {
-                cout << dp[i][j][k] << " ";
-            }
-            cout << "\n";
-        }
-        cout << "\n";
-    }
 
     return dp.back().back().front();
 }
