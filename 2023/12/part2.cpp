@@ -6,20 +6,17 @@ ll solve(const string& s, const vector<int>& v) {
     int N = s.size(), 
         M = v.size(), 
         O = *max_element(v.begin(), v.end());
-
     // dp[i][j][k] = hányféleképpen lehet elrendezni
     // a [0..i) tartományát a stringnek, 
     // az első j-1 csoport teljes lefedésével,
     // amennyiben ez a j. csoport k. eleme
     vector<vector<vector<ll>>> dp(N, vector<vector<ll>>(M, vector<ll>(O + 1)));
-
     if (s[0] == '#' || s[0] == '?') {
         dp[0][0][1] = 1;
     }
     if (s[0] == '.' || s[0] == '?') {
         dp[0][0][0] = 1;
     }
-
     for (int i = 1; i < N; i++) {
     for (int j = 0; j < M; j++) {
     for (int k = 0; k <= v[j]; k++) {
@@ -50,7 +47,6 @@ ll solve(const string& s, const vector<int>& v) {
             dp[i][j][k] += dot_count;
         }
     }}}
-
     return dp.back().back().front();
 }
 
