@@ -27,6 +27,7 @@ ll solve(const string& s, const vector<int>& v) {
 
         ll dot_count = 0, hash_count = 0;
         
+        // hash csak akkor lehet, ha 
         if (k) {
             hash_count += dp[i - 1][j][k - 1];
         } else {
