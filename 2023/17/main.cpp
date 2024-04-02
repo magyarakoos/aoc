@@ -20,6 +20,10 @@ int dijkstra() {
 
         if (dist != distS[y][x]) continue;
 
+        if (x == M - 1 && y == N - 1) {
+            
+        }
+
         for (auto [dx, dy] : dirS) {
             int nx = x + dx, ny = y + dy;
             if (nx < 0 || ny < 0 || nx >= M || ny >= N) {
