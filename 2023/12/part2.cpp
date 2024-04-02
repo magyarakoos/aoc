@@ -12,7 +12,8 @@ ll solve(const string& s, const vector<int>& v) {
 
     for (int k = 0; k < O; k++) {
         if (s[0] == '#') {
-            
+            dp[0][0][k] = k == 1;
+            continue;
         }
     }
 
