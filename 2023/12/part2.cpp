@@ -10,13 +10,16 @@ ll solve(const string& s, const vector<int>& v) {
 
     vector<vector<vector<ll>>> dp(N, vector<vector<ll>>(M, vector<ll>(O)));
 
+    dp[0][0][1] = 1;
+
     for (int k = 0; k < O; k++) {
         if (s[0] == '#') {
             dp[0][0][k] = k == 1;
-            continue;
         }
 
-        if ()
+        if (s[0] == '.') {
+
+        }
     }
 
     for (int i = 1; i < N; i++) {
