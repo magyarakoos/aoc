@@ -31,8 +31,10 @@ ll solve(const string& s, const vector<int>& v) {
                 dot_count += s.substr(0, i + 1).find('#') == s.npos;
             }
         } else {
-            hash_count = dp[i - 1][j][k - 1];
+            hash_count += dp[i - 1][j][k - 1];
         }
+
+        if (s[i] == '#' || )
     }}}
 }
 
