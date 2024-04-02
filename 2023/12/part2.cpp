@@ -44,7 +44,7 @@ ll solve(string s, vector<int> v) {
             dp[i][j][k] += dot_count;
         }
 
-        
+        cout << i << " "
     }}}
 
     for (int i = 0; i < N; i++) {
