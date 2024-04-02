@@ -8,7 +8,9 @@ ll solve(const string& s, const vector<int>& v) {
         M = v.size(), 
         O = *max_element(v.begin(), v.end());
 
-    vector<vector<vector<ll>>> dp();
+    vector<vector<vector<ll>>> dp(N, vector<vector<ll>>(M, vector<ll>(O)));
+
+    
 }
 
 int main() {
