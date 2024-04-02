@@ -21,7 +21,7 @@ int dijkstra() {
         if (dist != distS[y][x]) continue;
 
         if (x == M - 1 && y == N - 1) {
-            
+            return dist;
         }
 
         for (auto [dx, dy] : dirS) {
@@ -36,6 +36,8 @@ int dijkstra() {
             }
         }
     }
+
+    return INF;
 }
 
 int main() {
