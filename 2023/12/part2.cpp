@@ -10,6 +10,8 @@ int main() {
     ifstream f("input");
     string s, t;
     while (f >> s >> t) {
-        
+        replace(t.begin(), t.end(), ',', ' ');
+        stringstream ss(t);
+
     }
 }
