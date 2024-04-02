@@ -39,7 +39,7 @@ int dijkstra(int min_step, int max_step) {
             int ndist = dist + g[ny][nx];
             state nstate {nx, ny, i, nstep};
 
-            if (!distS.count(nstate) || distS[nstate] > ndist) {
+            if (distS[nstate] > ndist) {
                 distS[nstate] = ndist;
                 pq.push({ndist, nx, ny, i, nstep});
             }
