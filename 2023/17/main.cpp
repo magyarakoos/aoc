@@ -19,10 +19,10 @@ int dijkstra(int min_step, int max_step) {
     while (!pq.empty()) {
         auto [dist, x, y, dir, step] = pq.top(); pq.pop();
 
-        if (dist != distS[{x, y, dir, step}]) continue;
+        if (dir != -1 && dist != distS[x][y][dir][step]) continue;
 
         if (x == M - 1 && y == N - 1 && step >= min_step) {
-            return distS[{x, y, dir, step}];
+            return distS[x][y][dir][step];
         }
 
         for (int i = 0; i < 4; i++) {
