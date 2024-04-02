@@ -42,7 +42,7 @@ ll solve(const string& s, const vector<int>& v) {
         }
     }}}
 
-    return dp[N - 1][]
+    return dp.back().back().front();
 }
 
 int main() {
