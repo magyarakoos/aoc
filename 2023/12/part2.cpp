@@ -15,6 +15,8 @@ ll solve(const string& s, const vector<int>& v) {
             dp[0][0][k] = k == 1;
             continue;
         }
+
+        if ()
     }
 
     for (int i = 1; i < N; i++) {
