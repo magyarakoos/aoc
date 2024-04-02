@@ -8,7 +8,7 @@ vector<vector<int>> g;
 int N, M;
 
 int dijkstra(int min_step, int max_step) {
-    map<state, int> distS;
+    unordered_map<state, int> distS;
     priority_queue<route, vector<route>, greater<route>> pq;
 
     distS[{0, 0, 0, 0}] = 0;
@@ -60,5 +60,5 @@ int main() {
 
     N = g.size(), M = g[0].size();
 
-    cout << dijkstra() << "\n";
+    cout << dijkstra(0, 3) << "\n";
 }
