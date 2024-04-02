@@ -34,9 +34,8 @@ ll solve(const string& s, const vector<int>& v) {
             // dot nem lehet része szakasznak, így csak akkor pozitív az értéke ha k = 0
             if (j) {
                 // amennyiben ez nem a legelső csoport, 
-                // dot elhelyezhető az előző csoport után,
+                // dot elhelyezhető az előző csoport után
                 dot_count += dp[i - 1][j - 1][v[j - 1]];
-                // vagy
                 dot_count += dp[i - 1][j][0];
             } else {
                 dot_count += s.substr(0, i + 1).find('#') == s.npos;
