@@ -89,7 +89,8 @@ def ways(s, target_runs):
 
     for i in range(n):
         for j in range(m):
-            for k in target_runs
+            for k in range(target_runs[j]+1):
+                print()
 
     return ans
 
