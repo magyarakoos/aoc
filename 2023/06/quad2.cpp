@@ -7,6 +7,6 @@ int main() {
     f >> r; getline(f, r);
     f >> s; getline(f, s);
     long long t = stoll(
-        
-    )
+        istringstream(r | views)
+    );
 }
