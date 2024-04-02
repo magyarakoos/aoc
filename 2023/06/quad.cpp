@@ -17,7 +17,6 @@ int main() {
         x1 = ceil(x1)  + (x1 == floor(x1));
         x2 = floor(x2) - (x2 == floor(x2));
         p1 *= x2 - x1 + 1;
-        if (j + 1 == 100000) cout << p1;
     }
     }
 }
