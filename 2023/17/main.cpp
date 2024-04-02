@@ -24,7 +24,9 @@ int dijkstra() {
             return dist;
         }
 
-        for (auto [dx, dy] : dirS) {
+        for (int i = 0; i < 4; i++) {
+            auto [dx, dy] = dirS[i];
+
             int nx = x + dx, ny = y + dy;
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
                 (dir != -1 && ())) {
