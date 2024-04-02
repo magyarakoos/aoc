@@ -24,6 +24,8 @@ int dijkstra() {
     while (!pq.empty()) {
         auto [dist, x, y, dir, step] = pq.top(); pq.pop();
 
+        cout << x << " " << y << " " << pq.size() << "\n";
+
         if (dist != distS[{x, y, dir, step}]) continue;
 
         if (x == M - 1 && y == N - 1) {
