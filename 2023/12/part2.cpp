@@ -72,20 +72,15 @@ int main() {
         p2 += solve(s2, v);
     }
     cout << p2;*/
-        /*ifstream f("input");
+    ifstream f("input");
     string s, t;
     ll p2 = 0;
     while (f >> s >> t) {
-        string s2 = s, t2 = t;
-        for (int i = 0; i < 4; i++) {
-            s2 += "?" + s;
-            t2 += "," + t;
-        }
-        replace(t2.begin(), t2.end(), ',', ' ');
-        istringstream iss(t2);
+        replace(t.begin(), t.end(), ',', ' ');
+        istringstream iss(t);
         vector<int> v;
         while (iss >> t) v.push_back(stoi(t));
-        p2 += solve(s2, v);
+        p2 += solve(s, v);
     }
-    cout << p2;*/
+    cout << p2;
 }
