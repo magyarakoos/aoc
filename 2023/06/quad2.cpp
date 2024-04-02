@@ -6,4 +6,5 @@ int main() {
     string s;
     getline(f, s);
     long long d = stoll(s);
+    cout << d;
 }
