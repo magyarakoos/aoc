@@ -62,5 +62,5 @@ int main() {
 
     N = g.size(), M = g[0].size();
 
-    cout << dijkstra(0, 3) << "\n" << dijkstra(4, 10);
+    cout << dijkstra(1, 3) << "\n" << dijkstra(4, 10);
 }
