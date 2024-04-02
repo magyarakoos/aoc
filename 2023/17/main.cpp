@@ -14,7 +14,11 @@ int dijkstra() {
     priority_queue<route, vector<route>, greater<route>> pq;
 
     distS[0][0] = 0;
-    pq.push({})
+    pq.push({0, 0, 0});
+
+    while (!pq.empty()) {
+        
+    }
 }
 
 int main() {
