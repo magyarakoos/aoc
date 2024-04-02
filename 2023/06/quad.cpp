@@ -13,7 +13,7 @@ int main() {
         double x1 = (t[i] - sqrt(t[i]*t[i]-4*d[i])) / 2;
         double x2 = (t[i] + sqrt(t[i]*t[i]-4*d[i])) / 2;
         x1 += x1 == floor(x1);
-        x2 += x2 == floor(x2);
+        x2 -= x2 == floor(x2);
         x1 = ceil(x1);
         x2 = floor(x2);
         p1 *= x2 - x1 + 1;
