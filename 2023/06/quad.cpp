@@ -6,7 +6,7 @@ int main() {
     string s;
     f >> s;
     vector<int> t({0}), d({0});
-    while (f >> t.back()) {
+    while (f >> s && s[0] != '') {
         t.push_back(0);
     }
 }
