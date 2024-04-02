@@ -16,6 +16,9 @@ int main() {
             s2 += "?" + s;
             t2 += "," + t;
         }
-        replace(t2.begin(), t2.end(), ",")
+        replace(t2.begin(), t2.end(), ',', ' ');
+        istringstream iss(t2);
+        vector<int> v;
+        
     }
 }
