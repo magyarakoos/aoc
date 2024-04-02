@@ -12,7 +12,7 @@ int main() {
     for (int i = 0; i < t.size(); i++) {
         double x1 = (t[i] - sqrt(t[i]*t[i]-4*d[i])) / 2;
         double x2 = (t[i] + sqrt(t[i]*t[i]-4*d[i])) / 2;
-        cout << x1 << " " << x2 << "\n";
+        x1 += x1 == floor(x1);
     }
     cout << p1;
 }
