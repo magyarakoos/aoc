@@ -13,7 +13,7 @@ int dijkstra(int min_step, int max_step) {
     map<state, int> distS;
     priority_queue<route, vector<route>, greater<route>> pq;
 
-    distS[0][0][] = 0;
+    distS[0][0][0][0] = 0;
     pq.push({0, 0, 0, -1, 0});
 
     while (!pq.empty()) {
