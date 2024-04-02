@@ -8,6 +8,7 @@ vector<vector<int>> g;
 int N, M;
 
 int dijkstra(int min_step, int max_step) {
+    vector<vector<vector<vector<int>>>> distS(N, vector<vector<vector<int>>())
     map<state, int> distS;
     priority_queue<route, vector<route>, greater<route>> pq;
 
