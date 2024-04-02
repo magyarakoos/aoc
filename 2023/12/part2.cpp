@@ -14,9 +14,7 @@ int main() {
         stringstream ss(t);
         int n;
         vector<int> v;
-        while (ss >> n) {
-            v.push_back(n);
-        }
+        while (ss >> n) v.push_back(n);
         
     }
 }
