@@ -17,18 +17,18 @@ ll solve(const string& s, const vector<int>& v) {
         dp[0][0][0] = 1;
     }
 
-   for (int i = 1; i < N; i++) {
+    for (int i = 1; i < N; i++) {
     for (int j = 0; j < M; j++) {
     for (int k = 0; k < O; k++) {
 
         int dot_count  = 0, hash_count = 0;
         
-        if (k != 0) {
+        if (!k) {
             if (0 < j) {
                 dot_count += dp[i - 1][j - 1][v[j - 1]];
                 dot_count += dp[i - 1][j - 1][0];
             } else {
-
+                dot_count += all_of()
             }
         }
     }}}
