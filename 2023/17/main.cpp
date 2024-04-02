@@ -12,7 +12,7 @@ int dijkstra() {
     vector<vector<int>> distS(N, vector<int>(M, INF));
     priority_queue<route, vector<route>, greater<route>> pq;
 
-    vector<vector<array<int, 2>>> prev(N, vector<int>(M));
+    vector<vector<array<int, 2>>> prev(N, vector<array<int, 2>>(M));
 
     distS[0][0] = 0;
     pq.push({0, 0, 0, 0, 0});
@@ -45,7 +45,7 @@ int dijkstra() {
     }
 
     int cx = M - 1, cy = N - 1;
-    while (cx && cy) {
+    while (cx || cy) {
         g[cy][cx] = -1;
         auto [nx, ny] = prev[cy][cx];
         cx = nx;
