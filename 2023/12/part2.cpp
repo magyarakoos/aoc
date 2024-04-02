@@ -14,8 +14,9 @@ int main() {
         replace(t.begin(), t.end(), ',', ' ');
         stringstream ss(t);
         int n;
-        vector<int> v;
+        vector<int> v, w;
         while (ss >> n) v.push_back(n);
-        p2 += solve(s+s+s+s+s, {});
+        for (int i = 0; i < 5;)
+        p2 += solve(s, {});
     }
 }
