@@ -10,21 +10,14 @@ vector<vector<int>> g;
 int N, M;
 
 int dijkstra() {
-    priority_queue<route, vector<route>, greater<route>> pq;
-
     map<state, int> distS;
-
-    vector<vector<array<int, 2>>> prev(N, vector<array<int, 2>>(M));
+    priority_queue<route, vector<route>, greater<route>> pq;
 
     distS[{0, 0, 0, 0}] = 0;
     pq.push({0, 0, 0, 0, 0});
 
-    int result = INF;
-
     while (!pq.empty()) {
         auto [dist, x, y, dir, step] = pq.top(); pq.pop();
-
-        cout << x << " " << y << " " << pq.size() << "\n";
 
         if (dist != distS[{x, y, dir, step}]) continue;
 
@@ -45,10 +38,8 @@ int dijkstra() {
             state nstate {nx, ny, i, nstep};
 
             if (!distS.count(nstate) || distS[nstate] > ndist) {
-
                 distS[nstate] = ndist;
                 pq.push({ndist, nx, ny, i, nstep});
-                prev[ny][nx] = {x, y};
             }
         }
     }
@@ -70,11 +61,4 @@ int main() {
     N = g.size(), M = g[0].size();
 
     cout << dijkstra() << "\n";
-
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < M; j++) {
-            cout << (g[i][j] == -1 ? "." : to_string(g[i][j]));
-        }
-        cout << "\n";
-    }
 }
