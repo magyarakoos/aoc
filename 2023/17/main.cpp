@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
-using point = array<int, 2>;
 using route = array<int, 3>;
 
-constexpr point dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
+constexpr array<int, 2> dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
 constexpr int INF = 1e9;
 
 vector<vector<int>> g;
@@ -29,7 +28,7 @@ int dijkstra() {
             int ndist = dist + g[ny][nx];
             if (distS[ny][nx] > ndist) {
                 distS[ny][nx] = ndist;
-                pq.push({ndist, })
+                pq.push({ndist, nx, ny});
             }
         }
     }
