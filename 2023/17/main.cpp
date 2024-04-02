@@ -37,10 +37,9 @@ int dijkstra(int min_step, int max_step) {
 
             int nstep = (i == dir ? step + 1 : 1);
             int ndist = dist + g[ny][nx];
-            state nstate {nx, ny, i, nstep};
 
-            if (distS[nstate] > ndist) {
-                distS[nstate] = ndist;
+            if (distS[nx][ny][i][nstep] > ndist) {
+                distS[nx][ny][i][nstep] = ndist;
                 pq.push({ndist, nx, ny, i, nstep});
             }
         }
