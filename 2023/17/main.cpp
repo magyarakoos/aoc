@@ -11,8 +11,8 @@ int dijkstra(int min_step, int max_step) {
     map<state, int> distS;
     priority_queue<route, vector<route>, greater<route>> pq;
 
-    distS[{0, 0, 0, 0}] = 0;
-    pq.push({0, 0, 0, 0, 0});
+    distS[{0, 0, -1, 0}] = 0;
+    pq.push({0, 0, 0, -1, 0});
 
     while (!pq.empty()) {
         auto [dist, x, y, dir, step] = pq.top(); pq.pop();
@@ -33,7 +33,7 @@ int dijkstra(int min_step, int max_step) {
             int nx = x + dx, ny = y + dy;
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
                 dir == (i + 2) % 4 ||
-                (i != dir && step <= min_step) ||
+                (i != dir && step < min_step) ||
                 (i == dir && step >= max_step)) continue;
 
             int nstep = (i == dir ? step + 1 : 1);
