@@ -14,8 +14,6 @@ int main() {
         r += s;
     }
     long long d = stoll(r), p2 = 0;
-    for (int i = 0; i < t; i++) {
-        if (i * (t - i) > d) p2++;
-    }
+
     cout << p2;
 }
