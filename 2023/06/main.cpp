@@ -3,19 +3,23 @@ using namespace std;
 
 int main() {
     ifstream f("input");
-    string r, s;
+    vector<int> t, d;
+    string s;
+    int n;
     f >> s;
     while ((f >> s) && s[0] != 'D') {
-        r += s;
+        t.push_back(stoi(s));
     }
-    long long t = stoll(r);
-    r.clear();
-    while (f >> s) {
-        r += s;
+    while (f >> n) {
+        d.push_back(n);
     }
-    long long d = stoll(r), p2 = 0;
-    for (int i = 0; i < t; i++) {
-        if (i * (t - i) > d) p2++;
+    int p1 = 1;
+    for (int i = 0; i < t.size(); i++) {
+        int ways = 0;
+        for (int j = 1; j < t[i]; j++) {
+            if (j * (t[i] - j) > d[i]) ways++;
+        }
+        p1 *= ways;
     }
-    cout << p2;
+    cout << p1;
 }
