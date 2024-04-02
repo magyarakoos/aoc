@@ -2,8 +2,7 @@
 using namespace std;
 using ll = unsigned long long;
 
-ll solve(string s, vector<int> v) {
-
+ll solve(const string& s, const vector<int>& v) {
 
     int N = s.size(), 
         M = v.size(), 
@@ -71,7 +70,7 @@ int main() {
         istringstream iss(t);
         vector<int> v;
         while (iss >> t) v.push_back(stoi(t));
-        p2 += solve(s, v);
+        p2 += solve(s + ".", v);
     }
     cout << p2;
 }
