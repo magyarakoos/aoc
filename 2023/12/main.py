@@ -89,7 +89,7 @@ def ways(s, target_runs):
 
     for i in range(n):
         for j in range(m):
-            for k in tar
+            for k in target_runs
 
     return ans
 
