@@ -5,5 +5,5 @@ int main() {
     ifstream f("input");
     string s;
     getline(f, s);
-    long long d = stoll(istringstream(s) >> std::ws);
+    long long d = stoll(s);
 }
