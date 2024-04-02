@@ -9,4 +9,7 @@ int main() {
     while (f >> s && s[0] != 'D') t.push_back(stoi(s));
     while (f >> s) d.push_back(stoi(s));
     
+    for (int i = 0; i < t.size(); i++) {
+        
+    }
 }
