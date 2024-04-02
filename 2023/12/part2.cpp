@@ -9,12 +9,13 @@ ll solve(const string& s, const vector<int>& groupS) {
 int main() {
     ifstream f("input");
     string s, t;
+    ll p2 = 0;
     while (f >> s >> t) {
         replace(t.begin(), t.end(), ',', ' ');
         stringstream ss(t);
         int n;
         vector<int> v;
         while (ss >> n) v.push_back(n);
-        
+        p2 += solve(s+s+s+s+s, {});
     }
 }
