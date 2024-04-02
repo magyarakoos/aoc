@@ -41,6 +41,8 @@ ll solve(const string& s, const vector<int>& v) {
             dp[i][j][k] += dot_count;
         }
     }}}
+
+    return dp[N - 1][]
 }
 
 int main() {
