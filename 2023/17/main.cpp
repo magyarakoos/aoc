@@ -32,9 +32,11 @@ int dijkstra(int min_step, int max_step) {
 
             int nx = x + dx, ny = y + dy;
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
-                dir == (i + 2) % 4 ||
-                (i != dir && step < min_step) ||
-                (i == dir && step >= max_step)) continue;
+                dir == (i + 2) % 4 || (
+                dir != -1 && 
+                ((i != dir && step < min_step) ||
+                (i == dir && step >= max_step))
+                )) continue;
 
             int nstep = (i == dir ? step + 1 : 1);
             int ndist = dist + g[ny][nx];
