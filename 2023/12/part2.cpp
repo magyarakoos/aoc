@@ -4,9 +4,11 @@ using ll = unsigned long long;
 
 ll solve(const string& s, const vector<int>& v) {
 
-    int N = s.size(), M = v.size(), O = 
+    int N = s.size(), 
+        M = v.size(), 
+        O = *max_element(v.begin(), v.end());
 
-    vector<vector<vector<ll>>> dp()
+    vector<vector<vector<ll>>> dp();
 }
 
 int main() {
