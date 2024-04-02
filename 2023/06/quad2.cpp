@@ -7,4 +7,5 @@ int main() {
     f >> r; getline(f, r);
     f >> s; getline(f, s);
     replace(r.begin(), r.end(), ' ', ' ');
+    filter
 }
