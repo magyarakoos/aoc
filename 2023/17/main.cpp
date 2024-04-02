@@ -11,7 +11,7 @@ int N, M;
 
 int dijkstra() {
     vector<vector<bool>> vis(N, vector<bool>(M));
-    vector<vector<int>> dist()
+    vector<vector<int>> distS(N, vector<int>(M, INF));
 }
 
 int main() {
