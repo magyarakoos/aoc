@@ -46,7 +46,7 @@ ll solve(const string& s, const vector<int>& v) {
 }
 
 int main() {
-    /*ifstream f("input");
+    ifstream f("input");
     string s, t;
     ll p2 = 0;
     while (f >> s >> t) {
@@ -59,19 +59,8 @@ int main() {
         istringstream iss(t2);
         vector<int> v;
         while (iss >> t) v.push_back(stoi(t));
-        p2 += solve(s2 + ".", v);
-    }
-    cout << p2;*/
-    ifstream f("input");
-    string s, t;
-    ll p2 = 0;
-    while (f >> s >> t) {
-        replace(t.begin(), t.end(), ',', ' ');
-        istringstream iss(t);
-        vector<int> v;
-        while (iss >> t) v.push_back(stoi(t));
         v.push_back(0);
-        p2 += solve(s + ".", v);
+        p2 += solve(s2 + ".", v);
     }
     cout << p2;
 }
