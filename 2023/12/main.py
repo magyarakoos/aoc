@@ -87,6 +87,10 @@ def ways(s, target_runs):
 
     ans = dp[n-1][-1][0]
 
+    for i in range(n):
+        for j in range(m):
+            for k in tar
+
     return ans
 
 
