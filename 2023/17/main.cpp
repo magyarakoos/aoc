@@ -22,7 +22,7 @@ int dijkstra() {
     while (!pq.empty()) {
         auto [dist, x, y, dir, step] = pq.top(); pq.pop();
 
-        if (dist != distS[y][x]) continue;
+        if (dist != dist[{}]) continue;
 
         if (x == M - 1 && y == N - 1) {
             break;
