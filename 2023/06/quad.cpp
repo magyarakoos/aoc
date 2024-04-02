@@ -17,5 +17,5 @@ int main() {
         x2 = floor(x2) - (x2 == floor(x2));
         p1 *= x2 - x1 + 1;
     }
-    cout << ((long long)p1);
+    cout << p1;
 }
