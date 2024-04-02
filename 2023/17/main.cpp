@@ -12,17 +12,17 @@ int N, M;
 int dijkstra() {
     priority_queue<route, vector<route>, greater<route>> pq;
 
-    map<state, int> dist;
+    map<state, int> distS;
 
     vector<vector<array<int, 2>>> prev(N, vector<array<int, 2>>(M));
 
-    dist[{0, 0, 0, 0}] = 0;
+    distS[{0, 0, 0, 0}] = 0;
     pq.push({0, 0, 0, 0, 0});
 
     while (!pq.empty()) {
         auto [dist, x, y, dir, step] = pq.top(); pq.pop();
 
-        if (dist != dist[{}]) continue;
+        if (dist != distS[{x, y, dir, step}]) continue;
 
         if (x == M - 1 && y == N - 1) {
             break;
