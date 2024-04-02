@@ -29,7 +29,7 @@ ll solve(const string& s, const vector<int>& v) {
                 dot_count += dp[i - 1][j - 1][0];
             } else {
                 string t = s.substr(0, i + 1);
-                dot_count += s.substr(0, i + 1).find('#');
+                dot_count += t.find('#');
             }
         }
     }}}
