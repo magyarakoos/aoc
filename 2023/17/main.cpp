@@ -12,7 +12,7 @@ int dijkstra() {
     vector<vector<int>> distS(N, vector<int>(M, INF));
     priority_queue<route, vector<route>, greater<route>> pq;
 
-    vector<vector<int>>
+    vector<vector<int>> prev(N, vector<int>(M));
 
     distS[0][0] = 0;
     pq.push({0, 0, 0, 0, 0});
@@ -25,7 +25,7 @@ int dijkstra() {
         cout << x << " " << y << " " << step << "\n";
 
         if (x == M - 1 && y == N - 1) {
-            return dist;
+            break;
         }
 
         for (int i = 0; i < 4; i++) {
@@ -43,7 +43,9 @@ int dijkstra() {
         }
     }
 
-    return INF;
+    
+
+    return 0;
 }
 
 int main() {
