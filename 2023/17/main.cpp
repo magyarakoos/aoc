@@ -29,10 +29,9 @@ int dijkstra(int min_step, int max_step) {
             int nx = x + dx, ny = y + dy;
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
                 dir == (i + 2) % 4 || (
-                dir != -1 && 
-                ((i != dir && step < min_step) ||
-                (i == dir && step >= max_step))
-                )) continue;
+                (i != dir && step <  min_step) ||
+                (i == dir && step >= max_step)
+                ) && dir != -1) continue;
 
             int nstep = (i == dir ? step + 1 : 1);
             int ndist = dist + g[ny][nx];
