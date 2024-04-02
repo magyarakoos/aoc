@@ -25,7 +25,8 @@ ll solve(const string& s, const vector<int>& v) {
         
         if (k != 0) {
             if (0 < j) {
-                dot_count += 
+                dot_count += dp[i - 1][j - 1][v[j - 1]];
+                dot_count += dp[i - 1][j - 1][0];
             } else {
 
             }
