@@ -17,16 +17,6 @@ ll solve(const string& s, const vector<int>& v) {
         dp[0][0][0] = 1;
     }
 
-    for (int k = 0; k < O; k++) {
-        if (s[0] == '#') {
-            dp[0][0][k] = k == 1;
-        }
-
-        if (s[0] == '.') {
-
-        }
-    }
-
     for (int i = 1; i < N; i++) {
     for (int j = 0; j < M; j++) {
     for (int k = 0; k < O; k++) {
