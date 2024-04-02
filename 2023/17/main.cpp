@@ -39,8 +39,9 @@ int dijkstra() {
                 dir == (i + 2) % 4 ||
                 (i == dir && step >= 3)) continue;
 
+            if (!distS.count({}))
+
             int ndist = dist + g[ny][nx];
-            if ()
             if (distS[] > ndist) {
                 distS[ny][nx] = ndist;
                 pq.push({ndist, nx, ny, i, (i == dir ? step + 1 : 1)});
