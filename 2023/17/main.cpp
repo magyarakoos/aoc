@@ -25,8 +25,10 @@ int dijkstra(int min_step, int max_step) {
 
         for (int i = 0; i < 4; i++) {
             auto [dx, dy] = dirS[i];
-
             int nx = x + dx, ny = y + dy;
+
+            // 1. nem mehet ki a pályáról
+            // 2. 
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
                 dir == (i + 2) % 4 || (
                 (i != dir && step <  min_step) ||
