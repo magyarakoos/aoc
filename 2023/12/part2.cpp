@@ -12,6 +12,6 @@ int main() {
     while (f >> s >> t) {
         replace(t.begin(), t.end(), ',', ' ');
         stringstream ss(t);
-
+        
     }
 }
