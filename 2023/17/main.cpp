@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 using point = array<int, 2>;
-using route = array<int, 5>;
+using route = array<int, 3>;
 
 constexpr point dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
 constexpr int INF = 1e9;
