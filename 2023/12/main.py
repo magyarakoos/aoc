@@ -8,8 +8,6 @@ ss = []
 target_runs = []
 for line in lines:
     parts = line.split(" ")
-    parts[0] = "?".join([parts[0]] * 5)
-    parts[1] = ",".join([parts[1]] * 5)
 
     ss.append(parts[0])
     target_runs.append(list(map(int, parts[1].split(","))))
