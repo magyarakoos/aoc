@@ -29,8 +29,8 @@ int dijkstra(int min_step, int max_step) {
             int nx = x + dx, ny = y + dy;
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
                 dir == (i + 2) % 4 ||
-                (i != dir && step  < min_step) ||
-                (i == dir && step == max_step)) continue;
+                (i != dir && step <= min_step) ||
+                (i == dir && step >= max_step)) continue;
 
             int nstep = (i == dir ? step + 1 : 1);
             int ndist = dist + g[ny][nx];
@@ -60,5 +60,5 @@ int main() {
 
     N = g.size(), M = g[0].size();
 
-    cout << dijkstra(0, 3) << "\n" << dijkstra(3, 10);
+    cout << dijkstra(-1, 3) << "\n" << dijkstra(3, 10);
 }
