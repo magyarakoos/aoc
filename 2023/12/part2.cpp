@@ -43,6 +43,8 @@ ll solve(string s, vector<int> v) {
         if (s[i] == '.' || s[i] == '?') {
             dp[i][j][k] += dot_count;
         }
+
+        
     }}}
 
     for (int i = 0; i < N; i++) {
