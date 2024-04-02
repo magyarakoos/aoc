@@ -10,7 +10,8 @@ int main() {
     while (f >> s) d.push_back(stoi(s));
     int p1 = 1;
     for (int i = 0; i < t.size(); i++) {
-        float x1 = -t[i] - sqrt(t[i]*t[i]-4*)
+        double x1 = -t[i] - sqrt(t[i]*t[i]-4*d[i]);
+
     }
     cout << p1;
 }
