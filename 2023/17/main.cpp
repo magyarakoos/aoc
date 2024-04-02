@@ -43,7 +43,8 @@ int dijkstra() {
         }
     }
 
-    
+    int cx = M - 1, cy = N - 1;
+    while ()
 
     return 0;
 }
