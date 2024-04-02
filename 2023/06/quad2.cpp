@@ -7,7 +7,5 @@ int main() {
     string r, s;
     f >> r; getline(f, r);
     f >> s; getline(f, s);
-    long long t = stoll(
-        istringstream(r | std::views::)
-    );
+    long long t = stoll(istringstream(r) >> std::ws);
 }
