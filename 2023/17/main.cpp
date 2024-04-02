@@ -40,10 +40,11 @@ int dijkstra() {
                 (i == dir && step >= 3)) continue;
 
             int nstep = (i == dir ? step + 1 : 1);
-
             int ndist = dist + g[ny][nx];
+
             if (!distS.count({nx, ny, i, nstep}) || distS[{nx, ny, i, nstep}] > ndist) {
-                distS[ny][nx] = ndist;
+                
+                distS[{nx, ny, i, nstep}] = ndist;
                 pq.push({ndist, nx, ny, i, nstep});
                 prev[ny][nx] = {x, y};
             }
