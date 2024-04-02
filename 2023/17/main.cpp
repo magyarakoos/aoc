@@ -7,7 +7,7 @@ array<int, 2> dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
 vector<vector<int>> g;
 int N, M;
 
-int dijkstra() {
+int dijkstra(int min_step, int max_step) {
     map<state, int> distS;
     priority_queue<route, vector<route>, greater<route>> pq;
 
@@ -29,7 +29,7 @@ int dijkstra() {
             int nx = x + dx, ny = y + dy;
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
                 dir == (i + 2) % 4 ||
-                (i == dir && step >= 3)) continue;
+                (i == dir && step >= max_step)) continue;
 
             int nstep = (i == dir ? step + 1 : 1);
             int ndist = dist + g[ny][nx];
