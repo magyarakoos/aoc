@@ -23,7 +23,7 @@ int dijkstra() {
         if (dist != distS[y][x]) continue;
 
         if (x == M - 1 && y == N - 1) {
-
+            break;
         }
 
         for (int i = 0; i < 4; i++) {
