@@ -3,7 +3,7 @@ using namespace std;
 using ll = unsigned long long;
 
 ll solve(const string& s, const vector<int>& v) {
-
+    
 }
 
 int main() {
@@ -22,4 +22,5 @@ int main() {
         while (iss >> t) v.push_back(stoi(t));
         p2 += solve(s2, v);
     }
+    cout << p2;
 }
