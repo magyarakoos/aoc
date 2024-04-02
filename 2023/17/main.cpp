@@ -29,6 +29,7 @@ int dijkstra() {
             int ndist = dist + g[ny][nx];
             if (distS[ny][nx] > ndist) {
                 distS[ny][nx] = ndist;
+                pq.push({ndist, })
             }
         }
     }
