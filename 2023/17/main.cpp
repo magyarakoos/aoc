@@ -21,7 +21,11 @@ int dijkstra() {
 
         if (dist != distS[y][x]) continue;
 
-        for (auto [d])
+        for (auto [dx, dy] : dirS) {
+            int nx = x + dx, ny = y + dy;
+            if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
+                )
+        }
     }
 }
 
