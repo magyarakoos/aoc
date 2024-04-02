@@ -6,6 +6,7 @@ int main() {
     string r, s;
     f >> r; getline(f, r);
     f >> s; getline(f, s);
-    replace(r.begin(), r.end(), ' ', ' ');
-    filter
+    long long t = stoll(
+        
+    )
 }
