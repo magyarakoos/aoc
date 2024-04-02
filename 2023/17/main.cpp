@@ -22,8 +22,6 @@ int dijkstra() {
 
         if (dist != distS[y][x]) continue;
 
-        cout << x << " " << y << " " << step << "\n";
-
         if (x == M - 1 && y == N - 1) {
             break;
         }
