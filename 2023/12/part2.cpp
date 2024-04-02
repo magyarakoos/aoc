@@ -9,7 +9,7 @@ ll solve(const string& s, const vector<int>& v) {
         O = *max_element(v.begin(), v.end());
 
     vector<vector<vector<ll>>> dp(N, vector<vector<ll>>(M, vector<ll>(O + 1)));
-    
+
     if (s[0] == '#' || s[0] == '?') {
         dp[0][0][1] = 1;
     }
