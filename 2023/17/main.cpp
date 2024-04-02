@@ -44,7 +44,10 @@ int dijkstra() {
     }
 
     int cx = M - 1, cy = N - 1;
-    while ()
+    while (cx && cy) {
+        g[cy][cx] = -1;
+        
+    }
 
     return 0;
 }
