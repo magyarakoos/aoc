@@ -29,7 +29,7 @@ int dijkstra() {
 
             int nx = x + dx, ny = y + dy;
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
-                (dir != -1 && dir == )
+                (dir != -1 && dir == (i + 2) % 4)
                 ) continue;
 
             int ndist = dist + g[ny][nx];
