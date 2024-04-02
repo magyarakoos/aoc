@@ -87,7 +87,7 @@ def ways(s, target_runs):
 
     for i in range(n):
         for j in range(m):
-            for k in range(target_runs[j]+1):
+            for k in range():
                 print(dp[i][j][k],end="")
                 print(" ")
             print()
