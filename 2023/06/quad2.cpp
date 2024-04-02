@@ -9,7 +9,7 @@ int main() {
         r += s;
     }
     long long t = stoll(r);
-    r.clear();
+    r = "";
     while (f >> s) {
         r += s;
     }
