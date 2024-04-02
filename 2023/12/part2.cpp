@@ -27,7 +27,7 @@ ll solve(const string& s, const vector<int>& v) {
 
         ll dot_count = 0, hash_count = 0;
         
-        // hash csak akkor lehet, ha 
+        // hash csak akkor lehet, ha a jelenlegi szakasznak legalább az első eleme
         if (k) {
             hash_count += dp[i - 1][j][k - 1];
         } else {
