@@ -3,7 +3,6 @@ using namespace std;
 using ll = long long;
 
 ll solve(const string& s, const vector<int>& v) {
-
     int N = s.size(), 
         M = v.size(), 
         O = *max_element(v.begin(), v.end());
@@ -24,12 +23,11 @@ ll solve(const string& s, const vector<int>& v) {
     for (int i = 1; i < N; i++) {
     for (int j = 0; j < M; j++) {
     for (int k = 0; k <= v[j]; k++) {
-
         ll dot_count = 0, hash_count = 0;
-        
         // hash csak akkor lehet, ha a jelenlegi szakasznak legalább az első eleme
         if (k) {
-            // ebben az esetben egy karakterrel visszább, a jelenlegi csoportnak e
+            // ebben az esetben egy karakterrel visszább, 
+            // a jelenlegi csoportnak eggyel előbbi elemét folytatjuk
             hash_count += dp[i - 1][j][k - 1];
         } else {
             // dot nem lehet része szakasznak, így csak akkor pozitív az értéke ha k = 0
@@ -45,7 +43,6 @@ ll solve(const string& s, const vector<int>& v) {
                 dot_count += s.substr(0, i + 1).find('#') == s.npos;
             }
         }
-
         if (s[i] == '#' || s[i] == '?') {
             dp[i][j][k] += hash_count;
         }
