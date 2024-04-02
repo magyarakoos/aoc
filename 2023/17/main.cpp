@@ -2,9 +2,7 @@
 using namespace std;
 using state = array<int, 4>;
 using route = array<int, 5>;
-
-constexpr array<int, 2> dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
-constexpr int INF = 1e9;
+array<int, 2> dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
 
 vector<vector<int>> g;
 int N, M;
@@ -43,7 +41,7 @@ int dijkstra() {
             }
         }
     }
-    
+
     return -1;
 }
 
