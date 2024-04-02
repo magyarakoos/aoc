@@ -1,7 +1,7 @@
 from tqdm import tqdm
 from pprint import pprint
 
-with open("./day_12.in") as fin:
+with open("input") as fin:
     lines = fin.read().strip().split("\n")
 
 ss = []
