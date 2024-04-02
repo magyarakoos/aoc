@@ -70,6 +70,7 @@ int main() {
         istringstream iss(t);
         vector<int> v;
         while (iss >> t) v.push_back(stoi(t));
+        v.push_back(0);
         p2 += solve(s + ".", v);
     }
     cout << p2;
