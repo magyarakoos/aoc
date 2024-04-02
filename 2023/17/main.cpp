@@ -10,7 +10,7 @@ int N, M;
 
 int dijkstra() {
     vector<vector<int>> distS(N, vector<int>(M, INF));
-    priority_queue<pair<int, route>, vector<route>, greater<route>> pq;
+    priority_queue<pair<int, route>, vector<pair<int, route>>, greater<pair<int, route>>> pq;
 
     map<route, int> dist;
 
