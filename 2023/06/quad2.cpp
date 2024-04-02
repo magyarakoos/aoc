@@ -5,6 +5,7 @@ int main() {
     ifstream f("input");
     string r, s;
     f >> s;
+    
     while (f >> s && s[0] != 'D') {
         r += s;
     }
