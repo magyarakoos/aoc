@@ -19,12 +19,15 @@ int dijkstra() {
     distS[{0, 0, 0, 0}] = 0;
     pq.push({0, 0, 0, 0, 0});
 
+    int result = INF;
+
     while (!pq.empty()) {
         auto [dist, x, y, dir, step] = pq.top(); pq.pop();
 
         if (dist != distS[{x, y, dir, step}]) continue;
 
         if (x == M - 1 && y == N - 1) {
+            result = distS[{x, y, dir, step}];
             break;
         }
 
@@ -53,7 +56,7 @@ int dijkstra() {
         cy = ny;
     }
 
-    return distS[{M - 1, N - 1}]
+    return result;
 }
 
 int main() {
