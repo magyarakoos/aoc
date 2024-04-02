@@ -42,6 +42,12 @@ ll solve(const string& s, const vector<int>& v) {
         }
     }}}
 
+    for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
+        
+    }
+    }
+
     return dp.back().back().front();
 }
 
