@@ -29,7 +29,7 @@ ll solve(const string& s, const vector<int>& v) {
         
         // hash csak akkor lehet, ha a jelenlegi szakasznak legalább az első eleme
         if (k) {
-            // ebben az esetben egy karakterrel visszább, a
+            // ebben az esetben egy karakterrel visszább, a jelenlegi csoportnak e
             hash_count += dp[i - 1][j][k - 1];
         } else {
             // dot nem lehet része szakasznak, így csak akkor pozitív az értéke ha k = 0
