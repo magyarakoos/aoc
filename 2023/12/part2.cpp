@@ -31,9 +31,9 @@ ll solve(const string& s, const vector<int>& v) {
         if (k) {
             hash_count += dp[i - 1][j][k - 1];
         } else {
-        // dot nem lehet része szakasznak, így csak akkor pozitív az értéke ha k = 0
-            // amennyiben ez nem a legelső csoport,
+            // dot nem lehet része szakasznak, így csak akkor pozitív az értéke ha k = 0
             if (j) {
+                // amennyiben ez nem a legelső csoport, dot lehet ott
                 dot_count += dp[i - 1][j][0];
                 dot_count += dp[i - 1][j - 1][v[j - 1]];
             } else {
