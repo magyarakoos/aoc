@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-using route = array<int, 4>;
+using route = array<int, 5>;
 
 constexpr array<int, 2> dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
 constexpr int INF = 1e9;
@@ -16,7 +16,7 @@ int dijkstra() {
     pq.push({0, 0, 0, 0});
 
     while (!pq.empty()) {
-        auto [dist, x, y, dir] = pq.top(); pq.pop();
+        auto [dist, x, y, dir,] = pq.top(); pq.pop();
 
         if (dist != distS[y][x]) continue;
 
