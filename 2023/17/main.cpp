@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+using state = array<int, 4>;
 using route = array<int, 5>;
 
 constexpr array<int, 2> dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
@@ -10,9 +11,9 @@ int N, M;
 
 int dijkstra() {
     vector<vector<int>> distS(N, vector<int>(M, INF));
-    priority_queue<pair<int, route>, vector<pair<int, route>>, greater<pair<int, route>>> pq;
+    priority_queue<route, vector<route>, greater<route>> pq;
 
-    map<route, int> dist;
+    map<state, int> dist;
 
     vector<vector<array<int, 2>>> prev(N, vector<array<int, 2>>(M));
 
