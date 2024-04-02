@@ -29,7 +29,7 @@ int dijkstra(int min_step, int max_step) {
 
             if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
                 dir == (i + 2) % 4 || (
-                (i != dir && step <  min_step) ||
+                (i != dir && step <=  min_step) ||
                 (i == dir && step >= max_step)
                 ) && dir != -1) continue;
 
