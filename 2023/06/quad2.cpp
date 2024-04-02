@@ -11,7 +11,7 @@ int main() {
     double d = stold(r), t = stold(s);
     cout << d << " " << t << "\n";
     double 
-        x1 = (t - sqrt(t * t - 4 * d)) / 2,
+        x1 = (t - sqrt(pow(t, 2) - 4 * d)) / 2,
         x2 = (t + sqrt(t * t - 4 * d)) / 2;
     cout << x1 << " " << x2 << "\n";
     x1 = ceil(x1)  + (x1 == floor(x1));
