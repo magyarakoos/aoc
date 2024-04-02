@@ -4,8 +4,6 @@ using ll = unsigned long long;
 
 ll solve(string s, vector<int> v) {
 
-    s += ".";
-    v.push_back(0);
 
     int N = s.size(), 
         M = v.size(), 
