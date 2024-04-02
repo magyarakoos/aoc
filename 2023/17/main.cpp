@@ -34,7 +34,7 @@ int dijkstra() {
             int ndist = dist + g[ny][nx];
             if (distS[ny][nx] > ndist) {
                 distS[ny][nx] = ndist;
-                pq.push({ndist, nx, ny, i, (dir == )});
+                pq.push({ndist, nx, ny, i, (i == dir ? step + 1 : 1)});
             }
         }
     }
