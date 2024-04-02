@@ -21,7 +21,7 @@ ll solve(const string& s, const vector<int>& v) {
     for (int j = 0; j < M; j++) {
     for (int k = 0; k <= v[j]; k++) {
 
-        int dot_count = 0, hash_count = 0;
+        ll dot_count = 0, hash_count = 0;
         
         if (k) {
             hash_count += dp[i - 1][j][k - 1];
