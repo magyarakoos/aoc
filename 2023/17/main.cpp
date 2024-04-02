@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-using route = array<int, 3>;
+using route = array<int, 4>;
 
 constexpr array<int, 2> dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
 constexpr int INF = 1e9;
@@ -13,7 +13,7 @@ int dijkstra() {
     priority_queue<route, vector<route>, greater<route>> pq;
 
     distS[0][0] = 0;
-    pq.push({0, 0, 0});
+    pq.push({0, 0, 0, });
 
     while (!pq.empty()) {
         auto [dist, x, y] = pq.top(); pq.pop();
