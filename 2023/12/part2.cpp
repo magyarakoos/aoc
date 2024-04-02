@@ -12,8 +12,8 @@ int main() {
     ll p2 = 0;
     while (f >> s >> t) {
         string s2 = s, t2 = t;
-        for (int i = 0; i < 5; i++) {
-            s2 += 
+        for (int i = 0; i < 4; i++) {
+            s2 += "?" + s;
         }
     }
 }
