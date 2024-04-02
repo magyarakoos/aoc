@@ -24,6 +24,7 @@ ll solve(const string& s, const vector<int>& v) {
         int dot_count = 0, hash_count = 0;
         
         if (!k) {
+            hash_count += dp[i - 1][j][k - 1];
             if (0 < j) {
                 dot_count += dp[i - 1][j - 1][v[j - 1]];
                 dot_count += dp[i - 1][j - 1][0];
@@ -31,10 +32,14 @@ ll solve(const string& s, const vector<int>& v) {
                 dot_count += s.substr(0, i + 1).find('#') == s.npos;
             }
         } else {
-            hash_count += dp[i - 1][j][k - 1];
         }
 
-        if (s[i] == '#' || )
+        if (s[i] == '#' || s[i] == '?') {
+            dp[i][j][k] += hash_count;
+        }
+        if (s[i] == '.' || s[i] == '?') {
+            dp[i][j][k] += dot_count;
+        }
     }}}
 }
 
