@@ -10,14 +10,13 @@ vector<vector<int>> g;
 int N, M;
 
 int dijkstra() {
-    vector<vector<int>> distS(N, vector<int>(M, INF));
     priority_queue<route, vector<route>, greater<route>> pq;
 
     map<state, int> dist;
 
     vector<vector<array<int, 2>>> prev(N, vector<array<int, 2>>(M));
 
-    distS[0][0] = 0;
+    dist[{0, 0, 0, 0}] = 0;
     pq.push({0, 0, 0, 0, 0});
 
     while (!pq.empty()) {
