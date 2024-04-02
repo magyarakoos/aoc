@@ -82,6 +82,8 @@ def ways(s, target_runs):
                     dp[i][j][k] = ans_pound
                 else:
                     dp[i][j][k] = ans_dot + ans_pound
+                
+                print(i + " " + j + " " + k + " | " + )
 
     ans = dp[n-1][-1][0]
 
