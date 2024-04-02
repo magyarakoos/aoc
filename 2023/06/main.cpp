@@ -13,13 +13,15 @@ int main() {
     while (f >> n) {
         d.push_back(n);
     }
-    int p1 = 1;
-    for (int i = 0; i < t.size(); i++) {
-        int ways = 0;
-        for (int j = 1; j < t[i]; j++) {
-            if (j * (t[i] - j) > d[i]) ways++;
+    for (int j = 0; j < 100000; j++) {
+        int p1 = 1;
+        for (int i = 0; i < t.size(); i++) {
+            int ways = 0;
+            for (int j = 1; j < t[i]; j++) {
+                if (j * (t[i] - j) > d[i]) ways++;
+            }
+            p1 *= ways;
         }
-        p1 *= ways;
     }
-    cout << p1;
+    //cout << p1;
 }
