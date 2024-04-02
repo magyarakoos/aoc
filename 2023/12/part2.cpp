@@ -7,6 +7,8 @@ ll solve(string s, vector<int> v) {
     s += ".";
     v.push_back(0);
 
+    cout << s << "\n";
+
     int N = s.size(), 
         M = v.size(), 
         O = *max_element(v.begin(), v.end());
