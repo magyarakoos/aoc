@@ -3,17 +3,17 @@ using namespace std;
 using state = array<int, 4>;
 using route = array<int, 5>;
 array<int, 2> dirS[] = {{0, -1}, {1, 0}, {0, 1}, {-1, 0}};
+constexpr int INF = 1e9;
 
 vector<vector<int>> g;
 int N, M;
 
 int dijkstra(int min_step, int max_step) {
-    vector<vector<vector<vector<int>>>> distS(N, vector<vector<vector<int>>>(M,
-    vector<vector<int>>(4, vector<int>(max_step + 1, INF))));
+    vector<vector<vector<vector<int>>>> distS(N, vector<vector<vector<int>>>(M, vector<vector<int>>(4, vector<int>(max_step + 1, INF))));
     map<state, int> distS;
     priority_queue<route, vector<route>, greater<route>> pq;
 
-    distS[{0, 0, -1, 0}] = 0;
+    distS[0][0][] = 0;
     pq.push({0, 0, 0, -1, 0});
 
     while (!pq.empty()) {
