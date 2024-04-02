@@ -35,8 +35,10 @@ ll solve(const string& s, const vector<int>& v) {
             // dot nem lehet része szakasznak, így csak akkor pozitív az értéke ha k = 0
             if (j) {
                 // amennyiben ez nem a legelső csoport, 
-                // dot elhelyezhető az előző csoport után, így annak az összértékét
+                // dot elhelyezhető az előző csoport után, 
+                // így annak az összértékét hozzáadhatjuk
                 dot_count += dp[i - 1][j - 1][v[j - 1]];
+                // ezen kívül 
                 dot_count += dp[i - 1][j][0];
             } else {
                 // ha viszont még csak a legelső csoportnál tartunk
