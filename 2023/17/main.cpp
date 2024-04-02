@@ -26,8 +26,10 @@ int dijkstra() {
             if (nx < 0 || ny < 0 || nx >= M || ny >= N) {
                 continue;
             }
-            int ndist = dist + distS[ny][nx];
-            if (ndist < dist)
+            int ndist = dist + g[ny][nx];
+            if (distS[ny][nx] > ndist) {
+                distS[ny][nx] = ndist;
+            }
         }
     }
 }
