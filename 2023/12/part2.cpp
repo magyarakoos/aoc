@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = unsigned long long;
+using ll = long long;
 
 ll solve(const string& s, const vector<int>& v) {
 
