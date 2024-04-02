@@ -16,8 +16,7 @@ int main() {
         x2 += x2 == floor(x2);
         x1 = ceil(x1);
         x2 = floor(x2);
-
-        cout << x1 << " " << x2 << "\n";
+        p1 *= x2 - x1 + 1;
     }
     cout << p1;
 }
