@@ -12,6 +12,8 @@ int dijkstra() {
     vector<vector<int>> distS(N, vector<int>(M, INF));
     priority_queue<route, vector<route>, greater<route>> pq;
 
+    vector<vector<int>>
+
     distS[0][0] = 0;
     pq.push({0, 0, 0, 0, 0});
 
