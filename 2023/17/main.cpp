@@ -13,10 +13,10 @@ int dijkstra() {
     priority_queue<route, vector<route>, greater<route>> pq;
 
     distS[0][0] = 0;
-    pq.push({0, 0, 0, 0});
+    pq.push({0, 0, 0, 0, 0});
 
     while (!pq.empty()) {
-        auto [dist, x, y, dir,] = pq.top(); pq.pop();
+        auto [dist, x, y, dir, step] = pq.top(); pq.pop();
 
         if (dist != distS[y][x]) continue;
 
@@ -34,7 +34,7 @@ int dijkstra() {
             int ndist = dist + g[ny][nx];
             if (distS[ny][nx] > ndist) {
                 distS[ny][nx] = ndist;
-                pq.push({ndist, nx, ny, i});
+                pq.push({ndist, nx, ny, i, });
             }
         }
     }
