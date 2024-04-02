@@ -26,7 +26,8 @@ int dijkstra() {
 
         for (auto [dx, dy] : dirS) {
             int nx = x + dx, ny = y + dy;
-            if (nx < 0 || ny < 0 || nx >= M || ny >= N) {
+            if (nx < 0 || ny < 0 || nx >= M || ny >= N ||
+                (dir != -1 && ())) {
                 continue;
             }
             int ndist = dist + g[ny][nx];
