@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <sstream>
 using namespace std;
 
 int main() {
@@ -8,4 +7,5 @@ int main() {
     f >> r; getline(f, r);
     f >> s; getline(f, s);
     long long t = stoll(istringstream(r) >> std::ws);
+    long long d = stoll(istringstream(s) >> std::ws);
 }
