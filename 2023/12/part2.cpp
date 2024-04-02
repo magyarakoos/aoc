@@ -10,7 +10,11 @@ ll solve(const string& s, const vector<int>& v) {
 
     vector<vector<vector<ll>>> dp(N, vector<vector<ll>>(M, vector<ll>(O)));
 
-    
+    for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
+        
+    }
+    }
 }
 
 int main() {
