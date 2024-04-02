@@ -28,7 +28,7 @@ ll solve(const string& s, const vector<int>& v) {
                 dot_count += dp[i - 1][j - 1][v[j - 1]];
                 dot_count += dp[i - 1][j - 1][0];
             } else {
-                dot_count += all_of()
+                dot_count += s.substr(0, i + 1)
             }
         }
     }}}
