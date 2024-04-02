@@ -11,7 +11,7 @@ ll solve(const string& s, const vector<int>& v) {
     // dp[i][j][k] = hányféleképpen lehet elrendezni
     // a [0..i) tartományát a stringnek, 
     // az első j csoport teljes lefedésével,
-    // 
+    // amennyiben ez a
     vector<vector<vector<ll>>> dp(N, vector<vector<ll>>(M, vector<ll>(O + 1)));
 
     if (s[0] == '#' || s[0] == '?') {
