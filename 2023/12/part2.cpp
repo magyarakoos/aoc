@@ -12,6 +12,11 @@ int main() {
     while (f >> s >> t) {
         replace(t.begin(), t.end(), ',', ' ');
         stringstream ss(t);
+        int n;
+        vector<int> v;
+        while (ss >> n) {
+            v.push_back(n);
+        }
         
     }
 }
