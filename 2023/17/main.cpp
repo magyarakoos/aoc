@@ -13,7 +13,7 @@ int dijkstra() {
     priority_queue<route, vector<route>, greater<route>> pq;
 
     distS[0][0] = 0;
-    pq.push({0, 0, 0, -1});
+    pq.push({0, 0, 0, 0});
 
     while (!pq.empty()) {
         auto [dist, x, y, dir] = pq.top(); pq.pop();
