@@ -10,9 +10,11 @@ vector<vector<int>> g;
 int N, M;
 
 int dijkstra() {
-    vector<vector<bool>> vis(N, vector<bool>(M));
     vector<vector<int>> distS(N, vector<int>(M, INF));
     priority_queue<route, vector<route>, greater<route>> pq;
+
+    distS[0][0] = 0;
+    pq.push({})
 }
 
 int main() {
