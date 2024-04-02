@@ -19,10 +19,6 @@ int dijkstra(int min_step, int max_step) {
 
         if (dist != distS[{x, y, dir, step}]) continue;
 
-        if (max_step == 10) {
-            cout << x << " " << y << "\n";
-        }
-
         if (x == M - 1 && y == N - 1) {
             return distS[{x, y, dir, step}];
         }
@@ -66,5 +62,5 @@ int main() {
 
     N = g.size(), M = g[0].size();
 
-    cout << dijkstra(-1, 3) << "\n" << dijkstra(2, 10);
+    cout << dijkstra(0, 3) << "\n" << dijkstra(4, 10);
 }
