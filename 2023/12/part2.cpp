@@ -22,7 +22,7 @@ ll solve(string s, vector<int> v) {
 
     for (int i = 1; i < N; i++) {
     for (int j = 0; j < M; j++) {
-    for (int k = 0; k < O; k++) {
+    for (int k = 0; k <= v[]; k++) {
 
         int dot_count = 0, hash_count = 0;
         
