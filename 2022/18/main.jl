@@ -8,5 +8,7 @@ for (x, y, z) in σ, ρ in Ψ(x, y, z)
         global Σ -= 1
     end
 end
+for ρ in σ
+    m
 println(Σ)
 println(◿)
