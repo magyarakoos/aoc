@@ -16,7 +16,7 @@ for (b, e) in intvs, x in beacons
         push!(beacons2, x)
     end
 end
-
+exit(0)
 intvs2 = []
 for intv in intvs
     i = 1
@@ -33,4 +33,4 @@ for intv in intvs
     end
 end
 
-println(intvs2)
+# println(intvs2)
