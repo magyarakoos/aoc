@@ -1,4 +1,5 @@
 function f(a)
+    zc = zeros(length(a[1])); oc = zeros(length(a[1]))
     for j in eachindex(a[1]), i in eachindex(a)
         if (a[i][j] == 1) global oc[j] += 1
         else global zc[j] += 1 end
@@ -9,7 +10,7 @@ function f(a)
     reverse!(zc)
     b = []; c = []
     for j in eachindex(zc)
-        if zc[j]
+        if zc[j] == 1
             for x in a
                 if x & (1 << (j - 1)) == 0
                     push!(b, x)
@@ -40,5 +41,4 @@ function f(a)
 end
 
 a = [parse.(Int, split(l, "")) for l in eachline("input")]
-zc = zeros(length(a[1])); oc = zeros(length(a[1]))
 f(a)
