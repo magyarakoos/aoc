@@ -1,1 +1,1 @@
-a = m
+a = map(x -> [x[i] for ], readlines("input"))
