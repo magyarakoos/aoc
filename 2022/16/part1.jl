@@ -25,18 +25,19 @@ for (key, rate, values) in f
     end
     global i += 1
 end
-dists = Array{Int}(Int(1e9), length(g) + 1, length(g) + 1)
+dists = Array{Int}(undef, length(g) + 1, length(g) + 1)
 for i in eachindex(g), j in eachindex(g)
     if i == j
         dists[i,j] = 0
     elseif j in g[i]
         dists[i,j] = 1
     else
-        dists[i]
+        dists[i,j] = 1e9
+    end
 end
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
     dists[i,j] = min(dists[i,j], dists[i,k] + dists[k,j])
 end
-for i in eachindex(g), j in eachindex(g)
-    println("$i -> $j = $(dists[i,j])")
-end
+# for i in eachindex(g), j in eachindex(g)
+#     println("$i -> $j = $(dists[i,j])")
+# end
