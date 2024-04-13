@@ -5,6 +5,6 @@ for l in eachline(f)
     a = parse.(Int, split(match(rx, l)[1]))
     b = parse.(Int, split(match(rx, l)[2]))
     sz = length(intersect(a, b))
-    if (sz)
+    global p1 += 
 end
 println(p1)
