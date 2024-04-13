@@ -25,6 +25,6 @@ end
 for i in eachindex(g)
     println("$i : $(g[i])")
 end
-for i in eachindex(g), j in eachindex(g), k in eachindex(g)
-
+for 
+    dists[u][v] = min(dists[u][v], )
 end
