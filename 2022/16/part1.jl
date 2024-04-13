@@ -29,6 +29,12 @@ for u in nodes, v in nodes, k in nodes
     )
 end
 
+for u in nodes, v in nodes 
+    if dists[u][v] == 1 
+        println("$u-$(rates[u]) $v-$(rates[v])")
+    end
+end
+
 t = 30; p1 = 0; u = "AA"
 while true
     best = 0; bestv = ""; bestd = 0
@@ -49,9 +55,3 @@ while true
     println(u)
 end
 println(p1)
-
-for u in nodes, v in nodes 
-    if dists[u][v] == 1 
-        println("$u-$(rates[u]) $v")
-    end
-end
