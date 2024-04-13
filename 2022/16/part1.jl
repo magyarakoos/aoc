@@ -15,3 +15,6 @@ for (rate, values) in f
     end
     global i += 1
 end
+for i in eachindex(g), j in eachindex(g), k in eachindex(g)
+    g[i]
+end
