@@ -12,13 +12,13 @@ for l in eachline(f)
         global p1 += 2 ^ (sz - 1)
     end
     push!(matches, sz)
-    push!(counts, sz != 0 ? 1 : 0)
+    push!(counts, 1)
 end
 for (i, (m, c)) in enumerate(zip(matches, counts)) 
     for j in (i + 1):(i + m)
         if j > length(matches)
             break
         end
-        
+
     end
 end
