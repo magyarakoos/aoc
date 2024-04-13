@@ -41,5 +41,6 @@ end
 
 p1 = 0
 for perm in permutations(todo)
-
+    t = 30
+    for i in 2:length(perm)
 end
