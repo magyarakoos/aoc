@@ -9,7 +9,7 @@ reverse!(oc)
 println(zc)
 println(oc)
 g = 0; e = 0
-for j in length(a[1])
+for j in eachindex(zc)
     println((1 << (j - 1)))
     if zc[j] < oc[j]
         global e |= (1 << (j - 1))
