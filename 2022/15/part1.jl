@@ -49,4 +49,4 @@ for x in beacons, intv in intvs
         global dec += 1
     end
 end
-println(intv[2] - intv[1] + 1 - dec)
+println(sum(map(x->x[2]-x[1] + 1,)) - dec)
