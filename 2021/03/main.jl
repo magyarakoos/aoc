@@ -4,8 +4,10 @@ for j in eachindex(a[1]), i in eachindex(a)
     if (a[i][j] == 1) global oc[j] += 1
     else global zc[j] += 1 end
 end
-reverse!()
+reverse!(zc)
+reverse!(oc)
 g = 0; e = 0
 for j in length(a[1])
+    (z)
 end
 println(g * e)
