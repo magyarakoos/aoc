@@ -8,7 +8,7 @@ reverse!(zc)
 reverse!(oc)
 g = 0; e = 0
 for j in length(a[1])
-    if zc < oc
+    if zc[j] < oc[j]
         global e |= (1 << (j - 1))
     else
         global g |= (1 << (j - 1))
