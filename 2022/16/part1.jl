@@ -41,9 +41,12 @@ end
 
 p1 = 0
 for perm in permutations(todo)
-    t = 30; i = 2
+    t = 30; i = 2; cur = 0
     while i <= length(perm)
         if (t <= dists[perm[i - 1]][perm[i]])
-            
+            break
+        end
+        
     end
+    p1 = max(p1, cur)
 end
