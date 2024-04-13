@@ -17,4 +17,6 @@ for (key, rate, values) in f
         push!(g[key], value)
     end
 end
-for 
+for i in eachindex(g)
+    println("$i : $(g[i])")
+end
