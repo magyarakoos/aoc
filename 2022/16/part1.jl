@@ -26,7 +26,7 @@ for (key, rate, values) in f
     global i += 1
 end
 dists = [typemax(Int) for i in 1:length(g), j in 1:length(g)]
-for i in eachindex(g)
+for i in eachindex(keys)
     dists[i][i] = 1
 end
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
