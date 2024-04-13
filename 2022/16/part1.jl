@@ -8,8 +8,10 @@ f = map(a -> [a[1], parse(Int, a[2]), split(a[3], ", ")],
 g = Dict(); rates = Dict(); dists = Dict()
 keys = []
 for (key, rate, values) in f
-    findfirst(keys, key)
-    
+    i = findfirst(keys, key)
+    if isnothing(i)
+        
+    end
     rates[i] = rate
     g[i] = Vector{String}()
     for value in values
