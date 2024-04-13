@@ -4,7 +4,7 @@
 map(l -> λ(map(x -> parse(Int, x), match(r"(\d+),(\d+),(\d+)", l))), readlines("input"))
 Σ = length(σ) * 6
 for (x, y, z) in σ, ρ in Ψ(x, y, z)
-    println(ρ)
+    println("$x,$y,$z -> $ρ")
     if in(σ, ρ)
         global Σ -= 1
     end
