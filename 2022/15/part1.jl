@@ -23,6 +23,8 @@ function merge(intvs)
     end
     if (length(intvs) != length(intvs2))
         merge(intvs2)
+    else
+        return intvs2
     end
 end
 
@@ -43,3 +45,4 @@ for l in eachline(open("input", "r"))
 end
 
 merge(intvs)
+println(intvs)
