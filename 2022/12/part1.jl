@@ -1,6 +1,6 @@
 f = open("input", "r")
 a = []
 for l in eachline(f)
-    rx = r"Card \d+: ((?:\s)+)"
+    rx = r"Card \d+: ((?:\d+\s+)+)\| ((?:\d+\s+)+)"
     push!(a, parse.(Int, split(l)))
 end
