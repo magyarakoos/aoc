@@ -7,10 +7,10 @@ for l in eachline(f)
 end
 wander = (curr, i) -> begin
     return curr == "ZZZ" ? 0 :
-    1 + 
+    1 + wander(g[curr][inst[i % length(inst)] == 'L' ? 1 : 0], i + 1)
     if (curr == "ZZZ")
         return 0
-    elseif (inst[i % length(inst)] == 'L')
+    elseif ()
         return 1 + wander(g[curr][0], i + 1)
     else
         return 1 + wander(g[curr][1], i + 1)
