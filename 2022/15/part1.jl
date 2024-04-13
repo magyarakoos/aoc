@@ -29,7 +29,7 @@ end
 
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
 const y::Int = 10
-intvs = []; beacons = Set()
+intvs = []; beacons = Set(); beacons_on_y = Set()
 
 for l in eachline(open("input", "r"))
     m = [parse.(Int, match(rx, l)[i]) for i in 1:4]
@@ -42,6 +42,6 @@ for l in eachline(open("input", "r"))
         push!(intvs, (ps[1] - d, ps[1] + d))
     end
 end
-
 intvs = merge(intvs)
+for 
 println(intvs)
