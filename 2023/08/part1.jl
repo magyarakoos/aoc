@@ -1,7 +1,8 @@
 f = open("input", "r")
-(inst = readline(f)
+inst = readline(f)
+readlin
 g = Dict()
-for l in eachline(f)
+for l in eachline(f).skip(1)
     a, b, c = [match(r"(\w+) = \((\w+), (\w+)\)", l)[i] for i in 1:3]
     g[a] = (b, c)
 end
