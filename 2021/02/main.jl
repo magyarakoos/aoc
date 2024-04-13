@@ -5,7 +5,11 @@ println(
 )
 hpos = 0; depth = 0; aim = 0
 for (t, x) in f
-    if t == 'd' 
+    if t == 'd' global aim += x
+    elseif t == 'u' global aim -= x
+    else
+        
+    end
 end
 # for (int i = 0; i < input.Length; i++) {
 #     if (input[i].task == 'd') aim += input[i].x;
