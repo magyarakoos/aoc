@@ -40,10 +40,11 @@ end
 # end
 
 p1 = 0
-for perm in permutations(todo)
+fuck = [["DD", "BB", "JJ", "HH", "EE", "CC"]]
+for perm in fuck
     t = 30; i = 2; cur = 0
     while i <= length(perm)
-        d = dists[perm[i - 1]][perm[i]] + 1
+        d = dists[perm[i - 1]][perm[i]]
         if t < d break end
         cur += (t - d) * rates[perm[i]]
         i += 1
