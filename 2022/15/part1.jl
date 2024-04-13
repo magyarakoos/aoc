@@ -1,6 +1,14 @@
 using IntervalSets
 ∆(a, b) = abs(a[1] - b[1]) + abs(a[2] - b[2])
 ∩(a, b) = 
+
+function overlap(range1, range2)
+    int1 = Interval(range1[1], range1[end])
+    int2 = Interval(range2[1], range2[end])
+    return !isempty(intersect(Interval(a[1], a[2]), Interval))
+end
+
+
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
 const y::Int = 10
 intvs = Set(); beacons = Set(); beacons2 = Set()
