@@ -24,7 +24,7 @@ function →(intvs)
     if (length(intvs) == length(intvs2))
         return intvs2
     end
-    merge(intvs2)
+    →(intvs2)
 end
 
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
@@ -42,7 +42,7 @@ for l in eachline(open("input", "r"))
         push!(intvs, (ps[1] - d, ps[1] + d))
     end
 end
-intv = →←(intvs)[1]
+intvs = →(intvs)
 dec = 0
 for x in beacons
     if intv[1] <= x && x <= intv[2]
