@@ -1,5 +1,5 @@
 f = open("input", "r")
-rx = r"Card \d+: (\d+(?: \d+)*) \| (\d+(?: \d+)*)"
+rx = r"Card \d+: (\d+(?:\s+\d+)*) \| (\d+(?:\s+\d+)*)"
 (a = []; b = [])
 for l in eachline(f)
     push!(a, match(rx, l)[1])
