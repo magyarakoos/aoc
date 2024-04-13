@@ -7,7 +7,7 @@ for l in eachline(f)
     if (sz != 0)
         global p1 += 2 ^ (sz - 1)
     end
-    push!(p2, (sz, 1))
+    push!(p2, [sz, 1])
 end
 for i in eachindex(p2), j in (i + 1):(i + p2[i][1])
     if j > length(p2)
