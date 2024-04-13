@@ -1,3 +1,5 @@
+function wander(curr, i)
+
 f = open("input", "r")
 inst = readline(f)
 readline(f)
