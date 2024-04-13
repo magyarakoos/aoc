@@ -6,6 +6,7 @@ beacons = []
 for l in eachline(open("input", "r"))
     m = [parse.(Int, match(rx, l)[i]) for i in 1:4]
     ps = (m[1], m[2]); pb = (m[3], m[4])
+    push!(beacons)
     if (∆(ps, (ps[1], y)) > ∆(ps, pb))
         continue
     end
