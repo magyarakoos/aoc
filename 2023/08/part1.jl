@@ -7,3 +7,6 @@ for l in eachline(f)
     g[m[1]] = (m[2], m[3])
 end
 (p1 = 0; i = 1; s = "AAA")
+while (s != "ZZZ")
+    if i =
+end
