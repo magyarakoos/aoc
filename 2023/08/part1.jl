@@ -15,3 +15,4 @@ while (s != "ZZZ")
     global s = g[s][inst[i] == 'L' ? 1 : 2]
     i += 1
 end
+println(p1)
