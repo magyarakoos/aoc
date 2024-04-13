@@ -5,3 +5,5 @@ for l in eachline(f)
     push!(a, match(rx, l)[1])
     push!(b, match(rx, l)[2])
 end
+println(a)
+println(b)
