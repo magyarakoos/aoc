@@ -12,7 +12,7 @@ function f(a)
     for j in eachindex(zc)
         if zc[j] == 1
             for x in a
-                if x & (1 << (j - 1)) == 0
+                if reverse(x)[]
                     push!(b, x)
                 else
                     push!(c, x)
