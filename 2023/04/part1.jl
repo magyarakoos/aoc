@@ -1,5 +1,5 @@
 f = open("input", "r")
-rx = r"Card \d+:((?:\s+\d+)+) \|((?:\s+\d+)+)"
+rx = r"Card\s+\d+:((?:\s+\d+)+) \|((?:\s+\d+)+)"
 p1 = 0
 for l in eachline(f)
     a = parse.(Int, split(match(rx, l)[1]))
