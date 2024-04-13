@@ -1,1 +1,1 @@
-f = open("input")
+f = open("input", "r")
