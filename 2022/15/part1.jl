@@ -27,8 +27,8 @@ intvs2 = []
 for intv in intvs
     i = 1
     while i <= length(intvs2)
+        println((intvs2[i], intv))
         if ∩(intvs2[i], intv)
-            println((intvs2[i], intv))
             intvs2[i] = (min(intvs2[i][1], intv[1]), max(intvs2[i][2], intv[2]))
             break
         end
