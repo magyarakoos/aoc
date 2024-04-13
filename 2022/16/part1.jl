@@ -18,11 +18,13 @@ for (key, rate, values) in f
     end
 end
 for i in eachindex(g), j in eachindex(g)
-    if !haskey(g[i], j)
+    if !in(g[i], j)
         g[i][j] = typemax(Int)
     end
 end
-
+for i in eachindex(g)
+    println("$i : $(g[i])")
+end
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
 
 end
