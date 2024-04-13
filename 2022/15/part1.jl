@@ -17,7 +17,7 @@
 #     end
 # end
 
-intv = [(1, 3), ()]
+intv = [(1, 3), (2, 5), (3, 4), (6, 7), (7, 9), (10, 11)]
 
 intvs2 = []
 for intv in intvs
@@ -34,3 +34,5 @@ for intv in intvs
         push!(intvs2, intv)
     end
 end
+
+println(intvs2)
