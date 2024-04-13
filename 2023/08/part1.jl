@@ -6,6 +6,8 @@ for l in eachline(f)
     g[a] = (b, c)
 end
 wander = (curr, i) -> begin
+    return curr == "ZZZ" ? 0 :
+    1 + 
     if (curr == "ZZZ")
         return 0
     elseif (inst[i % length(inst)] == 'L')
