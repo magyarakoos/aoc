@@ -5,7 +5,7 @@ f = map(a -> [a[1], parse(Int, a[2]), split(a[3], ", ")],
         readlines("input")
     )
 )
-g = Dict(); rates = Dict(); dists = Dict()
+g = Dict(); rates = Dict(); dists = Dict{Dict()}()
 keys = []
 for (key, rate, values) in f
     i = findfirst(x -> x == key, keys)
@@ -26,5 +26,5 @@ for (key, rate, values) in f
     global i += 1
 end
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
-    if !haskey(distS, i) end
+    if !haskey(distS, i) distS[] end
 end
