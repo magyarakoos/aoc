@@ -11,7 +11,7 @@ for l in eachline(f)
 end
 p2 = 1
 for s in starts
-    i = 1
+    i = 0
     while (s[3] != 'Z')
         s = g[s][inst[(i % length(inst)) + 1] == 'L' ? 1 : 2]
         println((s, i))
