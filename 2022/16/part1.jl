@@ -5,7 +5,7 @@ f = map(a -> [a[1], parse.(Int, a[2]), split(a[3], ", ")],
         readlines("input")
     )
 )
-g = Dict(); rates = Dict()
+g = Dict(); rates = Dict(); dists = Dict()
 for (key, rate, values) in f
     rates[key] = rate
     g[key] = Vector{String}()
@@ -13,3 +13,5 @@ for (key, rate, values) in f
         push!(g[key], value)
     end
 end
+
+for i in 
