@@ -13,7 +13,7 @@ p2 = 1
 for s in starts
     i = 1
     while (s[3] != 'Z')
-        s = g[s][inst[i % (length(inst) + 1)] == 'L' ? 1 : 2]
+        s = g[s][inst[i % length(inst)] == 'L' ? 1 : 2]
         i += 1
     end
     global p2 = lcm(p2, i - 1)
