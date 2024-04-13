@@ -1,4 +1,3 @@
-
 a = [parse.(Int, split(l, "")) for l in eachline("input")]
 zc = zeros(length(a[1])); oc = zeros(length(a[1]))
 for j in eachindex(a[1]), i in eachindex(a)
@@ -6,7 +5,7 @@ for j in eachindex(a[1]), i in eachindex(a)
     else global zc[j] += 1 end
 end
 for j in eachindex(zc)
-    zc[j] = zc[j] < oc[j] ? 0 : 1
+    zc[j] = zc[j] <= oc[j] ? 0 : 1
 end
 reverse!(zc)
 g = 0; e = 0
