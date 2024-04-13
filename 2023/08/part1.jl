@@ -5,4 +5,6 @@ for l in eachline(f)
     a, b, c = [match(r"\w+", l)[i] for i in 1:3]
     g[a] = (b, c)
 end
-wander = ()
+wander = (curr, i) -> begin
+    
+end
