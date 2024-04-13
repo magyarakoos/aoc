@@ -19,7 +19,10 @@ for (key, rate, values) in f
 end
 for i in eachindex(g), j in eachindex(g)
     if !haskey(g[i], j)
-        
+        g[i][j] = typemax(Int)
+    end
 end
+
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
+
 end
