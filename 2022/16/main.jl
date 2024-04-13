@@ -10,5 +10,6 @@ function issub(s, t)
 end
 s = readline()
 t = lowercase(readline())
-if ()
+if (t[3] == 'x')
+    println(issub(s, t[1:2]))
 println(issub(s, t) || issub(s, ))
