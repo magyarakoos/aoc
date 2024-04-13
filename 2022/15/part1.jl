@@ -28,7 +28,7 @@ function merge(intvs)
 end
 
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
-const y::Int = 10
+const y::Int = 2e6
 intvs = []; beacons = Set()
 
 for l in eachline(open("input", "r"))
