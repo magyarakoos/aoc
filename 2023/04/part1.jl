@@ -12,10 +12,10 @@ for l in eachline(f)
 end
 for (i, (m, c)) in enumerate(p2) 
     for j in (i + 1):(i + m)
-        if j > length(matches)
+        if j > length(p2)
             break
         end
         counts[j] += c
     end
 end
-println((p1, sum(counts)))
+println((p1, sum(p2)))
