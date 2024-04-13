@@ -41,6 +41,8 @@ end
 
 p1 = 0
 for perm in permutations(todo)
-    t = 30
-    for i in 2:length(perm)
+    t = 30; i = 2
+    while i <= length(perm) && t > 0
+        
+    end
 end
