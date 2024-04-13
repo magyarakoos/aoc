@@ -10,7 +10,7 @@ function f(a)
     b = []; c = []
     for j in eachindex(zc)
         if zc[j]
-            push!(c, a[j])
+            
         else
             global e |= (1 << (j - 1))
         end
