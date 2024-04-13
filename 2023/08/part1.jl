@@ -4,7 +4,7 @@ readline(f)
 g = Dict()
 for l in eachline(f)
     m = match(r"(\w+) = \((\w+), (\w+)\)", l)
-    g[m[1]] = (m[2], m[3])
+    g[l[1:3]] = (l[8:10] m[3])
 end
 (p1 = 0; i = 1; s = "AAA")
 while (s != "ZZZ")
