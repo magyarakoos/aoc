@@ -34,8 +34,8 @@ while true
     best = 0; bestv = ""; bestd = 0
     for (v, dist) in dists[u]
         if dist <= t
-            if best < (t - dist) * rates[v]
-                best = (t - dist) * rates[v]
+            if best < (t - dist - 1) * rates[v]
+                best = (t - dist - 1) * rates[v]
                 bestv = v
                 bestd = dist
             end
