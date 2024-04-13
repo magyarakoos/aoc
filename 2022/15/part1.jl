@@ -17,4 +17,6 @@ for (b, e) in intvs, x in beacons
     end
 end
 
-for i in eachindex(intvs), 
+for i in eachindex(intvs), j in eachindex(intvs)
+    
+end
