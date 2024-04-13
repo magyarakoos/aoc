@@ -43,11 +43,11 @@ p1 = 0
 for perm in permutations(todo)
     t = 30; i = 2; cur = 0
     while i <= length(perm)
-        d = dists[perm[i - 1]][perm[i]]
-        if t <= d break end
-        cur += (t - d - 1) * rates[perm[i]]
+        d = dists[perm[i - 1]][perm[i]] + 1
+        if t < d break end
+        cur += (t - d) * rates[perm[i]]
         i += 1
-        t -= d + 1
+        t -= d
     end
     global p1 = max(p1, cur)
     if cur == 1639
