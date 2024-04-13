@@ -5,10 +5,11 @@ f = map(a -> [a[1], parse(Int, a[2]), split(a[3], ", ")],
         readlines("input")
     )
 )
-g = Dict(); rates = Dict(); dists = Dict{String, Dict{String, Int}}()
+g = Dict(); rates = Dict(); dists = Dict()
 nodes = []
 for (key, rate, values) in f
     push!(nodes, key)
-    dists[key]
+    dists[key] = Dict{String, Int}()
     dists[key][key] = 0
+    
 end
