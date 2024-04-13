@@ -35,8 +35,12 @@ while true
     for (v, dist) in dists[u]
         if dist <= t
             if best < (t - dist) * rate[v]
+                best = (t - dist) * rate[v]
+                t -= dist
+                rate[v] = 0
+                
             end
         end
     end
-    
+    if best == 0 break end
 end
