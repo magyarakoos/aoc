@@ -46,7 +46,7 @@ intv = merge(intvs)[1]
 dec = 0
 for x in beacons
     if intv[1] <= x && x <= intv[2]
-        global dec -= 1
+        global dec += 1
     end
 end
 println(intv[2] - intv[1] + 1 - dec)
