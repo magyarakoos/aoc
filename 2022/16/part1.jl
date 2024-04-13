@@ -8,12 +8,13 @@ g = Dict(); rates = Dict(); dists = Dict()
 nodes = []; todo = []
 for (key, rate, values) in f
     push!(nodes, key)
+    if rate != 0
+        push!(todo, key)
+    end
     rates[key] = rate
     g[key] = Vector{String}()
     dists[key] = Dict{String, Int}()
     dists[key][key] = 0
-    if rate != 0
-        
     for value in values
         dists[key][value] = 1
         push!(g[key], value)
@@ -36,3 +37,5 @@ end
 #         println("$u-$(rates[u]) $v-$(rates[v])")
 #     end
 # end
+
+backtrack -> 
