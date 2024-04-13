@@ -15,7 +15,10 @@ for l in eachline(f)
     push!(counts, sz != 0 ? 1 : 0)
 end
 for (i, (m, c)) in enumerate(zip(matches, counts)) 
-    for j in (i + 1):min((i + m)
-
+    for j in (i + 1):(i + m)
+        if j > length(matches)
+            break
+        end
+        
     end
 end
