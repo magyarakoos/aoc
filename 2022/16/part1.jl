@@ -6,28 +6,25 @@ f = map(a -> [a[1], parse(Int, a[2]), split(a[3], ", ")],
     )
 )
 g = Dict(); rates = Dict(); dists = Dict()
-key_list = Vector{String}()  # Renamed from 'keys' to avoid conflicts
+key_list = Vector{String}()
 for (key, rate, values) in f
-    key_str = string(key)  # Convert key to a string
-    i = findfirst(key_list, key_str)
+    i = findfirst(x -> x == key, keys)
     if isnothing(i)
-        push!(key_list, key_str)
-        i = length(key_list)
+        push!(keys, key)
+        i = length(keys)
     end
     rates[i] = rate
     g[i] = Vector{String}()
     for value in values
-        value_str = string(value)  # Convert value to a string
-        j = findfirst(key_list, value_str)
+        j = findfirst(x -> x == value, keys)
         if isnothing(j)
-            push!(key_list, value_str)
-            j = length(key_list)
+            push!(keys, value)
+            j = length(keys)
         end
         push!(g[i], j)
     end
     global i += 1
 end
-
 for i in eachindex(g)
     println(g[i])
 end
