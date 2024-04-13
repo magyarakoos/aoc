@@ -1,4 +1,4 @@
-function issub(s, t)
+function issub(t, s)
     i, j = 1, 1
     while i <= length(s) && j <= length(t)
         if s[i] == t[j]
@@ -11,5 +11,7 @@ end
 s = readline()
 t = lowercase(readline())
 if (t[3] == 'x')
-    println(issub(s, t[1:2]))
-println(issub(s, t) || issub(s, ))
+    println(issub(s, t[1:2]) ? "Yes" : "No")
+else
+    println(issub(s, t) ? "Yes" : "No")
+end
