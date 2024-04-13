@@ -10,8 +10,8 @@ for l in eachline(open("input", "r"))
     end
     d = ∆(ps, pb) - ∆(ps, (ps[1], y))
     if (d >= 0)
-        
-    push!(intvs, (ps[1] - d, ps[1] + d))
+        push!(intvs, (ps[1] - d, ps[1] + d))
+    end
 end
 
 for (b, e) in intvs, x in beacons
@@ -25,8 +25,9 @@ for intv in intvs
     while i <= length(intvs2)
         if (intvs2[i][1] <= intv[1] && intv[1] <= intvs2[i][2]) ||
            (intvs2[i][1] <= intv[2] && intv[2] <= intvs2[i][2])
+            
             println((intvs2[i], intv))
-           intvs2[i] = (min(intvs2[i][1], intv[1]), max(intvs2[i][2], intv[2]))
+            intvs2[i] = (min(intvs2[i][1], intv[1]), max(intvs2[i][2], intv[2]))
            
            break
         end
