@@ -3,7 +3,7 @@ using IntervalSets
 ∆(a, b) = abs(a[1] - b[1]) + abs(a[2] - b[2])
 ∩(a, b) = !isempty(intersect(Interval(a[1], a[2]), Interval(b[1], b[2])))
 
-function merge(intvs)
+function →(intvs)
     intvs2 = []
     for intv in intvs
         i = 1
@@ -42,7 +42,7 @@ for l in eachline(open("input", "r"))
         push!(intvs, (ps[1] - d, ps[1] + d))
     end
 end
-intv = merge(intvs)[1]
+intv = →←(intvs)[1]
 dec = 0
 for x in beacons
     if intv[1] <= x && x <= intv[2]
