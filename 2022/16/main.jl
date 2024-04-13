@@ -9,5 +9,6 @@ function issub(s, t)
     return i > length(s)
 end
 s = readline()
-t = tolower(readline())
-println(issub())
+t = lowercase(readline())
+if ()
+println(issub(s, t) || issub(s, ))
