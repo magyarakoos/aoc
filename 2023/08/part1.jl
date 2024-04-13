@@ -1,2 +1,4 @@
 f = open("input", "r")
-rx = r""
+for l in eachline(f)
+    
+end
