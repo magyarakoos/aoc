@@ -1,4 +1,7 @@
 function wander(curr, i)
+    return curr == "ZZZ" ? 0 :
+    
+end
 
 f = open("input", "r")
 inst = readline(f)
