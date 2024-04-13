@@ -42,7 +42,7 @@ end
 p1 = 0
 for perm in permutations(todo)
     t = 30; i = 2
-    while i <= length(perm) && t > 0
-        
+    while i <= length(perm)
+        dists[i][j]
     end
 end
