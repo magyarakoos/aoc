@@ -14,4 +14,5 @@ for j in length(a[1])
         global g |= (1 << (j - 1))
     end
 end
+
 println(g * e)
