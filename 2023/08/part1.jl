@@ -1,7 +1,7 @@
 function wander(curr, i, inst, g)
     return curr == "ZZZ" ? 0 :
     wander(
-        g[curr][inst[i % (length(inst) + 1)] == 'L' ? 1 : 0], 
+        g[curr][inst[i % (length(inst) + 1)]] == 'L' ? 1 : 0], 
         i + 1, inst, g)
 end
 
