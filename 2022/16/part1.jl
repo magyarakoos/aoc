@@ -42,8 +42,9 @@ while true
         end
     end
     if best == 0 break end
-    curr += best
+    global p1 += best
     global u = bestv
     global t -= bestd
     global rates[u] = 0
 end
+println(p1)
