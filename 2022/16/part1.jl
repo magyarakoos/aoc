@@ -19,7 +19,7 @@ for (key, rate, values) in f
 end
 for u in nodes, v in nodes
     if !haskey(dists[u], v)
-        dists[u][v] = typemax(Int)
+        dists[u][v] = 1e9
     end
 end
 for u in nodes, v in nodes, k in nodes
@@ -29,6 +29,6 @@ for u in nodes, v in nodes, k in nodes
     )
 end
 
-for i in nodes, j in nodes
-    println("$i -> $j = $(dists[i][j])")
-end
+# for i in nodes, j in nodes
+#     println("$i -> $j = $(dists[i][j])")
+# end
