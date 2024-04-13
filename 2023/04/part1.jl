@@ -2,9 +2,7 @@ f = open("input", "r")
 rx = r"Card\s+\d+:((?:\s+\d+)+) \|((?:\s+\d+)+)"
 (p1 = 0; p2 = [])
 for l in eachline(f)
-    a, b =
-    a = parse.(Int, split(match(rx, l)[1]))
-    b = parse.(Int, split(match(rx, l)[2]))
+    a, b = [parse.(Int, split(match(rx, l)[i])) for i in 1:2]
     sz = length(intersect(a, b))
     if (sz != 0)
         global p1 += 2 ^ (sz - 1)
