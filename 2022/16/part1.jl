@@ -38,9 +38,10 @@ while true
                 best = (t - dist) * rate[v]
                 t -= dist
                 rate[v] = 0
-                
+
             end
         end
     end
     if best == 0 break end
+    curr += best
 end
