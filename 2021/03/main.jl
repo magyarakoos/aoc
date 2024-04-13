@@ -9,13 +9,12 @@ for j in eachindex(zc)
     zc[j] = zc[j] < oc[j] ? 0 : 1
 end
 reverse!(zc)
-reverse!(oc)
 g = 0; e = 0
 for j in eachindex(zc)
-    if zc[j] < oc[j]
-        global e |= (1 << (j - 1))
-    else
+    if zc[j]
         global g |= (1 << (j - 1))
+    else
+        global e |= (1 << (j - 1))
     end
 end
 println(g * e)
