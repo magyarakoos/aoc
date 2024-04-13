@@ -9,10 +9,10 @@ for l in eachline(f)
         push!(starts, l[1:3])
     end
 end
+p2 = 1
 for s in starts
     
 end
-(p1 = 0; p2 = 0)
 (i = 1; s = "AAA")
 while (s != "ZZZ")
     global s = g[s][inst[i % (length(inst) + 1)] == 'L' ? 1 : 2]
