@@ -4,7 +4,7 @@ lines = readlines(file)
 close(file)
 
 # Create a 2D vector of characters
-a::Vector = [collect(line) for line in lines]
+a::Vector{Vector} = [collect(line) for line in lines]
 
 # Transpose the 2D vector
 a_tr = transpose(a)
