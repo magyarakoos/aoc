@@ -9,7 +9,8 @@ for l in eachline(open("input", "r"))
         continue
     end
     d = ∆(ps, pb)
-    for x in (ps[1] - ):()
+    for x in (ps[1] - d):(ps[1] + d)
+        if ()
     end
 end
 println(length(s))
