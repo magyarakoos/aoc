@@ -1,0 +1,1 @@
+f = map(l -> parse(Int, l), readlines("input"))
