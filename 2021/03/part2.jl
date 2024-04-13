@@ -18,6 +18,10 @@ function f(a)
                 end
             end
             if length(b) == 1
+                println(b[1])
+            else
+                f(b)
+            end
         else
             for x in a
                 if x & (1 << (j - 1)) == 0
@@ -25,6 +29,11 @@ function f(a)
                 else
                     push!(b, x)
                 end
+            end
+            if length(c) == 1
+                println(c[1])
+            else
+                f(c)
             end
         end
     end
