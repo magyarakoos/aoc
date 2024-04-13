@@ -8,6 +8,7 @@ f = map(a -> [parse(Int, a[2]), split(a[3], ", ")],
 g = Dict(); rates = Dict(); dists = Dict()
 keys = []
 for (rate, values) in f
+    indexin()
     rates[i] = rate
     g[i] = Vector{String}()
     for value in values
