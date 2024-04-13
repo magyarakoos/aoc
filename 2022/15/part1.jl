@@ -1,4 +1,13 @@
 ∆(a, b) = abs(a[1] - b[1]) + abs(a[2] - b[2])
+∩(a, b) =
+    
+bool testOverlap(int x1, int x2, int y1, int y2) {
+  return (x1 >= y1 && x1 <= y2) ||
+         (x2 >= y1 && x2 <= y2) ||
+         (y1 >= x1 && y1 <= x2) ||
+         (y2 >= x1 && y2 <= x2);
+}
+
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
 const y::Int = 10
 intvs = Set(); beacons = Set(); beacons2 = Set()
