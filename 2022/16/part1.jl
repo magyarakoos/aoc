@@ -31,8 +31,9 @@ end
 
 t = 30; p1 = 0; u = "AA"
 while 0 < t
-    for v in dists[u]
-        println(v)
+    cango = []
+    for (v, dist) in dists[u]
+        if dist <=
     end
     sleep(1)
 end
