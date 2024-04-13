@@ -8,5 +8,6 @@ for l in eachline(open("input", "r"))
     if (∆(ps, (ps[1], row)) > ∆(ps, pb))
         continue
     end
-    println((ps, pb))
+
 end
+println()
