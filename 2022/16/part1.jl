@@ -26,8 +26,10 @@ for (key, rate, values) in f
     global i += 1
 end
 dists = Array{Any}(undef, length(g) + 1, length(g) + 1)
-for i in eachindex(g)
-    dists[i,i] = 1
+for i in eachindex(g), j in eachingex(g)
+    if i == j
+        dists[i,j] = 0
+    elseif
 end
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
     dists[i,j] = min(dists[i,j], dists[i,k] + dists[k,j])
