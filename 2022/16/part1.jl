@@ -44,6 +44,6 @@ while true
     if best == 0 break end
     curr += best
     global u = bestv
-    t -= 
-    rate[u] = 0
+    global t -= bestd
+    global rate[u] = 0
 end
