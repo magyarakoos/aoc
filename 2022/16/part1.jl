@@ -6,7 +6,7 @@ f = map(a -> [a[1], parse(Int, a[2]), split(a[3], ", ")],
     )
 )
 g = Dict(); rates = Dict(); dists = Dict()
-keys = []
+keys = Vector{String}()
 for (key, rate, values) in f
     i = findfirst(keys, key)
     if isnothing(i)
