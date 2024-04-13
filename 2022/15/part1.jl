@@ -8,5 +8,5 @@ for l in eachline(open("input", "r"))
     if pb[2] == y
         push!(beacons, pb[1])
     d = ∆(ps, pb); h = ∆(ps, (ps[1], y))
-    push!(intvs, )
+    push!(intvs, (ps[]))
 end
