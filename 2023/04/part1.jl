@@ -10,7 +10,7 @@ for l in eachline(f)
     end
     push!(p2, (sz, 1))
 end
-for (i, (m, c)) in enumerate(p2) 
+for i in 1:length()
     for j in (i + 1):(i + m)
         if j > length(p2)
             break
