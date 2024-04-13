@@ -1,5 +1,5 @@
 
-f = map(a -> [parse.(Int, a[2]), split(a[3], ", ")], 
+f = map(a -> [parse(Int, a[2]), split(a[3], ", ")], 
     map(l -> 
         match(r".{6}(\w+).{15}(\d+).{23}\w?\s(.*)", l), 
         readlines("input")
@@ -15,5 +15,3 @@ for (rate, values) in f
     end
     global i += 1
 end
-
-for i in 
