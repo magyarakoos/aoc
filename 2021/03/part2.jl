@@ -41,4 +41,4 @@ end
 
 a = [parse.(Int, split(l, "")) for l in eachline("input")]
 zc = zeros(length(a[1])); oc = zeros(length(a[1]))
-println(g * e)
+f(a)
