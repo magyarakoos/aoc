@@ -26,5 +26,5 @@ for (key, rate, values) in f
     global i += 1
 end
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
-    
+    if !haskey(distS[i])
 end
