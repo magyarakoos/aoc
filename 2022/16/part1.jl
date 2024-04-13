@@ -16,12 +16,12 @@ for (key, rate, values) in f
     rates[i] = rate
     g[i] = Vector{String}()
     for value in values
-        j = findfirst(keys, key)
-        if isnothing(i)
-            push!(keys, key)
-            i = length(keys)
+        j = findfirst(keys, value)
+        if isnothing(j)
+            push!(keys, value)
+            j = length(keys)
         end
-        push!(g[i], value)
+        push!(g[i], j)
     end
     global i += 1
 end
