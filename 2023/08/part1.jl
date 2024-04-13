@@ -13,12 +13,12 @@ p2 = 1
 for s in starts
     i = 1; t = s
     while (t != "ZZZ")
-        global t = g[t][inst[i % (length(inst) + 1)] == 'L' ? 1 : 2]
-        global i += 1
+        t = g[t][inst[i % (length(inst) + 1)] == 'L' ? 1 : 2]
+        i += 1
     end
     if s == "AAA"
         println(i - 1)
     end
-    p2 = lcm(p2, i - 1)
+    global p2 = lcm(p2, i - 1)
 end
 println(p2)
