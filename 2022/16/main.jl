@@ -1,5 +1,8 @@
 d = Dict()
-for c in readline()
+
+for c in 
     d[c] += 1
 end
-for 
+for p in d
+    println(p)
+end
