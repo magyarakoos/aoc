@@ -10,12 +10,10 @@ for l in eachline(f)
     end
     push!(p2, (sz, 1))
 end
-for i in 1:length()
-    for j in (i + 1):(i + m)
-        if j > length(p2)
-            break
-        end
-        p2[j][2] += c
+for i in 1:length(p2), j in (i + 1):(i + m)
+    if j > length(p2)
+        break
     end
+    p2[j][2] += c
 end
 println((p1, sum(map(x -> x[2], p2))))
