@@ -14,7 +14,7 @@ for (key, rate, values) in f
         i = length(keys)
     end
     rates[i] = rate
-    g[i] = Vector{String}()
+    g[i] = Vector{Int}()
     for value in values
         j = findfirst(x -> x == value, keys)
         if isnothing(j)
