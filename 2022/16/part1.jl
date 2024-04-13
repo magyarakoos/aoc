@@ -43,5 +43,6 @@ for i in eachindex(g), j in eachindex(g)
     println("$i -> $j = $(dists[i,j])")
 end
 
-for i in eachindex(g)
-    
+for i in eachindex(g), j in g[i]
+    println("$i $j")
+end
