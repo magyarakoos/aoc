@@ -30,7 +30,6 @@ end
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
 const y::Int = 2e6
 intvs = []; beacons = Set()
-
 for l in eachline(open("input", "r"))
     m = [parse.(Int, match(rx, l)[i]) for i in 1:4]
     ps = (m[1], m[2]); pb = (m[3], m[4])
@@ -49,4 +48,4 @@ for x in beacons, intv in intvs
         global dec += 1
     end
 end
-println(sum(map(x->x[2]-x[1] + 1,)) - dec)
+println(sum(map(x -> x[2] - x[1] + 1, intvs)) - dec)
