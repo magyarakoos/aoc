@@ -22,9 +22,12 @@ for u in nodes, v in nodes
         dists[u][v] = typemax(Int)
     end
 end
-for i in eachindex(g)
-    println("$i : $(g[i])")
-end
-for 
-    dists[u][v] = min(dists[u][v], )
-end
+for u in nodes, v in nodes, k in nodes
+    dists[u][v] = min(
+        dists[u][v], 
+        dists[u][k] + dists[v][k]
+        )
+    end
+    for i in eachindex(g)
+        println("$i : $(g[i])")
+    end
