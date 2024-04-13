@@ -8,8 +8,9 @@ for (x, y, z) in σ, ρ in Ψ(x, y, z)
         global Σ -= 1
     end
 end
+exit(0)
 for ρ in σ
-    mx = tuple(max(a, b) for (a, b) in zip(mx, ρ))
+    global mx = tuple(max(a, b) for (a, b) in zip(mx, ρ))
 end
 println(Σ)
 println(mx)
