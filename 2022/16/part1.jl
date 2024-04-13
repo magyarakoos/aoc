@@ -26,5 +26,5 @@ for (key, rate, values) in f
     global i += 1
 end
 for i in eachindex(g)
-    println(g[i])
+    println("$i : $(g[i])")
 end
