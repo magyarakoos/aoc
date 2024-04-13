@@ -36,9 +36,8 @@ while true
         if dist <= t
             if best < (t - dist) * rate[v]
                 best = (t - dist) * rate[v]
-                t -= dist
-                rate[v] = 0
                 bestv = v
+                bestd = 
             end
         end
     end
