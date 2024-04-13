@@ -6,6 +6,4 @@ for l in eachline(f)
     m = match(r"(\w+) = \((\w+), (\w+)\)", l)
     g[m[1]] = (m[2], m[3])
 end
-p1 = 0
-s = "AAA"
-i = 0;
+(p1 = 0; i = 1; s = "AAA")
