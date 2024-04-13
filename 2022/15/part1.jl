@@ -1,5 +1,6 @@
 using IntervalSets
 ∆(a, b) = abs(a[1] - b[1]) + abs(a[2] - b[2])
+∩(a, b) = 
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
 const y::Int = 10
 intvs = Set(); beacons = Set(); beacons2 = Set()
