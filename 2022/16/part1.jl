@@ -25,7 +25,7 @@ for (key, rate, values) in f
     end
     global i += 1
 end
-dists = Array{Int}(1e9, length(g), length(g))
+dists = Array{Any}(undef, length(g) + 1, length(g) + 1)
 for i in eachindex(g)
     dists[i,i] = 1
 end
