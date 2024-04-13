@@ -52,4 +52,6 @@ println(p1)
 
 for u in nodes, v in nodes 
     if dists[u][v] == 1 
-        println()
+        println("$u $v")
+    end
+end
