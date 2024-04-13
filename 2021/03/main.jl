@@ -8,11 +8,9 @@ reverse!(zc)
 reverse!(oc)
 g = 0; e = 0
 for j in eachindex(zc)
-    swapfield!()
     if zc[j] < oc[j]
-        global e |= (1 << (j - 1))
-    else
-        global g |= (1 << (j - 1))
+        swap(g, e)
     end
+    global g |= (1 << (j - 1))
 end
 println(g * e)
