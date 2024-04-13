@@ -12,6 +12,10 @@ function f(a)
         if zc[j]
             for x in a
                 if x & (1 << (j - 1)) == 0
+                    push!(b, x)
+                else
+                    push!(c, x)
+                end
             end
         else
             global e |= (1 << (j - 1))
