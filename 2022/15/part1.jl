@@ -43,8 +43,10 @@ for l in eachline(open("input", "r"))
     end
 end
 intv = merge(intvs)[1]
-p1 = 0
+dec = 0
 for x in beacons
-    if 
+    if intv[1] <= x && x <= intv[2]
+        dec -= 1
+    end
 end
 println(intv)
