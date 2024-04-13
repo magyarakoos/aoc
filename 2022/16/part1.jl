@@ -17,9 +17,9 @@ for (key, rate, values) in f
         push!(g[key], value)
     end
 end
-for i in nodes, j in nodes
-    if !in(g[i], j)
-        g[i][j] = typemax(Int)
+for u in nodes, v in nodes
+    if !in(g[u], v)
+        g[u][v] = typemax(Int)
     end
 end
 for i in eachindex(g)
