@@ -8,6 +8,6 @@ reverse!(zc)
 reverse!(oc)
 g = 0; e = 0
 for j in length(a[1])
-    (z)
+    (zc < oc ? )
 end
 println(g * e)
