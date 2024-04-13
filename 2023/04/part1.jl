@@ -15,7 +15,7 @@ for (i, (m, c)) in enumerate(p2)
         if j > length(p2)
             break
         end
-        p2[j] += c
+        p2[j][2] += c
     end
 end
 println((p1, sum(map(x -> x[2], p2))))
