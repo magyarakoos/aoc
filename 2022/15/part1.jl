@@ -44,7 +44,7 @@ for l in eachline(open("input", "r"))
 end
 intvs = →(intvs)
 dec = 0
-for x in beacons
+for x in beacons, intv in intvs
     if intv[1] <= x && x <= intv[2]
         global dec += 1
     end
