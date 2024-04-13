@@ -5,7 +5,8 @@ intvs = []; beacons = []
 for l in eachline(open("input", "r"))
     m = [parse.(Int, match(rx, l)[i]) for i in 1:4]
     ps = (m[1], m[2]); pb = (m[3], m[4])
-    if (pb[])
+    if pb[2] == y
+        push!(beacons, )
     d = ∆(ps, pb); h = ∆(ps, (ps[1], y))
 
 end
