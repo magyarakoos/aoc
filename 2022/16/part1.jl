@@ -34,7 +34,7 @@ while 0 < t
     best = 0
     for (v, dist) in dists[u]
         if dist <= t
-            
+            if best < (t - dist) * rate[v]
         end
     end
     sleep(1)
