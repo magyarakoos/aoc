@@ -8,20 +8,6 @@ f = map(a -> [a[1], parse(Int, a[2]), split(a[3], ", ")],
 g = Dict(); rates = Dict(); dists = Dict{String, Dict{String, Int}}()
 nodes = []
 for (key, rate, values) in f
-    i = findfirst(x -> x == key, keys)
-    if isnothing(i)
-        push!(keys, key)
-        i = length(keys)
-    end
-    rates[i] = rate
-    g[i] = Vector{Int}()
-    for value in values
-        j = findfirst(x -> x == value, keys)
-        if isnothing(j)
-            push!(keys, value)
-            j = length(keys)
-        end
-        push!(g[i], j)
-    end
-    global i += 1
+    push!(nodes, key)
+    dists[key][key] = 0
 end
