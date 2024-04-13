@@ -15,6 +15,6 @@ for l in eachline(f)
     push!(counts, 1)
 end
 
-
-
-println(p1)
+for i in 1:length(matches)
+    println((matches[i], countS[i]))
+end
