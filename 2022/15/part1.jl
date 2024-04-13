@@ -43,5 +43,5 @@ for l in eachline(open("input", "r"))
     end
 end
 
-merge(intvs)
+intvs = merge(intvs)
 println(intvs)
