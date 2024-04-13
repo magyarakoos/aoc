@@ -12,9 +12,8 @@ for l in eachline(f)
         global p1 += 2 ^ (sz - 1)
     end
     push!(matches, sz)
-    push!(counts, 1)
+    push!(counts, sz != 0 ? 1 : 0)
 end
-for (i, (a, b)) in enumerate(zip(matches, counts)) 
+for (i, (m, c)) in enumerate(zip(matches, counts)) 
     println(i)
-    # println((matches[i], count[i]))
 end
