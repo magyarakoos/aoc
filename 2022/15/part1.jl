@@ -10,4 +10,6 @@ for l in eachline(open("input", "r"))
     d = ∆(ps, pb) - ∆(ps, (ps[1], y))
     push!(intvs, (ps[1] - d, ps[1] + d))
 end
-cv_beacons = []
+cv_beacons = Set()
+for (b, e) in intvs, x in beacons
+end
