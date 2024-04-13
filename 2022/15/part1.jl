@@ -4,6 +4,7 @@ using IntervalSets
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
 const y::Int = 10
 intvs = Set(); beacons = Set(); beacons2 = Set()
+
 for l in eachline(open("input", "r"))
     m = [parse.(Int, match(rx, l)[i]) for i in 1:4]
     ps = (m[1], m[2]); pb = (m[3], m[4])
@@ -15,11 +16,13 @@ for l in eachline(open("input", "r"))
         push!(intvs, (ps[1] - d, ps[1] + d))
     end
 end
+
 for (b, e) in intvs, x in beacons
     if b <= x && x <= e
         push!(beacons2, x)
     end
 end
+
 intvs2 = []
 for intv in intvs
     i = 1
