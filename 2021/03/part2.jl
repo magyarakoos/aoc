@@ -10,7 +10,9 @@ function f(a)
     b = []; c = []
     for j in eachindex(zc)
         if zc[j]
-            
+            for x in a
+                if ()
+            end
         else
             global e |= (1 << (j - 1))
         end
