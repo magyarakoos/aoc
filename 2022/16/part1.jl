@@ -14,6 +14,7 @@ for (key, rate, values) in f
     dists[key][key] = 0
     for value in values
         dists[key][value] = 1
-        g[]
+        push!(g[key], value)
     end
 end
+for 
