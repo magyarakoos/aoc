@@ -10,9 +10,8 @@ function issub(t, s)
 end
 s = readline()
 t = lowercase(readline())
-
 if (t[3] == 'x')
-    println(issub(s, t[1:2]) ? "Yes" : "No")
-else
-    println(issub(s, t) ? "Yes" : "No")
+    t = t[1:2]
 end
+i, j = 1, 1
+while i <= length(s) && j <= length(t)
