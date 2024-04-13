@@ -5,7 +5,7 @@ f = map(a -> [a[1], parse(Int, a[2]), split(a[3], ", ")],
         readlines("input")
     )
 )
-g = Dict(); rates = Dict(); dists = Dict{Dict{}}()
+g = Dict(); rates = Dict(); dists = Dict{String, Dict{String, Int}}()
 nodes = []
 for (key, rate, values) in f
     i = findfirst(x -> x == key, keys)
@@ -24,25 +24,4 @@ for (key, rate, values) in f
         push!(g[i], j)
     end
     global i += 1
-end
-dists = fill(Int(1e9), length(g) + 1, length(g) + 1)
-for i in eachindex(g), j in eachindex(g)
-    if i == j
-        dists[i,j] = 0
-    elseif j in g[i]
-        dists[i,j] = 1
-    else
-        dists[i,j] = 1e9
-    end
-end
-for i in eachindex(g), j in eachindex(g), k in eachindex(g)
-    dists[i,j] = min(dists[i,j], dists[i,k] + dists[k,j])
-end
-
-for i in eachindex(g), j in eachindex(g)
-    println("$i -> $j = $(dists[i,j])")
-end
-
-for i in eachindex(g), j in g[i]
-    println("$i $j")
 end
