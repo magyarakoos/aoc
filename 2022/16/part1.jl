@@ -25,10 +25,13 @@ for (key, rate, values) in f
     end
     global i += 1
 end
-dists = [typemax(Int) for i in 1:(length(g)+1), j in 1:(length(g)+1)]
+dists = [typemax(Int) for i in 1:length(g)+1, j in 1:length(g)+1]
 for i in eachindex(g)
     dists[i,i] = 1
 end
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
-    dists[i,j] = min(dists[i,j], dists[i][k] + dists[k][j])
+    dists[i,j] = min(dists[i,j], dists[i,k] + dists[k,j])
+end
+for i in eachindex(g), j in eachindex(g)
+    
 end
