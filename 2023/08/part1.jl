@@ -12,5 +12,6 @@ while (s != "ZZZ")
         global i = 1
     end
     global p1 += 1
-    s = g[s][inst[i] == 'L' ? 1 : 2]
+    global s = g[s][inst[i] == 'L' ? 1 : 2]
+    global i += 1
 end
