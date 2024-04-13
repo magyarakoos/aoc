@@ -14,7 +14,7 @@ for l in eachline(f)
     push!(matches, sz)
     push!(counts, 1)
 end
-for i in axes(matches)
+for (i, (a, b)) in enumerate() 
     println(i)
     # println((matches[i], count[i]))
 end
