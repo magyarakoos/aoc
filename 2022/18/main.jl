@@ -7,8 +7,6 @@ for (x, y, z) in σ, ρ in Ψ(x, y, z)
     if ∈(ρ, σ)
         global Σ -= 1
     end
-    mx = max(mx, x)
-    mx
 end
 println(Σ)
 println(◿)
