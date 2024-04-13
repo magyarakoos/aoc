@@ -31,17 +31,18 @@ end
 
 t = 30; p1 = 0; u = "AA"
 while true
-    best = 0
+    best = 0, bestv = ""
     for (v, dist) in dists[u]
         if dist <= t
             if best < (t - dist) * rate[v]
                 best = (t - dist) * rate[v]
                 t -= dist
                 rate[v] = 0
-
+                bestv = v
             end
         end
     end
     if best == 0 break end
     curr += best
+    global u = bestv
 end
