@@ -25,7 +25,7 @@ for (key, rate, values) in f
     end
     global i += 1
 end
-dists = fill()
+dists = fill(Int(1e9), length(g) + 1, length(g) + 1)
 for i in eachindex(g), j in eachindex(g)
     if i == j
         dists[i,j] = 0
