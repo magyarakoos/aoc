@@ -16,6 +16,4 @@ for (b, e) in intvs, x in beacons
         push!(beacons2, x)
     end
 end
-for i in eachindex(intvs), j in eachindex(intvs)
 
-end
