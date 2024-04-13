@@ -7,7 +7,7 @@ f = map(a -> [a[1], parse.(Int, a[2]), split(a[3], ", ")],
 g = Dict(); rates = Dict()
 for (key, rate, values) in f
     rates[key] = rate
-    g[key] = {}
+    g[key] = Vector{String}()
     for value in values
         push!(g[key], value)
     end
