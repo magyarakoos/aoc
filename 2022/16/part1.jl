@@ -26,8 +26,9 @@ for u in nodes, v in nodes, k in nodes
     dists[u][v] = min(
         dists[u][v], 
         dists[u][k] + dists[v][k]
-        )
-    end
-    for i in eachindex(g)
-        println("$i : $(g[i])")
-    end
+    )
+end
+
+for i in nodes, j in nodes
+    println("$i -> $j = $(dists[i][j])")
+end
