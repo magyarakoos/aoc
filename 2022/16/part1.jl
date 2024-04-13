@@ -41,5 +41,5 @@ end
 
 p1 = 0
 for perm in permutations(todo)
-
+    println(perm)
 end
