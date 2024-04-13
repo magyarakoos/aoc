@@ -18,6 +18,6 @@ for s in starts
         sleep(1)
         i += 1
     end
-    global p2 = lcm(p2, i - 1)
+    global p2 = lcm(p2, i)
 end
 println(p2)
