@@ -5,7 +5,7 @@ f = map(a -> [a[1], parse(Int, a[2]), split(a[3], ", ")],
         readlines("input")
     )
 )
-g = Dict(); rates = Dict(); dists = Dict{Dict{Int, Int}}()
+g = Dict(); rates = Dict()
 keys = []
 for (key, rate, values) in f
     i = findfirst(x -> x == key, keys)
@@ -25,5 +25,6 @@ for (key, rate, values) in f
     end
     global i += 1
 end
+dists = [(Int)1e18]
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
 end
