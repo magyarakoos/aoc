@@ -9,6 +9,6 @@ for (x, y, z) in σ, ρ in Ψ(x, y, z)
     end
 end
 for ρ in σ
-    m
+    mx = tuple(max(a, b))
 println(Σ)
 println(◿)
