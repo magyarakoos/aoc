@@ -9,7 +9,7 @@ for l in eachline(f)
     end
     push!(p2, (sz, 1))
 end
-for i in 1:length(p2), j in (i + 1):(i + p2[i][1])
+for i in eachindex(p2), j in (i + 1):(i + p2[i][1])
     if j > length(p2)
         break
     end
