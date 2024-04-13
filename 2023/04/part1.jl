@@ -1,5 +1,5 @@
 f = open("input", "r")
-(a = [], b = [])
+(a = []; b = [])
 for l in eachline(f)
     rx = r"Card \d+: ((?:\d+\s+)+)\| ((?:\d+\s+)+)"
     push!(a, rx.captures[1])
