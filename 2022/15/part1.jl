@@ -10,7 +10,10 @@ function merge(intvs)
         while i <= length(intvs2)
             println((intvs2[i], intv))
             if ∩(intvs2[i], intv)
-                intvs2[i] = (min(intvs2[i][1], intv[1]), max(intvs2[i][2], intv[2]))
+                intvs2[i] = (
+                    min(intvs2[i][1], intv[1]), 
+                    max(intvs2[i][2], intv[2])
+                )
                 break
             end
             i += 1
@@ -20,7 +23,8 @@ function merge(intvs)
         end
     end
     if (length(intvs) != length(intvs2))
-        
+        merge(intvs2)
+    end
 end
 
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
