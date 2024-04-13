@@ -4,13 +4,5 @@ const y::Int = 10
 for l in eachline(open("input", "r"))
     m = [parse.(Int, match(rx, l)[i]) for i in 1:4]
     ps = (m[1], m[2]); pb = (m[3], m[4])
-    if (∆(ps, (ps[1], y)) > ∆(ps, pb))
-        continue
-    end
-    d = ∆(ps, pb)
-    for x in (ps[1] - d):(ps[1] + d)
-        if (∆(ps, (x, y)) <= d)
-            push!(s, (x, y))
-        end
-    end
+    d = ∆(ps, pb); h = ∆(ps, (ps[1], y))
 end
