@@ -12,7 +12,7 @@ end
 p2 = 1
 for s in starts
     i = 1; t = s
-    while (t != "ZZZ")
+    while (t[3] )
         t = g[t][inst[i % (length(inst) + 1)] == 'L' ? 1 : 2]
         i += 1
     end
