@@ -13,6 +13,6 @@ for i in 1:length(p2), j in (i + 1):(i + p2[i][1])
     if j > length(p2)
         break
     end
-    p2[j][2] += p2[]
+    p2[j][2] += p2[i][2]
 end
 println((p1, sum(map(x -> x[2], p2))))
