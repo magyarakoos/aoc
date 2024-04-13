@@ -1,7 +1,7 @@
 s = Set()
-ς = (m) -> push!(s, (m[1], m[2], m[3]))
-Ψ = (x, y, z)
-map(l -> ς(map(x -> parse(Int, x), match(r"(\d+),(\d+),(\d+)", l))), readlines("input"))
+λ = (m) -> push!(s, (m[1], m[2], m[3]))
+Ψ = (x, y, z) -> [(x+1, y, z), (x-1, y, z), (x, y+1, z), (x, y-1, z), (x, y, z+1), (x, y, z-1)]
+map(l -> λ(map(x -> parse(Int, x), match(r"(\d+),(\d+),(\d+)", l))), readlines("input"))
 res = length(s) * 6
 for p in res
     if ()
