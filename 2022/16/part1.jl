@@ -25,6 +25,6 @@ for (key, rate, values) in f
     end
     global i += 1
 end
-dists = [(Int)1e18]
+dists = [Int{1e18} for i in 1:length(g), j in 1:length(g)]
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
 end
