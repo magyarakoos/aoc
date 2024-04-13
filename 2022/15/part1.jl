@@ -42,5 +42,6 @@ for l in eachline(open("input", "r"))
         push!(intvs, (ps[1] - d, ps[1] + d))
     end
 end
-intvs = merge(intvs)
-println(intvs)
+intv = merge(intvs)[1]
+for x in 
+println(intv)
