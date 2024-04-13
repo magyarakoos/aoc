@@ -1,8 +1,2 @@
-d = Dict()
-
-for c in 
-    d[c] += 1
-end
-for p in d
-    println(p)
-end
+s = "ASD"; t = "ASDSADSA"
+println(issubsequence(s, t))
