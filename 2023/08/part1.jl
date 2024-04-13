@@ -8,5 +8,8 @@ end
 wander = (curr, i) -> begin
     if (curr == "ZZZ")
         return 0
-    elseif (inst[i %])
+    elseif (inst[i % length(inst)] == 'L')
+        
+    else
+    end
 end
