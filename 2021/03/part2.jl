@@ -17,8 +17,15 @@ function f(a)
                     push!(c, x)
                 end
             end
+            if length(b) == 1
         else
-            global e |= (1 << (j - 1))
+            for x in a
+                if x & (1 << (j - 1)) == 0
+                    push!(c, x)
+                else
+                    push!(b, x)
+                end
+            end
         end
     end
 end
