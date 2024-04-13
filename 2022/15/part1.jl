@@ -9,6 +9,8 @@ for l in eachline(open("input", "r"))
         push!(beacons, pb[1])
     end
     d = ∆(ps, pb) - ∆(ps, (ps[1], y))
+    if (d >= 0)
+        
     push!(intvs, (ps[1] - d, ps[1] + d))
 end
 
