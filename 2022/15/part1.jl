@@ -8,6 +8,6 @@ for l in eachline(open("input", "r"))
     if (∆(ps, (ps[1], row)) > ∆(ps, pb))
         continue
     end
-
+    for x in 
 end
-println()
+println(length(s))
