@@ -1,1 +1,3 @@
-f = map(l ->  x, open("input", "r"))
+f = map(l -> match(
+    r""
+), open("input", "r"))
