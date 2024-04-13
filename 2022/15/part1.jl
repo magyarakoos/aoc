@@ -7,6 +7,6 @@ for l in eachline(open("input", "r"))
     ps = (m[1], m[2]); pb = (m[3], m[4])
     if pb[2] == y
         push!(beacons, pb[1])
-    d = ∆(ps, pb); h = ∆(ps, (ps[1], y))
-    push!(intvs, (ps[]))
+    d = ∆(ps, pb)- ∆(ps, (ps[1], y))
+    push!(intvs, (ps[1] - (d - h)))
 end
