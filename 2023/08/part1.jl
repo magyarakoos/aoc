@@ -3,8 +3,9 @@ function wander(curr, i, inst, g)
         return 0
     end
     if (inst[i % (len(inst) + 1)] == 'L')
-        return wander(g[cur])
+        return wander(g[curr][0], i + 1, inst, g)
     else
+        return wander(g[curr][1], i + 1, inst, g)
     end
 end
 
