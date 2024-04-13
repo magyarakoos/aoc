@@ -50,4 +50,6 @@ while true
 end
 println(p1)
 
-for 
+for u in nodes, v in nodes 
+    if dists[u][v] == 1 
+        println()
