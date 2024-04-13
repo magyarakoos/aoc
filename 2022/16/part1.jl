@@ -18,8 +18,8 @@ for (key, rate, values) in f
     end
 end
 for u in nodes, v in nodes
-    if !in(g[u], v)
-        g[u][v] = typemax(Int)
+    if !haskey(dists[u], v)
+        dists[u][v] = typemax(Int)
     end
 end
 for i in eachindex(g)
