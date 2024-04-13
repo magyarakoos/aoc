@@ -6,5 +6,6 @@ for j in eachindex(a[1]), i in eachindex(a)
 end
 g = 0; e = 0
 for j in eachindex(a[1])
-
+    (zc)
 end
+println(g * e)
