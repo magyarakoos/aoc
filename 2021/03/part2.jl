@@ -7,7 +7,7 @@ function f(a)
         zc[j] = zc[j] <= oc[j] ? 0 : 1
     end
     reverse!(zc)
-    b = []
+    b = []; c = []
     for j in eachindex(zc)
         if zc[j]
             global g |= (1 << (j - 1))
