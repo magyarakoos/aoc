@@ -1,6 +1,8 @@
 function wander(curr, i)
     return curr == "ZZZ" ? 0 :
-    
+    wander(
+        g[curr][inst[i % length(inst)] == 'L' ? 1 : 0], 
+        i + 1)
 end
 
 f = open("input", "r")
@@ -13,6 +15,6 @@ for l in eachline(f)
 end
 wander = (curr, i) -> begin
 return curr == "ZZZ" ? 0 :
-1 + wander(g[curr][inst[i % length(inst)] == 'L' ? 1 : 0], i + 1)
+1 + 
 end
 println(wander("AAA"))
