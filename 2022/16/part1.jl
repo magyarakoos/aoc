@@ -17,6 +17,9 @@ for (key, rate, values) in f
         push!(g[key], value)
     end
 end
+for i in eachindex(g), j in eachindex(g)
+    if !haskey(g[i], j)
+        
+end
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
-    if (!haske)
 end
