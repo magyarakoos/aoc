@@ -4,4 +4,4 @@
 map(l -> λ(map(x -> parse(Int, x), match(r"(\d+),(\d+),(\d+)", l))), readlines("input"))
 Σ = length(s) * 6
 for p in σ
-    if ()
+    if 
