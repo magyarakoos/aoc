@@ -55,3 +55,5 @@ for perm in permutations(todo)
     end
 end
 println(p1)
+
+["DD", "BB", "JJ", "HH", "EE", "CC"]
