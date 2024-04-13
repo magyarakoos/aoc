@@ -1,5 +1,8 @@
 function wander(curr, i, inst, g)
     if (curr == "ZZZ")
+        return 0
+    end
+    if (inst[i % (len(inst ))])
 end
 
 f = open("input", "r")
