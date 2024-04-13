@@ -15,5 +15,5 @@ for l in eachline(open("input", "r"))
             push!(s, (x, y))
         end
     end
-end
+end0
 println(length(setdiff(s, beacons)))
