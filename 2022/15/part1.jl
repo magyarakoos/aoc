@@ -8,8 +8,8 @@ for l in eachline(open("input", "r"))
     if pb[2] == y
         push!(beacons, pb[1])
     end
-        d = ∆(ps, pb) - ∆(ps, (ps[1], y))
-        push!(intvs, (ps[1] - d, ps[1] + d))
+    d = ∆(ps, pb) - ∆(ps, (ps[1], y))
+    push!(intvs, (ps[1] - d, ps[1] + d))
 end
 
 for (b, e) in intvs, x in beacons
@@ -36,4 +36,4 @@ for intv in intvs
     end
 end
 
-# println(intvs2)
+println(intvs2)
