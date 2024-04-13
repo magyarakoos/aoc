@@ -9,7 +9,7 @@ end
 (p1 = 0; i = 1; s = "AAA")
 while (s != "ZZZ")
     if i > length(s)
-        i = 1
+        global i = 1
     end
-
+    global p1 += 1
 end
