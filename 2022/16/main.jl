@@ -1,2 +1,2 @@
 readline()
-println(-sum(split(readline())))
+println(sum(split(readline())) * -1)
