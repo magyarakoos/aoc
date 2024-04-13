@@ -12,7 +12,7 @@ function f(a)
     for j in eachindex(zc)
         if zc[j] == 1
             for x in a
-                if reverse(x)[]
+                if reverse(x)[j] == 0
                     push!(b, x)
                 else
                     push!(c, x)
@@ -20,12 +20,13 @@ function f(a)
             end
             if length(b) == 1
                 println(b[1])
+                sleep81
             else
                 f(b)
             end
         else
             for x in a
-                if x & (1 << (j - 1)) == 0
+                if reverse(x)[j] == 1
                     push!(c, x)
                 else
                     push!(b, x)
@@ -33,6 +34,7 @@ function f(a)
             end
             if length(c) == 1
                 println(c[1])
+                sleep(1)
             else
                 f(c)
             end
