@@ -6,6 +6,6 @@ for l in eachline(f)
     b = parse.(Int, split(match(rx, l)[2]))
     sz = length(intersect(a, b))
     # global p1 += sz != 0 ? 2 ^ (sz - 1) : 0
-    global p1 += sz * (2 ^ (sz - 1))
+    global p1 += sz * (2.0 ^ (sz - 1))
 end
-println(p1)
+println(Int{p1})
