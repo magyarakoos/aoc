@@ -38,5 +38,5 @@ for intv in intvs
         push!(intvs2, intv)
     end
 end
-
+println(intvs)
 println(intvs2)
