@@ -25,7 +25,7 @@ for (key, rate, values) in f
     end
     global i += 1
 end
-dists = [Int(1e9) for i in 1:length(g)+1, j in 1:length(g)+1]
+dists = Array{Int}(1e9, length(g), length(g))
 for i in eachindex(g)
     dists[i,i] = 1
 end
