@@ -12,12 +12,9 @@ end
 p2 = 1
 for s in starts
     i = 1; t = s
-    while (t[3] )
+    while (t[3] != 'Z')
         t = g[t][inst[i % (length(inst) + 1)] == 'L' ? 1 : 2]
         i += 1
-    end
-    if s == "AAA"
-        println(i - 1)
     end
     global p2 = lcm(p2, i - 1)
 end
