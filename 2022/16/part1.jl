@@ -4,9 +4,10 @@ f = map(a -> [a[1], parse.(Int, a[2]), split(a[3], ", ")],
         readlines("input")
     )
 )
-g = Dict(); rate = Dict()
-for (k, r, v) in f
-    rate[k]
+g = Dict(); rates = Dict()
+for (key, rate, values) in f
+    rates[key] = rate
+    
     println(key)
     println(rate)
     println(values)
