@@ -7,12 +7,9 @@ for (x, y, z) in σ, ρ in Ψ(x, y, z)
     if ∈(ρ, σ)
         global Σ -= 1
     end
-    mxx = max(mxx, x)
-    mxy = max(mxy, y)
-    mxz = max(mxz, z)
-end
-for ρ in σ
-    global mx = tuple(max(a, b) for (a, b) in zip(mx, ρ))
+    global mxx = max(mxx, x)
+    global mxy = max(mxy, y)
+    global mxz = max(mxz, z)
 end
 println(Σ)
-println(mx)
+println((mxx, mxy, mxz))
