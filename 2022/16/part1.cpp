@@ -1,8 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
-using ll = long long;
-vector<vector<
+vector<vector<int>> g;
 
-ll bfs(int s, int t) {
+int bfs(int s, int t) {
 
+}
+
+int main() {
+    
 }
