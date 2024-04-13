@@ -9,6 +9,9 @@ reverse!(oc)
 g = 0; e = 0
 for j in length(a[1])
     if zc < oc
-        global e = e | (1 << j)
+        global e |= (1 << (j - 1))
+    else
+        global g |= (1 << (j - 1))
+    end
 end
 println(g * e)
