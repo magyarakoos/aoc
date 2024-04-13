@@ -33,4 +33,4 @@ for intv in intvs
     end
 end
 
-# println(intvs2)
+println(intvs2)
