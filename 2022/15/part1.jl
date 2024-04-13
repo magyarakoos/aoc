@@ -21,6 +21,6 @@ intvs2 = []
 for intv in intvs
     i = 1
     while i <= length(intvs2)
-        
+        if (intvs[1])
     end
 end
