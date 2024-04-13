@@ -37,11 +37,13 @@ while true
             if best < (t - dist) * rate[v]
                 best = (t - dist) * rate[v]
                 bestv = v
-                bestd = 
+                bestd = dist
             end
         end
     end
     if best == 0 break end
     curr += best
     global u = bestv
+    t -= 
+    rate[u] = 0
 end
