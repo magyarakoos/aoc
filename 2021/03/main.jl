@@ -1,1 +1,1 @@
-gamma::UInt = 0
+a = m
