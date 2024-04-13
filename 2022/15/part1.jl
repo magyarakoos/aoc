@@ -17,3 +17,5 @@ for (b, e) in intvs, x in beacons
     end
 end
 
+intvs2 = Set()
+for ()
