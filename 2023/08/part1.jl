@@ -3,7 +3,7 @@ f = open("input", "r")
 g = Dict()
 for l in eachline(f)
     println(l)
-    println(match(r"(\w+*)+", l))
+    println(match(r"((\w+)+)", l))
     continue
     a, b, c = [match(r"\w+", l)[i] for i in 1:3]
     g[a] = (b, c)
