@@ -11,7 +11,7 @@ function f(a)
     for j in eachindex(zc)
         if zc[j]
             for x in a
-                if ()
+                if x & (1 << (j - 1)) == 0
             end
         else
             global e |= (1 << (j - 1))
