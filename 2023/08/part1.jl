@@ -12,4 +12,5 @@ while (s != "ZZZ")
         global i = 1
     end
     global p1 += 1
+    s = g[s][]
 end
