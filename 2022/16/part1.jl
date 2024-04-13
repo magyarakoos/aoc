@@ -38,6 +38,10 @@ end
 for i in eachindex(g), j in eachindex(g), k in eachindex(g)
     dists[i,j] = min(dists[i,j], dists[i,k] + dists[k,j])
 end
+
 for i in eachindex(g), j in eachindex(g)
     println("$i -> $j = $(dists[i,j])")
 end
+
+for i in eachindex(g)
+    
