@@ -50,6 +50,8 @@ for perm in permutations(todo)
         t -= d + 1
     end
     global p1 = max(p1, cur)
-    if 
+    if cur == 1639
+        println(perm)
+    end
 end
 println(p1)
