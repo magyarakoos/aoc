@@ -11,7 +11,7 @@ readline(f)
 g = Dict()
 for l in eachline(f)
     a, b, c = [match(r"(\w+) = \((\w+), (\w+)\)", l)[i] for i in 1:3]
-    g[a] = (b, c)
+    g[a] = [b, c]
 end
 
 println(wander("AAA", 1, inst, g))
