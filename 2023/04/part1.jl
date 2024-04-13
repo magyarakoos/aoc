@@ -19,6 +19,6 @@ for (i, (m, c)) in enumerate(zip(matches, counts))
         if j > length(matches)
             break
         end
-
+        counts[j] += c
     end
 end
