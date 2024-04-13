@@ -39,6 +39,7 @@ end
 #     end
 # end
 
-function backtrack()
+p1 = 0
+for perm in permutations(todo)
 
 end
