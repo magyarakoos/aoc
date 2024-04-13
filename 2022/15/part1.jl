@@ -19,11 +19,12 @@ for (b, e) in intvs, x in beacons
 end
 intvs2 = []
 for intv in intvs
+    println(intv)
     i = 1
     while i <= length(intvs2)
         if (intvs2[i][1] <= intv[1] && intv[1] <= intvs2[i][2]) ||
            (intvs2[i][1] <= intv[2] && intv[2] <= intvs2[i][2])
-           println((intvsS[i]))
+           # println((intvs2[i], intv))
            intvs2[i] = (min(intvs2[i][1], intv[1]), max(intvs2[i][2], intv[2]))
            
            break
@@ -35,4 +36,4 @@ for intv in intvs
     end
 end
 
-println(intvs2)
+# println(intvs2)
