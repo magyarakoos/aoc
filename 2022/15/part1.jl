@@ -21,7 +21,8 @@ intvs2 = []
 for intv in intvs
     i = 1
     while i <= length(intvs2)
-        if (intvs2[i] intv[1])
+        if (intvs2[i][1] <= intv[1] && intv[1] <= intvs2[i][2]) ||
+           ()
         end
     end
 end
