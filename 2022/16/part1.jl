@@ -8,10 +8,12 @@ g = Dict(); rates = Dict(); dists = Dict()
 nodes = []
 for (key, rate, values) in f
     push!(nodes, key)
-    
+    rates[key] = rate
+    g[key] = Vector{String}()
     dists[key] = Dict{String, Int}()
     dists[key][key] = 0
     for value in values
         dists[key][value] = 1
+        g[]
     end
 end
