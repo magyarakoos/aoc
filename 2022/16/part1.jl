@@ -5,5 +5,4 @@ f = map(a -> [a[1], parse.(Int, a[2]), split(a[3], ", ")],
     )
 )
 
-g = Dict{String, Vector{String}}()
-
+g = Dict{String, Vector{String}}(); rate = Dict()
