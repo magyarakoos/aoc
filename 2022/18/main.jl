@@ -5,3 +5,7 @@ map(l -> λ(map(x -> parse(Int, x), match(r"(\d+),(\d+),(\d+)", l))), readlines(
 Σ = length(s) * 6
 for (x, y, z) in σ, ρ in Ψ(x, y, z)
     if in(σ, ρ)
+        global Σ -= 1
+    end
+end
+println(Σ)
