@@ -20,9 +20,11 @@ function f(a)
             end
             if length(b) == 1
                 println(b[1])
-                sleep81
+                sleep(1)
             else
                 f(b)
+                println(length(b))
+                sleep(1)
             end
         else
             for x in a
@@ -37,6 +39,8 @@ function f(a)
                 sleep(1)
             else
                 f(c)
+                println(length(c))
+                sleep(1)
             end
         end
     end
