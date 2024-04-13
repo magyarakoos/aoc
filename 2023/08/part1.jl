@@ -15,7 +15,7 @@ for s in starts
     while (s[3] != 'Z')
         s = g[s][inst[(i % length(inst)) + 1] == 'L' ? 1 : 2]
         println((s, i))
-        sleep()
+        sleep(1)
         i += 1
     end
     global p2 = lcm(p2, i - 1)
