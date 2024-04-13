@@ -8,7 +8,6 @@ function merge(intvs)
     for intv in intvs
         i = 1
         while i <= length(intvs2)
-            println((intvs2[i], intv))
             if ∩(intvs2[i], intv)
                 intvs2[i] = (
                     min(intvs2[i][1], intv[1]), 
@@ -29,7 +28,7 @@ end
 
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
 const y::Int = 10
-intvs = Set(); beacons = Set(); beacons2 = Set()
+intvs = []; beacons = Set()
 
 for l in eachline(open("input", "r"))
     m = [parse.(Int, match(rx, l)[i]) for i in 1:4]
@@ -43,11 +42,4 @@ for l in eachline(open("input", "r"))
     end
 end
 
-for (b, e) in intvs, x in beacons
-    if b <= x && x <= e
-        push!(beacons2, x)
-    end
-end
-
-println(intvs)
-println(intvs2)
+merge(intvs)
