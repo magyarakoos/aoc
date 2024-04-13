@@ -10,7 +10,8 @@ keys = []
 for (key, rate, values) in f
     i = findfirst(keys, key)
     if isnothing(i)
-        
+        push!(keys, key)
+        i = length(keys)
     end
     rates[i] = rate
     g[i] = Vector{String}()
