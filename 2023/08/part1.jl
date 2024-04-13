@@ -8,9 +8,9 @@ for l in eachline(f)
 end
 (p1 = 0; i = 1; s = "AAA")
 while (s != "ZZZ")
-    if i > length(s)
+    if i > length(inst)
         global i = 1
     end
     global p1 += 1
-    s = g[s][]
+    s = g[s][inst[i] == 'L' ? 1 : 2]
 end
