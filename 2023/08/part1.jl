@@ -16,7 +16,9 @@ for s in starts
         global t = g[t][inst[i % (length(inst) + 1)] == 'L' ? 1 : 2]
         global i += 1
     end
-    if s ==
+    if s == "AAA"
+        println(i - 1)
+    end
+    p2 = lcm(p2, i - 1)
 end
-# (i = 1; s = "AAA")
-# println(i - 1)
+println(p2)
