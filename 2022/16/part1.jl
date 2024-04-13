@@ -5,8 +5,8 @@ f = map(a -> [a[1], parse(Int, a[2]), split(a[3], ", ")],
         readlines("input")
     )
 )
-g = Dict(); rates = Dict()
-keys = []
+g = Dict(); rates = Dict(); dists = Dict{Dict{}}()
+nodes = []
 for (key, rate, values) in f
     i = findfirst(x -> x == key, keys)
     if isnothing(i)
