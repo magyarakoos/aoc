@@ -17,6 +17,8 @@ for (b, e) in intvs, x in beacons
     end
 end
 
+
+
 intvs2 = []
 for intv in intvs
     i = 1
@@ -29,5 +31,6 @@ for intv in intvs
         i += 1
     end
     if i > length(intvs2)
-        push!(intvs2)
+        push!(intvs2, intv)
+    end
 end
