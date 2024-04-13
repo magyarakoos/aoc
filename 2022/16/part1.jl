@@ -4,4 +4,3 @@ f = map(a -> [a[1], parse.(Int, a[2]), split(a[3], ", ")],
         readlines("input")
     )
 )
-println(f)
