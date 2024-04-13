@@ -9,6 +9,7 @@ for (x, y, z) in σ, ρ in Ψ(x, y, z)
     end
 end
 for ρ in σ
-    mx = tuple(max(a, b))
+    mx = tuple(max(a, b) for (a, b) in zip(mx, ρ))
+end
 println(Σ)
-println(◿)
+println(mx)
