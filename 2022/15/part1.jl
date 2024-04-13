@@ -1,6 +1,6 @@
-rx = r"/.{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)/gm"
+rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
 
 for l in eachline(open("input", "r"))
-    println(l)
-    println(match(rx, l))
+    # println(l)
+    for s in println(match(rx, l))
 end
