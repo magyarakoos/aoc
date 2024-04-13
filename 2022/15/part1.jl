@@ -21,11 +21,10 @@ function merge(intvs)
             push!(intvs2, intv)
         end
     end
-    if (length(intvs) != length(intvs2))
-        merge(intvs2)
-    else
+    if (length(intvs) == length(intvs2))
         return intvs2
     end
+    merge(intvs2)
 end
 
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
