@@ -31,9 +31,11 @@ end
 
 t = 30; p1 = 0; u = "AA"
 while 0 < t
-    cango = []
+    best = 0
     for (v, dist) in dists[u]
-        if dist <=
+        if dist <= t
+            
+        end
     end
     sleep(1)
 end
