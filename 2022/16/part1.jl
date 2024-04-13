@@ -40,20 +40,17 @@ end
 # end
 
 p1 = 0
-for perm in permutations(todo)
-    t = 30; i = 2; cur = 0
-    while i <= length(perm)
-        d = dists[perm[i - 1]][perm[i]] + 1
-        if t < d break end
-        cur += (t - d) * rates[perm[i]]
-        i += 1
-        t -= d
-    end
-    global p1 = max(p1, cur)
-    if cur == 1639
-        println(perm)
-    end
+perm = ["DD", "BB", "JJ", "HH", "EE", "CC"]
+t = 30; i = 2; cur = 0
+while i <= length(perm)
+    d = dists[perm[i - 1]][perm[i]] + 1
+    if t < d break end
+    global cur += (t - d) * rates[perm[i]]
+    global i += 1
+    t -= d
+end
+global p1 = max(p1, cur)
+if cur == 1639
+    println(perm)
 end
 println(p1)
-
-["DD", "BB", "JJ", "HH", "EE", "CC"]
