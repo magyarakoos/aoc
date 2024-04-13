@@ -14,4 +14,4 @@ for l in eachline(f)
     g[a] = (b, c)
 end
 
-println(wander("AAA", 0, ))
+println(wander("AAA", 0, inst, g))
