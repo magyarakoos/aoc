@@ -12,7 +12,7 @@ end
 f = open("input", "r")
 inst = readline(f)
 readline(f)
-g = Dict{String, String}()
+g = Dict()
 for l in eachline(f)
     m = match(r"(\w+) = \((\w+), (\w+)\)", l)
 end
