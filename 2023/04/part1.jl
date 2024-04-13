@@ -15,5 +15,6 @@ for l in eachline(f)
     push!(counts, sz != 0 ? 1 : 0)
 end
 for (i, (m, c)) in enumerate(zip(matches, counts)) 
-    for 
+    for j in (i + 1):(i + m)
+    end
 end
