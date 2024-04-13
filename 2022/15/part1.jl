@@ -1,3 +1,4 @@
 open("input") do f
-    x1, x2, y1, y2
+    m = match(r"/.{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)/gm", readline(f))
+    
 end
