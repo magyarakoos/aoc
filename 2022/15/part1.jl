@@ -2,6 +2,7 @@
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
 const y::Int = 10
 s = Set()
+beacons = []
 for l in eachline(open("input", "r"))
     m = [parse.(Int, match(rx, l)[i]) for i in 1:4]
     ps = (m[1], m[2]); pb = (m[3], m[4])
@@ -12,6 +13,7 @@ for l in eachline(open("input", "r"))
     for x in (ps[1] - d):(ps[1] + d)
         if (∆(ps, (x, y)) <= d)
             push!(s, (x, y))
+        end
     end
 end
 println(length(s))
