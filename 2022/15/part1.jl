@@ -19,4 +19,6 @@ end
 
 intvs2 = Set()
 for intv in intvs
-    for intv2 in intvs2
+    i = 1
+    
+end
