@@ -46,8 +46,9 @@ for perm in permutations(todo)
         d = dists[perm[i - 1]][perm[i]]
         if t <= d break end
         cur += (t - d - 1) * rates[perm[i]]
-
         i += 1
+        t -= d + 1
     end
-    p1 = max(p1, cur)
+    global p1 = max(p1, cur)
 end
+println(p1)
