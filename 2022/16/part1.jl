@@ -29,6 +29,3 @@ for u in nodes, v in nodes, k in nodes
     )
 end
 
-# for i in nodes, j in nodes
-#     println("$i -> $j = $(dists[i][j])")
-# end
