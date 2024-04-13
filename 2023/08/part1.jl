@@ -8,5 +8,8 @@ for l in eachline(f)
 end
 (p1 = 0; i = 1; s = "AAA")
 while (s != "ZZZ")
-    if i =
+    if i > length(s)
+        i = 1
+    end
+
 end
