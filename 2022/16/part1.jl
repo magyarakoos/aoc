@@ -46,7 +46,8 @@ for perm in permutations(todo)
         if (t <= dists[perm[i - 1]][perm[i]])
             break
         end
-        
+        cur += (t - dists[])
+        i += 1
     end
     p1 = max(p1, cur)
 end
