@@ -1,6 +1,5 @@
 f = open("input", "r")
 a = []
 for l in eachline(f)
-    
-    lx = split(l)
+    push!(a, parse.(Int, split(l)))
 end
