@@ -8,6 +8,7 @@ g = Dict(); rates = Dict(); dists = Dict()
 nodes = []
 for (key, rate, values) in f
     push!(nodes, key)
+    
     dists[key] = Dict{String, Int}()
     dists[key][key] = 0
     for value in values
