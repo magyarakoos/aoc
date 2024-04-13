@@ -46,5 +46,6 @@ while true
     global u = bestv
     global t -= bestd
     global rates[u] = 0
+    println(u)
 end
 println(p1)
