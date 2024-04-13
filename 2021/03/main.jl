@@ -9,8 +9,9 @@ reverse!(oc)
 g = 0; e = 0
 for j in eachindex(zc)
     if zc[j] < oc[j]
-        swap(g, e)
+        global e |= (1 << (j - 1))
+    else
+        global g |= (1 << (j - 1))
     end
-    global g |= (1 << (j - 1))
 end
 println(g * e)
