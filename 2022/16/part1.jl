@@ -17,6 +17,6 @@ for (key, rate, values) in f
         push!(g[key], value)
     end
 end
-for i in eachindex(g)
-    println("$i : $(g[i])")
+for i in eachindex(g), j in eachindex(g), k in eachindex(g)
+    if (!haske)
 end
