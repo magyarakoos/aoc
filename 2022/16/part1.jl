@@ -13,7 +13,6 @@ for (key, rate, values) in f
         push!(keys, key)
         i = length(keys)
     end
-    continue
     rates[i] = rate
     g[i] = Vector{String}()
     for value in values
