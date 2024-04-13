@@ -4,5 +4,5 @@ for j in eachindex(a[1]), i in eachindex(a)
     if (a[i][j] == 1) global oc[j] += 1
     else global zc[j] += 1 end
 end
-println(zc)
-println(oc)
+for i in eachindex(a[1])
+    
