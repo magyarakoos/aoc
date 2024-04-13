@@ -31,5 +31,5 @@ end
 
 t = 30; p1 = 0; cur = "AA"
 while 0 < t
-    
+    for 
 end
