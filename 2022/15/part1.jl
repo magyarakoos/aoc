@@ -4,7 +4,23 @@ using IntervalSets
 ∩(a, b) = !isempty(intersect(Interval(a[1], a[2]), Interval(b[1], b[2])))
 
 function merge(intvs)
-    
+    intvs2 = []
+    for intv in intvs
+        i = 1
+        while i <= length(intvs2)
+            println((intvs2[i], intv))
+            if ∩(intvs2[i], intv)
+                intvs2[i] = (min(intvs2[i][1], intv[1]), max(intvs2[i][2], intv[2]))
+                break
+            end
+            i += 1
+        end
+        if i > length(intvs2)
+            push!(intvs2, intv)
+        end
+    end
+    if (length(intvs) != length(intvs2))
+        
 end
 
 const rx = r".{12}(-?\d+).{4}(-?\d+).{25}(-?\d+).{4}(-?\d+)"
@@ -29,20 +45,5 @@ for (b, e) in intvs, x in beacons
     end
 end
 
-intvs2 = []
-for intv in intvs
-    i = 1
-    while i <= length(intvs2)
-        println((intvs2[i], intv))
-        if ∩(intvs2[i], intv)
-            intvs2[i] = (min(intvs2[i][1], intv[1]), max(intvs2[i][2], intv[2]))
-            break
-        end
-        i += 1
-    end
-    if i > length(intvs2)
-        push!(intvs2, intv)
-    end
-end
 println(intvs)
 println(intvs2)
