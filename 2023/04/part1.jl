@@ -21,4 +21,4 @@ for (i, (m, c)) in enumerate(zip(matches, counts))
         counts[j] += c
     end
 end
-println(p1 * "\n" * sum(counts))
+println((p1, sum(counts)))
