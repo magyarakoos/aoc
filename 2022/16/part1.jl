@@ -30,3 +30,6 @@ for u in nodes, v in nodes, k in nodes
 end
 
 t = 30; p1 = 0; cur = "AA"
+while 0 < t
+    
+end
