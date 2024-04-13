@@ -4,6 +4,8 @@ function wander(curr, i, inst, g)
     end
     if (inst[i % (len(inst) + 1)])
         
+    else
+    end
 end
 
 f = open("input", "r")
