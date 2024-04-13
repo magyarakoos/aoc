@@ -31,7 +31,7 @@ end
 
 t = 30; p1 = 0; u = "AA"
 while true
-    best = 0, bestv = ""
+    best = Array[]
     for (v, dist) in dists[u]
         if dist <= t
             if best < (t - dist) * rate[v]
