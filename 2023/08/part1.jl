@@ -7,4 +7,6 @@ for l in eachline(f)
 end
 wander = (curr, i) -> begin
     if (curr == "ZZZ")
+        return 0
+    end
 end
