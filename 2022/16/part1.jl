@@ -30,12 +30,13 @@ for u in nodes, v in nodes, k in nodes
 end
 
 t = 30; p1 = 0; u = "AA"
-while 0 < t
+while true
     best = 0
     for (v, dist) in dists[u]
         if dist <= t
             if best < (t - dist) * rate[v]
+            end
         end
     end
-    sleep(1)
+    
 end
