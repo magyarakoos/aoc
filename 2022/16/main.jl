@@ -8,3 +8,6 @@ function issub(s, t)
     end
     return i > length(s)
 end
+s = readline()
+t = tolower(readline())
+println(issub())
