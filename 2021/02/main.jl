@@ -8,15 +8,8 @@ for (t, x) in f
     if t == 'd' global aim += x
     elseif t == 'u' global aim -= x
     else
-        
+        global hpos += x
+        global depth += aim * x
     end
 end
-# for (int i = 0; i < input.Length; i++) {
-#     if (input[i].task == 'd') aim += input[i].x;
-#     else if (input[i].task == 'u') aim -= input[i].x;
-#     else {
-#         hpos += input[i].x;
-#         depth += aim * input[i].x;
-#     }
-# }
-# Console.WriteLine(hpos * depth);
+println(hpos * depth)
