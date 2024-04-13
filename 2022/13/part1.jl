@@ -1,2 +1,2 @@
-f = read("input")
+f = read("input", String)
 println(f)
