@@ -3,7 +3,6 @@ rx = r"Card\s+\d+:((?:\s+\d+)+) \|((?:\s+\d+)+)"
 p1 = 0
 matches = []
 counts = []
-
 for l in eachline(f)
     a = parse.(Int, split(match(rx, l)[1]))
     b = parse.(Int, split(match(rx, l)[2]))
@@ -22,5 +21,4 @@ for (i, (m, c)) in enumerate(zip(matches, counts))
         counts[j] += c
     end
 end
-
 println(p1 * "\n" * sum(counts))
