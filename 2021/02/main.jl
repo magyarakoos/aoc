@@ -1,1 +1,1 @@
-f = map(l -> , readlines("input"))
+f = map(l -> split(l)[1][], readlines("input"))
