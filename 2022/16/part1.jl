@@ -52,6 +52,6 @@ println(p1)
 
 for u in nodes, v in nodes 
     if dists[u][v] == 1 
-        println("$u $v")
+        println("$u-$(rates[u]) $v")
     end
 end
