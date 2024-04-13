@@ -6,5 +6,5 @@ for l in eachline(f)
     g[a] = (b, c)
 end
 wander = (curr, i) -> begin
-    
+    if (curr == "ZZZ")
 end
