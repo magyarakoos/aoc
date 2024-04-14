@@ -7,7 +7,9 @@ m = zeros(Int, 1000, 1000); m2 = m
         end
     end
 end
-ψ = (p) -> p
+ψ = (p) -> begin
+    
+end
 map(p -> (Ψ(p), ψ(p)), 
     map(l -> map(x -> parse(Int, x) + 1, 
         match(r"(\d+),(\d+) -> (\d+),(\d+)", l)), 
