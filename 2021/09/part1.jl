@@ -10,8 +10,7 @@ end
 p1 = 0
 for i in eachindex(f)
     for j in eachindex(f[i])
-        
-        if ψ(i, j) 
+        if ψ(i, j) print(f[i][j]) end
     end
     println()
 end
