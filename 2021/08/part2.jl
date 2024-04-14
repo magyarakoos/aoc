@@ -13,7 +13,7 @@ f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"
 #     end
 # end
 
-perm = "abcdefg"
+perm = ['a','b','c','d','e','f','g']
 taken = fill('#', 10)
 for s in f[1][1]
     mask = zeros(Int, 7)
