@@ -1,2 +1,2 @@
-f = readlines("input")
-n = map(x -> parse(Int, x), split(f[1], ","))
+f::Vector{String} = readlines("input")
+n::Vector{Int} = map(x -> parse(Int, x), split(f[1], ","))
