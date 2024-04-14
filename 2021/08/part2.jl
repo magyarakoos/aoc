@@ -21,6 +21,7 @@ for s in f[1][1]
     for i in indexin(s, perm)
         mask[i] = 1
     end
+    println(mask)
     if (!∈(mask, ⊗))
         println("HELLNAW")
         exit(0)
