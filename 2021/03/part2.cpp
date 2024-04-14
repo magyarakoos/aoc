@@ -44,5 +44,5 @@ int main() {
         solve(w - 1, v, [](int zc, int oc){ return zc <= oc; })
     << "\n";
     cout <<
-        solve(w - 1, v, [](int x, int i){ return !((x >> i) & 1); });
+        solve(w - 1, v, [](int zc, int oc){ return oc < zc; });
 }
