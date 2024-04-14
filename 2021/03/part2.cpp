@@ -14,7 +14,7 @@ void solve(int i, vector<int> v) {
     for (int x : v) {
         oc += (x >> i) & 1;
     }
-    oc = oc >= v.size() - oc;
+    oc = oc > v.size() - oc;
     vector<int> nv;
     for (int x : v) {
         if (oc && (x >> i) & 1 || !oc && !((x >> i) & 1)) {
