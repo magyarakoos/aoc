@@ -25,6 +25,9 @@ for s in f[1][1]
         exit(0)
     end
     n = findfirst(mask, ⊗)
-    if taken[]
+    if taken[n] == "#"
+        taken[n] = s
+    else
+    end
     println((s, mask))
 en
