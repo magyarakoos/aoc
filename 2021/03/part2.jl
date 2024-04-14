@@ -10,5 +10,6 @@ end
 Ψ = (i, a, λ) -> begin
     if length(a) == 1 return a[1] end
     o = count(x -> (x >> i) & 1 == 1, a)
-    return solve(i - 1, filter(x -> λ(length(v) - o, o) ?, a), λ)
+    return solve(i - 1, 
+        filter(x -> λ(length(v) - o, o) ? (x >> i) & 1, a), λ)
 end
