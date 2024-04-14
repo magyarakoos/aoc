@@ -1,6 +1,6 @@
 using Combinatorics
-⊗ = [[1,1,1,0,1,1,1],[0,0,1,0,0,1,0],[1,0,1,1,1,0,1],[1,0,1,1,0,1,1],[0,1,1,1,0,1,0],[1,1,0,1,0,1,1],[1,1,0,1,1,1,1],[1,0,1,0,0,1,0],[1,1,1,1,1,1,1],[1,1,1,1,0,1,1]] 
-◿ = (d) -> for i in eachindex(⊗) if d == ⊗[i] return i end end
+digits = [[1,1,1,0,1,1,1],[0,0,1,0,0,1,0],[1,0,1,1,1,0,1],[1,0,1,1,0,1,1],[0,1,1,1,0,1,0],[1,1,0,1,0,1,1],[1,1,0,1,1,1,1],[1,0,1,0,0,1,0],[1,1,1,1,1,1,1],[1,1,1,1,0,1,1]] 
+◿ = (d) -> for i in eachindex(⊗) if d == digits[i] return i end end
 f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"))
 # for (a, sol) in f
 #     for perm in permutations("abcdefg")
@@ -23,11 +23,11 @@ for s in f[1][1]
         mask[i] = 1
     end
     println(mask)
-    if (!∈(mask, ⊗))
+    if (!∈(mask, digits))
         println("HELLNAW")
         exit(0)
     end
-    n = findfirst(mask, ⊗)
+    n = findfirst(mask, digits)
     if taken[n] == "#"
         taken[n] = s
     else
