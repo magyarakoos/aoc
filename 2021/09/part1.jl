@@ -12,7 +12,7 @@ end
 φ = (i, j, k) -> begin
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
-        if !vis[ni, nj]
+        if !vis[ni, nj] && ni > 0 && nj > 0 && ni
 end
 p1 = 0
 vis = zeros(Bool, length(f), length(f[1]))
