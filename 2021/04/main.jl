@@ -1,6 +1,6 @@
 f = open("input", "r")
 n::Vector{Int} = map(x -> parse(Int, x), split(readline(f), ","))
-b = []; bc = []
+b = []
 while !eof(f)
     readline(f)
     board = []
@@ -8,10 +8,5 @@ while !eof(f)
         push!(board, map(x -> parse(Int, x), split(readline(f))))
     end
     push!(b, board)
-    push!(bc, zeros(Int, 20))
 end
-bc = zeros()
-for x in n
-
-end
-distinc
+bc = zeros(Int, length(b), 20)
