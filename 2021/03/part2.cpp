@@ -14,6 +14,7 @@ int main() {
         }
         v.push_back({});
     }
+    exit(0);
     for (int& x : oc) x = x >= v.size() - x;
     auto [mn, mx] = minmax_element(v.begin(), v.end(),
         [&](auto a, auto b) {
@@ -31,7 +32,6 @@ int main() {
             return false;
         }
     );
-
     for (int x : *mn) cout << x;
     cout << "\n";
     for (int x : *mx) cout << x;
