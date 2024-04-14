@@ -11,5 +11,5 @@ while !eof(f)
 end
 bc = zeros(Int, length(b), 20)
 for x in n
-    
+    for i in eachindex(b), j in eachinde
 end
