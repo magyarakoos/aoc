@@ -3,6 +3,7 @@ a = []
 for l in eachline(f)
     x = 0
     for i in eachindex(l)
-        x |= ((l[i] == '1') << (length(l)- i))
+        x |= ((l[i] == '1') << (length(l) - i))
     end
+    println(x)
 end
