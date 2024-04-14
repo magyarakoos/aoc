@@ -8,7 +8,8 @@ for l in eachline(f)
     push!(a, x)
 end
 ω = (i) -> begin
-    if (i == -1)
+    if (i == -1) return 0 end
+    
 end
 Ψ = (i, a, λ) -> begin
     if length(a) == 1 return a[1] end
