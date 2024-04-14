@@ -17,7 +17,7 @@ int solve(int i, vector<int> v, function<bool(int, int)> f) {
     }
     vector<int> nv;
     for (int x : v) {
-        if (f(x, i)) {
+        if (f(zc, oc)) {
             if ((x >> i) & 1) {
                 nv.push_back(x);
             }
@@ -42,7 +42,7 @@ int main() {
         }
     }
     cout << 
-        solve(w - 1, v, [](int x, int i){ return (x >> i) & 1; })
+        solve(w - 1, v, [](int zc, int oc){ return zc <= oc; })
     << "\n";
     cout <<
         solve(w - 1, v, [](int x, int i){ return !((x >> i) & 1); });
