@@ -14,6 +14,7 @@ scores = map(x -> sum(sum(x)), b)
 for x in n
     for i in eachindex(b), j in 1:5, k in 1:5
         if b[i][j][k] == x
+            scores[i] -= x
             bc[i, j] += 1
             bc[i, k + 5] += 1
         end
