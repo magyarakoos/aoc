@@ -15,6 +15,10 @@ int main() {
         v.push_back({});
     }
     auto [mn, mx] = minmax_element(v.begin(), v.end(),
-        [&](){}
+        [&](auto a, auto b) {
+            for (int i = 0; i < a.size(); i++) {
+                
+            }
+        }
     );
 }
