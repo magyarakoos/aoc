@@ -11,5 +11,5 @@ int main() {
         }
         v.push_back({});
     }
-    cou
+    auto [mn, mx] minmax_element()
 }
