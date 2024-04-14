@@ -12,9 +12,9 @@ int main() {
             v.back().push_back(s[i] == '1');
             oc[i] += v.back().back();
         }
+        exit(0);
         v.push_back({});
     }
-    exit(0);
     for (int& x : oc) x = x >= v.size() - x;
     auto [mn, mx] = minmax_element(v.begin(), v.end(),
         [&](auto a, auto b) {
