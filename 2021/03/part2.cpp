@@ -10,14 +10,13 @@ int solve(int i, vector<int> v, function<bool(int, int)> f) {
     // cout << i << " : ";
     // for (int x : v) cout << bitset<5>(x) << " ";
     // cout << "\n";
-    int zc = 0, oc = 0;
+    int oc = 0;
     for (int x : v) {
-        oc += f(x, i);
-        zc += !f(x, i);
+        oc += (x >> i) & 1;
     }
     vector<int> nv;
     for (int x : v) {
-        if (f(zc, oc)) {
+        if (f(v.size() - oc, oc)) {
             if ((x >> i) & 1) {
                 nv.push_back(x);
             }
