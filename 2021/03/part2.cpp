@@ -31,5 +31,9 @@ int main() {
             return false;
         }
     );
-    cout << *mn
+
+    for (int x : *mn) cout << x;
+    cout << "\n";
+    for (int x : *mx) cout << x;
+    cout << "\n";
 }
