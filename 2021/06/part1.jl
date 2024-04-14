@@ -1,2 +1,2 @@
 pop = zeros(Int, 9)
-map(x -> parse(Int, x), split(readline("input"), ","))
+map(x -> pop[parse(Int, x) + 1] += 1, split(readline("input"), ","))
