@@ -11,5 +11,6 @@ int main() {
         }
         v.push_back({});
     }
-    auto [mn, mx] minmax_element()
+    auto [mn, mx] = minmax_element(v.begin(), v.end(),
+        [](){})
 }
