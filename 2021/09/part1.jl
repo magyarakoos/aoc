@@ -1,8 +1,9 @@
 f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 ψ = (i, j) -> begin
     di = [1, -1, 0, 0]; dj = [0, 0, 1, -1]
-    for i in 1:4
-        if !(0 < i + di[i] && 0 < j + dj[i] && i + di[i] <= length(f) && j + dj[i] <= length(f[i]))
+    for k in 1:4
+        ni = i + di[k]; nj = j + dj[k]
+        if 
             continue
         end
         # if f[i + di[i]][j + dj[i]] <= f[i][j]
