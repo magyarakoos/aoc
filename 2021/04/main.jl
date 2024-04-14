@@ -11,6 +11,7 @@ while !eof(f)
 end
 bc = zeros(Int, length(b), 10)
 scores = map(x -> sum(sum(x)), b)
+won =
 for x in n
     for i in eachindex(b), j in 1:5, k in 1:5
         if b[i][j][k] == x
