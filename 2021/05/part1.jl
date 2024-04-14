@@ -12,6 +12,7 @@ end
         Ψ(p, m); Ψ(p, m2)
     else
         x = p[1]; y = p[2]
+        
         while !(x == p[3] && y == p[4])
             m2[y, x] += 1
             x += sign(p[3] - p[1])
