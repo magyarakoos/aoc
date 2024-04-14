@@ -5,6 +5,8 @@ for (a, sol) in f
     for perm in permutations("abcdefg")
         taken = zeros(Char, 10)
         for s in a
+            mask = zeros(Int, 7)
+            
             if (findfirst())
         end
     end
