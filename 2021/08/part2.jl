@@ -26,7 +26,7 @@ res = 0
 for (a, sol) in f
     for perm in permutations("abcdefg")
         if (◿(a, perm))
-            t = ""
+            t = "0000"
             for s in sol
                 mask = zeros(Int, 7)
                 for i in indexin(s, perm)
