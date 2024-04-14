@@ -36,7 +36,8 @@ int main() {
         }
     }
     cout << 
-        solve(w - 1, v, [](int x, int i){ return (x << i) & 1; }) *
-        solve(w - 1, v, [](int x, int i){ return !((x << i) & 1); })
+        solve(w - 1, v, [](int x, int i){ return (x >> i) & 1; });
     ;
+    cout <<
+        solve(w - 1, v, [](int x, int i){ return (x >> i) & 1; });
 }
