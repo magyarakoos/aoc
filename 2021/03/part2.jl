@@ -10,10 +10,11 @@ end
 Σ = (i, a) -> o = count(x -> (x >> i) & 1 == 1, a)
 ω = (i) -> begin
     if (i == -1) return 0 end
-    return length(a) <= Σ(i, a) * 2
+    return (length(a) <= Σ(i, a) * 2) << i
 end
 Ψ = (i, a, λ) -> begin
     if length(a) == 1 return a[1] end
     return Ψ(i - 1, filter(x -> (x >> i) & 1 == λ(length(a), Σ(i, a)), a), λ)
 end
+println(ω(w - 1))
 println(Ψ(w - 1, a, (z, o) -> z <= o * 2) * Ψ(w - 1, a, (z, o) -> z > o * 2))
