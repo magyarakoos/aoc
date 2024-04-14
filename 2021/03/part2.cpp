@@ -3,6 +3,7 @@ using namespace std;
 int w;
 
 void solve(int i, vector<int> v) {
+    cout << i << " "
     if (i == -1) {
         cout << bitset<5>(v[0]);
         return;
@@ -12,10 +13,9 @@ void solve(int i, vector<int> v) {
         oc += (x >> i) & 1;
         zc += !((x >> i) & 1);
     }
-    oc = oc >= v.size() - oc;
     vector<int> nv;
     for (int x : v) {
-        if (oc) {
+        if (oc >= zc) {
             if ((x >> i) & 1) {
                 nv.push_back(x);
             }
