@@ -1,2 +1,2 @@
 m = zeros(Int, 1000, 1000)
-map(x -readlines("input")
+map(l -> match(r"(\d+),(\d+) -> (\d+),(\d+)", l), readlines("input"))
