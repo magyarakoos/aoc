@@ -17,6 +17,7 @@ end
         if ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1]) && !vis[ni, nj]
             vis[ni, nj] = true
             sizes[k] += 1
+            println((ni, nj, k))
             φ(ni, nj, k)
         end
     end
