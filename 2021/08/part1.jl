@@ -1,1 +1,1 @@
-Í
+match(r"", readlines("input"))
