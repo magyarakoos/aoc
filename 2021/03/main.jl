@@ -7,7 +7,7 @@ for l in eachline(f)
     end
     push!(a, x)
 end
-Σ = (i, a) -> o = count(x -> (x >> i) & 1 == 1, a)
+Σ = (i, a) -> count(x -> (x >> i) & 1 == 1, a)
 ω = (i, λ) -> i == -1 ? 0 : (λ(length(a), Σ(i, a)) << i) | ω(i - 1, λ)
 Ψ = (i, a, λ) -> begin
     if length(a) == 1 return a[1] end
