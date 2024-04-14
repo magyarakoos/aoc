@@ -14,6 +14,6 @@ end
 end
 Ψ = (i, a, λ) -> begin
     if length(a) == 1 return a[1] end
-    return Ψ(i - 1, filter(x -> (x >> i) & 1 == λ(length(a) - Σ(x, i, a), Σ(x, i ,a)), a), λ)
+    return Ψ(i - 1, filter(x -> (x >> i) & 1 == λ(length(a), Σ(x, i ,a)), a), λ)
 end
-println(Ψ(w - 1, a, (z, o) -> z <= o) * Ψ(w - 1, a, (z, o) -> z > o))
+println(Ψ(w - 1, a, (z, o) -> z <= o * 2) * Ψ(w - 1, a, (z, o) -> z > o * 2))
