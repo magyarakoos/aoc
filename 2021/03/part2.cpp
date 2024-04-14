@@ -7,9 +7,10 @@ void solve(int i, vector<int> v) {
         cout << bitset<5>(v[0]);
         return;
     }
-    int oc = 0;
+    int oc = 0, zc = 0;
     for (int x : v) {
         oc += (x >> i) & 1;
+        zc += !((x >> i) & 1);
     }
     oc = oc >= v.size() - oc;
     vector<int> nv;
