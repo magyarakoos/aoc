@@ -10,5 +10,6 @@ while !eof(f)
     push!(b, board)
 end
 for x in n
-    
+
 end
+distinc
