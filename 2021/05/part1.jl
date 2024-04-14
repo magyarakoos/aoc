@@ -13,7 +13,9 @@ end
     else
         x = p[1]; y = p[2]; k = 0
         while k <= max(abs(p[1] - p[3]), abs(p[2] - p[4]))
+            m
             x += sign(p[3] - p[1])
+            y += sign(p[4] - p[2])
             k += 1
         end     
     end
