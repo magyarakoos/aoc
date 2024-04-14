@@ -37,8 +37,8 @@ int main() {
     while (f >> s) {
         v.push_back(0);
         w = s.size();
-        for (int i = s.size() - 1; i >= 0; i--) {
-            v.back() |= ((s[i] == '1') << i);
+        for (int i = 0; i < s.size(); i++) {
+            v.back() |= ((s[i] == '1') << (s.size() - i - 1));
         }
     }
     solve(w - 1, v);
