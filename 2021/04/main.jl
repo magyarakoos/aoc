@@ -10,4 +10,6 @@ while !eof(f)
     push!(b, board)
 end
 bc = zeros(Int, length(b), 20)
-println(bc)
+for x in n
+    
+end
