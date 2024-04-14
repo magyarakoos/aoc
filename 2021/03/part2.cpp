@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    vector<vector<bool>> v({});
+    vector<vector<bool>> v({{}});
     vector<int> oc;
     ifstream f("input");
     string s;
