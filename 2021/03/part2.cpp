@@ -13,7 +13,9 @@ void solve(int i, vector<int> v) {
     for (int x : v) {
         oc += (x >> i) & 1;
     }
-    oc = oc >= 
+    oc = oc >= v.size() - oc;
+    vector<int> nv;
+
 }
 
 int main() {
