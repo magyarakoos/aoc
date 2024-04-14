@@ -6,8 +6,9 @@ for (a, sol) in f
         taken = zeros(Char, 10)
         for s in a
             mask = zeros(Int, 7)
-            
-            if (findfirst())
+            for i in indexin(s, perm)
+                mask[i] = 1
+            end
         end
     end
 end
