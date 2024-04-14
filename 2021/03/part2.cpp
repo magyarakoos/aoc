@@ -2,7 +2,7 @@
 using namespace std;
 int w;
 
-void solve(int i, vector<int> v, function<) {
+void solve(int i, vector<int> v, function<bool(int, int)> f) {
     if (v.size() == 1) {
         cout << bitset<5>(v[0]);
         return;
@@ -12,9 +12,9 @@ void solve(int i, vector<int> v, function<) {
     // cout << "\n";
     int c = 0;
     for (int x : v) {
-        c += (x >> i) & 1;
+        c += f(x, i);
     }
-    c = c >= v.s
+    c = c >= v.size() - c;
     vector<int> nv;
     for (int x : v) {
         if (c >= zc) {
