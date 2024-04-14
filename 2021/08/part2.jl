@@ -20,5 +20,6 @@ for s in f[1][1]
     for i in indexin(s, perm)
         mask[i] = 1
     end
+    if (in())
     println((s, mask))
 end
