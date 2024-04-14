@@ -10,10 +10,6 @@ end
 ψ = (p) -> begin
     if p[1] == p[3] || p[2] == p[4] 
         Ψ(p, m); Ψ(p, m2)
-    else
-        for Δ in 0:(p[3] - p[1])
-            m2[min(p[1], p[3]) + Δ, min(p[2], p[4]) + Δ] += 1
-        end
     end
 end
 map(p -> ψ(p), 
