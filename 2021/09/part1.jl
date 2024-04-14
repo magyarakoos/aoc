@@ -23,7 +23,7 @@ end
     end
 end
 for i in eachindex(f), j in eachindex(f[1])
-    if ψ(i, j) push!(basins, (i, j)); push!(sizes, 1) end
+    if ψ(i, j) push!(basins, (i, j)); push!(sizes, 0) end
 end
 for i in eachindex(basins)
     φ(basins[i][1], basins[i][2], i)
