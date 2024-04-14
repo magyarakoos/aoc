@@ -10,7 +10,8 @@ while !eof(f)
     push!(b, board)
 end
 bc = zeros(Int, length(b), 10)
-scores = 
+scores = map(x -> sum(x), b)
+println(scores)
 for x in n
     for i in eachindex(b), j in 1:5, k in 1:5
         if b[i][j][k] == x
