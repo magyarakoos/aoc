@@ -5,5 +5,5 @@ for l in eachline(f)
     for i in eachindex(l)
         x |= ((l[i] == '1') << (length(l) - i))
     end
-    println(x)
+    push!(a, x)
 end
