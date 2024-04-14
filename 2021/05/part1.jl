@@ -14,7 +14,6 @@ end
         x = p[1]; y = p[2]
         while !(x == p[3] && y == p[4])
             m2[y, x] += 1
-            println((x, y))
             x += sign(p[3] - p[1])
             y += sign(p[4] - p[2])
         end
