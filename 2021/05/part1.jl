@@ -8,7 +8,7 @@ m = zeros(Int, 1000, 1000); m2 = m
     end
 end
 ψ = (p) -> begin
-    
+    if p[1] == p[3] || p[2] == p[4] Ψ(p)
 end
 map(p -> (Ψ(p), ψ(p)), 
     map(l -> map(x -> parse(Int, x) + 1, 
