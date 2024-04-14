@@ -3,7 +3,9 @@ using namespace std;
 int w;
 
 void solve(int i, vector<int> v) {
-
+    if (i == 0) {
+        
+    }
 }
 
 int main() {
@@ -17,7 +19,6 @@ int main() {
             v.back() |= ((s[i] == '1') << i);
         }
     }
-    v.pop_back();
     auto [mn, mx] = minmax_element(v.begin(), v.end(),
         [&](auto a, auto b) {
             for (int i = 0; i < a.size(); i++) {
