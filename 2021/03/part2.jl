@@ -7,4 +7,7 @@ for l in eachline(f)
     end
     push!(a, x)
 end
-Ψ = (i, a, λ)
+Ψ = (i, a, λ) -> begin
+    if length(a) == 1 return a[1] end
+    
+end
