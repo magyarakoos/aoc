@@ -12,9 +12,8 @@ end
         Ψ(p, m); Ψ(p, m2)
     else
         x = p[1]; y = p[2]
-        while ()
-        for x in p[1]:p[3], y in p[2]:p[4]
-            println((x, y))
+        while !(x == p[3] && y == p[4])
+            
         end
     end
 end
