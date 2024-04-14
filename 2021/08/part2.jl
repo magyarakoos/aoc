@@ -28,6 +28,10 @@ for s in f[1][1]
     if taken[n] == "#"
         taken[n] = s
     else
+        if taken[n] != s
+            println("HELLNAW")
+            exit(0)
+        end
     end
     println((s, mask))
 en
