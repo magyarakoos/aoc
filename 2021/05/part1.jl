@@ -12,6 +12,8 @@ end
         Ψ(p, m); Ψ(p, m2)
     else
         for Δ in 0:(p[3] - p[1])
+            m2[min(p[])]
+        end
     end
 end
 map(p -> ψ(p), 
