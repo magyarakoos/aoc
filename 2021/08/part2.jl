@@ -23,6 +23,7 @@ f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"
     return true
 end
 res::Int = 0
+@time begin
 for (a, sol) in f
     for perm in permutations("abcdefg")
         if (◿(a, perm))
@@ -38,5 +39,6 @@ for (a, sol) in f
             break
         end
     end
+end
 end
 println(res)
