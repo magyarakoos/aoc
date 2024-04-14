@@ -5,7 +5,7 @@ for (a, sol) in f
     for perm in permutations("abcdefg")
         taken = zeros(Char, 10)
         for s in a
-            if ()
+            if (findfirst())
         end
     end
 end
