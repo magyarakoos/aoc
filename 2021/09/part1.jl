@@ -9,6 +9,6 @@ m = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 end
 p1 = 0
 for i in eachindex(m), j in eachindex(m[1])
-    if ψ(i, j) global p1 += m[i][j] + 1 end
+    if ψ(i, j) global p1 += m[i][j] + 1; println(m[i][j]) end
 end
 println(p1)
