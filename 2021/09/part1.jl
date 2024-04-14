@@ -10,7 +10,7 @@ f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
     return true
 end
 p1 = 0
-vis = zeros(Bool, )
+vis = zeros(Bool, length(f), length(f[1]))
 for i in eachindex(f), j in eachindex(f[1])
     if ψ(i, j) global p1 += f[i][j] + 1 end
 end
