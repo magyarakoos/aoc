@@ -4,7 +4,7 @@ for d in minimum(a):maximum(a)
     global p1 = min(p1, sum(x -> abs(x - d), a))
     global p2 = min(p2, sum(x -> abs(x - d), a))
     for x in a
-        println(sum(collect(1:abs(a - d))))
+        println(collect(1:abs(a - d)))
     end
 end
 println("$p1\n$p2")
