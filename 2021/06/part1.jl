@@ -1,6 +1,6 @@
-pop = zeros(Int, 9)
-map(x -> pop[parse(Int, x) + 1] += 1, split(readline("input"), ","))
 λ = (cyc) -> begin
+    pop = zeros(Int, 9)
+    map(x -> pop[parse(Int, x) + 1] += 1, split(readline("input"), ","))
     for i in 1:cyc
         cur = zeros(Int, 9)
         for j in 2:9 cur[j - 1] = pop[j] end
@@ -8,5 +8,6 @@ map(x -> pop[parse(Int, x) + 1] += 1, split(readline("input"), ","))
         cur[7] += pop[1]
         global pop = copy(cur)
     end
+    return sum(pop)
 end
-println(sum(pop))
+println($)
