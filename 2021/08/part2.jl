@@ -1,10 +1,6 @@
 using Combinatorics
 ⊗ = [[1,1,1,0,1,1,1],[0,0,1,0,0,1,0],[1,0,1,1,1,0,1],[1,0,1,1,0,1,1],[0,1,1,1,0,1,0],[1,1,0,1,0,1,1],[1,1,0,1,1,1,1],[1,0,1,0,0,1,0],[1,1,1,1,1,1,1],[1,1,1,1,0,1,1]] 
-◿ = (d) -> begin
-    for (i, p) in enumerate(⊗)
-        
-    end
-end
+◿ = (d) -> findfirst(x -> x == )
 f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"))
 # for (a, sol) in f
 #     for perm in permutations("abcdefg")
