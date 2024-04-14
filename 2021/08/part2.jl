@@ -1,6 +1,8 @@
 using Combinatorics
 digits = [[1,1,1,0,1,1,1],[0,0,1,0,0,1,0],[1,0,1,1,1,0,1],[1,0,1,1,0,1,1],[0,1,1,1,0,1,0],[1,1,0,1,0,1,1],[1,1,0,1,1,1,1],[1,0,1,0,0,1,0],[1,1,1,1,1,1,1],[1,1,1,1,0,1,1]] 
-◿ = (d) -> for i in eachindex(digits) if d == digits[i] return i end end
+◿ = (d) -> begin
+    
+end
 f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"))
 # for (a, sol) in f
 #     for perm in permutations("abcdefg")
