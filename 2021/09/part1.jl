@@ -10,9 +10,8 @@ end
 p1 = 0
 for i in eachindex(f)
     for j in eachindex(f[i])
-        if ()
+        print(f[i][j])
+        if 
+    end
+    println()
 end
-for row in f
-    println(length(row))
-end
-println(p1)
