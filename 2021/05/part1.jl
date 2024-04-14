@@ -14,4 +14,4 @@ map(p -> (Ψ(p), ψ(p)),
         readlines("input")
     )
 )
-println(count(x -> x >= 2, m))
+println("$(count(x -> x >= 2, m))")
