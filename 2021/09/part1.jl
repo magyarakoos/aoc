@@ -9,6 +9,7 @@ f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
     end
     return true
 end
+φ()
 p1 = 0
 vis = zeros(Bool, length(f), length(f[1]))
 for i in eachindex(f), j in eachindex(f[1])
