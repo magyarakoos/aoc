@@ -8,6 +8,7 @@ void solve(int i, vector<int> v) {
             cout << (v[0] >> i);
         }
         cout << "\n";
+        return;
     }
     int oc = 0;
     for (int x : v) {
@@ -20,7 +21,7 @@ void solve(int i, vector<int> v) {
             nv.push_back(x);
         }
     }
-    solve()
+    solve(i - 1, nv);
 }
 
 int main() {
@@ -34,20 +35,5 @@ int main() {
             v.back() |= ((s[i] == '1') << i);
         }
     }
-    auto [mn, mx] = minmax_element(v.begin(), v.end(),
-        [&](auto a, auto b) {
-            for (int i = 0; i < a.size(); i++) {
-                if (oc[i]) {
-                    if (b[i] && !a[i]) {
-                        return true;
-                    }
-                } else {
-                    if (!b[i] && a[i]) {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-    );
+    solve(w - 1, v);
 }
