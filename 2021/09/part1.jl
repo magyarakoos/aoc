@@ -26,4 +26,6 @@ for i in eachindex(f), j in eachindex(f[1])
 end
 println(sum(basins) + length(basins))
 for i in eachindex(basins)
-    
+    φ(basins[i][1], basins[i][2], i)
+end
+sort!(sizes)
