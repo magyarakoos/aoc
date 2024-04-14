@@ -5,4 +5,6 @@ for i in 1:80
     for j in 2:9 cur[j - 1] = pop[j] end
     cur[9] += pop[1]
     cur[7] += pop[1]
+    global pop = copy(cur)
 end
+println(pop)
