@@ -17,7 +17,7 @@ for i in eachindex(m), j in eachindex(m[1])
 end
 for i in eachindex(m)
     for j in eachindex(m[1])
-        print(m[i][j])
+        print(m[i, j])
     end
     println()
 end
