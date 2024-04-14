@@ -14,7 +14,7 @@ end
         x = p[1]; y = p[2]
         while !(x == p[3] && y == p[4])
             m2[y, x] += 1
-            
+            sign()
         end
     end
 end
