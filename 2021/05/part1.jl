@@ -8,17 +8,13 @@ m = zeros(Int, 1000, 1000); m2 = zeros(Int, 1000, 1000)
     end
 end
 ψ = (p) -> begin
-    if p[1] == p[3] || p[2] == p[4] 
-        Ψ(p, m); Ψ(p, m2)
-    else
         x = p[1]; y = p[2]; k = 0
         while k <= max(abs(p[1] - p[3]), abs(p[2] - p[4]))
-            m
+            m2[y, x] += 1
             x += sign(p[3] - p[1])
             y += sign(p[4] - p[2])
             k += 1
-        end     
-    end
+        end
 end
 map(p -> ψ(p), 
     map(l -> map(x -> parse(Int, x) + 1, 
