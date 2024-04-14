@@ -1,1 +1,1 @@
-a = map(x -> parse(Int, x), split())
+a = map(x -> parse(Int, x), split(readline("input")))
