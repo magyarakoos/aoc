@@ -35,6 +35,7 @@ for (a, sol) in f
                 end
                 global res += i * findfirst(x -> x == mask, ⊗)
                 i /= 10
+                
             end
             break
         end
