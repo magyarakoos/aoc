@@ -23,9 +23,10 @@ for x in n
         end
         if bc[i, j] == 5 || bc[i, k + 5] == 5
             if p1 == 0 global p1 = i end
-            global p2
+            global p2 = i
             won[i] = 1
             scores[i] *= x
         end
     end
 end
+println((scores[p1], scores[p2]))
