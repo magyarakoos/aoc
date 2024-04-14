@@ -4,10 +4,7 @@ int w;
 
 void solve(int i, vector<int> v) {
     if (i == -1) {
-        for (int i = w - 1; i >= 0; i--) {
-            cout << ((v[0] >> i) & 1);
-        }
-        cout << "\n";
+        cout << bitset<5>(v[0]);
         return;
     }
     int oc = 0;
