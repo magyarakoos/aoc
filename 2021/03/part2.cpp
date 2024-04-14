@@ -4,6 +4,7 @@ int w;
 
 int solve(int i, vector<int> v, function<bool(int, int)> f) {
     if (v.size() == 1) {
+        cout << bitset<5>(v[0]) << "\n";
         return v[0];
     }
     // cout << i << " : ";
@@ -35,7 +36,7 @@ int main() {
         }
     }
     cout << 
-        solve(w - 1, v, [](int x, int i){ return (x >> i) & 1; }) *
-        solve(w - 1, v, [](int x, int i){ return !((x >> i) & 1); })
+        solve(w - 1, v, [](int x, int i){ return (x << i) & 1; }) *
+        solve(w - 1, v, [](int x, int i){ return !((x << i) & 1); })
     ;
 }
