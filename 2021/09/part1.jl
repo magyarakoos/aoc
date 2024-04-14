@@ -6,7 +6,7 @@ f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
         if ni < 1 || nj < 1 || ni > length(f) || nj > length(f[1])
             continue 
         end
-        if f[ni][ni] <= f[i][j]
+        if f[ni][nj] <= f[i][j]
             return false
         end
     end
@@ -15,7 +15,7 @@ end
 p1 = 0
 for i in eachindex(f)
     for j in eachindex(f[i])
-        if ψ(i, j) print(f[i][j]) end
+        if ψ(i, j) p1 +=  end
     end
     println()
 end
