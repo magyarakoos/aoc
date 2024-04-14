@@ -14,7 +14,7 @@ int main() {
         }
         v.push_back({});
     }
-    for (int& x : oc) x =  
+    for (int& x : oc) x = x >= v.size() - x;
     auto [mn, mx] = minmax_element(v.begin(), v.end(),
         [&](auto a, auto b) {
             for (int i = 0; i < a.size(); i++) {
