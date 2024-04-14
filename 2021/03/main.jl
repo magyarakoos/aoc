@@ -13,7 +13,5 @@ end
     if length(a) == 1 return a[1] end
     return Ψ(i - 1, filter(x -> (x >> i) & 1 == λ(length(a), Σ(i, a)), a), λ)
 end
-@time begin
-    println(ω(w - 1, (l, o) -> l <= o * 2) * ω(w - 1, (l, o) -> l > o * 2))
-    println(Ψ(w - 1, a, (l, o) -> l <= o * 2) * Ψ(w - 1, a, (l, o) -> l > o * 2))
-end
+println(ω(w - 1, (l, o) -> l <= o * 2) * ω(w - 1, (l, o) -> l > o * 2))
+println(Ψ(w - 1, a, (l, o) -> l <= o * 2) * Ψ(w - 1, a, (l, o) -> l > o * 2))
