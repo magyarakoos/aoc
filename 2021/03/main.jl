@@ -1,3 +1,4 @@
+@time begin
 f = open("input", "r")
 a = []; w = 0
 for l in eachline(f)
@@ -15,3 +16,4 @@ end
 end
 println(ω(w - 1, (l, o) -> l <= o * 2) * ω(w - 1, (l, o) -> l > o * 2))
 println(Ψ(w - 1, a, (l, o) -> l <= o * 2) * Ψ(w - 1, a, (l, o) -> l > o * 2))
+end
