@@ -24,5 +24,8 @@ map(p -> ψ(p),
 )
 for i in 1:10
     for j in 1:10
-        print()
+        print(m2[i, j])
+    end
+    println()
+end
 println("$(count(x -> x >= 2, m))")
