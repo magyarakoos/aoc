@@ -26,17 +26,14 @@ res::Int = 0
 for (a, sol) in f
     for perm in permutations("abcdefg")
         if (◿(a, perm))
-            println(perm)
             i = 1000
             for s in sol
                 mask = zeros(Int, 7)
                 for j in indexin(s, perm)
                     mask[j] = 1
                 end
-                println((s, mask))
                 global res += i * (findfirst(x -> x == mask, ⊗) - 1)
                 i /= 10
-                
             end
             break
         end
