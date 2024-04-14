@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-int w;
 
-int solve(int i, vector<int> v, function<bool(int, int)> f) {
+int solve(int i, int w, vector<int> v, function<bool(int, int)> f) {
     if (v.size() == 1) {
         return v[0];
     }
@@ -22,7 +21,7 @@ int solve(int i, vector<int> v, function<bool(int, int)> f) {
             }
         }
     }
-    return solve(i - 1, nv, f);
+    return solve(i - 1, w, nv, f);
 }
 
 int main() {
