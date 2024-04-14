@@ -33,6 +33,7 @@ int main() {
     );
     for (int x : *mn) cout << x;
     cout << "\n";
+    cout << (*mx).size();
     for (int x : *mx) cout << x;
     cout << "\n";
 }
