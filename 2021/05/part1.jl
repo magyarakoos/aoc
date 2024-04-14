@@ -1,4 +1,4 @@
-m = zeros(Int, 1000, 1000); m2 = m
+m = zeros(Int, 1000, 1000); m2 = zeros(Int, 1000, 1000)
 Ψ = (p, g) -> begin 
     if p[1] == p[3] || p[2] == p[4] 
         for x in min(p[1], p[3]):max(p[1], p[3]), 
@@ -10,6 +10,7 @@ end
 ψ = (p) -> begin
     if p[1] == p[3] || p[2] == p[4] 
         Ψ(p, m); Ψ(p, m2)
+    else
     end
 end
 map(p -> ψ(p), 
