@@ -1,4 +1,4 @@
-m = map(l -> split(l, ""), readlines("input"))
+m = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 ψ = (i, j) -> begin
     for di in [1, -1, 0, 0], dj in [0, 0, 1, -1]
         if (0 < di && 0 < dj && di <= length(m) && dj <= length(m[1]) && m[di][dj] <= m[i][j])
