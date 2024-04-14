@@ -15,5 +15,10 @@ p1 = 0
 for i in eachindex(m), j in eachindex(m[1])
     if ψ(i, j) global p1 += m[i][j] + 1 end
 end
-for i in eachind
+for i in eachindex(m)
+    for j in eachindex(m[1])
+        print(m[i][j])
+    end
+    println()
+end
 println(p1)
