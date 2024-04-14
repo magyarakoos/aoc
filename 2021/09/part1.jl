@@ -3,8 +3,8 @@ f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
     di = [1, -1, 0, 0]; dj = [0, 0, 1, -1]
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
-        if 
-            continue
+        if ni <= 0 
+            continue 
         end
         # if f[i + di[i]][j + dj[i]] <= f[i][j]
         #     return false
