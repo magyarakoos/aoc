@@ -26,13 +26,14 @@ res = 0
 for (a, sol) in f
     for perm in permutations("abcdefg")
         if (◿(a, perm))
-            i = 0
+            i = 1000
             for s in sol
                 mask = zeros(Int, 7)
                 for j in indexin(s, perm)
                     mask[j] = 1
                 end
                 t = t + string(Char('0' + findfirst(x -> x == mask, ⊗)))
+                i /= 10
             end
             break
         end
