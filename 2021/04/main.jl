@@ -8,7 +8,9 @@ while !eof(f)
         push!(board, map(x -> parse(Int, x), split(readline(f))))
     end
     push!(b, board)
+    push!(bc, zeros(Int, 20))
 end
+bc = zeros()
 for x in n
 
 end
