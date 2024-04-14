@@ -5,6 +5,5 @@ for (a, sol) in f
     for perm in permutations("abcdefg")
         
     end
-    println(a)
 end
 
