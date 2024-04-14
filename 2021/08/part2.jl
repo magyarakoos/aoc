@@ -24,12 +24,10 @@ f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"
 end
 
 for (a, sol) in f
-    @time begin
     for perm in permutations("abcdefg")
         if (◿(a, perm))
             println(perm)
             break
         end
     end
-end
 end
