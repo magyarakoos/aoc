@@ -7,9 +7,9 @@ void solve(int i, vector<int> v) {
         cout << bitset<5>(v[0]);
         return;
     }
-    cout << i << " : ";
-    for (int x : v) cout << bitset<5>(x) << " ";
-    cout << "\n";
+    // cout << i << " : ";
+    // for (int x : v) cout << bitset<5>(x) << " ";
+    // cout << "\n";
     int oc = 0, zc = 0;
     for (int x : v) {
         oc += (x >> i) & 1;
