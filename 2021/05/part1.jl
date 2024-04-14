@@ -14,7 +14,9 @@ end
         x = p[1]; y = p[2]
         while !(x == p[3] && y == p[4])
             m2[y, x] += 1
-            sign()
+            println((x, y))
+            x += sign(p[3] - p[1])
+            y += sign(p[4] - p[2])
         end
     end
 end
@@ -33,4 +35,3 @@ for i in 1:10
     println()
 end
 println("$(count(x -> x >= 2, m))")
-println(ψ([1, 3, 2, 4]))
