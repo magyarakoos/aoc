@@ -19,7 +19,13 @@ int main() {
         [&](auto a, auto b) {
             for (int i = 0; i < a.size(); i++) {
                 if (oc[i]) {
-                    if ()
+                    if (b[i] && !a[i]) {
+                        return 1;
+                    }
+                } else {
+                    if (!b[i] && a[i]) {
+                        return 1;
+                    }
                 }
             }
         }
