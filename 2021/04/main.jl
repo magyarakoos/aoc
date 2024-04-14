@@ -12,6 +12,7 @@ end
 bc = zeros(Int, length(b), 10)
 scores = map(x -> sum(sum(x)), b)
 won = zeros(Bool, length(b))
+p1 = 0; p2 = 0
 for x in n
     for i in eachindex(b), j in 1:5, k in 1:5
         if won[i] continue end
@@ -21,8 +22,10 @@ for x in n
             bc[i, k + 5] += 1
         end
         if bc[i, j] == 5 || bc[i, k + 5] == 5
+            if p1 == 0 global p1 = i end
+            global p2
             won[i] = 1
-            println(scores[i] * x)
+            scores[i] *= x
         end
     end
 end
