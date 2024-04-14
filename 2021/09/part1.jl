@@ -8,8 +8,9 @@ f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
     return true
 end
 p1 = 0
-for i in eachindex(f), j in eachindex(f[1])
-    if ψ(i, j) global p1 += f[i][j] + 1; println(f[i][j]) end
+for i in eachindex(f)
+    for j in eachindex(f[i])
+        if ()
 end
 for row in f
     println(length(row))
