@@ -26,8 +26,12 @@ end
 for (a, sol) in f
     for perm in permutations("abcdefg")
         if (◿(a, perm))
+            t = ""
             for s in sol
-                
+                mask = zeros(Int, 7)
+                for i in indexin(s, perm)
+                    mask[i] = 1
+                end
             end
             break
         end
