@@ -20,14 +20,16 @@ int main() {
             for (int i = 0; i < a.size(); i++) {
                 if (oc[i]) {
                     if (b[i] && !a[i]) {
-                        return 1;
+                        return true;
                     }
                 } else {
                     if (!b[i] && a[i]) {
-                        return 1;
+                        return true;
                     }
                 }
             }
+            return false;
         }
     );
+    cout << *mn
 }
