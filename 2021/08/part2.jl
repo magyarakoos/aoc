@@ -22,14 +22,15 @@ f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"
     end
     return true
 end
-# for (a, sol) in f
-#     for perm in permutations("abcdefg")
-#         taken = zeros(Char, 10)
-#         for s in a
-#             mask = zeros(Int, 7)
-#             for i in indexin(s, perm)
-#                 mask[i] = 1
-#             end
-#         end
-#     end
-# end
+
+for (a, sol) in f
+    for perm in permutations("abcdefg")
+        taken = zeros(Char, 10)
+        for s in a
+            mask = zeros(Int, 7)
+            for i in indexin(s, perm)
+                mask[i] = 1
+            end
+        end
+    end
+end
