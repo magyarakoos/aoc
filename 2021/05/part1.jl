@@ -11,7 +11,7 @@ end
     if p[1] == p[3] || p[2] == p[4] 
         Ψ(p, m); Ψ(p, m2)
     else
-        for x in minimum(p)
+        for d in 0:
     end
 end
 map(p -> ψ(p), 
