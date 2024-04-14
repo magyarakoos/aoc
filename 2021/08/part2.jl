@@ -1,7 +1,7 @@
 using Combinatorics
 ⊗ = [[1,1,1,0,1,1,1],[0,0,1,0,0,1,0],[1,0,1,1,1,0,1],[1,0,1,1,0,1,1],[0,1,1,1,0,1,0],[1,1,0,1,0,1,1],[1,1,0,1,1,1,1],[1,0,1,0,0,1,0],[1,1,1,1,1,1,1],[1,1,1,1,0,1,1]] 
 f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"))
-◿ = (a)
+◿ = (a, perm)
 # for (a, sol) in f
 #     for perm in permutations("abcdefg")
 #         taken = zeros(Char, 10)
