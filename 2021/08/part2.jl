@@ -24,6 +24,7 @@ for s in f[1][1]
         println("HELLNAW")
         exit(0)
     end
+    n = findfirst(mask, ⊗)
     if taken[]
     println((s, mask))
 en
