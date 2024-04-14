@@ -16,24 +16,21 @@ f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"
 perm = ['d','e','a','f','g','b','c']
 perm = ['a','b','c','d','e','f','g']
 taken = fill("#", 10)
+
 for s in f[1][1]
     mask = zeros(Int, 7)
     for i in indexin(s, perm)
         mask[i] = 1
     end
-    println(mask)
     if (!∈(mask, ⊗))
-        println("HELLNAW")
-        exit(0)
+        return false
     end
     n = findfirst(x -> x == mask, ⊗)
     if taken[n] == "#"
         taken[n] = s
     else
         if taken[n] != s
-            println("HELLNAW 2")
-            exit(0)
+            return false
         end
     end
-    println((s, mask))
 end
