@@ -33,6 +33,7 @@ for (a, sol) in f
                 for j in indexin(s, perm)
                     mask[j] = 1
                 end
+                println((s, mask))
                 global res += i * findfirst(x -> x == mask, ⊗)
                 i /= 10
                 
