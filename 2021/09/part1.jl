@@ -12,12 +12,12 @@ end
 φ = (i, j, k) -> begin
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
-        if !vis[ni, nj] && ni > 0 && nj > 0 && ni
+        if !vis[ni, nj] && ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1])
 end
 p1 = 0
 vis = zeros(Bool, length(f), length(f[1]))
-basins = []
+basins = []; sizes = []
 for i in eachindex(f), j in eachindex(f[1])
-    if ψ(i, j) push!(basins, (i, j)) end
+    if ψ(i, j) push!(basins, (i, j)); push!(sizes, 0) end
 end
 println(sum(basins) + length(basins))
