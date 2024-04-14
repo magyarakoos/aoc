@@ -1,16 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
-vector<int> v;
+int w;
 
-void solve(int i) {
+void solve(int i, vector<int> v) {
 
 }
 
 int main() {
     ifstream f("input");
     string s;
+    vector<int> v;
     while (f >> s) {
         v.push_back(0);
+        w = s.size();
         for (int i = s.size() - 1; i >= 0; i--) {
             v.back() |= ((s[i] == '1') << i);
         }
