@@ -26,6 +26,7 @@ res = 0
 for (a, sol) in f
     for perm in permutations("abcdefg")
         if (◿(a, perm))
+            println(perm)
             i = 1000
             for s in sol
                 mask = zeros(Int, 7)
