@@ -28,4 +28,4 @@ println(sum(basins) + length(basins))
 for i in eachindex(basins)
     φ(basins[i][1], basins[i][2], i)
 end
-println()
+println(prod(sort(sizes)[1:3]))
