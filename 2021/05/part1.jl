@@ -11,7 +11,7 @@ m = zeros(Int, 1000, 1000); m2 = zeros(Int, 1000, 1000)
         k += 1
     end
 end
-map(p -> (ψ(p, m), ψ(p, m2)), 
+map(p -> (ψ(p, m, true), ψ(p, m2, false)), 
     map(l -> map(x -> parse(Int, x) + 1, 
         match(r"(\d+),(\d+) -> (\d+),(\d+)", l)), 
         readlines("input")
