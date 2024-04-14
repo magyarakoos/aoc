@@ -15,6 +15,7 @@ for x in n
         if b[i][j][k] == x
             bc[i, j] += 1
             bc[i, k + 5] += 1
+            bc[i, j + k + 10] += 1
         end
     end
 end
