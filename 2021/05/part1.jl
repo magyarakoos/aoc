@@ -6,4 +6,4 @@ map(p -> λ(p), filter(p -> p[1] == p[3] || p[2] == p[4],
         readlines("input")
     ))
 )
-println()
+println(count(x -> x >= 2, m))
