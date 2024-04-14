@@ -4,12 +4,8 @@ int w;
 
 int solve(int i, vector<int> v, function<bool(int, int)> f) {
     if (v.size() == 1) {
-        cout << bitset<5>(v[0]) << "\n";
         return v[0];
     }
-    // cout << i << " : ";
-    // for (int x : v) cout << bitset<5>(x) << " ";
-    // cout << "\n";
     int oc = 0;
     for (int x : v) {
         oc += (x >> i) & 1;
@@ -41,8 +37,6 @@ int main() {
         }
     }
     cout << 
-        solve(w - 1, v, [](int zc, int oc){ return zc <= oc; })
-    << "\n";
-    cout <<
+        solve(w - 1, v, [](int zc, int oc){ return zc <= oc; }) *
         solve(w - 1, v, [](int zc, int oc){ return oc < zc; });
 }
