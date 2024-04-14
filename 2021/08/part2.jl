@@ -1,4 +1,4 @@
 using Combinatorics
-f = readlines("input")
+f = match(readlines("input")
 
 println(f)
