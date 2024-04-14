@@ -7,4 +7,4 @@ for l in eachline(f)
     end
     push!(a, x)
 end
-Ψ = (i, a)
+Ψ = (i, a, λ)
