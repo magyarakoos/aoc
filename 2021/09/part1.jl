@@ -5,9 +5,9 @@ f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
         if !(0 < i + di[i] && 0 < j + dj[i] && i + di[i] <= length(f) && j + dj[i] <= length(f[i]))
             continue
         end
-        if f[i + di[i]][j + dj[i]] <= f[i][j]
-            return false
-        end
+        # if f[i + di[i]][j + dj[i]] <= f[i][j]
+        #     return false
+        # end
     end
     return true
 end
