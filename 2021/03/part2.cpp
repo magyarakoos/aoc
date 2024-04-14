@@ -18,7 +18,9 @@ int main() {
     auto [mn, mx] = minmax_element(v.begin(), v.end(),
         [&](auto a, auto b) {
             for (int i = 0; i < a.size(); i++) {
-                
+                if (oc[i]) {
+                    if ()
+                }
             }
         }
     );
