@@ -12,8 +12,8 @@ end
 φ = (i, j, id)
 p1 = 0
 vis = zeros(Bool, length(f), length(f[1]))
-
+basins = []
 for i in eachindex(f), j in eachindex(f[1])
-    if ψ(i, j) global p1 += f[i][j] + 1 end
+    if ψ(i, j) push!(basins, (i, j)) end
 end
 println(p1)
