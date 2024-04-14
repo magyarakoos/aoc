@@ -12,7 +12,7 @@ end
         Ψ(p, m); Ψ(p, m2)
     else
         for Δ in 0:(p[3] - p[1])
-            m2[min(p[])]
+            m2[min(p[1], p[3]) + Δ, min(p[2], p[4]) + Δ] += 1
         end
     end
 end
@@ -22,4 +22,7 @@ map(p -> ψ(p),
         readlines("input")
     )
 )
+for i in 1:10
+    for j in 1:10
+        print()
 println("$(count(x -> x >= 2, m))")
