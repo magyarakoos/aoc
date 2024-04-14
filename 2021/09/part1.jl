@@ -8,7 +8,7 @@ m = map(l -> split(l, ""), readlines("input"))
     return true
 end
 p1 = 0
-for i in eachindex(f), j in eachline(f[1])
+for i in eachindex(m), j in eachindex(m[1])
     if ψ(i, j) global p1 += m[i][j] + 1 end
 end
 println(p1)
