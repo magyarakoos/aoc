@@ -1,5 +1,5 @@
 m = zeros(Int, 1000, 1000); m2 = zeros(Int, 1000, 1000)
-ψ = (p, g) -> begin
+ψ = (p, g, b) -> begin
     x = p[1]; y = p[2]; k = 0
     while k <= max(abs(p[1] - p[3]), abs(p[2] - p[4]))
         g[y, x] += 1
