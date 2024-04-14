@@ -3,8 +3,9 @@ using namespace std;
 int w;
 
 void solve(int i, vector<int> v) {
-    if (i == 0) {
-        
+    if (i == -1) {
+        for (int x : v[0]) cout << x;
+        cout << "\n";
     }
 }
 
