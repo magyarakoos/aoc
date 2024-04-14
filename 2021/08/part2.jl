@@ -22,7 +22,7 @@ f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"
     end
     return true
 end
-res = 0
+res::Int = 0
 for (a, sol) in f
     for perm in permutations("abcdefg")
         if (◿(a, perm))
@@ -34,7 +34,7 @@ for (a, sol) in f
                     mask[j] = 1
                 end
                 println((s, mask))
-                global res += i * findfirst(x -> x == mask, ⊗)
+                global res += i * (findfirst(x -> x == mask, ⊗) - 1)
                 i /= 10
                 
             end
