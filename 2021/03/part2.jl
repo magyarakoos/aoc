@@ -10,7 +10,7 @@ end
 Σ = (i, a) -> o = count(x -> (x >> i) & 1 == 1, a)
 ω = (i) -> begin
     if (i == -1) return 0 end
-    return Σ(i, a)
+    return length(a) <= Σ(i, a) * 2
 end
 Ψ = (i, a, λ) -> begin
     if length(a) == 1 return a[1] end
