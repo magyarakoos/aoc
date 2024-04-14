@@ -16,5 +16,8 @@ for x in n
             bc[i, j] += 1
             bc[i, k + 5] += 1
         end
+        if bc[i, j] == 5 || bc[i, k + 5] == 5
+            
+        end
     end
 end
