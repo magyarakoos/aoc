@@ -7,4 +7,4 @@ for i in 1:80
     cur[7] += pop[1]
     global pop = copy(cur)
 end
-println(pop)
+println(sum(pop))
