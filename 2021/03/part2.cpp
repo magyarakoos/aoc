@@ -2,10 +2,9 @@
 using namespace std;
 int w;
 
-void solve(int i, vector<int> v, function<bool(int, int)> f) {
+int solve(int i, vector<int> v, function<bool(int, int)> f) {
     if (v.size() == 1) {
-        cout << bitset<5>(v[0]);
-        return;
+        return v[0];
     }
     // cout << i << " : ";
     // for (int x : v) cout << bitset<5>(x) << " ";
@@ -21,7 +20,7 @@ void solve(int i, vector<int> v, function<bool(int, int)> f) {
             nv.push_back(x);
         }
     }
-    solve(i - 1, nv);
+    return solve(i - 1, nv, f);
 }
 
 int main() {
