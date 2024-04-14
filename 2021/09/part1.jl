@@ -9,9 +9,9 @@ f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 end
 p1 = 0
 for i in eachindex(f), j in eachindex(f[1])
-    if ψ(i, j) global p1 += m[i][j] + 1 end
+    if ψ(i, j) global p1 += f[i][j] + 1; println(f[i][j]) end
 end
 for row in f
-    println()
+    println(length(row))
 end
 println(p1)
