@@ -7,13 +7,13 @@ for l in eachline(f)
     end
     push!(a, x)
 end
-Σ = (x, i, a) -> o = count(x -> (x >> i) & 1 == 1, a)
+Σ = (i, a) -> o = count(x -> (x >> i) & 1 == 1, a)
 ω = (i) -> begin
     if (i == -1) return 0 end
-    return Σ()
+    return Σ(i, a)
 end
 Ψ = (i, a, λ) -> begin
     if length(a) == 1 return a[1] end
-    return Ψ(i - 1, filter(x -> (x >> i) & 1 == λ(length(a), Σ(x, i ,a)), a), λ)
+    return Ψ(i - 1, filter(x -> (x >> i) & 1 == λ(length(a), Σ(i, a)), a), λ)
 end
 println(Ψ(w - 1, a, (z, o) -> z <= o * 2) * Ψ(w - 1, a, (z, o) -> z > o * 2))
