@@ -9,5 +9,6 @@ while !eof(f)
     end
     push!(b, board)
 end
-println(n)
-println(b)
+for x in n
+    
+end
