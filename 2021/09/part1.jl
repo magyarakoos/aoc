@@ -9,11 +9,13 @@ f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
     end
     return true
 end
-φ = (i, j, id)
+φ = (i, j, k) -> begin
+    
+end
 p1 = 0
 vis = zeros(Bool, length(f), length(f[1]))
 basins = []
 for i in eachindex(f), j in eachindex(f[1])
     if ψ(i, j) push!(basins, (i, j)) end
 end
-println(p1)
+println(sum(basins) + length(basins))
