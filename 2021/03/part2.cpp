@@ -28,6 +28,7 @@ int main() {
     ifstream f("input");
     string s;
     vector<int> v;
+    int w;
     while (f >> s) {
         v.push_back(0);
         w = s.size();
@@ -36,6 +37,6 @@ int main() {
         }
     }
     cout << 
-        solve(w - 1, v, [](int zc, int oc){ return zc <= oc; }) *
-        solve(w - 1, v, [](int zc, int oc){ return oc < zc; });
+        solve(w - 1, w, v, [](int zc, int oc){ return zc <= oc; }) *
+        solve(w - 1, w, v, [](int zc, int oc){ return oc <  zc; });
 }
