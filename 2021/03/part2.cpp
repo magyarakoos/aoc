@@ -18,7 +18,7 @@ void solve(int i, vector<int> v) {
     vector<int> nv;
     for (int x : v) {
         if (oc) {
-            if ()
+            if (((x >> i) & 1))
         } else {
 
         }
