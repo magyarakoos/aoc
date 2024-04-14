@@ -7,8 +7,10 @@ int main() {
     ifstream f("input");
     string s;
     while (f >> s) {
+        if (oc.empty()) oc.resize(s.size());
         for (int i = 0; i < s.size(); i++) {
             v.back().push_back(s[i] == '1');
+            oc[i] += b
         }
         v.push_back({});
     }
