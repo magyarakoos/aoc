@@ -32,6 +32,7 @@ for (a, sol) in f
                 for i in indexin(s, perm)
                     mask[i] = 1
                 end
+                
             end
             break
         end
