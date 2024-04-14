@@ -17,7 +17,7 @@ perm = ['a','b','c','d','e','f','g']
 taken = fill('#', 10)
 for s in f[1][1]
     mask = zeros(Int, 7)
-    for i in indexin(string(s), perm)
+    for i in indexin(s, perm)
         mask[i] = 1
     end
     println((s, mask))
