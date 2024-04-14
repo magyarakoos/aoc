@@ -19,9 +19,10 @@ end
             sizes[k] += 1
             φ(ni, nj, k)
         end
-        end
-        
+    end
+end
 for i in eachindex(f), j in eachindex(f[1])
     if ψ(i, j) push!(basins, (i, j)); push!(sizes, 0) end
 end
 println(sum(basins) + length(basins))
+map(basin -> )
