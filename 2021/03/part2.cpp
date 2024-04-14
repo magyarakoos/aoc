@@ -6,8 +6,10 @@ int main() {
     ifstream f("input");
     string s;
     while (f >> s) {
-        for (char c :s) {
-            v.back().push_back()
+        for (char c : s) {
+            v.back().push_back(c == '1');
         }
+        v.push_back({});
     }
+    cou
 }
