@@ -11,13 +11,8 @@ end
     if p[1] == p[3] || p[2] == p[4] 
         Ψ(p, m); Ψ(p, m2)
     else
-        x = p[1]; y = p[2]
+        x = p[1]; y = p[2]; k = 0
         
-        while !(x == p[3] && y == p[4])
-            m2[y, x] += 1
-            x += sign(p[3] - p[1])
-            y += sign(p[4] - p[2])
-        end
     end
 end
 map(p -> ψ(p), 
