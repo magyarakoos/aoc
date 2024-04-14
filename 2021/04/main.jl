@@ -1,6 +1,6 @@
 f = open("input", "r")
 n::Vector{Int} = map(x -> parse(Int, x), split(readline(f), ","))
-b = []
+b = []; bc = []
 while !eof(f)
     readline(f)
     board = []
