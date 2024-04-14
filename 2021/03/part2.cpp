@@ -10,8 +10,8 @@ int main() {
     ifstream f("input");
     string s;
     while (f >> s) {
-        for (int i = 0; i < s.size(); i++) {
-            v.back().push_back(s[i] == '1');
+        for (int i = s.size() - 1; i >= 0; i--) {
+            v.back() |= (1 << i)
         }
         v.push_back({});
     }
