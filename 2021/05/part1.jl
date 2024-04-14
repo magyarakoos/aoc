@@ -6,4 +6,8 @@ map(p -> λ(p), filter(p -> p[1] == p[3] || p[2] == p[4],
         readlines("input")
     ))
 )
+for i in 1:20
+    for j in 1:20
+        print(m[])
+end
 println(count(x -> x >= 2, m))
