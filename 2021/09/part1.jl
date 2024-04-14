@@ -7,7 +7,7 @@ m = map(l -> split(l, ""), readlines("input"))
     end
     return true
 end
+p1 = 0
 for i in eachindex(f), j in eachline(f[1])
-    if 
+    if ψ(i, j) global p1 += 
 end
-filter()
