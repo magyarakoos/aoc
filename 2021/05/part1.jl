@@ -11,6 +11,7 @@ end
     if p[1] == p[3] || p[2] == p[4] 
         Ψ(p, m); Ψ(p, m2)
     else
+        
     end
 end
 map(p -> ψ(p), 
