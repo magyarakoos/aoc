@@ -32,7 +32,7 @@ for (a, sol) in f
                 for i in indexin(s, perm)
                     mask[i] = 1
                 end
-                t += findfirst(x -> x == mask, ⊗)
+                t += '0' + findfirst(x -> x == mask, ⊗)
             end
             break
         end
