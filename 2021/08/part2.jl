@@ -13,8 +13,8 @@ f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"
 #     end
 # end
 
-perm = ['a','b','c','d','e','f','g']
-
+# perm = ['a','b','c','d','e','f','g']
+perm = ['d','e','a','f','g','b','c']
 taken = fill("#", 10)
 for s in f[1][1]
     mask = zeros(Int, 7)
@@ -30,7 +30,7 @@ for s in f[1][1]
         taken[n] = s
     else
         if taken[n] != s
-            println("HELLNAW")
+            println("HELLNAW 2")
             exit(0)
         end
     end
