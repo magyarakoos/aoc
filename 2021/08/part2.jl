@@ -22,7 +22,7 @@ f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"
     end
     return true
 end
-
+res = 0
 for (a, sol) in f
     for perm in permutations("abcdefg")
         if (◿(a, perm))
@@ -32,7 +32,7 @@ for (a, sol) in f
                 for i in indexin(s, perm)
                     mask[i] = 1
                 end
-                
+                t += findfirst(x -> x == mask, ⊗)
             end
             break
         end
