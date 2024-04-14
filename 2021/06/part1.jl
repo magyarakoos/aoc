@@ -10,4 +10,4 @@
     end
     return sum(pop)
 end
-println($)
+println("$(λ(80))\n$(λ(256))")
