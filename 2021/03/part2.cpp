@@ -6,7 +6,7 @@ int main() {
     ifstream f("input");
     string s;
     while (f >> s) {
-        for (char c : s) {
+        for (int i = 0; i < ) {
             v.back().push_back(c == '1');
         }
         v.push_back({});
