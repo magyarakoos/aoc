@@ -1,6 +1,6 @@
 f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
+di = [1, -1, 0, 0]; dj = [0, 0, 1, -1]
 ψ = (i, j) -> begin
-    di = [1, -1, 0, 0]; dj = [0, 0, 1, -1]
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
         if ni > 0 &&  nj > 0 && ni <= length(f) && nj <= length(f[1]) && f[ni][nj] <= f[i][j]
@@ -10,7 +10,9 @@ f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
     return true
 end
 φ = (i, j, k) -> begin
-    
+    for k in 1:4
+        ni = i + di[k]; nj = j + dj[k]
+        i
 end
 p1 = 0
 vis = zeros(Bool, length(f), length(f[1]))
