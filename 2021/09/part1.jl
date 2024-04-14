@@ -11,7 +11,8 @@ p1 = 0
 for i in eachindex(f)
     for j in eachindex(f[i])
         print(f[i][j])
-        if 
+        if ψ(i, j) global p1 += f[i][j] + 1 end
     end
     println()
 end
+println(p1)
