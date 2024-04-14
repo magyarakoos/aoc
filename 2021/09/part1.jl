@@ -17,7 +17,6 @@ end
         ni = i + di[k]; nj = j + dj[k]
         if ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1]) && !vis[ni, nj] && f[ni][nj] < 9
             vis[ni, nj] = true
-            println((ni, nj, k))
             φ(ni, nj, k)
         end
     end
