@@ -1,4 +1,5 @@
-m = zeros(Int, 1000, 1000)
+m = zeros(Int, 1000, 1000); m2 = m
+
 map((p) -> for 
         x in min(p[1], p[3]):max(p[1], p[3]), 
         y in min(p[2], p[4]):max(p[2], p[4]) m[y, x] += 1 end, 
