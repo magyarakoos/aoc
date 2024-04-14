@@ -12,9 +12,9 @@ int solve(int i, vector<int> v, function<bool(int, int)> f) {
     // cout << "\n";
     int zc = 0, oc = 0;
     for (int x : v) {
-        c += f(x, i);
+        zc += f(x, i);
+        oc += !f(x, i);
     }
-    c = c >= v.size() - c;
     vector<int> nv;
     for (int x : v) {
         if (zc <= oc) {
