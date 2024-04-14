@@ -12,8 +12,8 @@ int solve(int i, vector<int> v, function<bool(int, int)> f) {
     // cout << "\n";
     int zc = 0, oc = 0;
     for (int x : v) {
+        oc += f(x, i);
         zc += f(x, i);
-        oc += !f(x, i);
     }
     vector<int> nv;
     for (int x : v) {
@@ -22,12 +22,9 @@ int solve(int i, vector<int> v, function<bool(int, int)> f) {
                 nv.push_back(x);
             }
         } else {
-            if (((x >> i) & 1)) {
+            if (!((x >> i) & 1)) {
                 nv.push_back(x);
             }
-        }
-        if ((zc <= oc && (x >> i) & 1) || (!c && !((x >> i) & 1))) {
-            
         }
     }
     return solve(i - 1, nv, f);
