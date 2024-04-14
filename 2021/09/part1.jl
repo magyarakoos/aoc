@@ -15,9 +15,9 @@ p1 = 0
 for i in eachindex(m), j in eachindex(m[1])
     if ψ(i, j) global p1 += m[i][j] + 1 end
 end
-for i in eachindex(m)
-    for j in eachindex(m[1])
-        print(m[i, j])
+for row in m
+    for x in row
+        print(x)
     end
     println()
 end
