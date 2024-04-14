@@ -19,7 +19,8 @@ for x in n
             bc[i, k + 5] += 1
         end
         if bc[i, j] == 5 || bc[i, k + 5] == 5
-            
+            println(scores[i] * x)
+            exit(0)
         end
     end
 end
