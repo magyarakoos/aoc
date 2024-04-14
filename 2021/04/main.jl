@@ -4,6 +4,6 @@ while !eof(f)
     readline(f)
     board = []
     for i in 1:5
-        push!()
+        push!(board, map(x -> parse(Int, x), split("")))
     end
 end
