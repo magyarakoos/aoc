@@ -1,2 +1,2 @@
-f = map(l -> match(r".*\|(.*)", l), readlines("input"))
+f = map(l -> l, readlines("input"))
 println(f)
