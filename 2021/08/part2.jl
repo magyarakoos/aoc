@@ -32,7 +32,7 @@ for (a, sol) in f
                 for j in indexin(s, perm)
                     mask[j] = 1
                 end
-                t = t + string(Char('0' + findfirst(x -> x == mask, ⊗)))
+                global res += i * findfirst(x -> x == mask, ⊗)
                 i /= 10
             end
             break
