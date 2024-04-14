@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-vector<vector<bool>> v({{}});
+vector<int> v({0});
 
 void solve(int i) {
 
