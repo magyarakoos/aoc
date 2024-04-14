@@ -14,7 +14,7 @@ end
         
     end
 end
-map(p -> (Ψ(p, m), ψ(p)), 
+map(p -> ψ(p), 
     map(l -> map(x -> parse(Int, x) + 1, 
         match(r"(\d+),(\d+) -> (\d+),(\d+)", l)), 
         readlines("input")
