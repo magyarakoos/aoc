@@ -6,4 +6,5 @@ end
 for i in eachindex(f), j in eachline(f[1]), di in [1, -1, 0, 0], dj in [0, 0, 1, -1]
     if (0 < di && 0 < dj && di <= length(f) && dj <= length(f[1]))
         
+    end
 end
