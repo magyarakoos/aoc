@@ -26,11 +26,11 @@ res = 0
 for (a, sol) in f
     for perm in permutations("abcdefg")
         if (◿(a, perm))
-            t = "0000"
+            i = 0
             for s in sol
                 mask = zeros(Int, 7)
-                for i in indexin(s, perm)
-                    mask[i] = 1
+                for j in indexin(s, perm)
+                    mask[j] = 1
                 end
                 t = t + string(Char('0' + findfirst(x -> x == mask, ⊗)))
             end
