@@ -10,7 +10,6 @@ end
 Ψ = (i, a, λ) -> begin
     if length(a) == 1 return a[1] end
     o = count(x -> (x >> i) & 1 == 1, a)
-    return solve(i - 1, 
-        filter(x -> λ(length(a) - o, o) ? (x >> i) & 1 == 1 : (x >> i) & 1 == 0, a), λ)
+    return Ψ(i - 1, filter(x -> (x >> i) & 1 == λ(length(a) - o, o), a), λ)
 end
 println(Ψ(w - 1, a, (z, o) -> z <= o) * Ψ(w - 1, a, (z, o) -> z > o))
