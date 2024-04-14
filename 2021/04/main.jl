@@ -12,8 +12,8 @@ end
 bc = zeros(Int, length(b), 20)
 for x in n
     for i in eachindex(b), j in 1:5, k in 1:5
-        if b[i, j, k] == x
-            println(x)
+        if b[i][j][k] == x
+            bc
         end
     end
 end
