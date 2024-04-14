@@ -13,7 +13,7 @@ int solve(int i, vector<int> v, function<bool(int, int)> f) {
     int zc = 0, oc = 0;
     for (int x : v) {
         oc += f(x, i);
-        zc += f(x, i);
+        zc += !f(x, i);
     }
     vector<int> nv;
     for (int x : v) {
