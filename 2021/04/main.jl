@@ -29,4 +29,4 @@ for x in n
         end
     end
 end
-println((scores[p1], scores[p2]))
+println("$(scores[p1])\n$(scores[p2])")
