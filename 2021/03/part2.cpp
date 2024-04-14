@@ -18,9 +18,13 @@ void solve(int i, vector<int> v) {
     vector<int> nv;
     for (int x : v) {
         if (oc) {
-            if (((x >> i) & 1))
+            if ((x >> i) & 1) {
+                nv.push_back(x);
+            }
         } else {
-
+            if (!((x >> i) & 1)) {
+                nv.push_back(x);
+            }
         }
     }
     solve(i - 1, nv);
