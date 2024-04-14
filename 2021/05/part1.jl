@@ -12,8 +12,10 @@ end
         Ψ(p, m); Ψ(p, m2)
     else
         x = p[1]; y = p[2]; k = 0
-        while k <= 
-        max(abs(p[1] - p[3]), abs(p[2] - p[4]))
+        while k <= max(abs(p[1] - p[3]), abs(p[2] - p[4]))
+            x += sign(p[3] - p[1])
+            k += 1
+        end     
     end
 end
 map(p -> ψ(p), 
