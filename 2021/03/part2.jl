@@ -1,7 +1,7 @@
 f = open("input", "r")
 a = []; w = 0
 for l in eachline(f)
-    x = 0; w = length(l)
+    x = 0; global w = length(l)
     for i in eachindex(l)
         x |= ((l[i] == '1') << (length(l) - i))
     end
@@ -13,3 +13,4 @@ end
     return solve(i - 1, 
         filter(x -> λ(length(a) - o, o) ? (x >> i) & 1 == 1 : (x >> i) & 1 == 0, a), λ)
 end
+println(Ψ(w - ))
