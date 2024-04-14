@@ -39,3 +39,4 @@ for (a, sol) in f
         end
     end
 end
+println(res)
