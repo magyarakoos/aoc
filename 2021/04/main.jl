@@ -9,13 +9,13 @@ while !eof(f)
     end
     push!(b, board)
 end
-bc = zeros(Int, length(b), 20)
+bc = zeros(Int, length(b), 10)
 for x in n
     for i in eachindex(b), j in 1:5, k in 1:5
         if b[i][j][k] == x
             bc[i, j] += 1
             bc[i, k + 5] += 1
-            bc[i, j + k + 10] += 1
+            bc[i, j + k + 9] += 1
         end
     end
 end
