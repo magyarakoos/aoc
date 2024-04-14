@@ -10,3 +10,4 @@ end
 for i in eachindex(f), j in eachline(f[1])
     if 
 end
+filter()
