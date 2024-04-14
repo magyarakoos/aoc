@@ -4,7 +4,9 @@ int w;
 
 void solve(int i, vector<int> v) {
     if (i == -1) {
-        for (int x : v[0]) cout << x;
+        for (int i = w - 1; i >= 0; i--) {
+            cout << (v[0] >> i);
+        }
         cout << "\n";
     }
 }
