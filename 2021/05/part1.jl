@@ -24,7 +24,7 @@ map(p -> ψ(p),
 )
 for i in 1:10
     for j in 1:10
-        print(m2[i, j])
+        print(m2[i, j] == 0 ? )
     end
     println()
 end
