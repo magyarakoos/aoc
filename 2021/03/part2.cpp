@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-vector<int> v({0});
+vector<int> v;
 
 void solve(int i) {
 
@@ -10,10 +10,10 @@ int main() {
     ifstream f("input");
     string s;
     while (f >> s) {
+        v.push_back(0);
         for (int i = s.size() - 1; i >= 0; i--) {
-            v.back() |= (1 << i)
+            v.back() |= ((s[i] == '1') << i);
         }
-        v.push_back({});
     }
     v.pop_back();
     auto [mn, mx] = minmax_element(v.begin(), v.end(),
