@@ -1,6 +1,5 @@
 using Combinatorics
 ⊗ = [[1,1,1,0,1,1,1],[0,0,1,0,0,1,0],[1,0,1,1,1,0,1],[1,0,1,1,0,1,1],[0,1,1,1,0,1,0],[1,1,0,1,0,1,1],[1,1,0,1,1,1,1],[1,0,1,0,0,1,0],[1,1,1,1,1,1,1],[1,1,1,1,0,1,1]] 
-◿ = (d) -> findfirst(x -> x == d, ⊗)
 f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"))
 # for (a, sol) in f
 #     for perm in permutations("abcdefg")
@@ -14,7 +13,7 @@ f = map(l -> [split(match(r"(.*)\|(.*)", l)[i]) for i in 1:2], readlines("input"
 #     end
 # end
 
-# perm = ['a','b','c','d','e','f','g']
+perm = ['a','b','c','d','e','f','g']
 perm = ['d','e','a','f','g','b','c']
 taken = fill("#", 10)
 for s in f[1][1]
@@ -27,7 +26,7 @@ for s in f[1][1]
         println("HELLNAW")
         exit(0)
     end
-    n = ◿(mask)
+    n = findfirst(x -> x == mask, ⊗)
     if taken[n] == "#"
         taken[n] = s
     else
