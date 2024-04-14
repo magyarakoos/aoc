@@ -9,5 +9,5 @@ for l in eachline(f)
 end
 Ψ = (i, a, λ) -> begin
     if length(a) == 1 return a[1] end
-    
+    o = count(x -> )
 end
