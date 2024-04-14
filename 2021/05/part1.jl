@@ -25,12 +25,4 @@ map(p -> ψ(p),
         readlines("input")
     )
 )
-for i in 1:10
-    for j in 1:10
-        if m2[i, j] == 0
-            print('.')
-        else print(m2[i, j]) end
-    end
-    println()
-end
-println("$(count(x -> x >= 2, m))")
+println("$(count(x -> x >= 2, m))\n$(count(x -> x >= 2, m2))")
