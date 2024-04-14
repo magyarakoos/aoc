@@ -26,7 +26,9 @@ end
 for (a, sol) in f
     for perm in permutations("abcdefg")
         if (◿(a, perm))
-            println(perm)
+            for s in sol
+                
+            end
             break
         end
     end
