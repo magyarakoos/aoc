@@ -1,7 +1,6 @@
 m = zeros(Int, 1000, 1000)
-filter(p -> x1 == x2 || y1 == y2,
-map(l -> 
-map(x -> parse(Int, x), 
+filter(p -> p[1] == p[3] || p[2] == p[4],
+map(l -> map(x -> parse(Int, x), 
 match(r"(\d+),(\d+) -> (\d+),(\d+)", l)), 
 readlines("input")
 ))
