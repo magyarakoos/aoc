@@ -18,10 +18,16 @@ int solve(int i, vector<int> v, function<bool(int, int)> f) {
     vector<int> nv;
     for (int x : v) {
         if (zc <= oc) {
-            
+            if ((x >> i) & 1) {
+                nv.push_back(x);
+            }
+        } else {
+            if (((x >> i) & 1)) {
+                nv.push_back(x);
+            }
         }
         if ((zc <= oc && (x >> i) & 1) || (!c && !((x >> i) & 1))) {
-            nv.push_back(x);
+            
         }
     }
     return solve(i - 1, nv, f);
