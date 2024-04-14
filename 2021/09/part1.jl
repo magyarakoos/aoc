@@ -14,7 +14,7 @@ end
 φ = (i, j, k) -> begin
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
-        if !vis[ni, nj] && ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1])
+        if ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1]) && !vis[ni, nj]
             vis[ni, nj] = true
             sizes[k] += 1
             φ(ni, nj, k)
@@ -27,4 +27,4 @@ end
 for i in eachindex(basins)
     φ(basins[i][1], basins[i][2], i)
 end
-println("$(sum(basins) + length(basins))\n$(prod(sort(sizes)[1:3]))")
+println("$(sum(x -> xbasins) + length(basins))\n$(prod(sort(sizes)[1:3]))")
