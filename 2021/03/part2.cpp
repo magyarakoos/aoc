@@ -11,7 +11,7 @@ void solve(int i, vector<int> v) {
     }
     int oc = 0;
     for (int x : v) {
-        oc +=
+        oc += (x >> i)
     }
 }
 
