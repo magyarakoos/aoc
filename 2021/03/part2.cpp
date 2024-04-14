@@ -17,7 +17,7 @@ int solve(int i, vector<int> v, function<bool(int, int)> f) {
     }
     vector<int> nv;
     for (int x : v) {
-        if (zc <= oc) {
+        if (f(x)) {
             if ((x >> i) & 1) {
                 nv.push_back(x);
             }
