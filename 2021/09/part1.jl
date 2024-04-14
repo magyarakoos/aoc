@@ -16,8 +16,11 @@ end
         ni = i + di[k]; nj = j + dj[k]
         if !vis[ni, nj] && ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1])
             vis[ni, nj] = true
-            
+            sizes[k] += 1
+            φ(ni, nj, k)
         end
+        end
+        
 for i in eachindex(f), j in eachindex(f[1])
     if ψ(i, j) push!(basins, (i, j)); push!(sizes, 0) end
 end
