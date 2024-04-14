@@ -13,4 +13,4 @@ end
     return solve(i - 1, 
         filter(x -> λ(length(a) - o, o) ? (x >> i) & 1 == 1 : (x >> i) & 1 == 0, a), λ)
 end
-println(Ψ(w - 1, a, (z, o) -> z <= o) *)
+println(Ψ(w - 1, a, (z, o) -> z <= o) * Ψ(w - 1, a, (z, o) -> z > o))
