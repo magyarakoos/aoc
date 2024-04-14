@@ -5,9 +5,10 @@ m = zeros(Int, 1000, 1000); m2 = m
             y in min(p[2], p[4]):max(p[2], p[4]) 
             m[y, x] += 1
         end
+    end
 end
 ψ = (p) -> p
-map(Ψ, 
+map(p -> (Ψ(p), ψ(p)), 
     map(l -> map(x -> parse(Int, x) + 1, 
         match(r"(\d+),(\d+) -> (\d+),(\d+)", l)), 
         readlines("input")
