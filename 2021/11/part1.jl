@@ -13,7 +13,6 @@ p1 = 0; curr = 0
         ψ(ni, nj)
     end
 end
-@time begin
 for _ in 1:100
     global curr += 1
     for i in eachindex(f), j in eachindex(f[1])
