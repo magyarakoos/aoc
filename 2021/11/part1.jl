@@ -11,4 +11,5 @@ vis = Set()
         end
     end
 end
-for i in 1:
+for i in 1:3
+    
