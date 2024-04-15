@@ -12,7 +12,8 @@ vis = Set()
     end
 end
 for _ in 1:3
-    f = [l .+ 1 for l in f]
+    global vis = Set()
+    global f = [l .+ 1 for l in f]
     for i in eachindex(f), j in eachindex(f[1])
         if f[i][j] > 9 ψ(i, j) end
     end
