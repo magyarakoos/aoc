@@ -19,4 +19,5 @@ while true
         ψ(i, j)
     end
     if curr == 100 println(p1) end
+    if countma
 end
