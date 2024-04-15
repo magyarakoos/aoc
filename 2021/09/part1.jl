@@ -1,3 +1,4 @@
+using Statistics
 f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 di = [1, -1, 0, 0]; dj = [0, 0, 1, -1]
 vis = zeros(Int, length(f), length(f[1]))
