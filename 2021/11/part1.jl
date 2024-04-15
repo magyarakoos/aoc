@@ -20,9 +20,10 @@ while true
     for i in eachindex(f), j in eachindex(f[1])
         ψ(i, j)
     end
-    if curr == 100 ans[1] = p1 end
+    if curr == 100 ans[1] = p1; if ans[2] != 0 break end end
     if curr != 1 && length(countmap(collect(reduce(vcat, vis)))) == 1
         ans[2] = p2
         if ans[1] != 0 break end
     end
 end
+println("$(ans[1])\n$(ans[2])")
