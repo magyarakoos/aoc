@@ -18,8 +18,7 @@ while true
     for i in eachindex(f), j in eachindex(f[1])
         ψ(i, j)
     end
-    p1 += curr
-    if curr == 100
+    global p1 += curr
+    if curr == 100 println(label) end
     if label == 100 println(p1) end
 end
-println(label)
