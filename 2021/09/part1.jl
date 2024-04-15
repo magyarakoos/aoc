@@ -31,4 +31,3 @@ for i in eachindex(basins)
 end
 println(sum(x -> f[x[1]][x[2]], basins) + length(basins))
 println(map(x -> x, sort(collect(values(countmap(vis[:]))),rev=true)[1:3]))
-count
