@@ -9,5 +9,6 @@ for l in readlines("input")
         elseif c != d[first(s)] global p1 += v[c]; break
         else pop!(s) end
     end
+    if !
 end
 println(p1)
