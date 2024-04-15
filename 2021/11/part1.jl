@@ -2,8 +2,8 @@ f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 vis = zeros(Int, length(f), length(f[1]))
 p1 = 0; curr = 0
 ψ = (i, j) -> begin
-    if i < 1 || nj < 1 || ni > length(f) || nj > length(f[1]) ||
-       vis[ni][nj] == curr return end
+    if i < 1 || j < 1 || i > length(f) || j > length(f[1]) ||
+       vis[i][j] == curr return end
     f[i][j] += 1
     if f[i][j] <= 9 return end
     vis[i][j] = curr
