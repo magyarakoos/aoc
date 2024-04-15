@@ -6,7 +6,9 @@ p1 = 0; curr = 0
        vis[ni][nj] == curr return end
     f[i][j] += 1
     if f[i][j] <= 9 return end
+    vis[i][j] = curr
     global p1 += 1
+    f[i]
     for ni in (i - 1):(i + 1), nj in (j - 1):(j + 1)
             continue
         end
