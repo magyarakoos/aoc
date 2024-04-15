@@ -16,7 +16,7 @@ end
     vis[i, j] = l
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
-        if ni <= 0 || nj <= 0 || ni > length(f) || nj > length(f[1]) || vis[ni, nj] != 0
+        if ni > 0 && nj > 0 && ni <= length(f) || nj > length(f[1]) || vis[ni, nj] != 0
             continue
         end
         if f[ni][nj] == 9 continue end
