@@ -4,7 +4,9 @@ vis = Set()
     f[i][j] = 0
     for ni in (i - 1):(i + 1), nj in (j - 1):(j + 1)
         if (ni == i && nj == j) || (ni, nj) ∈ vis ||
-            continue end
+            ni < 1 || nj < 1 || ni > length(f) || nj > length(f[1])
+            continue
+        end
         push!(vis, (ni, nj))
         f[ni][nj] += 1
         if f[ni][nj] > 9
