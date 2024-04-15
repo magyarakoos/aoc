@@ -20,6 +20,6 @@ while true
         ψ(i, j)
     end
     if curr == 100 println(p1) end
-    println(countmap(f))
+    println(countmap(collect(f)))
     sleep(1)
 end
