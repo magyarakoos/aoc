@@ -13,6 +13,7 @@ for l in readlines("input")
     if !empty(s)
         score = 0
         while !empty(s)
+            score = score * 5 + v2[]
         push!(p2, score)
     end
 end
