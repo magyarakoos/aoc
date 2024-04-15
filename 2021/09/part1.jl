@@ -28,7 +28,7 @@ for i in eachindex(f), j in eachindex(f[1])
     if ψ(i, j) push!(basins, (i, j)) end
 end
 for i in eachindex(basins)
-    φ(basins[i][1], basins[i][2], )
+    φ(basins[i][1], basins[i][2], 1)
 end
 println(sum(x -> f[x[1]][x[2]], basins) + length(basins))
 # println(map(x -> x, sort(collect(values(countmap(vis[:]))),rev=true)[1:3]))
