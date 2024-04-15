@@ -13,4 +13,8 @@ vis = Set()
 end
 for _ in 1:3
     f = [l .+ 1 for l in f]
-    if 
+    for i in eachindex(f), j in eachindex(f[1])
+        if f[i][j] > 9 ψ(i, j) end
+    end
+end
+
