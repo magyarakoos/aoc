@@ -3,7 +3,8 @@ vis = Set()
 ψ = (i, j) -> begin
     f[i][j] = 0
     for ni in (i - 1):(i + 1), nj in (j - 1):(j + 1)
-        if (ni == i && nj == j) || (ni, nj) ∈ vis continue end
+        if (ni == i && nj == j) || (ni, nj) ∈ vis ||
+            continue end
         push!(vis, (ni, nj))
         f[ni][nj] += 1
         if f[ni][nj] > 9
