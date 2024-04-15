@@ -8,15 +8,9 @@ p1 = 0; curr = 0
     if f[i][j] <= 9 return end
     vis[i][j] = curr
     global p1 += 1
-    f[i]
+    f[i][j] = 0
     for ni in (i - 1):(i + 1), nj in (j - 1):(j + 1)
-            continue
-        end
-        vis[ni][nj] = curr
-        f[ni][nj] += 1
-        if f[ni][nj] > 9
-            ψ(ni, nj)
-        end
+        ψ(ni, nj)
     end
 end
 for _ in 1:10
