@@ -24,3 +24,4 @@ for l in readlines("input")
     end
 end
 println(p1)
+median()
