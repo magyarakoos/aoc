@@ -14,13 +14,13 @@ p1 = 0; curr = 0
         ψ(ni, nj)
     end
 end
-ans = []
+ans = zeros(Int, 2)
 while true
     global curr += 1
     for i in eachindex(f), j in eachindex(f[1])
         ψ(i, j)
     end
-    if curr == 100 println(p1) end
+    if curr == 100 ans[] end
     if curr != 1 && length(countmap(collect(reduce(vcat, vis)))) == 1
         println(curr)
         exit(0)
