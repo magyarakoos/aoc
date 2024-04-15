@@ -18,5 +18,6 @@ for _ in 1:100
     for i in eachindex(f), j in eachindex(f[1])
         ψ(i, j)
     end
+    if _ == 10
 end
-println(p1)
+println("$p1\n$curr")
