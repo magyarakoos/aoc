@@ -20,5 +20,7 @@ for _ in 1:3
     for i in eachindex(f), j in eachindex(f[1])
         if f[i][j] > 9 ψ(i, j) end
     end
+    for l in f println(l) end
+    println()
 end
 
