@@ -7,7 +7,7 @@ for l in readlines("input")
     s = Stack{Char}()    
     for c in l
         if c ∈ keys(d) push!(s, c) end
-        if c != d[first(s)] global p1 += v[c]; break end
+        if c != d[first(s)] global p1 += 1; break end
         push!(s, c)
     end
 end
