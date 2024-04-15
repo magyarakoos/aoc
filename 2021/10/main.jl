@@ -6,9 +6,14 @@ p1 = 0
 for l in readlines("input")
     s = Stack{Char}()    
     for c in l
-        if c ∈ keys(d) push!(s, c)
-        elseif c != d[first(s)] global p1 += 1; break end
-        push!(s, c)
+        if c ∈ keys(d) 
+            push!(s, c)
+        elseif c != d[first(s)] 
+            global p1 += 1
+            break
+        else 
+            push!(s, c)
+        end
     end
 end
 println(p1)
