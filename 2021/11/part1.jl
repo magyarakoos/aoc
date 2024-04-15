@@ -1,3 +1,4 @@
+using StatsBase
 f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 vis = zeros(Int, length(f), length(f[1]))
 p1 = 0; curr = 0
@@ -19,5 +20,5 @@ while true
         ψ(i, j)
     end
     if curr == 100 println(p1) end
-    if countma
+    if countmap()
 end
