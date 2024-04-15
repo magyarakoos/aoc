@@ -19,7 +19,7 @@ end
             continue
         end
         if f[ni][nj] == 9 continue end
-        vis[ni, nj] = k
+        Í
         φ(ni, nj, k)
     end
 end
