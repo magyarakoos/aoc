@@ -7,7 +7,7 @@ p1 = 0; label = 0; curr = 0
     f[i][j] += 1
     if f[i][j] <= 9 return end
     vis[i, j] = label
-    global p1 += 1
+    global curr += 1
     f[i][j] = 0
     for ni in (i - 1):(i + 1), nj in (j - 1):(j + 1)
         ψ(ni, nj)
@@ -18,6 +18,8 @@ while true
     for i in eachindex(f), j in eachindex(f[1])
         ψ(i, j)
     end
+    p1 += curr
+    if curr == 100
     if label == 100 println(p1) end
 end
 println(label)
