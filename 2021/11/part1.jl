@@ -20,6 +20,8 @@ while true
         ψ(i, j)
     end
     if curr == 100 println(p1) end
-    println(length(countmap(collect(reduce(vcat, vis)))))
-    sleep(1)
+    if length(countmap(collect(reduce(vcat, vis)))) == 1
+        println(curr)
+        exit(0)
+    end
 end
