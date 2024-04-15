@@ -21,11 +21,9 @@ end
     end
 end
 for i in eachindex(f), j in eachindex(f[1])
-    if ψ(i, j) push!(basins, (i, j)); push!(sizes, 0) end
+    if ψ(i, j) push!(basins, (i, j)) end
 end
 for i in eachindex(basins)
     φ(basins[i][1], basins[i][2], i)
 end
-sort(sizes, rev=true)
-println(sizes)
-println("$(sum(x -> f[x[1]][x[2]], basins) + length(basins))\n$(prod(sizes[1:3]))")
+println(sum(x -> f[x[1]][x[2]], basins))
