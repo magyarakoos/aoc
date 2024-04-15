@@ -1,7 +1,7 @@
 f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 di = [1, -1, 0, 0]; dj = [0, 0, 1, -1]
-vis = zeros(Bool, length(f), length(f[1]))
-basins = []; sizes = []
+vis = zeros(Int, length(f), length(f[1]))
+basins = []
 ψ = (i, j) -> begin
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
@@ -12,11 +12,10 @@ basins = []; sizes = []
     return true
 end
 φ = (i, j, k) -> begin
-    sizes[k] += 1  
+    vis[ni, nj] = k
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
         if ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1]) && !vis[ni, nj] && f[ni][nj] < 9
-            vis[ni, nj] = true
             φ(ni, nj, k)
         end
     end
