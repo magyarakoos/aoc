@@ -20,7 +20,6 @@ end
             continue
         end
         if f[ni][nj] == 9 continue end
-        println("$((i, j)) -> $((ni, nj))")
         φ(ni, nj, l)
     end
 end
@@ -31,5 +30,5 @@ for i in eachindex(basins)
     φ(basins[i][1], basins[i][2], i)
 end
 println(sum(x -> f[x[1]][x[2]], basins) + length(basins))
-# println(map(x -> x, sort(collect(values(countmap(vis[:]))),rev=true)[1:3]))
+println(sort(collect(values(countmap(vis[:]))),rev=true)[1:3])
 display(vis)
