@@ -9,6 +9,7 @@ p1 = 0; curr = 0
            (ni == i && nj == j) || vis[ni][nj] == curr
             continue
         end
+        vis[ni][nj] = curr
         f[ni][nj] += 1
         if f[ni][nj] > 9
             ψ(ni, nj)
@@ -16,7 +17,7 @@ p1 = 0; curr = 0
     end
 end
 for _ in 1:10
-    global vis = Set()
+    global curr += 1
     global f = [l .+ 1 for l in f]
     for i in eachindex(f), j in eachindex(f[1])
         if f[i][j] > 9 ψ(i, j) end
