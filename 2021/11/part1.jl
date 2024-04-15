@@ -19,6 +19,7 @@ while true
         ψ(i, j)
     end
     global p1 += curr
-    if curr == 100 println(label) end
+    if curr == 100 println(label); exit(0) end
     if label == 100 println(p1) end
+    global curr = 0
 end
