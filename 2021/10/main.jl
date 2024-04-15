@@ -1,6 +1,7 @@
 using DataStructures
 d = Dict('('=>')', '['=>']', '{'=>'}', '<'=>'>')
 v = Dict(')'=>3, ']'=>57, '}'=>1197, '>'=>25137)
+v2 = Dict('('=>1, '['=>2, '{'=>3, '<'=>4)
 p1 = 0
 for l in readlines("input")
     s = Stack{Char}()    
