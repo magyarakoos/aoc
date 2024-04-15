@@ -6,7 +6,7 @@ p1 = 0; curr = 0
     global p1 += 1
     for ni in (i - 1):(i + 1), nj in (j - 1):(j + 1)
         if ni < 1 || nj < 1 || ni > length(f) || nj > length(f[1]) ||
-           (ni == i && nj == j) || vis[ni][nj] == curr
+           vis[ni][nj] == curr
             continue
         end
         vis[ni][nj] = curr
