@@ -14,6 +14,7 @@ p1 = 0; curr = 0
         ψ(ni, nj)
     end
 end
+ans = []
 while true
     global curr += 1
     for i in eachindex(f), j in eachindex(f[1])
