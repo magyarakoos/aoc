@@ -1,4 +1,5 @@
 f = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
+vis = zeros()
 p1 = 0
 ψ = (i, j) -> begin
     f[i][j] = 0
