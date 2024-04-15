@@ -13,7 +13,7 @@ basins = []
     return true
 end
 φ = (i, j, k) -> begin
-    vis[i, j] = 1
+    vis[i, j] = k
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
         if ni <= 0 || nj <= 0 || ni > length(f) || nj > length(f[1]) || vis[ni, nj] != 0
@@ -30,4 +30,5 @@ for i in eachindex(basins)
     φ(basins[i][1], basins[i][2], i)
 end
 println(sum(x -> f[x[1]][x[2]], basins) + length(basins))
-println(map(x -> x, sort(collect(values(countmap(vis[:]))),rev=true)[1:3]))
+# println(map(x -> x, sort(collect(values(countmap(vis[:]))),rev=true)[1:3]))
+display(vis)
