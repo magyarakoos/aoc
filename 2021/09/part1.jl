@@ -18,10 +18,9 @@ end
         if ni <= 0 || nj <= 0 || ni > length(f) || nj > length(f[1]) || vis[ni, nj] != 0
             continue
         end
-        if ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1]) && vis[ni, nj] == 0 && f[ni][nj] < 9
-            vis[ni, nj] = k
-            φ(ni, nj, k)
-        end
+        if f[ni][nj] == 9 continue end
+        vis[ni, nj] = k
+        φ(ni, nj, k)
     end
 end
 for i in eachindex(f), j in eachindex(f[1])
