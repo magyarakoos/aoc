@@ -15,7 +15,6 @@ p1 = 0; curr = 0
     end
 end
 ans = zeros(Int, 2)
-@time begin
 while true
     global curr += 1
     for i in eachindex(f), j in eachindex(f[1])
@@ -26,6 +25,5 @@ while true
         ans[2] = curr
         if ans[1] != 0 break end
     end
-end
 end
 println("$(ans[1])\n$(ans[2])")
