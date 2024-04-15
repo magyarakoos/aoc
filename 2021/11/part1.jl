@@ -11,5 +11,6 @@ vis = Set()
         end
     end
 end
-for i in 1:3
-    
+for _ in 1:3
+    f = [l .+ 1 for l in f]
+    if 
