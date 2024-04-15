@@ -8,7 +8,6 @@ vis = Set(); p1 = 0
             ni < 1 || nj < 1 || ni > length(f) || nj > length(f[1])
             continue
         end
-        push!(vis, (ni, nj))
         f[ni][nj] += 1
         if f[ni][nj] > 9
             ψ(ni, nj)
