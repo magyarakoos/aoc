@@ -12,7 +12,7 @@ for l in readlines("input")
             global p1 += 1
             break
         else 
-            push!(s, c)
+            pop!(s)
         end
     end
 end
