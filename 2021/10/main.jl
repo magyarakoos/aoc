@@ -20,8 +20,7 @@ for l in readlines("input")
             score = score * 5 + v2[first(s)]
             pop!(s)
         end
-        println(score)
         push!(p2, score)
     end
 end
-println("$p1\n$(int(median(p2)))")
+println("$p1\n$(Int(median(p2)))")
