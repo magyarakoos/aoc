@@ -15,6 +15,7 @@ end
 φ = (i, j, k) -> begin
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
+        if ni <= 0 || nj <= 0 || ni > length(f) || nj > length(f[1]) || vis[ni, nj] != 0
         if ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1]) && vis[ni, nj] == 0 && f[ni][nj] < 9
             vis[ni, nj] = k
             φ(ni, nj, k)
