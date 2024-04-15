@@ -20,6 +20,7 @@ end
             continue
         end
         if f[ni][nj] == 9 continue end
+        println("$((i, j)) -> $((ni, nj))")
         φ(ni, nj, k)
     end
 end
