@@ -5,6 +5,7 @@ p1 = 0; curr = 0
     if ni < 1 || nj < 1 || ni > length(f) || nj > length(f[1]) ||
        vis[ni][nj] == curr return end
     f[i][j] += 1
+    if f[i][j] <= 9 return end
     global p1 += 1
     for ni in (i - 1):(i + 1), nj in (j - 1):(j + 1)
             continue
