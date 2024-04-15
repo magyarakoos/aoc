@@ -8,12 +8,8 @@ for l in readlines("input")
     for c in l
         if c ∈ keys(d) 
             push!(s, c)
-        elseif c != d[first(s)] 
-            global p1 += 1
-            break
-        else 
-            pop!(s)
-        end
+        elseif c != d[first(s)] global p1 += v[c]; break
+        else pop!(s) end
     end
 end
 println(p1)
