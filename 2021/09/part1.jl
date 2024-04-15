@@ -19,7 +19,6 @@ end
             continue
         end
         if f[ni][nj] == 9 continue end
-        Í
         φ(ni, nj, k)
     end
 end
