@@ -12,10 +12,10 @@ basins = []
     return true
 end
 φ = (i, j, k) -> begin
-    vis[ni, nj] = k
+    vis[i, j] = k
     for k in 1:4
         ni = i + di[k]; nj = j + dj[k]
-        if ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1]) && !vis[ni, nj] && f[ni][nj] < 9
+        if ni > 0 && nj > 0 && ni <= length(f) && nj <= length(f[1]) && vis[ni, nj] == 0 && f[ni][nj] < 9
             φ(ni, nj, k)
         end
     end
