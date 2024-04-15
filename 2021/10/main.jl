@@ -1,4 +1,5 @@
 using DataStructures
+using Statistics
 d = Dict('('=>')', '['=>']', '{'=>'}', '<'=>'>')
 v = Dict(')'=>3, ']'=>57, '}'=>1197, '>'=>25137)
 v2 = Dict('('=>1, '['=>2, '{'=>3, '<'=>4)
@@ -23,5 +24,4 @@ for l in readlines("input")
         push!(p2, score)
     end
 end
-println(p1)
-median()
+println("$p1\n$(int(median(p2)))")
