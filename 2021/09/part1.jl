@@ -29,3 +29,4 @@ for i in eachindex(basins)
 end
 println(sum(x -> f[x[1]][x[2]], basins) + length(basins))
 println(countmap(vis[:]))
+count
