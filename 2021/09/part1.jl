@@ -27,4 +27,3 @@ for i in eachindex(basins)
     φ(basins[i][1], basins[i][2], i)
 end
 println(sum(x -> f[x[1]][x[2]], basins) + length(basins))
-println(vis)
