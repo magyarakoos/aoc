@@ -2,13 +2,14 @@ using DataStructures
 g = Dict{String, Vector{String}}()
 for l in eachline("input")
     v = split(l, "-")
-    if !haskey(g, v[1])
-        g[v[1]] = []
+    for x in v
+        if !haskey(g, x)
+            g[x] = []
+        end
     end
     push!(g[v[1]], v[2])
 end
 println(g)
-exit(0)
 vis = Set(); p1 = 0
 q = Queue{String}()
 enqueue!(q, "start")
