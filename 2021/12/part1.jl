@@ -11,5 +11,8 @@ vis = Set(); q = Queue(Int)
 enqueue!(q, "start")
 while length(q) > 0
     u = dequeue!(q)
-    for v in 
+    for v in g[u]
+        if v ∈ vis continue end
+        if 
+    end
 end
