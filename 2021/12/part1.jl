@@ -1,0 +1,1 @@
+map(l -> split(l, "-"), readlines("input"))
