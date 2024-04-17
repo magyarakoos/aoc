@@ -9,6 +9,7 @@ dfs = (u) -> begin
         push!(vis, u)
     end
     for v in g[u]
+        if !()
         dfs(v)
     end
     delete!(vis, u)
@@ -24,3 +25,6 @@ for l in eachline("input")
     push!(g[v[1]], v[2])
     push!(g[v[2]], v[1])
 end
+
+dfs("start")
+println(p1)
