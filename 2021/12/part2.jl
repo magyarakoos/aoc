@@ -2,13 +2,13 @@ using DataStructures
 g = Dict{String, Vector{String}}()
 vis = Set(); twice = false; p2 = 0
 dfs = (u) -> begin
-push!(vis, u)
-    if u == "end"
-        global p2 += 1
+if u == "end"
+    global p2 += 1
         return
     end
+    push!(vis, u)
     for v in g[u]
-        if !(v ∈ vis)
+        if !(v ∈ vis) || v[1] <= 'a'
             dfs(v)
         elseif !(v ∈ ["start", "end"]) && !twice
             global twice = true
