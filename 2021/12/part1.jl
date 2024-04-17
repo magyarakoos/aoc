@@ -1,5 +1,5 @@
 g = Dict{String, Vector{String}}()
-vis = Set()
+vis = Set();
 for l in eachline("input")
     v = split(l, "-")
     if !haskey(g, v[1])
