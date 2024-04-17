@@ -3,6 +3,8 @@ g = Dict{String, Vector{String}}()
 vis = Set(); p1 = 0
 twice = false
 dfs = (u) -> begin
+    println(u)
+    sleep(0.2)
     if u == "end"
         global p1 += 1
     end
