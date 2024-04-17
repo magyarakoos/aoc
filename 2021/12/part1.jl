@@ -1,6 +1,6 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
-vis = Set(); p1 = 0
+vis = Set(); twice = false
 dfs = (u) -> begin
     if u == "end"
         global p1 += 1
