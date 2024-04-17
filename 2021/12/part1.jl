@@ -1,17 +1,19 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
 vis = Dict{String, Int}(); p1 = 0
-dfs = (u) -> begin
+dfs = (u, bound) -> begin
     if u == "end"
         global p1 += 1
     end
     if islowercase(u[1])
-        push!(vis, u)
+        vis[u] += 1
     end
     for v in g[u]
         if !(v ∈ vis) dfs(v) end
     end
-    delete!(vis, u)
+    if islowercase(u[1])
+        vis[u] -= 1
+    end
 end
 for l in eachline("input")
     v = split(l, "-")
