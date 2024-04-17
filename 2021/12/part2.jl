@@ -2,10 +2,12 @@ using DataStructures
 g = Dict{String, Vector{String}}()
 vis = Set(); p1 = 0
 twice = false
+count = 0
 dfs = (u) -> begin
     println(u)
     sleep(0.001)
-    if p1 >= 100 exit(0) end
+    global count += 1
+    if count >
     if u == "end"
         global p1 += 1
     end
