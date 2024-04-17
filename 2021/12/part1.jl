@@ -1,10 +1,11 @@
-g = Dict()
-λ = (a) -> begin
-    if !haskey(g, string(a[1])) 
-        g[string(a[1])] = Vector{String}() 
+g = Dict{String, Vector{String}}()
+for line in eachline("input")
+    nodes = split(line, "-")
+    node = nodes[1]
+    adjacent_node = nodes[2]
+    if !haskey(g, node)
+        g[node] = []
     end
-    push!(string(g[a[1]]), string(a[2]))
+    push!(g[node], adjacent_node)
 end
-map(l -> map(λ, split(l, "-")), readlines("input"))
-
 println(g)
