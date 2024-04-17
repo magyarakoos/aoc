@@ -5,9 +5,8 @@ dfs = (u) -> begin
     if islowercase(u)
         push!(vis, u)
     end
-
-    if u ∈ vis
-        delete!(u)
+    for 
+    delete!(vis, u)
 end
 
 for l in eachline("input")
