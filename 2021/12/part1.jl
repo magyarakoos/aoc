@@ -5,7 +5,9 @@ dfs = (u) -> begin
     if islowercase(u)
         push!(vis, u)
     end
-    for 
+    for v in g[u]
+        
+    end
     delete!(vis, u)
 end
 
