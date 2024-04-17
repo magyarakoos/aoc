@@ -2,7 +2,7 @@ using DataStructures
 g = Dict{String, Vector{String}}()
 vis = Set()
 dfs = (u) -> begin
-    if islowercase(u)
+    if islowercase(u[1])
         push!(vis, u)
     end
     for v in g[u]
@@ -21,4 +21,3 @@ for l in eachline("input")
     push!(g[v[1]], v[2])
     push!(g[v[2]], v[1])
 end
-
