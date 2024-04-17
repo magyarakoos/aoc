@@ -7,7 +7,9 @@ for l in eachline("input")
     end
     push!(g[v[1]], v[2])
 end
-vis = Set(); q = Deque{String}(); p1 = 0
+vis = Set(); p1 = 0
+q = Queue(Int)
+exit(0)
 push!(q, "start")
 while length(q) > 0
     u = front(q)
