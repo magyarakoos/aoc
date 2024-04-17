@@ -7,9 +7,7 @@ dfs = (u) -> begin
         global p2 += 1
         return
     end
-    if islowercase(u[1])
-        push!(vis, u)
-    end
+    push!(vis, u)
     for v in g[u]
         if !(v ∈ vis)
             dfs(v)
