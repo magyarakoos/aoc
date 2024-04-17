@@ -1,5 +1,5 @@
+using DataStructures
 g = Dict{String, Vector{String}}()
-vis = Set();
 for l in eachline("input")
     v = split(l, "-")
     if !haskey(g, v[1])
@@ -7,4 +7,5 @@ for l in eachline("input")
     end
     push!(g[v[1]], v[2])
 end
+vis = Set(); q = Queue(Int)
 
