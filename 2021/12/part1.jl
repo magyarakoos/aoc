@@ -5,6 +5,6 @@ g = Dict()
     end
     push!(g[a[1]], a[2])
 end
-map(l -> map(λ, split(l, "-")[1:2]), readlines("input"))
+map(l -> map(λ, split(l, "-")), readlines("input"))
 
 println(g)
