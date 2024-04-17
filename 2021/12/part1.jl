@@ -11,7 +11,8 @@ vis = Set(); p1 = 0
 q = Queue{String}()
 enqueue!(q, "start")
 while length(q) > 0
-    u = front(q)
+    # u = front(q)
+    dequeue!(u)
     if u == "end"
         global p1 += 1
         continue
