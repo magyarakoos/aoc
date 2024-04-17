@@ -27,5 +27,6 @@ for l in eachline("input")
     push!(g[v[2]], v[1])
     vis[v[1]] = 0; vis[v[2]] = 0
 end
+vis["start"] = 1
 dfs("start")
 println(p1)
