@@ -3,7 +3,11 @@ g = Dict{String, Vector{String}}()
 vis = Set()
 dfs = (u) -> begin
     if islowercase(u)
-        push!(u)
+        push!(vis, u)
+    end
+
+    if u ∈ vis
+        delete!(u)
 end
 
 for l in eachline("input")
