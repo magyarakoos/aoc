@@ -8,4 +8,5 @@ for l in eachline("input")
     push!(g[v[1]], v[2])
 end
 vis = Set(); q = Queue(Int)
-
+enqueue!(q, "start")
+while empty(q)
