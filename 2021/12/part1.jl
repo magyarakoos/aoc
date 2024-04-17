@@ -1,6 +1,9 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
-dfs = ()
+dfs = (u) -> begin
+
+end
+
 for l in eachline("input")
     v = split(l, "-")
     for x in v
@@ -11,9 +14,8 @@ for l in eachline("input")
     push!(g[v[1]], v[2])
     push!(g[v[2]], v[1])
 end
-println(g)
-vis = Set(); q = Queue{String}(); p1 = 0
-enqueue!(q, "start")
+
+vis = Set()
 while length(q) > 0
     u = dequeue!(q)
     if u == "end"
