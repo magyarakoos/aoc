@@ -4,6 +4,7 @@ vis = Dict{String, Int}(); ans = [0, 0]
 dfs = (u, i) -> begin
     if u == "end"
         ans[i] += 1
+        return
     end
     if islowercase(u[1])
         vis[u] += 1
