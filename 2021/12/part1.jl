@@ -7,4 +7,4 @@ for l in eachline("input")
     end
     push!(g[v[1]], v[2])
 end
-println(g)
+
