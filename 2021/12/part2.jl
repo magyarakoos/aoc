@@ -8,7 +8,7 @@ dfs = (u) -> begin
     end
     push!(vis, u)
     for v in g[u]
-        if !(v ∈ vis) || isuppercase()
+        if !(v ∈ vis)
             dfs(v)
         elseif !(v ∈ ["start", "end"]) && !twice
             global twice = true
