@@ -3,13 +3,12 @@ g = Dict{String, Vector{String}}()
 vis = Set(); twice = false; p2 = 0
 dfs = (u) -> begin
     if u == "end"
-        delete!(vis, "end")
         global p2 += 1
         return
     end
     push!(vis, u)
     for v in g[u]
-        if !(v ∈ vis)
+        if !(v ∈ vis) || isuppercase()
             dfs(v)
         elseif !(v ∈ ["start", "end"]) && !twice
             global twice = true
