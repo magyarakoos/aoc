@@ -21,7 +21,7 @@ while length(q) > 0
     end
     for v in g[u]
         if v ∈ vis continue end
-        if isuppercase(v[1])
+        if islowercase(v[1])
             push!(vis, v)
         end
         enqueue!(q, v)
