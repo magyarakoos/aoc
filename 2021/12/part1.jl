@@ -10,8 +10,7 @@ for l in eachline("input")
     push!(g[v[1]], v[2])
 end
 println(g)
-vis = Set(); p1 = 0
-q = Queue{String}()
+vis = Set(); q = Queue{String}(); p1 = 0
 enqueue!(q, "start")
 while length(q) > 0
     u = dequeue!(q)
