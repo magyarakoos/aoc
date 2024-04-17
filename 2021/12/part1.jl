@@ -7,7 +7,7 @@ dfs = (u, i) -> begin
         return
     end
     if islowercase(u[1])
-        vis[u] += 1
+        push!(vis, 1)
     end
     for v in g[u]
         if vis[v] < i dfs(v, i) end
