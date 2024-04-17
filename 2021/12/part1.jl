@@ -1,11 +1,9 @@
 g = Dict{String, Vector{String}}()
-for line in eachline("input")
-    nodes = split(line, "-")
-    node = nodes[1]
-    adjacent_node = nodes[2]
-    if !haskey(g, node)
-        g[node] = []
+for l in eachline("input")
+    v = split(l, "-")
+    if !haskey(g, v[1])
+        g[v[1]] = []
     end
-    push!(g[node], adjacent_node)
+    push!(g[v[1]], v[2])
 end
 println(g)
