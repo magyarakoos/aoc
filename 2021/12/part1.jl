@@ -7,12 +7,13 @@ for l in eachline("input")
     end
     push!(g[v[1]], v[2])
 end
+println(g)
+exit(0)
 vis = Set(); p1 = 0
 q = Queue{String}()
 enqueue!(q, "start")
 while length(q) > 0
-    # u = front(q)
-    dequeue!(u)
+    u = dequeue!(q)
     if u == "end"
         global p1 += 1
         continue
