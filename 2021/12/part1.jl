@@ -9,8 +9,7 @@ dfs = (u) -> begin
         push!(vis, u)
     end
     for v in g[u]
-        if !()
-        dfs(v)
+        if !(v ∈ vis) dfs(v) end
     end
     delete!(vis, u)
 end
