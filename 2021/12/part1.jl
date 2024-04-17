@@ -1,6 +1,6 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
-vis = Dict{String, Int}(); ans = [0, 0]
+vis = Set(); ans = [0, 0]; twice = false
 dfs = (u, i) -> begin
     if u == "end"
         ans[i] += 1
