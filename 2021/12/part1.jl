@@ -10,7 +10,8 @@ end
 vis = Set(); q = Deque{String}(); p1 = 0
 push!(q, "start")
 while length(q) > 0
-    u = front!(q)
+    u = front(q)
+    
     if u == "end"
         global p1 += 1
         continue
