@@ -8,6 +8,7 @@ for l in eachline("input")
         end
     end
     push!(g[v[1]], v[2])
+    push!(g[v[2]], v[1])
 end
 println(g)
 vis = Set(); q = Queue{String}(); p1 = 0
