@@ -9,7 +9,7 @@ dfs = (u, bound) -> begin
         vis[u] += 1
     end
     for v in g[u]
-        if !(v ∈ vis) dfs(v) end
+        if vis[v] < bound dfs(v) end
     end
     if islowercase(u[1])
         vis[u] -= 1
