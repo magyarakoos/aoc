@@ -1,12 +1,15 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
-vis = Set()
+vis = Set(); p1 = 0
 dfs = (u) -> begin
+    if u == "end"
+        global p1 += 1
+    end
     if islowercase(u[1])
         push!(vis, u)
     end
     for v in g[u]
-        
+        dfs(v)
     end
     delete!(vis, u)
 end
