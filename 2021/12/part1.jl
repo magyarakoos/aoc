@@ -7,14 +7,12 @@ dfs = (u, i) -> begin
         return
     end
     if islowercase(u[1])
-        push!(vis, 1)
+        push!(vis, u)
     end
     for v in g[u]
-        if vis[v] < i dfs(v, i) end
+        
     end
-    if islowercase(u[1])
-        vis[u] -= 1
-    end
+    delete!(vis, u)
 end
 for l in eachline("input")
     v = split(l, "-")
