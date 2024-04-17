@@ -11,8 +11,9 @@ dfs = (u) -> begin
     end
     for v in g[u]
         if !(v ∈ vis) dfs(v)
-        else
+        elseif !(v ∈ ["start", "end"]) && !twice
             
+            end
     end
     delete!(vis, u)
 end
