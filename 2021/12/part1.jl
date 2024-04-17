@@ -4,12 +4,13 @@ vis = Set(); twice = false
 dfs = (u) -> begin
     if u == "end"
         global p1 += 1
+        return
     end
     if islowercase(u[1])
         push!(vis, u)
     end
     for v in g[u]
-        if !(v ∈ vis) dfs(v) end
+        
     end
     delete!(vis, u)
 end
