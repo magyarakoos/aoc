@@ -1,5 +1,6 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
+dfs = ()
 for l in eachline("input")
     v = split(l, "-")
     for x in v
