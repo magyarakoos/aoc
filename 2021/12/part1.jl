@@ -9,4 +9,7 @@ for l in eachline("input")
 end
 vis = Set(); q = Queue(Int)
 enqueue!(q, "start")
-while empty(q)
+while length(q) > 0
+    u = dequeue!(q)
+    for v in 
+end
