@@ -5,6 +5,7 @@ twice = false
 dfs = (u) -> begin
     println(u)
     sleep(0.001)
+    if p1 >= 100 exit(0) end
     if u == "end"
         global p1 += 1
     end
