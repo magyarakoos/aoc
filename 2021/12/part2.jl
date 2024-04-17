@@ -1,6 +1,7 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
 vis = Set(); p1 = 0
+twice = false
 dfs = (u) -> begin
     if u == "end"
         global p1 += 1
@@ -9,7 +10,9 @@ dfs = (u) -> begin
         push!(vis, u)
     end
     for v in g[u]
-        if !(v ∈ vis) dfs(v) end
+        if !(v ∈ vis) dfs(v)
+        else
+            
     end
     delete!(vis, u)
 end
