@@ -1,20 +1,17 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
-vis = Dict{String, Int}(); ans = [0, 0]
-dfs = (u, i) -> begin
+vis = Set(); p1 = 0
+dfs = (u) -> begin
     if u == "end"
-        ans[i] += 1
-        return
+        global p1 += 1
     end
     if islowercase(u[1])
-        vis[u] += 1
+        push!(vis, u)
     end
     for v in g[u]
-        if vis[v] < i && v != "start" dfs(v) end
+        if !(v ∈ vis) dfs(v) end
     end
-    if islowercase(u[1])
-        vis[u] -= 1
-    end
+    delete!(vis, u)
 end
 for l in eachline("input")
     v = split(l, "-")
@@ -25,7 +22,6 @@ for l in eachline("input")
     end
     push!(g[v[1]], v[2])
     push!(g[v[2]], v[1])
-    vis[v[1]] = 0; vis[v[2]] = 0
 end
 dfs("start")
 println(p1)
