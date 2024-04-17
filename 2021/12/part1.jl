@@ -28,5 +28,5 @@ for l in eachline("input")
     vis[v[1]] = 0; vis[v[2]] = 0
 end
 vis["start"] = 1
-dfs("start", 1)
-println(ans[1])
+dfs("start", 1); dfs("start", 2)
+println("$(ans[1])\n$(ans[2])")
