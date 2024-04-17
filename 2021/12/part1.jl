@@ -24,6 +24,7 @@ for l in eachline("input")
     push!(g[v[1]], v[2])
     push!(g[v[2]], v[1])
 end
-
+@time begin
 dfs("start")
+end
 println(p1)
