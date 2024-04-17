@@ -3,6 +3,7 @@ g = Dict{String, Vector{String}}()
 vis = Set(); twice = false; p2 = 0
 dfs = (u) -> begin
     if u == "end"
+        delete!(vis, "end")
         global p2 += 1
         return
     end
@@ -13,10 +14,10 @@ dfs = (u) -> begin
         if !(v ∈ vis)
             dfs(v)
         elseif !(v ∈ ["start", "end"]) && !twice
-            twice = true
+            global twice = true
             push!(vis, v)
             dfs(v)
-            twice = false
+            global twice = false
         end
     end
     delete!(vis, u)
