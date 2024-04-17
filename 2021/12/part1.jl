@@ -1,7 +1,7 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
-vis = Dict{String, Int}(); p1 = 0
-dfs = (u, bound) -> begin
+vis = Dict{String, Int}(); ans = []
+dfs = (u, i) -> begin
     if u == "end"
         global p1 += 1
     end
@@ -9,7 +9,7 @@ dfs = (u, bound) -> begin
         vis[u] += 1
     end
     for v in g[u]
-        if vis[v] < bound dfs(v) end
+        if vis[v] < i dfs(v) end
     end
     if islowercase(u[1])
         vis[u] -= 1
