@@ -9,11 +9,9 @@ for l in eachline("input")
 end
 vis = Set(); p1 = 0
 q = Queue{String}()
-push!(q, "start")
-exit(0)
+enqueue!(q, "start")
 while length(q) > 0
     u = front(q)
-    
     if u == "end"
         global p1 += 1
         continue
@@ -23,7 +21,7 @@ while length(q) > 0
         if isuppercase(v[1])
             push!(vis, v)
         end
-        push!(q, v)
+        enqueue!(q, v)
     end
 end
 println(p1)
