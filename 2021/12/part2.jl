@@ -7,7 +7,7 @@ dfs = (u) -> begin
     println(u)
     sleep(0.001)
     global count += 1
-    if count >
+    if count >= 100 exit(0) end
     if u == "end"
         global p1 += 1
     end
