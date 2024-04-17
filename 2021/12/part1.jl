@@ -14,7 +14,9 @@ dfs = (u) -> begin
             dfs(v)
         elseif !(v ∈ ["start", "end"]) && !twice
             twice = true
+            push!(vis, v)
             dfs(v)
+            twice = false
         end
     end
     delete!(vis, u)
