@@ -15,6 +15,8 @@ for m in f
     end
 end
 
+println(length(nodes))
+
 # floyd-warshall over all nodes O(n^3)
 n = length(nodes)
 dist = Dict{String, Dict{String, Int}}()
