@@ -7,8 +7,10 @@ int main() {
     vector<array<int, 2>> ptS;
     while (f >> s && s != "") {
         auto d = s.find(',');
+        cout << 
         ptS.push_back({stoi(s.substr(0, d)), stoi(s.substr(d))});
     }
+    exit(0);
     vector<array<int, 2>> foldS;
     while (f >> s) {
         foldS.push_back({s[11] == 'y', stoi(s.substr(13))});
