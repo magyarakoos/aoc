@@ -5,10 +5,10 @@ int main() {
     ifstream f("input");
     string s;
     vector<array<int, 2>> ptS;
-    while (f >> s && s != "") {
+    while (f >> s) {
         auto d = s.find(',');
-        cout << s.substr(0, d) << " " << s.substr(d + 1) << "\n";
-        ptS.push_back({stoi(s.substr(0, d)), stoi(s.substr(d))});
+        if ()
+        ptS.push_back({stoi(s.substr(0, d)), stoi(s.substr(d + 1))});
     }
     exit(0);
     vector<array<int, 2>> foldS;
