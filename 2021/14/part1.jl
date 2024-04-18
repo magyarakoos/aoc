@@ -5,16 +5,16 @@ d = Dict{String, Char}()
 map(l -> d[l[1:2]] = l[7], eachline(f))
 for _ in 1:40
     @time begin
-    t = s[1]
-    for i in eachindex(s)
-        if i > 1
-            if haskey(d, s[i - 1:i])
-                t *= d[s[i - 1:i]]
+        t = s[1]
+        for i in eachindex(s)
+            if i > 1
+                if haskey(d, s[i - 1:i])
+                    t *= d[s[i - 1:i]]
+                end
+                t *= s[i]
             end
-            t *= s[i]
         end
-    end
-    global s = t
+        global s = t
     end
 end
 s = sort(collect(values(countmap(s))))
