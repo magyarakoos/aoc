@@ -26,6 +26,8 @@ for i in 1:4, j in 1:n, k in 1:n
     push!(m[j], (m[j][k] + i - 1) % 9 + 1)
 end
 for i in 1:4, j in 1:n
+    push!(m, m[j])
+end
 for l in m
     for x in l print(x) end
     println()
