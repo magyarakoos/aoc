@@ -17,8 +17,5 @@ end
 n = length(visit)
 dist = Dict{String, Dict{String, Int}}()
 for u in visit, v in visit
-    if u == v
-        dist[u][v] = 0
-    else
-        dist
+    dist[u][v] = (u == v ? 0 : typemax(Int))
 end
