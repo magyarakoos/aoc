@@ -1,13 +1,7 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
-vis = Set(); p1 = 0
-twice = ""
-count = 0
+vis = Set(); p1 = 0; twice = ""
 dfs = (u) -> begin
-    println(u)
-    sleep(1)
-    global count += 1
-    if count >= 100 exit(0) end
     if u == "end"
         global p1 += 1
         return
