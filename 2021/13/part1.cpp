@@ -13,7 +13,8 @@ int main() {
     while (getline(f, s)) {
         int v = stoi(s.substr(13));
         if (s[11] == 'x') {
-            int l = 0, r = 
+            int l = 0, r = v * 2;
+            for (int l = 0, r = v * 2; l < r;)
         } else {
 
         }
