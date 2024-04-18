@@ -36,21 +36,16 @@ for u in nodes, v in nodes, k in nodes
 end
 
 # evaluate every possible route O(|visit|!)
-visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
-
-println(rate)
-
-t = 30 - dist["AA"][visit[1]] - 1
-res = t * rate[visit[1]]
-flow = rate[visit[1]]
-curr = visit[1]
-for u in visit[2:end]
-    println("$curr $u $(dist[curr][u]) $t")
-    global t -= dist[curr][u] + 1
-    if t <= 0 break end
-    global res += t * rate[u]
-    global curr = u
-    global flow += rate[u]
-    println(flow)
+# visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
+for perm in permutations(visit)
+    t = 30 - dist["AA"][visit[1]] - 1
+    res = t * rate[visit[1]]
+    curr = visit[1]
+    for u in visit[2:end]
+        global t -= dist[curr][u] + 1
+        if t <= 0 break end
+        global res += t * rate[u]
+        global curr = u
+    end
 end
 println(res)
