@@ -8,10 +8,7 @@ dijkstra = (m) -> begin
     dist[1,1] = 0
     while !isempty(q)
         (d, x, y) = pop!(q)
-        if x == n && y == n
-            println(d)
-            exit(0)
-        end
+        if x == n && y == n return d end
         for i in 1:4
             nx = x + dx[i]; ny = y + dy[i]
             if nx < 1 || ny < 1 || nx > n || ny > n continue end
