@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool m[10000][10000];
+constexpr int MAXN = 1e4;
+bool m[MAXN][MAXN];
 int main() {
     ifstream f("input");
     string s;
@@ -14,7 +15,7 @@ int main() {
         int v = stoi(s.substr(13));
         if (s[11] == 'y') {
             for (int l = 0, r = v * 2; l < r; l++, r--) {
-            
+                for (int x = 0; x < MAXN;)
             }
         } else {
 
