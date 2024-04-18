@@ -48,6 +48,6 @@ for perm in permutations(visit)
         curr += t * rate[u]
         prev = u
     end
-
+    
 end
-println(curr)
+println(res)
