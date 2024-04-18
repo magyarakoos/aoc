@@ -48,6 +48,4 @@ solve = (visit) -> begin
     end
     return res
 end
-@time begin
 println(maximum(map(solve, permutations(visit))))
-end
