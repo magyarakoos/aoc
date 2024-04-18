@@ -22,7 +22,7 @@ end
 m1 = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 println(dijkstra(m1))
 n = length(m1)
-for i in 1:5, j in 1:n, k in 1:n
-    push!(m1[j], m1[j][k])
+for i in 1:5
+    push!(m1[i], m1[i][1:5])
 end
-for i in 1:5, j in 1:5
+println(m1)
