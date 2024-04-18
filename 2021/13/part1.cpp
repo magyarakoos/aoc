@@ -9,7 +9,7 @@ int main() {
     vector<array<int, 2>> ptS;
     while (getline(f, s) && s != "") {
         auto d = s.find(',');
-        ptS.push_back({stoi(s.substr(0, d)), stoi(s.substr(d + 1))});
+        m[stoi(s.substr(d + 1))][stoi(s.substr(0, d))] = 1;
     }
     while (getline(f, s)) {
         int v = stoi(s.substr(13));
