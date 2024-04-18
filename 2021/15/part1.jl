@@ -9,5 +9,7 @@ while !isempty(q)
         println(dist)
         exit(0)
     end
-    for i in 
+    for i in 1:4
+    
+    end
 end
