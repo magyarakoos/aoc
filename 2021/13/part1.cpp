@@ -48,4 +48,5 @@ int main() {
     //     }
     //     cout << "\n";
     }
+    cout << cnt();
 }
