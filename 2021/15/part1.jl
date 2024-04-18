@@ -19,4 +19,5 @@ dijkstra = (m) -> begin
         end
     end
 end
-println(dijkstra(map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))))
+m1 = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
+println(m1)
