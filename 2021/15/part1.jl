@@ -29,3 +29,4 @@ for i in 1:5, j in 1:n
     push!(m, m[j])
 end
 println(dijkstra(m))
+for l in m
