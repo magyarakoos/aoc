@@ -20,10 +20,12 @@ for u in visit
     dist[u] = Dict{String, Int}()
 end
 for u in visit, v in visit
-    dist[u][v] = (u == v ? 0 : typemax(Int))
+    dist[u][v] = (u == v ? 0 : Int{1e9})
 end
 for u in visit, v in visit, k in visit
     if dist[u][k] + dist[k][v] < dist[u][v]
         dist[u][v] = dist[u][k] + dist[k][v]
     end
 end
+
+println(dist)
