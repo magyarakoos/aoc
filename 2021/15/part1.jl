@@ -6,3 +6,5 @@ for i in 1:10
 end
 while length(q) > 0
     println(peek(q))
+    dequeue!(q)
+end
