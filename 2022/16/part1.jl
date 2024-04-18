@@ -35,4 +35,4 @@ for u in nodes, v in nodes, k in nodes
     end
 end
 
-# evaluate every possible route ()
+# evaluate every possible route O(|visit|!)
