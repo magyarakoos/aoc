@@ -6,9 +6,10 @@ for _ in 1:10
     t = s[1]
     for i in eachindex(s)
         if i > 1
-        if haskey(d, s[(i - 1):i])
-            t *= d[s[(i - 1):i]]
+            if haskey(d, s[i - 1:i])
+                t *= d[s[i - 1:i]]
+            end
+            t *= s[i]
         end
-        t *= s[i]
     end
 end
