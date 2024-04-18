@@ -8,10 +8,8 @@ dist[1,1] = 0
 println(n)
 while !isempty(q)
     (d, x, y) = pop!(q)
-    println((x, y))
-    if x == n && y == m
+    if x == n && y == n
         println(d)
-        exit(0)
     end
     for i in 1:4
         nx = x + dx[i]; ny = y + dy[i]
