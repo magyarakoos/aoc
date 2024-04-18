@@ -1,3 +1,5 @@
+import Pkg; Pkg.add("Combinatorics")
+using Combinatorics
 f = map(l -> match(r".{6}(.[A-Z]).{15}(\d+).{24}\s+(.*)", l), readlines("input"))
 rates = Dict{String, Int}(); g = Dict{String, Vector{String}}()
 visit = Vector{String}()
@@ -7,7 +9,7 @@ for m in f
     for v in split(m[3], ", ")
         push!(g[m[1]], v)
     end
-    if m[2] != 0
+    if rates[m[1]] != 0
         push!(visit, m[1])
     end
 end
