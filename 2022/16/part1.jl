@@ -14,7 +14,7 @@ for m in f
     end
 end
 
-# floyd-warshall over all nodes O(n^3)
+# floyd-warshall overO(n^3)
 n = length(nodes)
 dist = Dict{String, Dict{String, Int}}()
 for u in nodes
@@ -37,11 +37,11 @@ end
 
 # for a given order of opening non-zero width valves,
 # what is the total amount of pressure released
-solve = (order) -> begin    
-    t = 30 - dist["AA"][order[1]] - 1
-    res = t * rate[order[1]]
-    curr = order[1]
-    for u in order[2:end]
+solve = (visit) -> begin    
+    t = 30 - dist["AA"][visit[1]] - 1
+    res = t * rate[visit[1]]
+    curr = visit[1]
+    for u in visit[2:end]
         t -= dist[curr][u] + 1
         if t <= 0 break end
         res += t * rate[u]
@@ -50,41 +50,7 @@ solve = (order) -> begin
     return res
 end
 
-m = length(visit)
-count = 0
-# optimized backtrack to find all (valid) permutations
-# when we run out of time, we cut off the search
-backtrack = (order, t) -> begin
-    println(t)
-    sleep(0.1)
-    if length(order) == m
-        # println(order)
-        global count += 1
-        return
-    end
-    for u in visit
-        t += dist[order[end]][u] + 1
-        if t >= 30
-            global count += 1
-            return
-        end
-        if !(u ∈ order)
-            push!(order, u)
-            backtrack(order, t)
-            pop!(order)
-        end
-        t -= dist[order[end]][u] + 1
-    end
+res = 0
+for perm in permutations(visit)
+    global res = max(res, solve(perm))
 end
-
-# visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
-
-# for u in visit
-#     order = Vector{String}()
-#     push!(order, u)
-#     backtrack(order, 0)
-# end
-
-# println(count)
-
-println(dist[visit[1]][visit[2]])
