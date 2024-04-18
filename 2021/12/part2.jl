@@ -1,17 +1,7 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
-vis = Set(); p1 = 0; p2 = 0; twice = ""
+vis = Set(); p2 = 0; twice = ""
 dfs = (u) -> begin
-    if u == "end"
-        global p1 += 1
-    end
-    if islowercase(u[1]) push!(vis, u) end
-    for v in g[u]
-        if !(v ∈ vis) dfs(v) end
-    end
-    delete!(vis, u)
-end
-dfs2 = (u) -> begin
     if u == "end"
         global p2 += 1
         return
@@ -38,5 +28,4 @@ for l in eachline("input")
     push!(g[v[2]], v[1])
 end
 dfs("start")
-dfs2("start")
-println("$p1\n$p2")
+println(p2)
