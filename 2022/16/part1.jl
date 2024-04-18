@@ -35,17 +35,18 @@ for u in nodes, v in nodes, k in nodes
     end
 end
 
-solve = () -> begin    
-    # evaluate every possible route O(|visit|!)
-    visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
+# visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
+solve = (visit) -> begin    
     t = 30 - dist["AA"][visit[1]] - 1
     res = t * rate[visit[1]]
     curr = visit[1]
     for u in visit[2:end]
-        global t -= dist[curr][u] + 1
+        t -= dist[curr][u] + 1
         if t <= 0 break end
-        global res += t * rate[u]
-        global curr = u
+        res += t * rate[u]
+        curr = u
     end
     println(res)
 end
+
+# evaluate every possible route O(|visit|!)
