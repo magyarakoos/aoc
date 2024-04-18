@@ -10,9 +10,9 @@ int main() {
         auto d = s.find(',');
         ptS.push_back({stoi(s.substr(0, d)), stoi(s.substr(d + 1))});
     }
-    vector<array<int, 2>> foldS;
     while (getline(f, s)) {
-        foldS.push_back({s[11] == 'y', stoi(s.substr(13))});
+        bool t = s[11] == 'y';
+        int v = stoi(s.substr(13));
+        
     }
-    
 }
