@@ -22,3 +22,6 @@ end
 for u in visit, v in visit
     dist[u][v] = (u == v ? 0 : typemax(Int))
 end
+for u in visit, v in visit, k in visit
+    
+end
