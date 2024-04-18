@@ -51,6 +51,10 @@ end
 
 res = 0
 i = 0
+
+println(length(visit))
+exit(0)
+
 for perm in permutations(visit)
     global i += 1
     println(i)
