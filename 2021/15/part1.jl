@@ -4,6 +4,6 @@ q = BinaryMinHeap(Int)
 for i in 1:10
     push!(q, i)
 end
-while length(q) > 0
+while !isempty(q)
     println(pop!(q))
 end
