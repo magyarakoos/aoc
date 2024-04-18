@@ -7,7 +7,7 @@ int main() {
     vector<array<int, 2>> ptS;
     while (f >> s && s != "") {
         auto d = s.find(',');
-        cout << s.substr(0, d) << " " << s.substr(d)) << "\n";
+        cout << s.substr(0, d) << " " << s.substr(d + 1) << "\n";
         ptS.push_back({stoi(s.substr(0, d)), stoi(s.substr(d))});
     }
     exit(0);
