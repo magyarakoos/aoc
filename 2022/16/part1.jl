@@ -14,6 +14,7 @@ for m in f
         push!(visit, m[1])
     end
 end
+unique!(nodes)
 
 # floyd-warshall over all nodes O(n^3)
 n = length(nodes)
