@@ -16,4 +16,4 @@ for _ in 1:10
     global s = t
 end
 s = sort(collect(values(countmap(s))))
-println(s[end] - s[])
+println(s[end] - s[1])
