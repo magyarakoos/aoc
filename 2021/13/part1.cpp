@@ -15,7 +15,9 @@ int main() {
         int v = stoi(s.substr(13));
         if (s[11] == 'y') {
             for (int l = 0, r = v * 2; l < r; l++, r--) {
-                for (int x = 0; x < MAXN;)
+                for (int x = 0; x < MAXN; x++) {
+                    
+                }
             }
         } else {
 
