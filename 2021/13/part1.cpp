@@ -16,11 +16,17 @@ int main() {
         if (s[11] == 'y') {
             for (int l = 0, r = v * 2; l < r; l++, r--) {
                 for (int x = 0; x < MAXN; x++) {
-                    m[l][x] |= 
+                    m[l][x] = m[l][x] || m[r][x];
+                    m[r][x] = 0;
                 }
             }
         } else {
-
+            for (int l = 0, r = v * 2; l < r; l++, r--) {
+                for (int x = 0; x < MAXN; x++) {
+                    m[l][x] = m[l][x] || m[r][x];
+                    m[r][x] = 0;
+                }
+            }
         }
     }
 }
