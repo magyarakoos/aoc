@@ -38,6 +38,5 @@ end
 println(visit)
 
 # evaluate every possible route O(|visit|!)
-for perm in permutations(visit)
+visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
 
-end
