@@ -50,4 +50,6 @@ solve = (order) -> begin
     return res
 end
 
-backtrack = ()
+backtrack = (vis, ) -> begin
+    
+end
