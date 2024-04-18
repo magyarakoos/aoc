@@ -11,8 +11,11 @@ int main() {
         ptS.push_back({stoi(s.substr(0, d)), stoi(s.substr(d + 1))});
     }
     while (getline(f, s)) {
-        bool t = s[11] == 'y';
         int v = stoi(s.substr(13));
-        
+        if (s[11] == 'x') {
+            
+        } else {
+
+        }
     }
 }
