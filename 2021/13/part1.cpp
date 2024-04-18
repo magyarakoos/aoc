@@ -39,11 +39,10 @@ int main() {
             cout << p1 << "\n";
         }
     }
-    for (int y = 0; y < 20; y++) {
-        for (int x = 0; x < 20; x++) {
+    for (int y = 0; y < 6; y++) {
+        for (int x = 0; x < 40; x++) {
             cout << (m[y][x] ? "#" : ".");
         }
         cout << "\n";
     }
-    cout << "\n";
 }
