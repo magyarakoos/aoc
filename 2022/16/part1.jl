@@ -35,8 +35,6 @@ for u in nodes, v in nodes, k in nodes
     end
 end
 
-
 # evaluate every possible route O(|visit|!)
 visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
-t = 30 - dist["AA", visit[1]]
-println(t)
+t = 30 - dist["AA"][visit[1]]
