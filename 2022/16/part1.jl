@@ -1,7 +1,7 @@
 using Combinatorics
 f = map(l -> match(r".{6}(.[A-Z]).{15}(\d+).{24}\s+(.*)", l), readlines("input"))
 rates = Dict{String, Int}(); g = Dict{String, Vector{String}}()
-visit = Vector{String}(); nodes = Vector{String}
+visit = Vector{String}(); nodes = Vector{String}()
 for m in f
     rates[m[1]] = parse(Int, m[2])
     g[m[1]] = Vector{String}()
@@ -15,12 +15,12 @@ for m in f
 end
 
 # floyd-warshall
-n = length(visit)
+n = length(nodes)
 dist = Dict{String, Dict{String, Int}}()
-for u in visit
+for u in nodes
     dist[u] = Dict{String, Int}()
 end
-for u in visit, v in visit
+for u in nodes, v in nodes
     if u == v
         dist[u][v] = 0
     elseif v ∈ g[u]
@@ -29,18 +29,8 @@ for u in visit, v in visit
         dist[u][v] = Int(1e9)
     end
 end
-for u in visit, v in visit, k in visit
+for u in nodes, v in nodes, k in nodes
     if dist[u][k] + dist[k][v] < dist[u][v]
         dist[u][v] = dist[u][k] + dist[k][v]
-    end
-end
-
-for (u, ux) in g
-    for v in ux
-        if u ∈ visit && v ∈ visit
-            println("$u $v $(dist[u][v])")
-        else
-            println("$u $v")
-        end
     end
 end
