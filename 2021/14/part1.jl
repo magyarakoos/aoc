@@ -8,5 +8,6 @@ for _ in 1:10
         if haskey(d, s[(i - 1):i])
             t = t + d[s[(i - 1):i]]
         end
+        t = t + s[i]
     end
 end
