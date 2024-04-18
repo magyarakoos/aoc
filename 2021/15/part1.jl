@@ -4,6 +4,7 @@ dx = [1, -1, 0, 0]; dy = [0, 0, 1, -1]; n = length(m)
 q = BinaryMinHeap{Tuple{Int, Int, Int}}()
 dist = fill(typemax(Int), n, n)
 push!(q, (0, 0, 0))
+dist[0][0] = 0
 while !isempty(q)
     (d, x, y) = pop!(q)
     if x == n && y == m
@@ -15,7 +16,7 @@ while !isempty(q)
         if nx < 1 || ny < 1 || nx > n || ny > n continue end
         if d + m[ny][nx] < dist[ny,nx]
             dist[ny,nx] = d + m[ny][nx]
-            push!(q, (d + m[ny][nx], ))
+            push!(q, (d + m[ny][nx], nx, ny))
         end
     end
 end
