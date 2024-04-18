@@ -63,7 +63,7 @@ backtrack = (order::Vector{String}, t) -> begin
         t += dist[order[end]][u] + 1
         if !(u ∈ order) && t < 30
             push!(order, u)
-
+            back
             pop!(order)
         end
         t -= dist[order[end]][u] + 1
