@@ -4,16 +4,6 @@ using namespace std;
 constexpr int MAXN = 1e4;
 bool m[MAXN][MAXN];
 
-int cnt() {
-    int res = 0;
-    for (int y = 0; y < MAXN; y++) {
-        for (int x = 0; x < MAXN; x++) {
-            res += m[y][x];
-        }
-    }
-    return res;
-}
-
 int main() {
     ifstream f("input");
     string s;
@@ -40,13 +30,12 @@ int main() {
             }
         }
         if (!i) cout << cnt() << "\n";
-    //     for (int y = 0; y < 20; y++) {
-    //         for (int x = 0; x < 20; x++) {
-    //             cout << (m[y][x] ? "#" : ".");
-    //         }
-    //         cout << "\n";
-    //     }
-    //     cout << "\n";
     }
-    cout << cnt();
+//     for (int y = 0; y < 20; y++) {
+//         for (int x = 0; x < 20; x++) {
+//             cout << (m[y][x] ? "#" : ".");
+//         }
+//         cout << "\n";
+//     }
+//     cout << "\n";
 }
