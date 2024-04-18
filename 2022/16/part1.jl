@@ -35,7 +35,9 @@ for u in nodes, v in nodes, k in nodes
     end
 end
 
+println(visit)
+
 # evaluate every possible route O(|visit|!)
 for perm in permutations(visit)
-    
+
 end
