@@ -57,13 +57,13 @@ count = 0
 # optimized backtrack to find all (valid) permutations
 # when we run out of time, we cut off the search
 backtrack = (order, t) -> begin
-    if length(order) == m   
+    if length(order) == m
+        println(order)   
         global count += 1
         return
     end
     for u in visit
         t += dist[order[end]][u] + 1
-        if t >= 30 return end
         if !(u ∈ order)
             push!(order, u)
             backtrack(order, t)
