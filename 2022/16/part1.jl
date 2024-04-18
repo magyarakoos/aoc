@@ -34,6 +34,7 @@ for u in visit, v in visit, k in visit
     end
 end
 
+
 for u in visit, v in visit
     if dist[u][v] != Int(1e9) && u != v
         println("$u $v $(dist[u][v])")
