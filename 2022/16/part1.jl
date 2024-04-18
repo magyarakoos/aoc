@@ -35,5 +35,6 @@ for u in visit, v in visit, k in visit
 end
 
 for u in visit, v in visit
+    
     println("$u $v $(dist[u][v] == Int(1e9) ? "INF" : dist[u][v])")
 end
