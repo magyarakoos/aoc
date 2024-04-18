@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-constexpr int MAXN = 
+constexpr int MAXN = 1e4;
 
 int main() {
     ifstream f("input");
