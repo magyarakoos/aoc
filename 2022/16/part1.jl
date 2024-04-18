@@ -15,8 +15,6 @@ for m in f
     end
 end
 
-println((length(nodes), length(unique(nodes))))
-
 # floyd-warshall over all nodes O(n^3)
 n = length(nodes)
 dist = Dict{String, Dict{String, Int}}()
@@ -52,6 +50,33 @@ solve = (visit) -> begin
         curr = u
     end
     return res
+end
+
+m = length(visit)
+count = 0
+# optimized backtrack to find all (valid) permutations
+# when we run out of time, we cut off the search
+backtrack = (order, t) -> begin
+    println(t)
+    sleep(0.1)
+    if length(order) == m
+        # println(order)
+        global count += 1
+        return
+    end
+    for u in visit
+        t += dist[order[end]][u] + 1
+        if t >= 30
+            global count += 1
+            return
+        end
+        if !(u ∈ order)
+            push!(order, u)
+            backtrack(order, t)
+            pop!(order)
+        end
+        t -= dist[order[end]][u] + 1
+    end
 end
 
 # res = 0
