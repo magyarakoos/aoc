@@ -41,5 +41,6 @@ t = 30 - dist["AA"][visit[1]] - 1
 res = t * rate[visit[1]]
 curr = visit[1]
 for u in visit[2:end]
+    t -= dist[curr][u] + 1
     
 end
