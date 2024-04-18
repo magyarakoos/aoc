@@ -51,12 +51,13 @@ solve = (order) -> begin
 end
 
 m = length(visit)
-
+count = 0
 # optimized backtrack to find all (valid) permutations
 # when we run out of time, we cut off the search
 backtrack = (order, t) -> begin
     if length(order) == m
         # println(order)
+        global count += 1
         return
     end
     for u in visit
@@ -70,10 +71,12 @@ backtrack = (order, t) -> begin
     end
 end
 
-visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
+# visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
 
 for u in visit
     order = Vector{String}()
     push!(order, u)
     backtrack(order, 0)
 end
+
+println(count)
