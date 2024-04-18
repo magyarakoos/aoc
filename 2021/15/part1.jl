@@ -25,4 +25,4 @@ n = length(m1)
 for i in 1:5, j in 1:n, k in 1:n
     push!(m1[j], m1[j][k])
 end
-prinln(m1)
+for 
