@@ -45,7 +45,7 @@ solve = (visit) -> begin
     for u in visit[2:end]
         println("$curr $u $(dist[curr][u])")
         t -= dist[curr][u] + 1
-        # if t <= 0 break end
+        if t <= 0 break end
         res += t * rate[u]
         curr = u
     end
