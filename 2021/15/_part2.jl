@@ -22,7 +22,7 @@ end
 m = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 println(dijkstra(m))
 n = length(m)
-for i in 1:4, j in 1:n, k in 1:n
+for i in 0:4, j in 1:n, k in 1:n
     push!(m[j], (m[j][k] + i) % 9 + 1)
 end
 
