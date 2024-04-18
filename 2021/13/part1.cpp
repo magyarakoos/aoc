@@ -15,5 +15,6 @@ int main() {
     }
     
     for (auto [x, y] : ptS) cout << x << " " << y << "\n";
-    for (auto [t, v] : foldS) cout <<  
+    cout << "\n";
+    for (auto [t, v] : foldS) cout <<  t << " " << v << "\n";
 }
