@@ -22,7 +22,11 @@ end
 for u in visit, v in visit
     if u == v
         dist[u][v] = 0
-    elseif haskey(g[u], v)
+    elseif v ∈ g[u]
+        dist[u][v] = 1
+    else
+        dist[u][v] = Int(1e9)
+    end
 end
 for u in visit, v in visit, k in visit
     if dist[u][k] + dist[k][v] < dist[u][v]
