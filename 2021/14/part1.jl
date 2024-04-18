@@ -1,3 +1,5 @@
 f = open("input", "r")
 s = readline(f)
 readline(f)
+d = Dict{String, String}()
+for l in readlines()
