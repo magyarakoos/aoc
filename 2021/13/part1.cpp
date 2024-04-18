@@ -10,13 +10,12 @@ int main() {
         if (s.substr(0, d) == "fold") break;
         ptS.push_back({stoi(s.substr(0, d)), stoi(s.substr(d + 1))});
     }
-    exit(0);
-    vector<array<int, 2>> foldS;
-    while (f >> s) {
-        foldS.push_back({s[11] == 'y', stoi(s.substr(13))});
-    }
+    // vector<array<int, 2>> foldS;
+    // while (f >> s) {
+    //     foldS.push_back({s[11] == 'y', stoi(s.substr(13))});
+    // }
     
     for (auto [x, y] : ptS) cout << x << " " << y << "\n";
     cout << "\n";
-    for (auto [t, v] : foldS) cout <<  t << " " << v << "\n";
+    //for (auto [t, v] : foldS) cout <<  t << " " << v << "\n";
 }
