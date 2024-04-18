@@ -11,6 +11,6 @@ int main() {
     }
     vector<array<int, 2>> foldS;
     while (f >> s) {
-        foldS.push_back()
+        foldS.push_back({s[11] == 'y', stoi(s.substr(13))})
     }
 }
