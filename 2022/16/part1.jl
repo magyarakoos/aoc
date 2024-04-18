@@ -37,11 +37,11 @@ end
 
 # for a given order of opening non-zero width valves,
 # what is the total amount of pressure released
-solve = (visit) -> begin    
-    t = 30 - dist["AA"][visit[1]] - 1
-    res = t * rate[visit[1]]
-    curr = visit[1]
-    for u in visit[2:end]
+solve = (order) -> begin    
+    t = 30 - dist["AA"][order[1]] - 1
+    res = t * rate[order[1]]
+    curr = order[1]
+    for u in order[2:end]
         t -= dist[curr][u] + 1
         if t <= 0 break end
         res += t * rate[u]
@@ -50,3 +50,4 @@ solve = (visit) -> begin
     return res
 end
 
+backtrack = ()
