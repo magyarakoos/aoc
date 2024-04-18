@@ -17,7 +17,7 @@ dfs = (u) -> begin
     end
     for v in g[u]
         if !(v ∈ vis) dfs(v)
-        elseif !(v ∈ ["start", "end"]) && !twice && islowercase(v[1])
+        elseif !(v ∈ ["start", "end"]) && !twice
             global twice = true
             dfs(v)
             global twice = false
