@@ -1,1 +1,3 @@
-s = readline("input");
+f = open("input", "r")
+s = readline(f)
+readline(f)
