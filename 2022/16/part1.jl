@@ -57,7 +57,7 @@ count = 0
 # optimized backtrack to find all (valid) permutations
 # when we run out of time, we cut off the search
 backtrack = (order, t) -> begin
-    println(t)
+    println(count)
     sleep(0.1)
     if length(order) == m
         println(order)   
