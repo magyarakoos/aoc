@@ -23,7 +23,7 @@ dfs = (u) -> begin
             global twice = false
         end
     end
-    # delete!(vis, u)
+    delete!(vis, u)
 end
 for l in eachline("input")
     v = split(l, "-")
