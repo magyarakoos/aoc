@@ -14,7 +14,7 @@ for m in f
     end
 end
 
-# floyd-warshall O(n^3)
+# floyd-warshall over all nodes O(n^3)
 n = length(nodes)
 dist = Dict{String, Dict{String, Int}}()
 for u in nodes
@@ -36,7 +36,7 @@ for u in nodes, v in nodes, k in nodes
 end
 
 # for a given order of opening non-zero width valves,
-# what is the amount of pressu
+# what is the total amount of pressure released
 solve = (visit) -> begin    
     t = 30 - dist["AA"][visit[1]] - 1
     res = t * rate[visit[1]]
@@ -50,7 +50,7 @@ solve = (visit) -> begin
     return res
 end
 
-res = 0
-for perm in permutations(visit)
-    global res = max(res, solve(perm))
-end
+# res = 0
+# for perm in permutations(visit)
+#     global res = max(res, solve(perm))
+# end
