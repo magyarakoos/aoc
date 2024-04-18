@@ -1,6 +1,17 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
 vis = Set(); p1 = 0; p2 = 0; twice = ""
+dfs = (u) -> begin
+    if u == "end"
+        global p1 += 1
+    end
+    if islowercase(u[1]) push!(vis, u)
+    end
+    for v in g[u]
+        if !(v ∈ vis) dfs(v) end
+    end
+    delete!(vis, u)
+end
 dfs2 = (u) -> begin
     if u == "end"
         global p2 += 1
@@ -16,18 +27,6 @@ dfs2 = (u) -> begin
         end
     end
     if twice != u delete!(vis, u) end
-end
-dfs = (u) -> begin
-    if u == "end"
-        global p1 += 1
-    end
-    if islowercase(u[1])
-        push!(vis, u)
-    end
-    for v in g[u]
-        if !(v ∈ vis) dfs(v) end
-    end
-    delete!(vis, u)
 end
 for l in eachline("input")
     v = split(l, "-")
