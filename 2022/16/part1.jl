@@ -15,7 +15,10 @@ end
 
 # floyd-warshall on non-zero width pipes
 n = length(visit)
-dist = Dict{String, String}()
+dist = Dict{String, Vector{String}}()
+for u in visit
+    dict[u] = Vector{String}()
+end
 for u in visit, v in visit
     if u == v
         dist[u]
