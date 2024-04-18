@@ -13,6 +13,6 @@ for m in f
     end
 end
 
-# floyd-warshall on non-zero width pipes
+# floyd-warshall on non-zero width pipes O(n^3)
 n = length(visit)
 dist = Dict{String, Dict{String, Int}}()
