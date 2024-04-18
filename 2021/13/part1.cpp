@@ -5,7 +5,13 @@ constexpr int MAXN = 1e4;
 bool m[MAXN][MAXN];
 
 int cnt() {
-    
+    int res = 0;
+    for (int y = 0; y < MAXN; y++) {
+        for (int x = 0; x < MAXN; x++) {
+            res += m[y][x];
+        }
+    }
+    return res;
 }
 
 int main() {
@@ -33,9 +39,7 @@ int main() {
                 }
             }
         }
-        if (!i) {
-
-        }
+        if (!i) cout << cnt() << "\n";
     }
     
     for (int y = 0; y < 20; y++) {
