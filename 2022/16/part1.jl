@@ -14,7 +14,7 @@ for m in f
     end
 end
 
-# floyd-warshall overO(n^3)
+# floyd-warshall over all nodes O(n^3)
 n = length(nodes)
 dist = Dict{String, Dict{String, Int}}()
 for u in nodes
@@ -50,7 +50,8 @@ solve = (visit) -> begin
     return res
 end
 
-res = 0
-for perm in permutations(visit)
-    global res = max(res, solve(perm))
-end
+# res = 0
+# for perm in permutations(visit)
+#     global res = max(res, solve(perm))
+# end
+println(solve(visit))
