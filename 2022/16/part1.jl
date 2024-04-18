@@ -64,7 +64,7 @@ backtrack = (order, t) -> begin
     end
     for u in visit
         t += dist[order[end]][u] + 1
-        if !(u ∈ order)
+        if !(u ∈ order) && t < 30
             push!(order, u)
             backtrack(order, t)
             pop!(order)
