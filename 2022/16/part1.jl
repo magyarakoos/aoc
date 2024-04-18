@@ -87,4 +87,4 @@ end
 
 # println(count)
 
-println(solve(visit))
+println(dist[visit[1]][visit[2]])
