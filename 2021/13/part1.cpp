@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+constexpr int MAXN = 
 
 int main() {
     ifstream f("input");
@@ -13,8 +14,4 @@ int main() {
     while (getline(f, s)) {
         foldS.push_back({s[11] == 'y', stoi(s.substr(13))});
     }
-    
-    for (auto [x, y] : ptS) cout << x << " " << y << "\n";
-    cout << "\n";
-    for (auto [t, v] : foldS) cout <<  t << " " << v << "\n";
 }
