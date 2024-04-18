@@ -50,10 +50,6 @@ solve = (visit) -> begin
 end
 
 res = 0
-i = 0
-
 for perm in permutations(visit)
-    global i += 1
-    println(i)
     global res = max(res, solve(perm))
 end
