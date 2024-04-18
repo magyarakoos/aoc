@@ -1,5 +1,5 @@
 using DataStructures
-m = map(l -> split(l, ""), readlines("input"))
+m = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 dx = [1, -1, 0, 0]; dy = [0, 0, 1, -1]; n = length(m)
 q = BinaryMinHeap{Tuple{Int, Int, Int}}()
 dist = fill(typemax(Int), n, n)
@@ -7,6 +7,7 @@ push!(q, (0, 1, 1))
 dist[1,1] = 0
 while !isempty(q)
     (d, x, y) = pop!(q)
+    println((x, y))
     if x == n && y == m
         println(d)
         exit(0)
