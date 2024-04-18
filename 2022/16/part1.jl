@@ -7,5 +7,8 @@ for m in f
     for v in split(m[3], ", ")
         push!(g[m[1]], v)
     end
-    
+    if m[2] != 0
+        push!(visit, m[1])
+    end
 end
+println(visit)
