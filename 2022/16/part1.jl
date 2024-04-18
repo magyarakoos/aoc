@@ -54,12 +54,14 @@ m = length(visit)
 
 # optimized backtrack to find all (valid) permutations
 # when we run out of time, we cut off the search
-backtrack = (taken::Set{String}, t) -> begin
-    if length(taken) == m
+backtrack = (order::Set{String}, t) -> begin
+    if length(order) == m
         println(order)
         return
     end
-    for u in avaliable
-        
+    for u in visit
+        if !(u ∈ order)
+            push
+        end        
     end
 end
