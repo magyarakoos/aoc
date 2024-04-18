@@ -54,7 +54,7 @@ m = length(visit)
 
 # optimized backtrack to find all (valid) permutations
 # when we run out of time, we cut off the search
-backtrack = (order::Vector{String}, t) -> begin
+backtrack = (order, t) -> begin
     if length(order) == m
         println(order)
         return
@@ -72,4 +72,4 @@ end
 
 visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
 
-backtrack()
+backtrack(Vector{String}(), 0)
