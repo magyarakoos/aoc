@@ -42,7 +42,7 @@ res = t * rate[visit[1]]
 curr = visit[1]
 for u in visit[2:end]
     println("$curr $u $(dist[curr][u]) $t")
-    global t -= dist[curr][u]
+    global t -= dist[curr][u] + 1
     if t <= 0 break end
     global res += t * rate[u]
     global curr = u
