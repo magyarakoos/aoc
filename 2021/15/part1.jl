@@ -1,3 +1,5 @@
 using DataStructures
 m = map(l -> split(l, ""), readlines("input"))
-q = BinaryMinHeap{Int}()
+dx = [1, -1, 0, 0]; dy = [0, 0, 1, -1]
+q = BinaryMinHeap{Tuple{Int, Int}}()
+push!()
