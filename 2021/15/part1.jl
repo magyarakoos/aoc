@@ -5,7 +5,6 @@ q = BinaryMinHeap{Tuple{Int, Int, Int}}()
 dist = fill(typemax(Int), n, n)
 push!(q, (0, 1, 1))
 dist[1,1] = 0
-println(n)
 while !isempty(q)
     (d, x, y) = pop!(q)
     if x == n && y == n
