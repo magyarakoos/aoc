@@ -37,6 +37,9 @@ end
 
 # evaluate every possible route O(|visit|!)
 visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
+
+println(rate)
+
 t = 30 - dist["AA"][visit[1]] - 1
 res = t * rate[visit[1]]
 flow = rate[visit[1]]
