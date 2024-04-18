@@ -21,3 +21,7 @@ dijkstra = (m) -> begin
 end
 m = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
 println(dijkstra(m))
+n = length(m)
+for i in 0:4, j in 1:n, k in 1:n
+    
+end
