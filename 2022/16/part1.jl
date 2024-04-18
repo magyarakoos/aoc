@@ -36,3 +36,6 @@ for u in nodes, v in nodes, k in nodes
 end
 
 # evaluate every possible route O(|visit|!)
+for perm in permutations(visit)
+    
+end
