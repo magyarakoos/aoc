@@ -79,10 +79,12 @@ end
 
 # visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
 
-for u in visit
-    order = Vector{String}()
-    push!(order, u)
-    backtrack(order, 0)
-end
+# for u in visit
+#     order = Vector{String}()
+#     push!(order, u)
+#     backtrack(order, 0)
+# end
 
-println(count)
+# println(count)
+
+println(solve(visit))
