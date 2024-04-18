@@ -60,9 +60,9 @@ backtrack = (order::Vector{String}, t) -> begin
         return
     end
     for u in visit
-        if !(u ∈ order)
+        if !(u ∈ order) && t + dist
             push!(order, u)
-            
+
             delete!(order, u)
         end        
     end
