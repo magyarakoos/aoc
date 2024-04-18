@@ -58,17 +58,13 @@ count = 0
 # when we run out of time, we cut off the search
 backtrack = (order, t) -> begin
     if length(order) == m
-        # println(order)
+        println(order)
         global count += 1
         return
     end
     for u in visit
         t += dist[order[end]][u] + 1
-        if t >= 30
-            global count += 1
-            return
-        end
-        if !(u ∈ order)
+        if !(u ∈ order) && t < 30
             push!(order, u)
             backtrack(order, t)
             pop!(order)
