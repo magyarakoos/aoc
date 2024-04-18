@@ -6,7 +6,7 @@ for _ in 1:10
     t::String = s[1]
     for i in 2:length(s)
         if haskey(d, s[(i - 1):i])
-            t = t + 
+            t = t + d[s[(i - 1):i]]
         end
     end
 end
