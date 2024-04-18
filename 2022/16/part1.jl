@@ -69,3 +69,7 @@ backtrack = (order::Vector{String}, t) -> begin
         t -= dist[order[end]][u] + 1
     end
 end
+
+visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
+
+backtrack()
