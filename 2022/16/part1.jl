@@ -54,14 +54,16 @@ m = length(visit)
 
 # optimized backtrack to find all (valid) permutations
 # when we run out of time, we cut off the search
-backtrack = (order::Set{String}, t) -> begin
+backtrack = (order::Vector{String}, t) -> begin
     if length(order) == m
         println(order)
         return
     end
     for u in visit
         if !(u ∈ order)
-            push
+            push!(order, u)
+            
+            delete!(order, u)
         end        
     end
 end
