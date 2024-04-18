@@ -31,7 +31,7 @@ int main() {
     }
     
     for (int y = 0; y < 20; y++) {
-        for (int x = 0 x < 20; x++) {
+        for (int x = 0; x < 20; x++) {
             cout << (m[y][x] ? "#" : ".");
         }
         cout << "\n";
