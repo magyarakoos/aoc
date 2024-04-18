@@ -16,6 +16,6 @@ int main() {
     // }
     
     for (auto [x, y] : ptS) cout << x << " " << y << "\n";
-    cout << "\n";
+    //cout << "\n";
     //for (auto [t, v] : foldS) cout <<  t << " " << v << "\n";
 }
