@@ -14,4 +14,6 @@ int main() {
         foldS.push_back({s[11] == 'y', stoi(s.substr(13))});
     }
     
+    for (auto [x, y] : ptS) cout << x << " " << y << "\n";
+    for (auto [t, v] : foldS) cout <<  
 }
