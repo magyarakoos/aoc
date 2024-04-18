@@ -57,8 +57,6 @@ count = 0
 # optimized backtrack to find all (valid) permutations
 # when we run out of time, we cut off the search
 backtrack = (order, t) -> begin
-    println(t)
-    sleep(0.1)
     if length(order) == m
         # println(order)
         global count += 1
@@ -79,14 +77,20 @@ backtrack = (order, t) -> begin
     end
 end
 
+
 # res = 0
 # for perm in permutations(visit)
 #     global res = max(res, solve(perm))
 # end
-println(solve(visit))
+# println(solve(visit))
 
 # for (u, vx) in g
 #     for v in vx
 #         println("$u $v")
 #     end
 # end
+
+for u in visit
+    order = Vector{String}()
+    push!
+end
