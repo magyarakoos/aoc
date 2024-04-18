@@ -20,5 +20,7 @@ dijkstra = (m) -> begin
     end
 end
 m1 = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
-
 println(dijkstra(m1))
+for i in 1:5
+    
+end
