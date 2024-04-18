@@ -9,6 +9,7 @@ while !isempty(q)
     (d, x, y) = pop!(q)
     if x == n && y == n
         println(d)
+        exit(0)
     end
     for i in 1:4
         nx = x + dx[i]; ny = y + dy[i]
