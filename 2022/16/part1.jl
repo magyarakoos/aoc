@@ -15,7 +15,7 @@ for m in f
     end
 end
 
-println(length(nodes))
+println((length(nodes), length(unique(nodes))))
 
 # floyd-warshall over all nodes O(n^3)
 n = length(nodes)
