@@ -26,7 +26,7 @@ for i in 1:3, j in 1:n, k in 1:n
     push!(m[j], (m[j][k] + i) % 9 + 1)
 end
 for i in 1:3, j in 1:n
-    push!(m, )
+    push!(m, map(x -> (x + i) % 9 + 1, m[j]))
 end
 println(dijkstra(m))
 for l in m
