@@ -91,6 +91,8 @@ end
 # end
 
 for u in visit
-    order = Vector{String}()
-    push!
+    order = [u]
+    backtrack(order, 0)
 end
+
+println(count)
