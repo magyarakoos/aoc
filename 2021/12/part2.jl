@@ -10,6 +10,7 @@ dfs = (u) -> begin
     if count >= 100 exit(0) end
     if u == "end"
         global p1 += 1
+        return
     end
     if islowercase(u[1])
         push!(vis, u)
