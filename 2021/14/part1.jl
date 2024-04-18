@@ -3,7 +3,7 @@ f = open("input", "r")
 s = readline(f); readline(f)
 d = Dict{String, Char}()
 map(l -> d[l[1:2]] = l[7], eachline(f))
-for _ in 1:4
+for _ in 1:10
     t = s[1]
     for i in eachindex(s)
         if i > 1
@@ -15,3 +15,4 @@ for _ in 1:4
     end
     global s = t
 end
+println(collect(values(countmap(s))))
