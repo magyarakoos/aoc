@@ -56,7 +56,7 @@ m = length(visit)
 # when we run out of time, we cut off the search
 backtrack = (order, t) -> begin
     if length(order) == m
-        println(order)
+        # println(order)
         return
     end
     for u in visit
@@ -73,5 +73,7 @@ end
 visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
 
 for u in visit
-    backtrack(Vector{String}(fill(u, 1)), 0)
+    order = Vector{String}()
+    push!(order, u)
+    backtrack(order, 0)
 end
