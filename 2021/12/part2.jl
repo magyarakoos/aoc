@@ -5,8 +5,7 @@ dfs = (u) -> begin
     if u == "end"
         global p1 += 1
     end
-    if islowercase(u[1]) push!(vis, u)
-    end
+    if islowercase(u[1]) push!(vis, u) end
     for v in g[u]
         if !(v ∈ vis) dfs(v) end
     end
@@ -39,4 +38,5 @@ for l in eachline("input")
     push!(g[v[2]], v[1])
 end
 dfs("start")
-println(p2)
+dfs2("start")
+println("$p1\n$p2")
