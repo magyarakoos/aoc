@@ -47,5 +47,7 @@ for u in visit[2:end]
     if t <= 0 break end
     global res += t * rate[u]
     global curr = u
+    global flow += rate[u]
+    println(flow)
 end
 println(res)
