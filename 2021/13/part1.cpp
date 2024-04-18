@@ -29,13 +29,21 @@ int main() {
                 }
             }
         }
-        if (!i) cout << cnt() << "\n";
+        if (!i) {
+            int p1 = 0;
+            for (int y = 0; y < MAXN; y++) {
+                for (int x = 0; x < MAXN; x++) {
+                    p1 += m[y][x];
+                }
+            }
+            cout << p1 << "\n";
+        }
     }
-//     for (int y = 0; y < 20; y++) {
-//         for (int x = 0; x < 20; x++) {
-//             cout << (m[y][x] ? "#" : ".");
-//         }
-//         cout << "\n";
-//     }
-//     cout << "\n";
+    for (int y = 0; y < 20; y++) {
+        for (int x = 0; x < 20; x++) {
+            cout << (m[y][x] ? "#" : ".");
+        }
+        cout << "\n";
+    }
+    cout << "\n";
 }
