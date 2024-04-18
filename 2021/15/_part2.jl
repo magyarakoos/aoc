@@ -29,7 +29,3 @@ for i in 1:4, j in 1:n
     push!(m, map(x -> (x + i - 1) % 9 + 1, m[j]))
 end
 println(dijkstra(m))
-# for l in m
-#     for x in l print(x) end
-#     println()
-# end
