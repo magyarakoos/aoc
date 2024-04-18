@@ -15,4 +15,4 @@ for _ in 1:10
     end
     global s = t
 end
-println(collect(values(countmap(s))))
+println(sort(collect(values(countmap(s)))))
