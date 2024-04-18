@@ -17,13 +17,15 @@ dfs = (u) -> begin
     end
     for v in g[u]
         if !(v ∈ vis) dfs(v)
-        elseif !(v ∈ ["start", "end"]) && !twice
-            global twice = true
+        elseif !(v ∈ ["start", "end"]) && twice == ""
+            global twice = v
             dfs(v)
-            global twice = false
+            global twice = ""
         end
     end
-    delete!(vis, u)
+    if twice != u
+        delete!(vis, u)
+    end
 end
 for l in eachline("input")
     v = split(l, "-")
