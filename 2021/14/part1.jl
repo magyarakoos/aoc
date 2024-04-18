@@ -2,7 +2,7 @@ f = open("input", "r")
 s = readline(f); readline(f)
 d = Dict{String, Char}()
 map(l -> d[l[1:2]] = l[7], eachline(f))
-for _ in 1:10
+for _ in 1:4
     t = s[1]
     for i in eachindex(s)
         if i > 1
@@ -12,4 +12,6 @@ for _ in 1:10
             t *= s[i]
         end
     end
+    global s = t
+    println(s)
 end
