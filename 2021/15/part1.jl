@@ -1,6 +1,7 @@
 using DataStructures
 dx = [1, -1, 0, 0]; dy = [0, 0, 1, -1]
 dijkstra = (m) -> begin
+    n = length(m)
     q = BinaryMinHeap{Tuple{Int, Int, Int}}()
     dist = fill(typemax(Int), n, n)
     push!(q, (0, 1, 1))
@@ -18,4 +19,5 @@ dijkstra = (m) -> begin
         end
     end
 end
-println(map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input")))
+m = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
+println()
