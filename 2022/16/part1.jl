@@ -48,6 +48,8 @@ for perm in permutations(visit)
         curr += t * rate[u]
         prev = u
     end
-    
+    if perm == ["DD", "BB", "JJ", "HH", "EE", "CC"]
+        println(curr)
+    end
 end
-println(res)
+# println(res)
