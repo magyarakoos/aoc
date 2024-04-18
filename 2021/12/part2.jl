@@ -1,9 +1,9 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
-vis = Set(); p1 = 0; twice = ""
-dfs = (u) -> begin
+vis = Set(); p2 = 0; twice = ""
+dfs2 = (u) -> begin
     if u == "end"
-        global p1 += 1
+        global p2 += 1
         return
     end
     if islowercase(u[1]) push!(vis, u) end
@@ -28,4 +28,4 @@ for l in eachline("input")
     push!(g[v[2]], v[1])
 end
 dfs("start")
-println(p1)
+println(p2)
