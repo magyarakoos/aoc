@@ -13,7 +13,9 @@ while !isempty(q)
     for i in 1:4
         nx = x + dx[i], ny = y + dy[i]
         if nx < 1 || ny < 1 || nx > n || ny > n continue end
-        if d + m[ny][nx] < dist[ny][nx]
-            
+        if d + m[ny][nx] < dist[ny,nx]
+            dist[ny,nx] = d + m[ny][nx]
+            push!(q, (d + m[ny][nx], ))
+        end
     end
 end
