@@ -41,7 +41,7 @@ int main() {
     }
     for (int y = 0; y < 6; y++) {
         for (int x = 0; x < 40; x++) {
-            cout << (m[y][x] ? "#" : ".");
+            cout << (m[y][x] ? "#" : " ");
         }
         cout << "\n";
     }
