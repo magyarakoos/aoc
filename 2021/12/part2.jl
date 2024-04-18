@@ -1,7 +1,7 @@
 using DataStructures
 g = Dict{String, Vector{String}}()
 vis = Set(); p1 = 0
-twice = false
+twice = ""
 count = 0
 dfs = (u) -> begin
     println(u)
