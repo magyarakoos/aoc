@@ -50,8 +50,9 @@ solve = (order) -> begin
     return res
 end
 
+m = length(visit)
 # optimized backtrack to find all (valid) permutations
 # when we run out of time, we cut off the search
 backtrack = (vis, t) -> begin
-    
+    if length(vis) == m
 end
