@@ -34,4 +34,6 @@ for u in visit, v in visit, k in visit
     end
 end
 
-println(dist)
+for u in visit, v in visit
+    
+end
