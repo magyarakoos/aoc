@@ -38,3 +38,5 @@ end
 # evaluate every possible route O(|visit|!)
 visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
 t = 30 - dist["AA"][visit[1]]
+res = (t - 1) * rate[visit[1]]
+println(res)
