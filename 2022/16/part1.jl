@@ -13,4 +13,5 @@ for m in f
     end
 end
 
-floydwarshall = ()
+# floyd-warshall on non-zero width pipes
+n = length(visit)
