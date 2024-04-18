@@ -1,5 +1,5 @@
 using Combinatorics
-f = map(l -> match(r".{6}(.[A-Z]).{15}(\d+).{24}\s+(.*)", l), readlines("input"))
+f = map(l -> match(r".{6}(.[A-Z]).{15}(\d+); [a-z]+\s[a-z]+\s[a-z]+\s[a-z]+\s(.*)", l), readlines("input"))
 rate = Dict{String, Int}(); g = Dict{String, Vector{String}}()
 visit = Vector{String}(); nodes = Vector{String}()
 for m in f
