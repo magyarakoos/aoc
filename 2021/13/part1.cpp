@@ -2,6 +2,7 @@
 using namespace std;
 constexpr int MAXN = 1e4;
 
+bool m[1e4][1e4];
 int main() {
     ifstream f("input");
     string s;
