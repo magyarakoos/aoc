@@ -37,15 +37,17 @@ end
 
 # evaluate every possible route O(|visit|!)
 # visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
+res = 0
 for perm in permutations(visit)
     t = 30 - dist["AA"][visit[1]] - 1
-    res = t * rate[visit[1]]
-    curr = visit[1]
+    curr = t * rate[visit[1]]
+    prev = visit[1]
     for u in visit[2:end]
-        global t -= dist[curr][u] + 1
+        t -= dist[prev][u] + 1
         if t <= 0 break end
-        global res += t * rate[u]
-        global curr = u
+        curr += t * rate[u]
+        prev = u
     end
+
 end
-println(res)
+println(curr)
