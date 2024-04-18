@@ -35,7 +35,8 @@ for u in nodes, v in nodes, k in nodes
     end
 end
 
-# evaluate every possible route O(|visit|!)
+# for a given order of opening non-zero width valves,
+# what is the amount of pressu
 solve = (visit) -> begin    
     t = 30 - dist["AA"][visit[1]] - 1
     res = t * rate[visit[1]]
