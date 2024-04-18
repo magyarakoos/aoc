@@ -73,5 +73,5 @@ end
 visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
 
 for u in visit
-    backtrack(Vector{String}(u), 0)
+    backtrack(Vector{String}(fill(u, 1)), 0)
 end
