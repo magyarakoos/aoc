@@ -48,4 +48,8 @@ solve = (visit) -> begin
     end
     return res
 end
-println(maximum(map(solve, permutations(visit))))
+
+res = 0
+for perm in permutations(visit)
+    global res = max(res, solve(perm))
+end
