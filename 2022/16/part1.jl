@@ -35,6 +35,3 @@ for u in nodes, v in nodes, k in nodes
     end
 end
 
-for u in visit
-
-end
