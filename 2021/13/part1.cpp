@@ -27,8 +27,8 @@ int main() {
         if (s[11] == 'y') {
             for (int l = 0, r = v * 2; l < r; l++, r--) {
                 for (int x = 0; x < MAXN; x++) {
-                    m[l][x] = m[l][x] || m[r][x];
-                    m[r][x] = 0;
+                    m[r][x] = m[l][x] || m[r][x];
+                    m[l][x] = 0;
                 }
             }
         } else {
@@ -46,6 +46,7 @@ int main() {
             }
             cout << "\n";
         }
+        cout << "\n";
     }
     
 }
