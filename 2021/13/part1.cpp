@@ -22,9 +22,9 @@ int main() {
             }
         } else {
             for (int l = 0, r = v * 2; l < r; l++, r--) {
-                for (int x = 0; x < MAXN; x++) {
-                    m[l][x] = m[l][x] || m[r][x];
-                    m[r][x] = 0;
+                for (int y = 0; y < MAXN; y++) {
+                    m[y][l] = m[y][l] || m[y][r];
+                    m[y][l] = 0;
                 }
             }
         }
