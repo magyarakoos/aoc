@@ -1,3 +1,4 @@
+# todo: debug
 using Combinatorics
 f = map(l -> match(r".{6}(.[A-Z]).{15}(\d+); [a-z]+\s[a-z]+\s[a-z]+\s[a-z]+\s(.*)", l), readlines("input"))
 rate = Dict{String, Int}(); g = Dict{String, Vector{String}}()
