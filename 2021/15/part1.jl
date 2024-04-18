@@ -19,12 +19,13 @@ dijkstra = (m) -> begin
         end
     end
 end
-m1 = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
-println(dijkstra(m1))
-n = length(m1)
+m = map(l -> map(x -> parse(Int, x), split(l, "")), readlines("input"))
+println(dijkstra(m))
+n = length(m)
 for i in 1:5, j in 1:n, k in 1:n
-    push!(m1[j], m1[j][k])
+    push!(m[j], m[j][k])
 end
-for i in 1:5, j in 1:5
-    
+for i in 1:5, j in 1:n
+    push!(m, m[j])
 end
+println(dijkstra(m))
