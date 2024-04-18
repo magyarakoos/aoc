@@ -50,7 +50,3 @@ solve = (visit) -> begin
     return res
 end
 
-# res = 0
-# for perm in permutations(visit)
-#     global res = max(res, solve(perm))
-# end
