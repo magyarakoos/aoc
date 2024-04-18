@@ -34,3 +34,7 @@ for u in nodes, v in nodes, k in nodes
         dist[u][v] = dist[u][k] + dist[k][v]
     end
 end
+
+for u in visit
+
+end
