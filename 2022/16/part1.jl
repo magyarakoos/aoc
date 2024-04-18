@@ -46,7 +46,7 @@ solve = (visit) -> begin
         res += t * rate[u]
         curr = u
     end
-    println(res)
+    return res
 end
-
+println(maximuum(solve (["DD", "BB", "JJ", "HH", "EE", "CC"]))
 # evaluate every possible route O(|visit|!)
