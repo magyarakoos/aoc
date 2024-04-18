@@ -52,6 +52,7 @@ end
 
 m = length(visit)
 order = Vector{String}()
+avaliable = copy(visit)
 
 # optimized backtrack to find all (valid) permutations
 # when we run out of time, we cut off the search
@@ -60,5 +61,5 @@ backtrack = (i, t) -> begin
         println(order)
         return
     end
-    
+
 end
