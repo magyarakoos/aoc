@@ -66,7 +66,8 @@ backtrack = (order, t) -> begin
         t += dist[order[end]][u] + 1
         if t >= 30
             global count += 1
-        
+            return
+        end
         if !(u ∈ order)
             push!(order, u)
             backtrack(order, t)
