@@ -9,5 +9,8 @@ int main() {
         auto d = s.find(',');
         ptS.push_back({stoi(s.substr(0, d)), stoi(s.substr(d))});
     }
-    
+    vector<array<int, 2>> foldS;
+    while (f >> s) {
+        foldS.push_back()
+    }
 }
