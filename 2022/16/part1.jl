@@ -39,6 +39,7 @@ end
 visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
 t = 30 - dist["AA"][visit[1]] - 1
 res = t * rate[visit[1]]
+flow = rate[visit[1]]
 curr = visit[1]
 for u in visit[2:end]
     println("$curr $u $(dist[curr][u]) $t")
