@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-constexpr int MAXN = 1e4;
-bool m[MAXN][MAXN];
+bool m[10000][10000];
 int main() {
     ifstream f("input");
     string s;
@@ -15,4 +14,5 @@ int main() {
     while (getline(f, s)) {
         foldS.push_back({s[11] == 'y', stoi(s.substr(13))});
     }
+    
 }
