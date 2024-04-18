@@ -16,6 +16,11 @@ end
 # floyd-warshall on non-zero width pipes O(n^3)
 n = length(visit)
 dist = Dict{String, Dict{String, Int}}()
+for u in visit
+    dist[u] = Dict{String, Int}()
+end
 for u in visit, v in visit
     dist[u][v] = (u == v ? 0 : typemax(Int))
 end
+
+println(dist)
