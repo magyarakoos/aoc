@@ -6,9 +6,7 @@ dfs = (u) -> begin
         global p1 += 1
         return
     end
-    if islowercase(u[1])
-        push!(vis, u)
-    end
+    if islowercase(u[1]) push!(vis, u) end
     for v in g[u]
         if !(v ∈ vis) dfs(v)
         elseif !(v ∈ ["start", "end"]) && twice == ""
@@ -17,9 +15,7 @@ dfs = (u) -> begin
             global twice = ""
         end
     end
-    if twice != u
-        delete!(vis, u)
-    end
+    if twice != u delete!(vis, u) end
 end
 for l in eachline("input")
     v = split(l, "-")
