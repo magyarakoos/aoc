@@ -7,7 +7,7 @@ int main() {
     vector<array<int, 2>> ptS;
     while (f >> s) {
         auto d = s.find(',');
-        if ()
+        if (s.substr(0, d) == "fold") break;
         ptS.push_back({stoi(s.substr(0, d)), stoi(s.substr(d + 1))});
     }
     exit(0);
