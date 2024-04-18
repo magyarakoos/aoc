@@ -35,7 +35,7 @@ for u in nodes, v in nodes, k in nodes
     end
 end
 
-# visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
+# evaluate every possible route O(|visit|!)
 solve = (visit) -> begin    
     t = 30 - dist["AA"][visit[1]] - 1
     res = t * rate[visit[1]]
@@ -48,5 +48,6 @@ solve = (visit) -> begin
     end
     return res
 end
-println(maximuum(solve (["DD", "BB", "JJ", "HH", "EE", "CC"]))
-# evaluate every possible route O(|visit|!)
+@time begin
+println(maximum(map(solve, permutations(visit))))
+end
