@@ -1,12 +1,13 @@
 using Combinatorics
 f = map(l -> match(r".{6}(.[A-Z]).{15}(\d+); [a-z]+\s[a-z]+\s[a-z]+\s[a-z]+\s(.*)", l), readlines("input"))
 rate = Dict{String, Int}(); g = Dict{String, Vector{String}}()
-visit = Vector{String}(); nodes = Vector{String}()
+visit = Set{String}(); nodes = Set{String}()
 for m in f
     rate[m[1]] = parse(Int, m[2])
     g[m[1]] = Vector{String}()
     for v in split(m[3], ", ")
         push!(g[m[1]], v)
+        push!(nodes, v)
     end
     push!(nodes, m[1])
     if rate[m[1]] != 0
