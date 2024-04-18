@@ -50,6 +50,8 @@ solve = (order) -> begin
     return res
 end
 
+# optimized backtrack to find all (valid) permutations
+# when we run out of time, we cut off the search
 backtrack = (vis, t) -> begin
     
 end
