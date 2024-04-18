@@ -51,9 +51,14 @@ solve = (order) -> begin
 end
 
 m = length(visit)
+order = Vector{String}()
+
 # optimized backtrack to find all (valid) permutations
 # when we run out of time, we cut off the search
 backtrack = (i, t) -> begin
     if i == m
-        println()
+        println(order)
+        return
+    end
+    
 end
