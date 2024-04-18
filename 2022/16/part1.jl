@@ -57,4 +57,8 @@ end
 # end
 # println(solve(visit))
 
-for 
+for (u, vx) in g
+    for v in vx
+        println("$u $v")
+    end
+end
