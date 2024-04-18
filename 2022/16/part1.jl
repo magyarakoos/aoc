@@ -34,8 +34,14 @@ for u in visit, v in visit, k in visit
     end
 end
 
-for (k, ux) in g
-    for 
+for (u, ux) in g
+    for v in ux
+        if v ∈ visit
+            
+        else
+            println("$u $v")
+        end
+    end
 end
 for u in visit, v in visit
     if dist[u][v] != Int(1e9) && u != v
