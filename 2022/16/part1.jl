@@ -14,7 +14,7 @@ for m in f
     end
 end
 
-# floyd-warshall
+# floyd-warshall O(n^3)
 n = length(nodes)
 dist = Dict{String, Dict{String, Int}}()
 for u in nodes
@@ -35,3 +35,4 @@ for u in nodes, v in nodes, k in nodes
     end
 end
 
+# evaluate every possible route ()
