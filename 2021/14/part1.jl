@@ -1,3 +1,4 @@
+using StatsBase
 f = open("input", "r")
 s = readline(f); readline(f)
 d = Dict{String, Char}()
@@ -13,5 +14,4 @@ for _ in 1:4
         end
     end
     global s = t
-    println(s)
 end
