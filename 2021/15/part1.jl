@@ -26,8 +26,7 @@ for i in 1:5, j in 1:n, k in 1:n
     push!(m[j], m[j][k] + i)
 end
 for i in 1:5, j in 1:n
-    push!(m, [])
-    for k in 1:n
+    push!(m, m[j]
 end
 println(dijkstra(m))
 for l in m
