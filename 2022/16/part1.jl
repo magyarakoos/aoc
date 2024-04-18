@@ -36,8 +36,8 @@ end
 
 for (u, ux) in g
     for v in ux
-        if v ∈ visit
-            
+        if u ∈ visit && v ∈ visit
+            println("$u $v $(dist[u][v])")
         else
             println("$u $v")
         end
