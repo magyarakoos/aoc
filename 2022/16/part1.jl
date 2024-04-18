@@ -42,7 +42,8 @@ res = t * rate[visit[1]]
 curr = visit[1]
 for u in visit[2:end]
     global t -= dist[curr][u] + 1
-    if t 
+    if t <= 0 break end
     global res += t * rate[u]
     global curr = u
 end
+println(res)
