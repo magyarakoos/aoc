@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-constexpr int MAXN = 2e3;
+constexpr int MAXN = 1e4;
 bool m[MAXN][MAXN];
 
 int cnt() {
