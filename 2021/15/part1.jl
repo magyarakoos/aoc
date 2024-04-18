@@ -10,6 +10,7 @@ while !isempty(q)
         exit(0)
     end
     for i in 1:4
-        
+        nx = x + dx[i], ny = y + dy[i]
+        if nx < 1 || ny < 1 || nx 
     end
 end
