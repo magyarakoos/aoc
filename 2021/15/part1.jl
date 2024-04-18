@@ -6,5 +6,8 @@ push!(q, (0, 0, 0))
 while !isempty(q)
     (dist, x, y) = pop!(q)
     if x == n && y == m
-        
+        println(dist)
+        exit(0)
+    end
+    
 end
