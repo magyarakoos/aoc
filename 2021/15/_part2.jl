@@ -1,5 +1,5 @@
 using DataStructures
-dx = [1, -1, 0, 0]; dy = [0, 0, 1, -1]; n = length(m)
+dx = [1, -1, 0, 0]; dy = [0, 0, 1, -1]
 dijkstra = (m) -> begin
     n = length(m)
     q = BinaryMinHeap{Tuple{Int, Int, Int}}()
