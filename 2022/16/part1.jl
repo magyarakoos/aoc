@@ -55,10 +55,10 @@ end
 # for perm in permutations(visit)
 #     global res = max(res, solve(perm))
 # end
-# println(solve(visit))
+println(solve(visit))
 
-for (u, vx) in g
-    for v in vx
-        println("$u $v")
-    end
-end
+# for (u, vx) in g
+#     for v in vx
+#         println("$u $v")
+#     end
+# end
