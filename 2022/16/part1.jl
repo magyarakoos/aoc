@@ -39,6 +39,6 @@ end
 visit = ["DD", "BB", "JJ", "HH", "EE", "CC"]
 t = 30 - dist["AA"][visit[1]] - 1
 res = t * rate[visit[1]]
-for i in 2:l
-    t -=
+for i in 2:length(visit)
+    t -= dist[visit[i - 1]][visit[i]]
 end
