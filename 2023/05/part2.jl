@@ -6,13 +6,11 @@ m = map(x -> parse(Int, x), split(match(r"\S+(.*)", readline(f))[1]))
 for i in 2:2:length(m)
     push!(start, Interval{Closed, Open}(m[i - 1], m[i - 1] + m[i]))
 end
-
 readline(f)
 while !eof(f)
     readline(f)
     source = Vector{Interval{Int, Closed, Open}}()
     diff = Vector{Int}()
-
     while true
         l = readline(f)
         if l == "" break end
@@ -20,12 +18,9 @@ while !eof(f)
         push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
         push!(diff, l[1] - l[2])
     end
-
-    # add unmapped regions as zero-diff intervals
     push!(source, Interval{Closed, Open}(typemin(Int), minimum(map(x -> first(x), source))))
     push!(source, Interval{Closed, Open}(maximum(map(x -> last(x), source)), typemax(Int)))
     for _ in 1:2 push!(diff, 0) end
-
     curr = Vector{Interval{Int, Closed, Open}}()
     for intv in start
         for i in eachindex(source)
@@ -33,13 +28,11 @@ while !eof(f)
             if !isempty(sect)
                 push!(curr, Interval{Closed, Open}(
                     first(sect) + diff[i], 
-                    last(sec) + diff[i]
+                    last(sect) + diff[i]
                 ))
             end
         end
     end
-
     global start = copy(curr)
-    for intv in start println(intv) end
-    println()
 end
+println(minimum(x -> ))
