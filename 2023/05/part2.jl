@@ -10,7 +10,6 @@ end
 readline(f)
 while !eof(f)
     label = readline(f)[1]
-    if label == 'h' break end
     source = Vector{Interval{Int, Closed, Open}}()
     diff = Vector{Int}()
     while true
@@ -37,4 +36,3 @@ while !eof(f)
     end
     global start = →(curr)
 end
-println(start)
