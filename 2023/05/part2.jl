@@ -6,3 +6,6 @@ for i in 2:2:length(m)
     push!(start, Interval{Closed, Open}(m[i - 1], m[i - 1] + m[i]))
 end
 readline(f)
+while !eof(f)
+    
+end
