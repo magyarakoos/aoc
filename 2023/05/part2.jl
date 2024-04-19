@@ -7,12 +7,12 @@ for i in 2:2:length(m)
     push!(start, Interval{Closed, Open}(m[i - 1], m[i - 1] + m[i]))
 end
 
-function collapse(intervals::Vector{Interval{Int, Closed, Open}})
-    sort!(intervals)
+function collapse(intvs::Vector{Interval{Int, Closed, Open}})
+    sort!(intvs)
     collapsed_intervals = Interval[]
     
-    current_interval = sorted_intervals[1]
-    for interval in sorted_intervals[2:end]
+    current_interval = intvs[1]
+    for interval in intvs[2:end]
         if current_interval ∩ interval != empty
             current_interval = current_interval ∪ interval
         else
