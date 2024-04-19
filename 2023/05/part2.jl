@@ -21,11 +21,10 @@ while !eof(f)
     end
 
     if !eof(f)
-    
+        push!(source, Interval{Closed, Open}(0, minimum(map(x -> first(x), source))))
+        push!(source, Interval{Closed, Open}(maximum(map(x -> last(x), source)), typemax(Int)))
+        for _ in 1:2 push!(diff, 0) end
     end
-    push!(source, Interval{Closed, Open}(0, minimum(map(x -> first(x), source))))
-    push!(source, Interval{Closed, Open}(maximum(map(x -> last(x), source)), typemax(Int)))
-    for _ in 1:2 push!(diff, 0) end
 
     curr = Vector{Interval{Int, Closed, Open}}()
     for intv in start
