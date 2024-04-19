@@ -24,7 +24,9 @@ while !eof(f)
     for intv in start
         for i in eachindex(source)
             sect = intv ∩ source[i]
-            if !isempty
+            if !isempty(sect)
+                push!(curr, sect)
+            end
         end
     end
 
