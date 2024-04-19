@@ -7,7 +7,7 @@ for i in 2:2:length(m)
     push!(start, Interval{Closed, Open}(m[i - 1], m[i - 1] + m[i]))
 end
 
-function collapse(intvs::Vector{Interval{Int, Closed, Open}})
+function collapse(intvs)
     sort!(intvs)
     result = Interval[]
     curr = intvs[1]
