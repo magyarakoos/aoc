@@ -23,10 +23,10 @@ while !eof(f)
     curr = Vector{Interval{Int, Closed, Open}}()
     for intv in start
         for i in eachindex(source)
-            
-            if
-                
-            end
+            sect = intv ∩ source[i]
+            println(sect)
         end
     end
+
+    exit(0)
 end
