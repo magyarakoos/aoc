@@ -13,10 +13,7 @@ function →(intvs)
         i = 1
         while i <= length(intvs2)
             if !isempty(intvs2[i] ∩ intv)
-                intvs2[i] = (
-                    min(intvs2[i][1], intv[1]), 
-                    max(intvs2[i][2], intv[2])
-                )
+                intvs2[i] = 
                 break
             end
             i += 1
