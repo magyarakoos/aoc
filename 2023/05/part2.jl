@@ -48,3 +48,13 @@ while true
 end
 result = Vector{Interval{Int, Closed, Open}}()
 for intv in start
+    for i in eachindex(result)
+        sect = intv ∩ source[i]
+        if !isempty(sect)
+            push!(result, Interval{Closed, Open}(
+                first(intv) + diff[i], 
+                last(intv) + diff[i]
+            ))
+        end
+    end
+end
