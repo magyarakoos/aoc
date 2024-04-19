@@ -13,9 +13,12 @@ while !eof(f)
     while true
         l = readline(f)
         if l == "" break end
-        l = map(x -> parse(Int, x), split(l))
+        l = m(ap(x -> parse(Int, x), split(l))
         push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
         push!(diff, l[1] - l[2])
     end
-
+    for i in eachindex(source)
+        println((source[i], diff[i]))
+    end
+    println
 end
