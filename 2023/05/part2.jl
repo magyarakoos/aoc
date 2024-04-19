@@ -46,3 +46,5 @@ while true
     push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
     push!(diff, l[1] - l[2])
 end
+result = Vector{Interval{Int, Closed, Open}}()
+for intv in start
