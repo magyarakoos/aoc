@@ -9,6 +9,6 @@ readline(f)
 while !eof(f)
     readline(f)
     source = Vector{Interval{Int, Closed, Open}}()
-    
+    dest = copy(source)
     while 
 end
