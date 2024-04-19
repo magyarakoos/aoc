@@ -37,3 +37,10 @@ while !eof(f)
     end
     global start = copy(curr)
 end
+while true
+    l = readline(f)
+    if l == "" || eof(f) break end
+    l = map(x -> parse(Int, x), split(l))
+    push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
+    push!(diff, l[1] - l[2])
+end
