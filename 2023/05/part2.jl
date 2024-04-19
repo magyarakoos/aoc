@@ -20,4 +20,8 @@ while !eof(f)
         push!(diff, l[1] - l[2])
     end
 
+    curr = 
+    for intv in start
+        
+    end
 end
