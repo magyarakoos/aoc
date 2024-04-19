@@ -7,5 +7,7 @@ for i in 2:2:length(m)
 end
 readline(f)
 while !eof(f)
-    
+    readline(f)
+    curr = Tuple{Vector{Interval{Int, Closed, Open}}}
+    while 
 end
