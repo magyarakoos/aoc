@@ -9,9 +9,10 @@ end
 
 readline(f)
 while !eof(f)
-    label = readline(f)[1]
+    readline(f)
     source = Vector{Interval{Int, Closed, Open}}()
     diff = Vector{Int}()
+
     while true
         l = readline(f)
         if l == "" break end
@@ -19,9 +20,11 @@ while !eof(f)
         push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
         push!(diff, l[1] - l[2])
     end
+
     push!(source, Interval{Closed, Open}(0, minimum(map(x -> first(x), source))))
     push!(source, Interval{Closed, Open}(maximum(map(x -> last(x), source)), typemax(Int)))
     for _ in 1:2 push!(diff, 0) end
+
     curr = Vector{Interval{Int, Closed, Open}}()
     for intv in start
         for i in eachindex(source)
@@ -34,6 +37,8 @@ while !eof(f)
             end
         end
     end
+
     global start = copy(curr)
 end
+
 for intv in start println(intv) end
