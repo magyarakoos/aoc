@@ -13,6 +13,7 @@ while !eof(f)
     while true
         l = readline(f)
         if l == "" break end
-        
+        l = split(l)
+        push!(dest, l[1])
     end
 end
