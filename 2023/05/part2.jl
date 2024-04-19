@@ -9,7 +9,7 @@ end
 
 readline(f)
 while !eof(f)
-    readline(f)
+    label = readline(f)[1]
     source = Vector{Interval{Int, Closed, Open}}()
     diff = Vector{Int}()
     while true
@@ -20,7 +20,7 @@ while !eof(f)
         push!(diff, l[1] - l[2])
     end
 
-    if !eof(f)
+    if label != "humidity-to-location"
         push!(source, Interval{Closed, Open}(0, minimum(map(x -> first(x), source))))
         push!(source, Interval{Closed, Open}(maximum(map(x -> last(x), source)), typemax(Int)))
         for _ in 1:2 push!(diff, 0) end
