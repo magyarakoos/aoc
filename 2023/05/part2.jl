@@ -20,8 +20,8 @@ while !eof(f)
         push!(diff, l[1] - l[2])
     end
 
-    curr = 
+    curr = Vector{Interval{Int, Closed, Open}}()
     for intv in start
-        
+        for 
     end
 end
