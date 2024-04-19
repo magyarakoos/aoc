@@ -35,4 +35,4 @@ while !eof(f)
     end
     global start = copy(curr)
 end
-println(minimum(x -> ))
+println(minimum(x -> first(x), start))
