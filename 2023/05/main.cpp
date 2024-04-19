@@ -3,7 +3,7 @@ using namespace std;
 using ll = long long;
 using intv = pair<ll, ll>; // [l;r)
 
-fstream inp("input.txt");
+fstream inp("input");
 vector<vector<pair<pair<ll, ll>, ll>>> mappings(7);
 
 vector<ll> parse_line() {
