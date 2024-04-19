@@ -20,6 +20,9 @@ while !eof(f)
         push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
         push!(diff, l[1] - l[2])
     end
+
+    sort!(source)
+    
     
     curr = Vector{Interval{Int, Closed, Open}}()
     for intv in start
@@ -34,7 +37,7 @@ while !eof(f)
         end
     end
 
-    sort!(curr)
+
 
     global start = copy(curr)
 end
