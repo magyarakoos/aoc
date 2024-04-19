@@ -7,25 +7,22 @@ for i in 2:2:length(m)
     push!(start, Interval{Closed, Open}(m[i - 1], m[i - 1] + m[i]))
 end
 
-function →(intvs)
-    intvs2 = []
-    for intv in intvs
-        i = 1
-        while i <= length(intvs2)
-            if !isempty(intvs2[i] ∩ intv)
-                intvs2[i] = intvs2[i] ∩ intv
-                break
-            end
-            i += 1
-        end
-        if i > length(intvs2)
-            push!(intvs2, intv)
+function collapse(intervals::Vector{Interval{Int, Closed, Open}})
+    sort!(intervals)
+    collapsed_intervals = Interval[]
+    
+    current_interval = sorted_intervals[1]
+    for interval in sorted_intervals[2:end]
+        if current_interval ∩ interval != empty
+            current_interval = current_interval ∪ interval
+        else
+            push!(collapsed_intervals, current_interval)
+            current_interval = interval
         end
     end
-    if (length(intvs) == length(intvs2))
-        return intvs2
-    end
-    →(intvs2)
+    push!(collapsed_intervals, current_interval)
+    
+    return collapsed_intervals
 end
 
 readline(f)
