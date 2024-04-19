@@ -1,3 +1,4 @@
 using Intervals
 f = open("input", "r")
-start = Interval{Closed, Closed}
+start = Vector{Interval{Closed, Closed}}()
+println(start)
