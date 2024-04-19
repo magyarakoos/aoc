@@ -29,6 +29,7 @@ while !eof(f)
                     first(intv) + diff[i], 
                     last(intv) + diff[i]
                 ))
+                println((intv, curr[end]))
             end
         end
     end
