@@ -10,5 +10,9 @@ while !eof(f)
     readline(f)
     source = Vector{Interval{Int, Closed, Open}}()
     dest = copy(source)
-    while 
+    while true
+        l = readline(f)
+        if l == "" break end
+        
+    end
 end
