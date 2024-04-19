@@ -21,8 +21,7 @@ while !eof(f)
     end
 
     
-    push!(diff, 0)
-    push!(diff, 0)
+    for _ in 1:2 push!(diff, 0) end
 
     curr = Vector{Interval{Int, Closed, Open}}()
     for intv in start
