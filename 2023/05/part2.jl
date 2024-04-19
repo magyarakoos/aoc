@@ -12,7 +12,7 @@ function collapse(intvs)
     result = Interval[]
     curr = intvs[1]
     for intv in intvs[2:end]
-        if curr ∩ intv != empty
+        if !isempty(curr ∩ intv)
             curr = curr ∪ intv
         else
             push!(result, curr)
