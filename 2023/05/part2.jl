@@ -25,7 +25,7 @@ while !eof(f)
         for i in eachindex(source)
             sect = intv ∩ source[i]
             if !isempty(sect)
-                push!(curr, sect + diff[i])
+                push!(curr, Interval{Closed, Open}(intv.left + diff[i], intv.right + diff[i]))
             end
         end
     end
