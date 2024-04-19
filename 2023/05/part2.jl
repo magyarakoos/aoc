@@ -56,6 +56,6 @@ while !eof(f)
             end
         end
     end
-    global start = copy(curr)
+    global start = →(copy(curr))
 end
 println(start)
