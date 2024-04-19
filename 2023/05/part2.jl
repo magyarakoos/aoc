@@ -37,6 +37,6 @@ while !eof(f)
         end
     end
     global start = copy(curr)
-    println(start)
+    for intv in start println(intv) end
     println()
 end
