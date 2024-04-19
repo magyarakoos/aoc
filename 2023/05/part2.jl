@@ -8,6 +8,6 @@ end
 readline(f)
 while !eof(f)
     readline(f)
-    curr = Tuple{Vector{Interval{Int, Closed, Open}}}
+    curr = Tuple{Vector{Interval{Int, Closed, Open}}, Vector{Interval{Int, Closed, Open}}}
     while 
 end
