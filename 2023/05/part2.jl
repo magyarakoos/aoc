@@ -28,7 +28,6 @@ while !eof(f)
     for intv in start
         for i in eachindex(source)
             sect = intv ∩ source[i]
-            # println((intv, source[i]))
             if !isempty(sect)
                 push!(curr, Interval{Closed, Open}(
                     first(intv) + diff[i], 
