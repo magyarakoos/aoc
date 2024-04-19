@@ -32,8 +32,8 @@ while !eof(f)
             sect = intv ∩ source[i]
             if !isempty(sect)
                 push!(curr, Interval{Closed, Open}(
-                    first(intv) + diff[i], 
-                    last(intv) + diff[i]
+                    first(sect) + diff[i], 
+                    last(sec) + diff[i]
                 ))
             end
         end
