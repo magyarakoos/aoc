@@ -37,26 +37,4 @@ while !eof(f)
     end
     global start = copy(curr)
 end
-source = Vector{Interval{Int, Closed, Open}}()
-diff = Vector{Int}()
-while true
-    l = readline(f)
-    if l == "" break end
-    l = map(x -> parse(Int, x), split(l))
-    push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
-    push!(diff, l[1] - l[2])
-end
-println(source)
-result = Vector{Interval{Int, Closed, Open}}()
-for intv in start
-    for i in eachindex(result)
-        sect = intv ∩ source[i]
-        if !isempty(sect)
-            push!(result, Interval{Closed, Open}(
-                first(intv) + diff[i], 
-                last(intv) + diff[i]
-            ))
-        end
-    end
-end
-println(result)
+println(start)
