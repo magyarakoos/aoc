@@ -51,6 +51,6 @@ while !eof(f)
             end
         end
     end
-    global start = collapse(copy(curr))
+    global start = collapse(curr)
 end
 println(start)
