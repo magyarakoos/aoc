@@ -20,7 +20,7 @@ while !eof(f)
         push!(diff, l[1] - l[2])
     end
 
-    if label != "humidity-to-location"
+    if label != 'h'
         push!(source, Interval{Closed, Open}(0, minimum(map(x -> first(x), source))))
         push!(source, Interval{Closed, Open}(maximum(map(x -> last(x), source)), typemax(Int)))
         for _ in 1:2 push!(diff, 0) end
