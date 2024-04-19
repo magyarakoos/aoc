@@ -20,7 +20,8 @@ while !eof(f)
         push!(diff, l[1] - l[2])
     end
 
-    push!(source, Interval{Closed, Open}(0, minimum(m)))
+    push!(source, Interval{Closed, Open}(0, minimum(map(x -> first(x), source))))
+    
     for _ in 1:2 push!(diff, 0) end
 
     curr = Vector{Interval{Int, Closed, Open}}()
