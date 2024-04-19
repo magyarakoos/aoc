@@ -22,6 +22,6 @@ while !eof(f)
 
     curr = Vector{Interval{Int, Closed, Open}}()
     for intv in start
-        for 
+        
     end
 end
