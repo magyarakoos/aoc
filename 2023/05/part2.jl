@@ -9,20 +9,18 @@ end
 
 function collapse(intvs::Vector{Interval{Int, Closed, Open}})
     sort!(intvs)
-    collapsed_intervals = Interval[]
-    
-    current_interval = intvs[1]
-    for interval in intvs[2:end]
-        if current_interval ∩ interval != empty
-            current_interval = current_interval ∪ interval
+    result = Interval[]
+    curr = intvs[1]
+    for intv in intvs[2:end]
+        if curr ∩ intv != empty
+            curr = curr ∪ intv
         else
-            push!(collapsed_intervals, current_interval)
-            current_interval = interval
+            push!(result, curr)
+            curr = intv
         end
     end
-    push!(collapsed_intervals, current_interval)
-    
-    return collapsed_intervals
+    push!(result, curr)
+    return result
 end
 
 readline(f)
@@ -53,6 +51,6 @@ while !eof(f)
             end
         end
     end
-    global start = →(copy(curr))
+    global start = collapse(copy(curr))
 end
 println(start)
