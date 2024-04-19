@@ -7,8 +7,28 @@ for i in 2:2:length(m)
     push!(start, Interval{Closed, Open}(m[i - 1], m[i - 1] + m[i]))
 end
 
-collapse = (intvs) -> begin
-    
+function →(intvs)
+    intvs2 = []
+    for intv in intvs
+        i = 1
+        while i <= length(intvs2)
+            if ∩(intvs2[i], intv)
+                intvs2[i] = (
+                    min(intvs2[i][1], intv[1]), 
+                    max(intvs2[i][2], intv[2])
+                )
+                break
+            end
+            i += 1
+        end
+        if i > length(intvs2)
+            push!(intvs2, intv)
+        end
+    end
+    if (length(intvs) == length(intvs2))
+        return intvs2
+    end
+    →(intvs2)
 end
 
 readline(f)
