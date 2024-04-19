@@ -9,12 +9,13 @@ readline(f)
 while !eof(f)
     readline(f)
     source = Vector{Interval{Int, Closed, Open}}()
-    dest = copy(source)
+    diff = Vector{Int}()
     while true
         l = readline(f)
         if l == "" break end
         l = map(x -> parse(Int, x), split(l))
         push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
+        push!(diff, l[2] - l[1])
     end
 
 end
