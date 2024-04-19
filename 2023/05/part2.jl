@@ -17,7 +17,5 @@ while !eof(f)
         push!(dest, Interval{Closed, Open}(l[1], l[1] + l[3]))
         push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
     end
-    println(dest)
-    println(source)
-    println()
+    
 end
