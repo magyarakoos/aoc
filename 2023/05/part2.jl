@@ -21,10 +21,11 @@ while !eof(f)
         push!(diff, l[1] - l[2])
     end
 
+    # add unmapped regions as zero-diff intervals
     push!(source, Interval{Closed, Open}(0, minimum(map(x -> first(x), source))))
     push!(source, Interval{Closed, Open}(maximum(map(x -> last(x), source)), typemax(Int)))
     for _ in 1:2 push!(diff, 0) end
-
+    
     curr = Vector{Interval{Int, Closed, Open}}()
     for intv in start
         for i in eachindex(source)
