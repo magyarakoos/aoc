@@ -29,6 +29,5 @@ while !eof(f)
             end
         end
     end
-
-    exit(0)
+    global start = copy(curr)
 end
