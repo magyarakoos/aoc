@@ -23,7 +23,8 @@ while !eof(f)
     curr = Vector{Interval{Int, Closed, Open}}()
     for intv in start
         for i in eachindex(source)
-            if intersect(intv, source[i])
+            
+            if
                 
             end
         end
