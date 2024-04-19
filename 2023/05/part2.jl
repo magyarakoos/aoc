@@ -7,6 +7,10 @@ for i in 2:2:length(m)
     push!(start, Interval{Closed, Open}(m[i - 1], m[i - 1] + m[i]))
 end
 
+collapse = (intvs) -> begin
+    
+end
+
 readline(f)
 while !eof(f)
     label = readline(f)[1]
