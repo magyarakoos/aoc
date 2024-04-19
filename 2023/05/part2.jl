@@ -40,6 +40,6 @@ while !eof(f)
     end
 
     global start = copy(curr)
+    for intv in start println(intv) end
+    println()
 end
-
-for intv in start println(intv) end
