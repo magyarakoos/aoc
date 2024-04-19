@@ -1,5 +1,4 @@
 using Intervals
-
 f = open("input", "r")
 start = Vector{Interval{Int, Closed, Open}}()
 m = map(x -> parse(Int, x), split(match(r"\S+(.*)", readline(f))[1]))
