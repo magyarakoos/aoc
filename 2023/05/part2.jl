@@ -25,9 +25,10 @@ while !eof(f)
         for i in eachindex(source)
             sect = intv ∩ source[i]
             if !isempty(sect)
-                push!(curr, sect)
+                push!(curr, sect + diff[i])
             end
         end
     end
     global start = copy(curr)
+    println(start)
 end
