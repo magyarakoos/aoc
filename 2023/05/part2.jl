@@ -14,6 +14,7 @@ while !eof(f)
         l = readline(f)
         if l == "" break end
         l = split(l)
-        push!(dest, l[1])
+        push!(dest, Interval{Closed, Open}(l[1], l[1] + l[3]))
+        push!(source, Interval{Closed, Open}(l[1]))
     end
 end
