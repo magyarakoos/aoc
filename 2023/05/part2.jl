@@ -13,8 +13,8 @@ while !eof(f)
     while true
         l = readline(f)
         if l == "" break end
-        l = split(l)
+        l = map(x -> parseInt, xsplit(l)
         push!(dest, Interval{Closed, Open}(l[1], l[1] + l[3]))
-        push!(source, Interval{Closed, Open}(l[1]))
+        push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
     end
 end
