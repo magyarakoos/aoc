@@ -24,7 +24,7 @@ while !eof(f)
     for intv in start
         for i in eachindex(source)
             sect = intv ∩ source[i]
-            println(sect)
+            if !isempty
         end
     end
 
