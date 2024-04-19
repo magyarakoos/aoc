@@ -13,7 +13,7 @@ function →(intvs)
         i = 1
         while i <= length(intvs2)
             if !isempty(intvs2[i] ∩ intv)
-                intvs2[i] = 
+                intvs2[i] = intvs2[i] ∩ intv
                 break
             end
             i += 1
