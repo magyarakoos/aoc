@@ -1,7 +1,7 @@
 using Intervals
 f = open("input", "r")
-start = Vector{Interval{Closed, Closed}}()
+start = Vector{Interval{Closed, Open}}()
 m = map(x -> parse(Int, x), split(match(r"\S+(.*)", readline(f))[1]))
 for i in 2:2:length(m)
-    push!(start, Interval{Closed,(m[i - 1], m[i]))
+    push!(start, Interval{Closed, Open}(m[i - 1], m[i]))
 end
