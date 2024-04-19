@@ -33,9 +33,10 @@ while !eof(f)
                     first(intv) + diff[i], 
                     last(intv) + diff[i]
                 ))
-                println((intv, curr[end]))
             end
         end
     end
     global start = copy(curr)
+    println(start)
+    println()
 end
