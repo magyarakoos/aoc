@@ -14,8 +14,7 @@ while !eof(f)
         l = readline(f)
         if l == "" break end
         l = map(x -> parse(Int, x), split(l))
-        push!(dest, Interval{Closed, Open}(l[1], l[1] + l[3]))
         push!(source, Interval{Closed, Open}(l[2], l[2] + l[3]))
     end
-    
+
 end
