@@ -7,8 +7,11 @@ map<string, pair<char, bool>> m;
 
 bool all_low() {
     for (const auto& [k, v] : rec) {
-        for (const auto& [id, ])
+        for (const auto& [id, w] : v) {
+            if (w) return 0;
+        }
     }
+    
 }
 
 int main() {
