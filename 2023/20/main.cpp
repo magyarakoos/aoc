@@ -9,6 +9,7 @@ int main() {
     ifstream f("input");
     string s;
     while (getline(f, s)) {
+        replace(s.begin(), s.end(), '')
         istringstream iss(s);
         vector<string> t;
         while (iss >> s) t.push_back(s);
