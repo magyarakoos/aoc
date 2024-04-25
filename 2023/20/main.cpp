@@ -16,7 +16,7 @@ int main() {
         m[t[0].substr(1)] = {t[0][0], 0};
         for (size_t i = 2; i < t.size(); i++) {
             g[t[0].substr(1)].push_back(t[i]);
-            
+            rec[t[i]].push_back({t[0].substr(1), 0});
         }
     }
 }
