@@ -11,7 +11,10 @@ bool all_low() {
             if (w) return 0;
         }
     }
-    
+    for (const auto& [k, v]: m) {
+        if (v.second) return 0;
+    }
+    return 1;
 }
 
 int main() {
