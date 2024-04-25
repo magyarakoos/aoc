@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<vector<string>> g;
-vector<vector<pair<string, bool>>> rec;
+map<string, vector<string>> g;
+map<string, <vector<pair<string, bool>>> rec;
 map<string, pair<char, bool>> m;
 
 int main() {
@@ -14,6 +14,8 @@ int main() {
         vector<string> t;
         while (iss >> s) t.push_back(s);
         m[t[0].substr(1)] = {t[0][0], 0};
-        for ()
+        for (size_t i = 2; i < t.size(); i++) {
+
+        }
     }
 }
