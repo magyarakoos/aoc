@@ -5,6 +5,12 @@ map<string, vector<string>> g;
 map<string, vector<pair<string, bool>>> rec;
 map<string, pair<char, bool>> m;
 
+bool all_low() {
+    for (const auto& [k, v] : rec) {
+        for (const auto& [id, ])
+    }
+}
+
 int main() {
     ifstream f("input");
     string s;
@@ -20,5 +26,5 @@ int main() {
         }
     }
 
-    
+
 }
