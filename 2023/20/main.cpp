@@ -9,8 +9,8 @@ int main() {
     string s;
     while (getline(f, s)) {
         istringstream iss(s);
-        vector<string> tokenS;
-        while (iss >> s) tokenS.push_back(s);
+        vector<string> t;
+        while (iss >> s) t.push_back(s);
         
     }
 }
