@@ -2,13 +2,12 @@
 using namespace std;
 
 struct Node {
-    string id;
     char type;
     bool state;
 };
 
-vector<vector<int>> g, rec;
-map<int, Node> m;
+vector<vector<string>> g, rec;
+map<string, Node> m;
 
 int main() {
 
