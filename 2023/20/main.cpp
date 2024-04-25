@@ -12,10 +12,6 @@ int main() {
         istringstream iss(s);
         vector<string> t;
         while (iss >> s) t.push_back(s);
-        if (m.count(t[0].substr(1))) {
-            
-        } else {
-
-        }
+        m[t[0].substr(1)] = {t[0][0], 0};
     }
 }
