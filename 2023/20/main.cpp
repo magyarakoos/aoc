@@ -6,4 +6,8 @@ map<string, pair<char, bool>> m;
 
 int main() {
     ifstream f("input");
+    string s;
+    while (getline(f, s)) {
+        
+    }
 }
