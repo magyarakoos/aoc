@@ -5,8 +5,8 @@ struct Node {
 
 };
 
-vector<vector<int>> g;
-
+vector<vector<int>> g, inputS;
+vector<Node> nodeS;
 
 int main() {
 
