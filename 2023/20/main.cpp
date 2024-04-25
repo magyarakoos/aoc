@@ -8,6 +8,9 @@ int main() {
     ifstream f("input");
     string s;
     while (getline(f, s)) {
+        istringstream iss(s);
+        vector<string> tokenS;
+        while (iss >> s) tokenS.push_back(s);
         
     }
 }
