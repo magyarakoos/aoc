@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
 map<string, vector<string>> g;
 map<string, vector<pair<string, bool>>> rec;
