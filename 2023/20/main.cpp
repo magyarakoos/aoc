@@ -7,16 +7,8 @@ map<string, vector<pair<string, bool>>> rec;
 map<string, pair<char, bool>> m;
 ll hcnt, lcnt;
 
-bool all_low() {
-    for (const auto& [k, v] : rec) {
-        for (const auto& [id, w] : v) {
-            if (w) return 0;
-        }
-    }
-    for (const auto& [k, v]: m) {
-        if (v.second) return 0;
-    }
-    return 1;
+void bfs() {
+    
 }
 
 int main() {
