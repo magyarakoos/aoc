@@ -5,7 +5,7 @@ using ll = long long;
 map<string, vector<string>> g;
 map<string, vector<pair<string, bool>>> rec;
 map<string, pair<char, bool>> m;
-vector<array<ll, 2>> pref_cntS;
+vector<array<ll, 2>> cntS;
 
 bool all_low() {
     for (const auto& [k, v] : rec) {
