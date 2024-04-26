@@ -34,5 +34,10 @@ int main() {
     
     assert(all_low());
 
-    
+    for (int i = 0; i < 1000; i++) {
+
+        if (all_low()) {
+            
+        }
+    }
 }
