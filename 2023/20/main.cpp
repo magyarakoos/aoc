@@ -5,6 +5,7 @@ using ll = long long;
 map<string, vector<string>> g;
 map<string, vector<pair<string, bool>>> rec;
 map<string, pair<char, bool>> m;
+vector<array<ll, 2>> pref_cntS;
 
 bool all_low() {
     for (const auto& [k, v] : rec) {
@@ -34,8 +35,6 @@ int main() {
     }
     
     assert(all_low());
-
-    ll 
 
     for (int i = 0; i < 1000; i++) {
 
