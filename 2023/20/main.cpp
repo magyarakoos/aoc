@@ -31,6 +31,7 @@ int main() {
             rec[t[i]].push_back({t[0].substr(1), 0});
         }
     }
-
+    
+    assert(all_low());
 
 }
