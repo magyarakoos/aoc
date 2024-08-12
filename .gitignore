@@ -1,6 +1,7 @@
 bin/
 obj/
 .vscode/
+a.out
 main
 input
 *.csproj
