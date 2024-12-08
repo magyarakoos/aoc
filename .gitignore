@@ -1,8 +1,14 @@
+# C# data
 bin/
 obj/
-.vscode/
+*.csproj
+
+# C++ executables
 a.out
 main
-input
-*.csproj
+
+# Input files
+input*
+
+# Wildcard for other files ignored intentionally
 _*
