@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> exec(vector<int>& reg, vector<int> inst) {
+vector<int> reg, inst;
+
+vector<int> exec(int n = inst.size()) {
     vector<int> result;
-    for (int i = 0; i + 1 < inst.size(); i += 2) {
+    for (int i = 0; i + 1 < n; i += 2) {
         int op = inst[i], lop = inst[i + 1],
             cop = (lop > 3 ? reg[lop - 4] : lop);
         assert(i % 2 == 0);
@@ -23,8 +25,20 @@ vector<int> exec(vector<int>& reg, vector<int> inst) {
     return result;
 }
 
+void backtrack(int i, int64_t x) {
+    if (i < 0) {
+        cout << x;
+        exit(0);
+    }
+    for (int j = 0; j < 8; j++) {
+        reg[0] = x * 8 + j;
+        if (inst[i] == exec(inst.size() - 2)[0]) {
+            backtrack(i - 1, x * 8 + j);
+        }
+    }
+}
+
 int main() {
-    vector<int> reg, inst;
     string s, t;
     while (getline(cin, s)) {
         replace(s.begin(), s.end(), ',', ' ');
@@ -39,22 +53,7 @@ int main() {
             }
         }
     }
-    for (int x : exec(reg, inst)) cout << x << ",";
+    for (int x : exec()) cout << x << ",";
     cout << "\b \n";
-    vector<int> result;
-    for (int i = 0; i < inst.size(); i++) {
-        for (int A = 0; A <= 1024; A++) {
-            reg[0] = A;
-            if (exec(reg, vector<int>(inst.begin(),
-                                      inst.end() - 2))[0] ==
-                inst[i]) {
-                cout << inst[i] << " " << A << "\n";
-                result.push_back(A);
-                break;
-            }
-        }
-    }
-    for (int i = result.size() - 1; i >= 0; i--) {
-        cout << result[i] << " ";
-    }
+    backtrack(inst.size() - 1, 0);
 }
