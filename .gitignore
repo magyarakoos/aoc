@@ -2,6 +2,7 @@
 bin/
 obj/
 *.csproj
+*.sln
 
 # C++ executables
 a.out
@@ -12,3 +13,6 @@ input*
 
 # Wildcard for other files ignored intentionally
 _*
+
+# IDE config files
+.editorconfig
